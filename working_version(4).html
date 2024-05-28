@@ -11,47 +11,47 @@
             background-color: #333333;
             color: white;
             font-family: 'Courier New', Courier, monospace;
-            margin: 20px; /* Add margin space */
+            margin: 20px;
             padding: 0;
-            text-align: center; /* Center align content */
+            text-align: center; 
         }
         h1 {
             font-size: 3em;
             font-weight: bold;
-            font-family: 'Bitstream Vera Sans Mono', monospace; /* Change font to Bitstream Vera Sans Mono */
-            margin-top: 0; /* Remove default margin */
+            font-family: 'Bitstream Vera Sans Mono', monospace; 
+            margin-top: 0; 
         }
         .subscript {
             font-family: 'Courier New', Courier, monospace;
             font-size: 1em;
-            margin-top: -10px; /* Reduce space between heading and subscript */
+            margin-top: -10px; 
         }
         a {
             color: white;
             text-decoration: underline;
         }
         a:hover {
-            color: #FFD700; /* Gold color on hover */
+            color: #FFD700; 
         }
         .content {
-            text-align: left; /* Align content to left */
-            margin-top: 20px; /* Add margin space */
+            text-align: left;
+            margin-top: 20px;
         }
         .content p {
-            font-size: 1.1em; /* Set font size slightly larger */
+            font-size: 1.1em;
         }
         .underline {
             text-decoration: underline;
             cursor: pointer;
         }
         .underline:hover {
-            color: #FFD700; /* Gold color on hover */
+            color: #FFD700; 
         }
         .formula {
-            font-size: 1.5em; /* Increase font size */
+            font-size: 1.5em; 
             font-weight: bold;
-            margin-bottom: 10px; /* Add margin space after formula */
-            text-align: center; /* Center align formula */
+            margin-bottom: 10px; 
+            text-align: center; 
         }
         #chartContainer {
             width: 80%;
@@ -61,25 +61,32 @@
             max-width: 100%;
             height: auto;
         }
+        .center-container {
+            display: flex;
+            justify-content: center;
+        }
+
         .box {
             background-color: #262626;
             border-radius: 10px;
             padding: 20px;
             color: #ffffff;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            max-width: 300px;
+            text-align: center;
         }
 
         label, input, button, p {
             display: block;
             margin-bottom: 10px;
+            width: 100%;
         }
 
         input, button {
-            width: 100%;
             padding: 8px;
-            margin-top: 5px;
             border: none;
             border-radius: 5px;
+            box-sizing: border-box;
         }
 
         input {
@@ -195,7 +202,7 @@
                     },
                     options: {
                         animation: {
-                            duration: 3000 // Set animation duration in milliseconds (slower)
+                            duration: 3000
                         },
                         scales: {
                             x: {
@@ -242,15 +249,17 @@
         }
     </script>
 <body class="dark-mode">
-    <div class="box">
-        <label for="boardPercentage">Enter your Board Percentage:</label><br>
-        <input type="number" id="boardPercentage" step="0.01"><br>
-        <label for="metMarks">Enter your MET Marks (out of 240):</label><br>
-        <input type="number" id="metMarks" step="0.01"><br><br>
-        <button onclick="predictRank()">Predict Rank</button>
-        <p id="result"></p>
-        <div id="attainableBranches"></div>
-    </div>
+    <div class="center-container"> 
+        <div class="box">
+            <label for="boardPercentage">Enter your Board Percentage:</label><br>
+            <input type="number" id="boardPercentage" step="0.01"><br>
+            <label for="metMarks">Enter your MET Marks (out of 240):</label><br>
+            <input type="number" id="metMarks" step="0.01"><br><br>
+            <button onclick="predictRank()">Predict Rank</button>
+            <p id="result"></p>
+            <div id="attainableBranches"></div>
+        </div>
+    </div> 
     <script>
         const xValues = [34, 42.6, 50.7, 52.025, 53.475, 56.125, 63.75, 64.125, 64.65, 68.75, 70.45, 76, 77.875, 78.4, 83.425, 85.975];
         const yValues = [31500, 21000, 18132, 17044, 15762, 11012, 6700, 4700, 4493, 3016, 2234, 950, 672, 604, 228, 108];  
@@ -374,7 +383,7 @@
             const attainableBranches = getAttainableBranches(predictedRank);
             document.getElementById('attainableBranches').innerHTML = attainableBranches;
 
-            // Add event listeners to the new collapsible elements
+            
             const coll = document.getElementsByClassName("collapsible");
             for (let i = 0; i < coll.length; i++) {
                 coll[i].addEventListener("click", function() {
