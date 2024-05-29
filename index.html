@@ -1,33 +1,19 @@
-
 <!DOCTYPE html>
 <html lang="en">
-
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-6B76EV7K8V"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-6B76EV7K8V');
-</script>
-
 <head>
-    <meta property="og:title" content="MET Rank Predictor 2024">
-    <meta property="og:description" content="A website that uses linear interpolation to predict the marks for the MET entrance exam.">
-    <meta property="og:image" content="https://cdn.discordapp.com/attachments/1142501310873223350/1245065844783054970/image.png?ex=6657656d&is=665613ed&hm=9221771473646b276bc496a50bb2983e479ce1d9ec0ebc1e68cf777f6465b19c&">
-    <meta property="og:url" content="Your website URL">
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="MET Rank Predictor 2024">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="MET Rank Predictor 2024">
-    <meta name="twitter:description" content="A website that uses linear interpolation to predict the marks for the MET entrance exam.">
-    <meta name="twitter:image" content="https://cdn.discordapp.com/attachments/1142501310873223350/1245065844783054970/image.png?ex=6657656d&is=665613ed&hm=9221771473646b276bc496a50bb2983e479ce1d9ec0ebc1e68cf777f6465b19c&">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6B76EV7K8V"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-6B76EV7K8V');
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MET Rank Predictor 2024</title>
+    <title>Rank Predictor</title>
+    <link rel="icon" href="https://media.discordapp.net/attachments/1245301144381558815/1245301187545137172/image.png?ex=6658409b&is=6656ef1b&hm=07875db9a3629f91c307dcae817d01efaa0e59283349955a4d3849188b0a8d82&=&format=webp&quality=lossless" type="image/png">
     <style>
-        
         body {
             background-color: #333333;
             color: white;
@@ -36,59 +22,85 @@
             padding: 0;
             text-align: center; 
         }
+
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: center; /* Center elements horizontally */
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .logo {
+            position: absolute;
+            top: 9px;
+            left: 20px; /* Adjust based on your preference */
+            width: 65px;
+            height: auto;
+            margin-right: 10px;
+        }
+
         h1 {
+            flex-grow: 1; /* Make the title take up the remaining space */
+            text-align: center; /* Ensure the title is centered */
             font-size: 3em;
             font-weight: bold;
             font-family: 'Bitstream Vera Sans Mono', monospace; 
             margin-top: 0; 
+            margin-bottom: 5px;
         }
+
         .subscript {
             font-family: 'Courier New', Courier, monospace;
             font-size: 1em;
             margin-top: -10px; 
         }
+
         a {
             color: white;
-            text-decoration: underline;
+            text-decoration: none;
         }
+
         a:hover {
             color: #FFD700; 
         }
+
         .content {
             text-align: left;
             margin-top: 20px;
         }
-        .content p {
-            font-size: 1.1em;
+
+        h2 {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 1.5em;
+            margin-bottom: 10px;
+            text-align: left;
+            padding-bottom: 5px;
         }
-        .underline {
-            text-decoration: underline;
-            cursor: pointer;
+
+        p {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 1em;
+            margin: 10px 0;
         }
-        .underline:hover {
-            color: #FFD700; 
-        }
-        .formula {
-            font-size: 1.5em; 
-            font-weight: bold;
-            margin-bottom: 10px; 
-            text-align: center; 
-        }
+
         #chartContainer {
             width: 80%;
             margin: 0 auto;
         }
+
         canvas {
             max-width: 100%;
             height: auto;
         }
+
         .center-container {
             display: flex;
             justify-content: center;
         }
 
         .box {
-            background-color: #262626;
+            background-color: rgba(38, 38, 38, 0.9);
             border-radius: 10px;
             padding: 20px;
             color: #ffffff;
@@ -124,320 +136,63 @@
         button:hover {
             background-color: #45a049;
         }
+
+        nav {
+            margin-top: 20px;
+        }
+
+        nav a {
+            margin: 0 30px; /* Increased margin for larger gaps between buttons */
+            font-size: 1.2em;
+            text-decoration: none; /* Remove underline */
+            color: white; /* White text color */
+            padding: 5px 10px; /* Smaller padding for the buttons */
+            border: 2px solid white; /* White border */
+            border-radius: 5px; /* Rounded corners */
+            transition: transform 0.2s, border-color 0.2s, color 0.2s; /* Smooth transition for hover effect */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        nav a:hover {
+            transform: translateY(-5px); /* Move up slightly on hover */
+            border-color: #FFD700; /* Change border color on hover */
+            color: #FFD700; /* Change text color on hover */
+        }
+
+        .separator {
+            border-bottom: 2px solid white; /* Changed color to white */
+            margin: 20px 0;
+            width: 100%; /* Make the lines go all the way to the ends of the page */
+        }
     </style>
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
-    <h1>MET Rank Predictor 2024</h1>
+    <header>
+        <img src="https://media.discordapp.net/attachments/1245301144381558815/1245301187545137172/image.png?ex=6658409b&is=6656ef1b&hm=07875db9a3629f91c307dcae817d01efaa0e59283349955a4d3849188b0a8d82&=&format=webp&quality=lossless" alt="Company Logo" class="logo">
+        <h1>Rank Predictor</h1>
+    </header>
     <div class="subscript">
         By <a href="https://github.com/druwn" target="_blank">druwn</a> and <a href="https://github.com/PixelHalide" target="_blank">Pixel</a>
     </div>
-    <div class="content"> Kcet 2024 Rank predictor coming may 30th!</div>
+    <div class="separator"></div>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="met2024rank.html">MET 2024 Rank</a>
+        <a href="kcet2024rank.html">KCET 2024 Rank</a>
+    </nav>
+    <div class="separator"></div>
     <div class="content">
-        <p class="underline" onclick="toggleContent()">How does this work? ></p>
-        <div id="hiddenContent" style="display: none;">
-            <p class="formula" style="text-align: left;">The code works on the principle of linear interpolation:</p>
-            <p>In MET 2020, board marks were implemented with a 60-40 weightage, With 60% being MET and 40% being board marks. I have compiled the results from various sources, Such as Youtube, Reddit, Quora and asking various students too. I have calculated their band percentages with the following formula:</p>
-            <p class="formula" style="font-size: 2em; text-align: center;">\( \left( \frac{M}{100} \right) \times 0.6 + (B \times 0.4) \)</p>
-            <p>Where M stands for your MET mark out of 800, and B your board percentage. <br>After calculating their band marks, I have plotted and compared it against their ranks on a graph </p>
-            <div id="chartContainer">
-                <canvas id="myChart"></canvas>
-            </div>
-            <p style="color: white;">Using a mathematical concept called <a href="https://en.wikipedia.org/wiki/Linear_interpolation" class="underline">Linear Interpolation</a>, We can find the ranks for values of various band scores. <br><br> There are obviously some faults with this:
-                <ul style="text-align: left;">
-                    <li>In areas with large gaps of data, It won't be very accurate</li>
-                    <li>MET 2020 was held online, with many people likely cheating and resulting in rank inflation</li>
-                    <li>Various other factors that may or may not be obvious</li>
-                </ul>
-                <br> However, This is the best we can do to predict this year's rank 
-                <br><br> <font size="+1"><b>Why did we use the 1 band system instead of 0.5?</font></b>
-                <br><br>ChronocRafter (credits to him) discovered that in the data spreadsheet, The band scores and the ranks would only match up when using the 1 band score and not with 0.5 or 60-40 average. You would see people with better band scores get worse ranks with 0.5 or 60-40 scores. The data is here for you to see if you wish to observe. 
-                <style>
-                    table {
-                        border-collapse: collapse;
-                        width: 100%;
-                    }
-                    th, td {
-                        border: 1px solid black;
-                        padding: 8px;
-                        text-align: center;
-                    }
-                </style>
-                </head>
-                <body>
-                
-                <table>
-                    <thead>
-                        <tr>
-                            <th>MET marks (/800)</th>
-                            <th>MET %</th>
-                            <th>Boards %</th>
-                            <th>0.5 Band score</th>
-                            <th>1 Band score</th>
-                            <th>60-40 avg score</th>
-                            <th>Rank</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr><td>613</td><td>76.625</td><td>95.8</td><td>85.975</td><td>85.975</td><td>84.295</td><td>108</td></tr>
-                        <tr><td>579</td><td>72.375</td><td>96.6</td><td>83.425</td><td>83.425</td><td>82.065</td><td>228</td></tr>
-                        <tr><td>512</td><td>64</td><td>95.5</td><td>78.4</td><td>78.4</td><td>76.6</td><td>604</td></tr>
-                        <tr><td>505</td><td>63.125</td><td>96.5</td><td>77.875</td><td>77.875</td><td>76.475</td><td>672</td></tr>
-                        <tr><td>480</td><td>60</td><td>96.66</td><td>76</td><td>76</td><td>74.664</td><td>950</td></tr>
-                        <tr><td>406</td><td>50.75</td><td>96</td><td>70.45</td><td>70.45</td><td>68.85</td><td>2234</td></tr>
-                        <tr><td>490</td><td>61.25</td><td>85</td><td>72.75</td><td>68.75</td><td>70.75</td><td>3016</td></tr>
-                        <tr><td>382</td><td>47.75</td><td>93</td><td>66.65</td><td>64.65</td><td>65.85</td><td>4493</td></tr>
-                        <tr><td>375</td><td>46.875</td><td>91.5</td><td>66.125</td><td>64.125</td><td>64.725</td><td>4700</td></tr>
-                        <tr><td>370</td><td>46.25</td><td>93</td><td>65.75</td><td>63.75</td><td>64.95</td><td>6700</td></tr>
-                        <tr><td>375</td><td>46.875</td><td>81.5</td><td>62.125</td><td>56.125</td><td>60.725</td><td>11012</td></tr>
-                        <tr><td>233</td><td>29.125</td><td>87.76</td><td>49.475</td><td>53.475</td><td>52.579</td><td>15762</td></tr>
-                        <tr><td>427</td><td>53.375</td><td>70</td><td>62.025</td><td>52.025</td><td>60.025</td><td>17044</td></tr>
-                        <tr><td>356</td><td>44.5</td><td>75.5</td><td>58.7</td><td>50.7</td><td>56.9</td><td>18132</td></tr>
-                        <tr><td>568</td><td>71</td><td>0</td><td>42.6</td><td>42.6</td><td>42.6</td><td>21000</td></tr>
-                        <tr><td>240</td><td>30</td><td>69</td><td>46</td><td>34</td><td>45.6</td><td>31500</td></tr>
-
-                    </tbody>
-                </table>
-            
-
-                </p>
-            <script>
-                const ctx = document.getElementById('myChart').getContext('2d');
-                const xData = [34, 42.6, 50.7, 52.025, 53.475, 56.125, 63.75, 64.125, 64.65, 68.75, 70.45, 76, 77.875, 78.4, 83.425, 85.975];
-                const yData = [31500, 21000, 18132, 17044, 15762, 11012, 6700, 4700, 4493, 3016, 2234, 950, 672, 604, 228, 108];
-
-                const myChart = new Chart(ctx, {
-                    type: 'line',
-                    data: {
-                        labels: xData,
-                        datasets: [{
-                            label: 'Values',
-                            data: yData,
-                            borderColor: 'white',
-                            backgroundColor: 'rgba(255, 255, 255, 0.2)',
-                            borderWidth: 2,
-                            pointBackgroundColor: 'white',
-                            pointBorderColor: 'white'
-                        }]
-                    },
-                    options: {
-                        animation: {
-                            duration: 3000
-                        },
-                        scales: {
-                            x: {
-                                ticks: {
-                                    color: 'white'
-                                },
-                                grid: {
-                                    color: '#555555'
-                                }
-                            },
-                            y: {
-                                ticks: {
-                                    color: 'white'
-                                },
-                                grid: {
-                                    color: '#555555'
-                                }
-                            }
-                        },
-                        plugins: {
-                            legend: {
-                                labels: {
-                                    color: 'white'
-                                }
-                            }
-                        }
-                    }
-                });
-            </script>
-        </div>
+        <h2>About</h2>
+        <p>After encountering numerous "rank predictors" on the internet that ask for your marks along with personal data like your phone number and name—only to farm and sell this information, as well as "coaches" and "bhaiyas" on Youtube spreading misinformation - we felt frustrated. Students lacked a legitimate way to predict and calculate their ranks. This frustration led to the creation of RankPredictor, a website that allows you to predict your rank for various exams with no nonsense.</p>
     </div>
-    <script>
-        function toggleContent() {
-            var hiddenContent = document.getElementById("hiddenContent");
-            var toggleButton = document.querySelector(".underline");
-
-            if (hiddenContent.style.display === "none") {
-                hiddenContent.style.display = "block";
-                toggleButton.textContent = "How does the code work? V";
-            } else {
-                hiddenContent.style.display = "none";
-                toggleButton.textContent = "How does the code work? >";
-            }
-        }
-    </script>
-<body class="dark-mode">
-    <div class="center-container"> 
-        <div class="box">
-            <label for="boardPercentage">Enter your Board Percentage:</label><br>
-            <input type="number" id="boardPercentage" step="0.01"><br>
-            <label for="metMarks">Enter your MET Marks (out of 240):</label><br>
-            <input type="number" id="metMarks" step="0.01"><br><br>
-            <button onclick="predictRank()">Predict Rank</button>
-            <p id="result"></p>
-            <div id="attainableBranches"></div>
-        </div>
-    </div> 
-    <script>
-        const xValues = [34, 42.6, 50.7, 52.025, 53.475, 56.125, 63.75, 64.125, 64.65, 68.75, 70.45, 76, 77.875, 78.4, 83.425, 85.975];
-        const yValues = [31500, 21000, 18132, 17044, 15762, 11012, 6700, 4700, 4493, 3016, 2234, 950, 672, 604, 228, 108];  
-
-        const cutoffs = {
-            Manipal: {
-              
-                "Computer Science & Engg": 1602,
-                "Computer Science & Engg (Artificial Intelligence & Machine Learning)": 2382,
-                "Computer Science and Financial Technology": 3737,
-                "Information Technology": 4765,
-                "Data Science": 5794,
-                "Computer & Communication Engg": 6360, 
-                "Mathematics and Computing": 6771,
-                "Electronics & Communication Engg": 8820,
-                "Electronics Engg & VLSI": 13725,
-                "Electrical & Electronics Engg": 20997,
-                "Cyber Physical Systems": 23818,
-                "Aeronautical Engg": 28850,
-                "Biotechnology": 30017,
-                "Electronics & Instrumentation Engg": 34087,
-                "Mechatronics": 38247,
-                "Industrial Engg": 45140,
-                "Automobile Engg": 46461,
-                "Biomedical Engg": 47120,
-                "Mechanical Engg": 47184,
-                "Civil Engg": 47893,
-                "Chemical Engg": 48465,
-                
-            },
-            Jaipur: {
-
-                "Computer Science & Engg": 17794,
-                "Computer Science & Engg (Artificial Intelligence & Machine Learning)": 24500,
-                "Electronics Engg & VLSI": 27258,
-                "Computer Science & Bioscience": 31591,
-                "Electrical & Computer Engg": 34935,
-                "Mechatronics": 41998,
-                "Chemical Engg": 42594,
-                "Computer Science and Bioscience": 43634,
-                "Electrical & Electronics Engg": 45001,
-                "Biotechnology": 46006,
-                "Mechanical Engg": 46177,
-                "Computer Science and Engg (IOT and Intelligent Systems)": 46707,
-                "Computer & Communication Engg": 46694,
-                "Information Technology": 47833,
-                "Civil Engg": 48178,
-                "Computer Science & Engg (Data Science)": 48250,
-                "Electronics & Communication Engg": 48266,
-                "Automobile Engg": 48334,
-            },
-            Bengaluru: {
-                "Computer Science & Engg": 8888,
-                "Computer Science & Engg (Artificial Intelligence)": 11738,
-                "Computer Science & Engg (Cyber Security)": 17427,
-                "Computer Science & Engg (Data Science)": 17587,
-                "Information Technology": 20167,
-                "Electronics & Communication Engg": 26764,
-                "Electronics & Computer Engg": 29025,
-            }
-        };
-
-        function linearInterpolation(x, xValues, yValues) {
-            if (x <= xValues[0]) return yValues[0];
-            if (x >= xValues[xValues.length - 1]) return yValues[yValues.length - 1];
-
-            for (let i = 0; i < xValues.length - 1; i++) {
-                if (x >= xValues[i] && x <= xValues[i + 1]) {
-                    const x1 = xValues[i];
-                    const x2 = xValues[i + 1];
-                    const y1 = yValues[i];
-                    const y2 = yValues[i + 1];
-                    return y1 + ((x - x1) * (y2 - y1)) / (x2 - x1);
-                }
-            }
-        }
-
-        function getBoardScore(percentage) {
-            if (percentage >= 95) return 100;
-            if (percentage >= 90) return 90;
-            if (percentage >= 85) return 80;
-            if (percentage >= 80) return 70;
-            if (percentage >= 75) return 60;
-            if (percentage >= 70) return 50;
-            if (percentage >= 65) return 40;
-            if (percentage >= 60) return 30;
-            if (percentage >= 55) return 20;
-            if (percentage >= 50) return 10;
-            return 0;
-        }
-
-        function applyThreshold(predictedRank) {
-            if (predictedRank > 15000) return predictedRank - 2000;
-            if (predictedRank > 10000) return predictedRank - 1000;
-            if (predictedRank > 7500) return predictedRank - 750;
-            if (predictedRank > 5000) return predictedRank - 500;
-            if (predictedRank > 2500) return predictedRank - 250;
-            return predictedRank;
-        }
-
-        function getAttainableBranches(predictedRank) {
-            const effectiveRank = applyThreshold(predictedRank);
-            let result = "";
-
-            Object.keys(cutoffs).forEach(campus => {
-                result += `<button class="collapsible">${campus}</button>`;
-                result += `<div class="content"><ul>`;
-                Object.keys(cutoffs[campus]).forEach(branch => {
-                    if (effectiveRank <= cutoffs[campus][branch]) {
-                        result += `<li>${branch} - ${cutoffs[campus][branch]}</li>`;
-                    }
-                });
-                result += `</ul></div>`;
-            });
-
-            return result;
-        }
-
-        function predictRank() {
-            const boardPercentage = parseFloat(document.getElementById('boardPercentage').value);
-            const metMarks = parseFloat(document.getElementById('metMarks').value);
-
-            if (isNaN(boardPercentage) || isNaN(metMarks)) {
-                document.getElementById('result').innerText = 'Please enter valid numbers for both fields.';
-                return;
-            }
-
-            const boardScore = getBoardScore(boardPercentage);
-            const metPercentage = (metMarks / 240) * 100;
-            const bandScore = (boardScore + metPercentage) / 2;
-            const predictedRank = linearInterpolation(bandScore, xValues, yValues);
-            document.getElementById('result').innerText = `Your rank is predicted to be ${Math.round(predictedRank)}`;
-
-            const attainableBranches = getAttainableBranches(predictedRank);
-            document.getElementById('attainableBranches').innerHTML = attainableBranches;
-
-            
-            const coll = document.getElementsByClassName("collapsible");
-            for (let i = 0; i < coll.length; i++) {
-                coll[i].addEventListener("click", function() {
-                    for (let j = 0; j < coll.length; j++) {
-                        if (j !== i) {
-                            coll[j].classList.remove("active");
-                            coll[j].nextElementSibling.style.display = "none";
-                        }
-                    }
-                    this.classList.toggle("active");
-                    const content = this.nextElementSibling;
-                    if (content.style.display === "block") {
-                        content.style.display = "none";
-                    } else {
-                        content.style.display = "block";
-                    }
-                });
-            }
-        }
-    </script>
+    <div class="content">
+        <h2>Our Methodology</h2>
+        <p>We gather verified and accurate data from past exam results to ensure our predictions are reliable. Using various mathematical methods, such as linear interpolation, we aim to provide the most accurate rank predictions possible. Detailed explanations of our rank prediction process for each exam are available in the "How does this work?" section within each exam's predictor, complete with graphs and datasets for transparency and scrutiny.</p>
+    </div>
+    <div class="content">
+        <h2>Contact and License</h2>
+        <p>You can reach out to us on Discord for any further queries, we are @pixelhalide and @druwn on Discord.</p>
+        <p>All our code and data are open-sourced under the GPL-3 license, allowing you to freely modify and share them, as long as credit is given.</p>
+    </div>
 </body>
 </html>
