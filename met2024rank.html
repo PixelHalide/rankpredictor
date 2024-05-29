@@ -28,21 +28,21 @@
         header {
             display: flex;
             align-items: center;
-            justify-content: center; /* Center elements horizontally */
+            justify-content: center; 
             margin-bottom: 20px;
             position: relative;
         }
         .logo {
             position: absolute;
             top: 9px;
-            left: 20px; /* Adjust based on your preference */
+            left: 20px; 
             width: 65px;
             height: auto;
             margin-right: 10px;
         }
         h1 {
-            flex-grow: 1; /* Make the title take up the remaining space */
-            text-align: center; /* Ensure the title is centered */
+            flex-grow: 1; 
+            text-align: center; 
             font-size: 3em;
             font-weight: bold;
             font-family: 'Bitstream Vera Sans Mono', monospace; 
@@ -134,29 +134,43 @@
         }
 
         nav a {
-            margin: 0 30px; /* Increased margin for larger gaps between buttons */
+            margin: 0 30px; 
             font-size: 1.2em;
-            text-decoration: none; /* Remove underline */
-            color: white; /* White text color */
-            padding: 5px 10px; /* Smaller padding for the buttons */
-            border: 2px solid white; /* White border */
-            border-radius: 5px; /* Rounded corners */
-            transition: transform 0.2s, border-color 0.2s, color 0.2s; /* Smooth transition for hover effect */
+            text-decoration: none; 
+            color: white; 
+            padding: 5px 10px;
+            border: 2px solid white;
+            border-radius: 5px; 
+            transition: transform 0.2s, border-color 0.2s, color 0.2s;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
 
         nav a:hover {
-            transform: translateY(-5px); /* Move up slightly on hover */
-            border-color: #FFD700; /* Change border color on hover */
-            color: #FFD700; /* Change text color on hover */
+            transform: translateY(-5px); 
+            border-color: #FFD700; 
+            color: #FFD700;
         }
 
         .separator {
-            border-bottom: 2px solid white; /* Changed color to white */
+            border-bottom: 2px solid white;
             margin: 20px 0;
-            width: 100%; /* Make the lines go all the way to the ends of the page */
+            width: 100%; 
         }
     </style>
+
+     <style>
+        
+        input[type=number]::-webkit-outer-spin-button,
+        input[type=number]::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        input[type=number] {
+            -moz-appearance: textfield; 
+        }
+
+</style>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
