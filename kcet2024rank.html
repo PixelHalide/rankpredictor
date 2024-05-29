@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6B76EV7K8V"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-6B76EV7K8V');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KCET Rank Predictor</title>
+    <link rel="icon" href="https://media.discordapp.net/attachments/1245301144381558815/1245301187545137172/image.png?ex=6658409b&is=6656ef1b&hm=07875db9a3629f91c307dcae817d01efaa0e59283349955a4d3849188b0a8d82&=&format=webp&quality=lossless" type="image/png">
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid rgb(255, 255, 255);
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: #333333;
+        }
+        body {
+            background-color: #333333;
+            color: white;
+            font-family: 'Courier New', Courier, monospace;
+            margin: 20px;
+            padding: 0;
+            text-align: center; 
+        }
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: center; /* Center elements horizontally */
+            margin-bottom: 20px;
+            position: relative;
+        }
+        .logo {
+            position: absolute;
+            top: 9px;
+            left: 20px; /* Adjust based on your preference */
+            width: 65px;
+            height: auto;
+            margin-right: 10px;
+        }
+        h1 {
+            flex-grow: 1; /* Make the title take up the remaining space */
+            text-align: center; /* Ensure the title is centered */
+            font-size: 3em;
+            font-weight: bold;
+            font-family: 'Bitstream Vera Sans Mono', monospace; 
+            margin-top: 0; 
+            margin-bottom: 5px;
+        }
+        .subscript {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 1em;
+            margin-top: -10px; 
+        }
+        a {
+            color: white;
+            text-decoration: none;
+        }
+        a:hover {
+            color: #FFD700; 
+        }
+        .content {
+            text-align: left;
+            margin-top: 20px;
+        }
+        .underline {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+        .underline:hover {
+            color: #FFD700; 
+        }
+        .formula {
+            font-size: 1.5em; 
+            font-weight: bold;
+            margin-bottom: 10px; 
+            text-align: center; 
+        }
+        #chartContainer {
+            width: 80%;
+            margin: 0 auto;
+        }
+        canvas {
+            max-width: 100%;
+            height: auto;
+        }
+        .center-container {
+            display: flex;
+            justify-content: center;
+        }
+
+        .box {
+            background-color: rgba(38, 38, 38, 0.9);
+            border-radius: 10px;
+            padding: 20px;
+            color: #ffffff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            max-width: 300px;
+            text-align: center;
+        }
+
+        label, input, button, p {
+            display: block;
+            margin-bottom: 10px;
+            width: 100%;
+        }
+
+        input, button {
+            padding: 8px;
+            border: none;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        input {
+            background-color: #444;
+            color: #fff;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        nav {
+            margin-top: 20px;
+        }
+
+        nav a {
+            margin: 0 30px; /* Increased margin for larger gaps between buttons */
+            font-size: 1.2em;
+            text-decoration: none; /* Remove underline */
+            color: white; /* White text color */
+            padding: 5px 10px; /* Smaller padding for the buttons */
+            border: 2px solid white; /* White border */
+            border-radius: 5px; /* Rounded corners */
+            transition: transform 0.2s, border-color 0.2s, color 0.2s; /* Smooth transition for hover effect */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        nav a:hover {
+            transform: translateY(-5px); /* Move up slightly on hover */
+            border-color: #FFD700; /* Change border color on hover */
+            color: #FFD700; /* Change text color on hover */
+        }
+
+        .separator {
+            border-bottom: 2px solid white; /* Changed color to white */
+            margin: 20px 0;
+            width: 100%; /* Make the lines go all the way to the ends of the page */
+        }
+        
+    </style>
+</head>
+ <style>
+        /* Add this CSS to hide arrows in number input fields */
+        input[type=number]::-webkit-outer-spin-button,
+        input[type=number]::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        input[type=number] {
+            -moz-appearance: textfield; /* Hides arrows in Firefox */
+        }
+
+</style>
+<body>
+    <header>
+        <img src="https://media.discordapp.net/attachments/1245301144381558815/1245301187545137172/image.png?ex=6658409b&is=6656ef1b&hm=07875db9a3629f91c307dcae817d01efaa0e59283349955a4d3849188b0a8d82&=&format=webp&quality=lossless" alt="Company Logo" class="logo">
+        <h1>Rank Predictor</h1>
+    </header>
+    <div class="subscript">
+        By <a href="https://github.com/druwn" target="_blank">druwn</a> and <a href="https://github.com/PixelHalide" target="_blank">Pixel</a>
+    </div>
+    <div class="separator"></div>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="met2024rank.html">MET 2024 Rank</a>
+        <a href="kcet2024rank.html">KCET 2024 Rank</a>
+    </nav>
+    <div class="separator"></div>
+    <div class="content">
+
+<div class="content">
+        <p class="underline" onclick="toggleContent()">How does this work? ></p>
+        <div id="hiddenContent" style="display: none;">
+            <font size="-1"><p class="formula" style="text-align: left;">The code works on the principle of linear interpolation:</p></font>
+            <p>Using data from 2023, Which I have compiled from various sources like Youtube, Reddit, Quora and asking various students, I calculated their scores with the following formula:</p>
+              <p class="formula" style="font-size: 2em; text-align: center;">\( \left( \frac{M}{180} \right) \times 0.5 + (B \times 0.5) \)</p>
+              <p>Where M stands for your KCET mark out of 180, and B your board percentage. <br>After calculating their band marks, I have plotted and compared it against their ranks on a graph </p>
+              
+<canvas id="myChart"></canvas>
+
+ <p style="color: white;">Using a mathematical concept called <a href="https://en.wikipedia.org/wiki/Linear_interpolation" class="underline">Linear Interpolation</a>, We can find the ranks for values of various band scores. <br><br> There are obviously some faults with this:
+                <ul style="text-align: left;">
+                    <li>In areas with large gaps of data, It won't be very accurate</li>
+                    <li>KCET 2024 was harder than 2023, So there definitely will be differences in ranks.</li>
+                    <li>Various other factors that may or may not be obvious</li>
+                </ul>
+
+                <br> However, This is the best we can do to predict this year's rank.
+                <br><br> If you wish to see the dataset we have used, Here it is:
+<body>
+
+    <table>
+        <thead>
+            <tr>
+                <th>KCET_Mark</th>
+                <th>KCET_%</th>
+                <th>Board_Score</th>
+                <th>Board_%</th>
+                <th>Avg_Score</th>
+                <th>Rank</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>141</td><td>78.33</td><td>298</td><td>99.33</td><td>88.833</td><td>322</td></tr>
+            <tr><td>142</td><td>78.89</td><td>291</td><td>97.00</td><td>87.944</td><td>409</td></tr>
+            <tr><td>130</td><td>72.22</td><td>299</td><td>99.67</td><td>85.944</td><td>745</td></tr>
+            <tr><td>128</td><td>71.11</td><td>295</td><td>98.33</td><td>84.722</td><td>980</td></tr>
+            <tr><td>126</td><td>70.00</td><td>296</td><td>98.67</td><td>84.333</td><td>1089</td></tr>
+            <tr><td>122</td><td>67.78</td><td>299</td><td>99.67</td><td>83.722</td><td>1249</td></tr>
+            <tr><td>120</td><td>66.67</td><td>298</td><td>99.33</td><td>83.000</td><td>1484</td></tr>
+            <tr><td>120</td><td>66.67</td><td>298</td><td>99.33</td><td>83.000</td><td>1487</td></tr>
+            <tr><td>123</td><td>68.33</td><td>293</td><td>97.67</td><td>83.000</td><td>1490</td></tr>
+            <tr><td>120</td><td>66.67</td><td>298</td><td>99.33</td><td>83.000</td><td>1496</td></tr>
+            <tr><td>127</td><td>70.56</td><td>284</td><td>94.67</td><td>82.611</td><td>1653</td></tr>
+            <tr><td>119</td><td>66.11</td><td>294</td><td>98.00</td><td>82.056</td><td>1873</td></tr>
+            <tr><td>118</td><td>65.56</td><td>291</td><td>97.00</td><td>81.278</td><td>2264</td></tr>
+            <tr><td>118</td><td>65.56</td><td>289</td><td>96.33</td><td>80.944</td><td>2411</td></tr>
+            <tr><td>113</td><td>62.78</td><td>293</td><td>97.67</td><td>80.222</td><td>2792</td></tr>
+            <tr><td>114</td><td>63.33</td><td>291</td><td>97.00</td><td>80.167</td><td>2830</td></tr>
+            <tr><td>118</td><td>65.56</td><td>283</td><td>94.33</td><td>79.944</td><td>2942</td></tr>
+            <tr><td>103</td><td>57.22</td><td>293</td><td>97.67</td><td>77.444</td><td>4872</td></tr>
+            <tr><td>102</td><td>56.67</td><td>291</td><td>97.00</td><td>76.833</td><td>5446</td></tr>
+            <tr><td>100</td><td>55.56</td><td>291</td><td>97.00</td><td>76.278</td><td>6037</td></tr>
+            <tr><td>97</td><td>53.89</td><td>291</td><td>97.00</td><td>75.444</td><td>7007</td></tr>
+            <tr><td>110</td><td>61.11</td><td>265</td><td>88.33</td><td>74.722</td><td>8013</td></tr>
+            <tr><td>89</td><td>49.44</td><td>292</td><td>97.33</td><td>73.389</td><td>10084</td></tr>
+            <tr><td>88</td><td>48.89</td><td>293</td><td>97.67</td><td>73.278</td><td>11186</td></tr>
+            <tr><td>118</td><td>65.56</td><td>234</td><td>78.00</td><td>71.778</td><td>12948</td></tr>
+            <tr><td>80</td><td>44.44</td><td>297</td><td>99.00</td><td>71.722</td><td>13146</td></tr>
+            <tr><td>81</td><td>45.00</td><td>290</td><td>96.67</td><td>70.833</td><td>15103</td></tr>
+            <tr><td>102</td><td>56.67</td><td>249</td><td>83.00</td><td>69.833</td><td>17514</td></tr>
+            <tr><td>74</td><td>41.11</td><td>294</td><td>98.00</td><td>69.556</td><td>18400</td></tr>
+            <tr><td>82</td><td>45.56</td><td>278</td><td>92.67</td><td>69.111</td><td>19679</td></tr>
+            <tr><td>82</td><td>45.56</td><td>277</td><td>92.33</td><td>68.944</td><td>20224</td></tr>
+            <tr><td>86</td><td>47.78</td><td>265</td><td>88.33</td><td>68.056</td><td>23258</td></tr>
+            <tr><td>72</td><td>40.00</td><td>287</td><td>95.67</td><td>67.833</td><td>24172</td></tr>
+            <tr><td>84</td><td>46.67</td><td>266</td><td>88.67</td><td>67.667</td><td>24846</td></tr>
+            <tr><td>72</td><td>40.00</td><td>286</td><td>95.33</td><td>67.667</td><td>24884</td></tr>
+            <tr><td>73</td><td>40.56</td><td>283</td><td>94.33</td><td>67.444</td><td>25682</td></tr>
+            <tr><td>71</td><td>39.44</td><td>286</td><td>95.33</td><td>67.389</td><td>26062</td></tr>
+            <tr><td>76</td><td>42.22</td><td>274</td><td>91.33</td><td>66.778</td><td>28396</td></tr>
+            <tr><td>61</td><td>33.89</td><td>297</td><td>99.00</td><td>66.444</td><td>29961</td></tr>
+            <tr><td>72</td><td>40.00</td><td>266</td><td>88.67</td><td>64.333</td><td>40702</td></tr>
+            <tr><td>59</td><td>32.78</td><td>279</td><td>93.00</td><td>62.889</td><td>49806</td></tr>
+            <tr><td>61</td><td>33.89</td><td>266</td><td>88.67</td><td>61.278</td><td>61134</td></tr>
+            <tr><td>67</td><td>37.22</td><td>238</td><td>79.33</td><td>58.278</td><td>93040</td></tr>
+            <tr><td>65</td><td>36.11</td><td>235</td><td>78.33</td><td>57.222</td><td>115885</td></tr>
+        </tbody>
+    </table>
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+    const ctx = document.getElementById('myChart').getContext('2d');
+    const xDat = [57.222, 58.278, 61.278, 62.889, 64.333, 66.444, 66.778, 67.389, 67.444, 67.667, 67.667, 67.833, 68.056, 68.944, 69.111, 69.556, 69.833, 70.833, 71.722, 71.778, 73.278, 73.389, 74.722, 75.444, 76.278, 76.833, 77.444, 79.944, 80.167, 80.222, 80.944, 81.278, 82.056, 82.611, 83.0, 83.0, 83.0, 83.0, 83.722, 84.333, 84.722, 85.944, 87.944, 88.833
+    ];
+
+    const yDat = [115885, 93040, 61134, 49806, 40702, 29961, 28396, 26062, 25682, 24884, 24846, 24172, 23258, 20224, 19679, 18400, 17514, 15103, 13146, 12948, 11186, 10084, 8013, 7007, 6037, 5446, 4872, 2942, 2830, 2792, 2411, 2264, 1873, 1653, 1496, 1490, 1487, 1484, 1249, 1089, 980, 745, 409, 322];
+
+    const myChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: xDat,
+            datasets: [{
+                label: 'Rank vs Avg Score',
+                data: yDat,
+                borderColor: 'white',
+                backgroundColor: 'rgba(255, 255, 255, 0.2)',
+                borderWidth: 2,
+                pointBackgroundColor: 'white',
+                pointBorderColor: 'white'
+            }]
+        },
+        options: {
+            animation: {
+                duration: 3000
+            },
+            scales: {
+                x: {
+                    ticks: {
+                        color: 'white'
+                    },
+                    grid: {
+                        color: '#555555'
+                    }
+                },
+                y: {
+                    ticks: {
+                        color: 'white'
+                    },
+                    grid: {
+                        color: '#555555'
+                    }
+                }
+            },
+            plugins: {
+                legend: {
+                    labels: {
+                        color: 'white'
+                    }
+                }
+            }
+        }
+    });
+</script>
+
+
+
+ </div>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+ <script>
+        function toggleContent() {
+            var hiddenContent = document.getElementById("hiddenContent");
+            var toggleButton = document.querySelector(".underline");
+
+            if (hiddenContent.style.display === "none") {
+                hiddenContent.style.display = "block";
+                toggleButton.textContent = "How does this work? V";
+            } else {
+                hiddenContent.style.display = "none";
+                toggleButton.textContent = "How does this work? >";
+            }
+        }
+    </script>
+
+<body>
+    <div class="center-container"> 
+        <div class="box">
+            <label for="boardPercentage">Enter your Board Percentage:</label><br>
+            <input type="number" id="boardPercentage" step="0.01"><br>
+            <label for="kcetMarks">Enter your KCET Marks (out of 141):</label><br>
+            <input type="number" id="kcetMarks" step="0.01"><br><br>
+            <button onclick="predictRank()">Predict Rank</button>
+            <p id="result"></p>
+            <div id="attainableBranches"></div>
+        </div>
+    </div> 
+
+<script>
+    const xData = [
+        57.222, 58.278, 61.278, 62.889, 64.333, 66.444, 66.778, 67.389, 67.444, 67.667, 67.667, 67.833, 68.056, 68.944, 69.111, 69.556, 69.833, 70.833, 71.722, 71.778, 73.278, 73.389, 74.722, 75.444, 76.278, 76.833, 77.444, 79.944, 80.167, 80.222, 80.944, 81.278, 82.056, 82.611, 83.0, 83.0, 83.0, 83.0, 83.722, 84.333, 84.722, 85.944, 87.944, 88.833
+    ];
+    const yData = [
+        115885, 93040, 61134, 49806, 40702, 29961, 28396, 26062, 25682, 24884, 24846, 24172, 23258, 20224, 19679, 18400, 17514, 15103, 13146, 12948, 11186, 10084, 8013, 7007, 6037, 5446, 4872, 2942, 2830, 2792, 2411, 2264, 1873, 1653, 1496, 1490, 1487, 1484, 1249, 1089, 980, 745, 409, 322
+    ];
+
+    function predictRank() {
+        const pcm = parseFloat(document.getElementById('boardPercentage').value);
+        const kcet = parseInt(document.getElementById('kcetMarks').value);
+        const kper = (kcet / 141) * 100;
+        const x_c = (pcm + kper) / 2;
+
+        const y_c = Math.round(interpolate(x_c, xData, yData));
+        document.getElementById('result').innerText = `Your rank is predicted to be ${y_c}`;
+    }
+
+    function interpolate(x, xData, yData) {
+        let i = 1;
+        while (xData[i] < x) i++;
+        const xL = xData[i - 1], yL = yData[i - 1];
+        const xR = xData[i], yR = yData[i];
+        return yL + (yR - yL) * (x - xL) / (xR - xL);
+    }
+</script>
+
+</body>
+</html>
+
