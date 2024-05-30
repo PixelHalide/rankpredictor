@@ -22,165 +22,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="https://media.discordapp.net/attachments/1142501310873223350/1245417308961374258/image.png?ex=6658acc1&is=66575b41&hm=7570272ab4cc703c0d20ddd6b4f7637db422e635ab3f7bb4a214a340974b03b8&=&format=webp&quality=lossless&width=1424&height=452" type="image/png">
-    <style>
     gtag('config', 'G-6B76EV7K8V');
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rank Predictor</title>
     <link rel="icon" href="https://media.discordapp.net/attachments/1245301144381558815/1245301187545137172/image.png?ex=6658409b&is=6656ef1b&hm=07875db9a3629f91c307dcae817d01efaa0e59283349955a4d3849188b0a8d82&=&format=webp&quality=lossless" type="image/png">
-    <style>
-        body {
-            background-color: #333333;
-            color: white;
-            font-family: 'Courier New', Courier, monospace;
-            margin: 20px;
-            padding: 0;
-            text-align: center; 
-        }
+    
 
-        header {
-            display: flex;
-            align-items: center;
-            justify-content: center; 
-            margin-bottom: 20px;
-            position: relative;
-        }
-
-        .logo {
-            position: absolute;
-            top: 9px;
-            left: 20px; 
-            width: 65px;
-            height: auto;
-            margin-right: 10px;
-        }
-
-        h1 {
-            flex-grow: 1; 
-            text-align: center;
-            font-size: 3em;
-            font-weight: bold;
-            font-family: 'Bitstream Vera Sans Mono', monospace; 
-            margin-top: 0; 
-            margin-bottom: 5px;
-        }
-
-        .subscript {
-            font-family: 'Courier New', Courier, monospace;
-            font-size: 1em;
-            margin-top: -10px; 
-        }
-
-        a {
-            color: white;
-            text-decoration: none;
-        }
-
-        a:hover {
-            color: #FFD700; 
-        }
-
-        .content {
-            text-align: left;
-            margin-top: 20px;
-        }
-
-        h2 {
-            font-family: 'Courier New', Courier, monospace;
-            font-size: 1.5em;
-            margin-bottom: 10px;
-            text-align: left;
-            padding-bottom: 5px;
-        }
-
-        p {
-            font-family: 'Courier New', Courier, monospace;
-            font-size: 1em;
-            margin: 10px 0;
-        }
-
-        #chartContainer {
-            width: 80%;
-            margin: 0 auto;
-        }
-
-        canvas {
-            max-width: 100%;
-            height: auto;
-        }
-
-        .center-container {
-            display: flex;
-            justify-content: center;
-        }
-
-        .box {
-            background-color: rgba(38, 38, 38, 0.9);
-            border-radius: 10px;
-            padding: 20px;
-            color: #ffffff;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            max-width: 300px;
-            text-align: center;
-        }
-
-        label, input, button, p {
-            display: block;
-            margin-bottom: 10px;
-            width: 100%;
-        }
-
-        input, button {
-            padding: 8px;
-            border: none;
-            border-radius: 5px;
-            box-sizing: border-box;
-        }
-
-        input {
-            background-color: #444;
-            color: #fff;
-        }
-
-        button {
-            background-color: #4CAF50;
-            color: #fff;
-            cursor: pointer;
-        }
-
-        button:hover {
-            background-color: #45a049;
-        }
-
-        nav {
-            margin-top: 20px;
-        }
-
-        nav a {
-            margin: 0 30px; /* Increased margin for larger gaps between buttons */
-            font-size: 1.2em;
-            text-decoration: none; /* Remove underline */
-            color: white; /* White text color */
-            padding: 5px 10px; /* Smaller padding for the buttons */
-            border: 2px solid white; /* White border */
-            border-radius: 5px; /* Rounded corners */
-            transition: transform 0.2s, border-color 0.2s, color 0.2s; /* Smooth transition for hover effect */
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
-
-        nav a:hover {
-            transform: translateY(-5px); /* Move up slightly on hover */
-            border-color: #FFD700; /* Change border color on hover */
-            color: #FFD700; /* Change text color on hover */
-        }
-
-        .separator {
-            border-bottom: 2px solid white; /* Changed color to white */
-            margin: 20px 0;
-            width: 100%; /* Make the lines go all the way to the ends of the page */
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
+    
 </head>
 <body>
     <header>
