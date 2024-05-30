@@ -165,3 +165,33 @@ th, td {
 th {
     background-color: #333333;
 }
+
+/* Mobile-specific styles */
+@media (max-width: 768px) {
+    nav {
+        display: flex;
+        flex-direction: column; /* Stack navigation links vertically */
+        align-items: center; /* Center navigation links */
+    }
+
+    nav a {
+        margin: 10px 0; /* Adjust margin for better spacing on mobile */
+        font-size: 1em; /* Slightly smaller font size for mobile */
+        width: 80%; /* Make the buttons wider */
+        text-align: center; /* Center the text in the buttons */
+    }
+
+    header {
+        flex-direction: column; /* Stack logo and title vertically */
+        align-items: center; /* Center align items */
+    }
+
+    .logo {
+        position: static; /* Remove absolute positioning for mobile */
+        margin: 0 auto 10px; /* Center logo and add bottom margin */
+    }
+
+    h1 {
+        font-size: 2em; /* Adjust font size for mobile */
+    }
+}
