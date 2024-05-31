@@ -144,6 +144,110 @@
 
     const yDat = [115885, 93040, 61134, 49806, 40702, 29961, 28396, 26062, 25682, 24884, 24846, 24172, 23258, 20224, 19679, 18400, 17514, 15103, 13146, 12948, 11186, 10084, 8013, 7007, 6037, 5446, 4872, 2942, 2830, 2792, 2411, 2264, 1873, 1653, 1496, 1490, 1487, 1484, 1249, 1089, 980, 745, 409, 322];
 
+    const cutoffs = {
+
+            "RVCE": {
+
+            "Aerospace Engg": 4868,
+            "Artificial Intelligence & Machine Learning": 1143,
+            "Bio Technology": 13000,
+            "Chemical Engg": 14949,
+            "Civil Engg": 18609,
+            "Computer Science & Engg": 360,
+            "Computer Science & Cyber Security": 1339,
+            "Computer Science & Data Science": 899,
+            "Electrical & Electronics Engg": 6013,
+            "Electronics & Communication Engg": 1366,
+            "Electronics & Instrumentation Engg": 6212,
+            "Electronics & Telecommunication Engg": 4663,
+            "Industrial Engg & Management": 21189,
+            "Information Science & Engg": 663,
+            "Mechanical Engg": 11815
+
+            },
+
+            "BMSCE": {
+
+            "Aerospace Engg": 4868,
+            "AIML": 1143,
+            "Bio Technology": 13000,
+            "Chemical Engg": 14949,
+            "Civil Engg": 18609,
+            "Computer Science & Engg": 360,
+            "Computer Science & Cyber Security": 1339,
+            "Computer Science & Data Science": 899,
+            "Electrical & Electronics Engg": 6013,
+            "Electronics & Communication Engg": 1366,
+            "Electronics & Instrumentation Engg": 6212,
+            "Electronics & Telecommunication Engg": 4663,
+            "Industrial Engg & Management": 21189,
+            "Information Science & Engg": 663,
+            "Mechanical Engg": 11815
+
+            },
+
+            "MSRIT":{
+
+            "Artificial Intelligence & Data Science": 4594,
+            "AIML": 4178,
+            "Bio Technology": 21557,
+            "Chemical Engg": 55300,
+            "Civil Engg": 44361,
+            "Computer Science & Engg": 1859,
+            "Computer Science & AIML": 3342,
+            "Computer Science & Cyber Security": 4810,
+            "Electrical & Electronics Engg": 13073,
+            "Electronics & Communication Engg": 5803,
+            "Electronics & Instrumentation Engg": 15240,
+            "Electronics & Telecommunication Engg": 9677,
+            "Industrial Engg & Management": 64430,
+            "Information Science & Engg": 2634,
+            "Mechanical Engg": 37472,
+            "Medical Electronics": 47014
+
+            },
+
+            "PESU":{
+
+            "Biotechnology": 24273,
+            "Computer Science & Engg": 1643,
+            "Computer Science & AIML": 2733,
+            "Electrical & Electronics Engg": 15006,
+            "Electronics & Communication Engg": 5898,
+            "Mechanical Engg": 29905
+
+            }
+
+            };
+
+            function applyThreshold(predictedRank) {
+            if (predictedRank > 15000) return predictedRank - 2000;
+            if (predictedRank > 10000) return predictedRank - 1000;
+            if (predictedRank > 7500) return predictedRank - 750;
+            if (predictedRank > 5000) return predictedRank - 500;
+            if (predictedRank > 2500) return predictedRank - 250;
+            return predictedRank;
+
+            }
+
+            function getAttainableBranches(predictedRank) {
+            const effectiveRank = applyThreshold(predictedRank);
+            let result = "";
+
+            Object.keys(cutoffs).forEach(campus => {
+                result += `<button class="collapsible">${campus}</button>`;
+                result += `<div class="content"><ul>`;
+                Object.keys(cutoffs[campus]).forEach(branch => {
+                    if (effectiveRank <= cutoffs[campus][branch]) {
+                        result += `<li>${branch} - ${cutoffs[campus][branch]}</li>`;
+                    }
+                });
+                result += `</ul></div>`;
+            });
+
+            return result;
+        }
+
     const myChart = new Chart(ctx, {
         type: 'line',
         data: {
@@ -238,8 +342,31 @@
         const kper = (kcet / 141) * 100;
         const x_c = (pcm + kper) / 2;
 
-        const y_c = Math.round(interpolate(x_c, xData, yData));
-        document.getElementById('result').innerText = `Your rank is predicted to be ${y_c}`;
+        const predictedRank = Math.round(interpolate(x_c, xData, yData));
+        document.getElementById('result').innerText = `Your rank is predicted to be ${predictedRank}`;
+
+        const attainableBranches = getAttainableBranches(predictedRank);
+        document.getElementById('attainableBranches').innerHTML = attainableBranches;
+
+        const coll = document.getElementsByClassName("collapsible");
+            for (let i = 0; i < coll.length; i++) {
+                coll[i].addEventListener("click", function() {
+                    for (let j = 0; j < coll.length; j++) {
+                        if (j !== i) {
+                            coll[j].classList.remove("active");
+                            coll[j].nextElementSibling.style.display = "none";
+                        }
+                    }
+                    this.classList.toggle("active");
+                    const content = this.nextElementSibling;
+                    if (content.style.display === "block") {
+                        content.style.display = "none";
+                    } else {
+                        content.style.display = "block";
+                    }
+                
+
+
     }
 
     function interpolate(x, xData, yData) {
