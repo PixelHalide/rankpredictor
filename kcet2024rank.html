@@ -370,18 +370,16 @@
     ];
 
     function predictRank() {
-    const pcm = parseFloat(document.getElementById('boardPercentage').value);
-    const kcet = parseInt(document.getElementById('kcetMarks').value);
-    const kper = (kcet / 141) * 100;
-    const x_c = (pcm + kper) / 2;
+        const pcm = parseFloat(document.getElementById('boardPercentage').value);
+        const kcet = parseInt(document.getElementById('kcetMarks').value);
+        const kper = (kcet / 141) * 100;
+        const x_c = (pcm + kper) / 2;
 
-    let predictedRank = Math.round(interpolate(x_c, xData, yData));
+        const predictedRank = Math.round(interpolate(x_c, xData, yData));
+        document.getElementById('result').innerText = `Your rank is predicted to be ${predictedRank}`;
 
-    document.getElementById('result').innerText = `Your rank is predicted to be ${predictedRank}`;
-
-    const attainableBranches = getAttainableBranches(predictedRank);
-    document.getElementById('attainableBranches').innerHTML = attainableBranches;
-}
+        const attainableBranches = getAttainableBranches(predictedRank);
+        document.getElementById('attainableBranches').innerHTML = attainableBranches;
 
     }
 
@@ -396,5 +394,4 @@
 
 </body>
 </html>
-
 
