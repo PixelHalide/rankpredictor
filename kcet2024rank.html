@@ -144,6 +144,143 @@
 
     const yDat = [115885, 93040, 61134, 49806, 40702, 29961, 28396, 26062, 25682, 24884, 24846, 24172, 23258, 20224, 19679, 18400, 17514, 15103, 13146, 12948, 11186, 10084, 8013, 7007, 6037, 5446, 4872, 2942, 2830, 2792, 2411, 2264, 1873, 1653, 1496, 1490, 1487, 1484, 1249, 1089, 980, 745, 409, 322];
 
+    const cutoffs = {
+    "RVCE": {
+        "Computer Science & Engg": 360,
+        "Information Science & Engg": 663,
+        "Computer Science & Data Science": 899,
+        "Artificial Intelligence & Machine Learning": 1143,
+        "Computer Science & Cyber Security": 1339,
+        "Electronics & Communication Engg": 1366,
+        "Electronics & Telecommunication Engg": 4663,
+        "Aerospace Engg": 4868,
+        "Electrical & Electronics Engg": 6013,
+        "Electronics & Instrumentation Engg": 6212,
+        "Mechanical Engg": 11815,
+        "Bio Technology": 13000,
+        "Chemical Engg": 14949,
+        "Civil Engg": 18609,
+        "Industrial Engg & Management": 21189
+    },
+    "BMSCE": {
+        "Computer Science & Engg": 360,
+        "Information Science & Engg": 663,
+        "Computer Science & Data Science": 899,
+        "AIML": 1143,
+        "Computer Science & Cyber Security": 1339,
+        "Electronics & Communication Engg": 1366,
+        "Electronics & Telecommunication Engg": 4663,
+        "Aerospace Engg": 4868,
+        "Electrical & Electronics Engg": 6013,
+        "Electronics & Instrumentation Engg": 6212,
+        "Mechanical Engg": 11815,
+        "Bio Technology": 13000,
+        "Chemical Engg": 14949,
+        "Civil Engg": 18609,
+        "Industrial Engg & Management": 21189
+    },
+    "MSRIT": {
+        "Computer Science & Engg": 1859,
+        "Information Science & Engg": 2634,
+        "Computer Science & AIML": 3342,
+        "AIML": 4178,
+        "Artificial Intelligence & Data Science": 4594,
+        "Computer Science & Cyber Security": 4810,
+        "Electronics & Communication Engg": 5803,
+        "Electronics & Telecommunication Engg": 9677,
+        "Electrical & Electronics Engg": 13073,
+        "Electronics & Instrumentation Engg": 15240,
+        "Bio Technology": 21557,
+        "Mechanical Engg": 37472,
+        "Civil Engg": 44361,
+        "Medical Electronics": 47014,
+        "Chemical Engg": 55300,
+        "Industrial Engg & Management": 64430
+    },
+    "PESU": {
+        "Computer Science & Engg": 1643,
+        "Computer Science & AIML": 2733,
+        "Electronics & Communication Engg": 5898,
+        "Electrical & Electronics Engg": 15006,
+        "Biotechnology": 24273,
+        "Mechanical Engg": 29905
+    },
+    "Dayanada Sagar": {
+        "Computer Science & Engg": 4424,
+        "AIML": 5840,
+        "Information Science & Engg": 6665,
+        "Computer Science & Data Science": 7360,
+        "Computer Science & Cyber Security": 8195,
+        "Computer Science & Business Systems": 9901,
+        "Computer Science & IOT, Cybersecurity, Blockchain": 10560,
+        "Electronics & Communication Engg": 11067,
+        "Computer Science & Design": 11288,
+        "Robotics & Artificial Intelligence": 15790,
+        "Electronics & Telecommunication Engg": 27256,
+        "Aeronautical Engg": 28059,
+        "Electrical & Electronics Engg": 29591,
+        "Electronics & Instrumentation Engg": 35307,
+        "Bio Technology": 57443,
+        "Mechanical Engg": 77609,
+        "Medical Electronics": 83455,
+        "Chemical Engg": 86010,
+        "Civil Engg": 122287,
+        "Automobile Engg": 124730
+    },
+    "NITTE": {
+        "Computer Science & Engg": 8854,
+        "AIML": 11384,
+        "Information Science & Engg": 11525,
+        "Artificial Intelligence & Data Science": 13937,
+        "Computer Science & Business Systems": 14432,
+        "Electronics & Communication Engg": 18544,
+        "Electronics Engg  & VLSI": 36392,
+        "Electrical & Electronics Engg": 39092,
+        "Aeronautical Engg": 51750,
+        "Mechanical Engg": 105127,
+        "Civil Engg": 167408
+    },
+    "BMSIT": {
+        "Computer Science & Engg": 6262,
+        "Information Science & Engg": 9744,
+        "AIML": 11163,
+        "Computer Science & Business Systems": 12606,
+        "Electronics & Communication Engg": 14907,
+        "Electronics & Telecommunication Engg": 27903,
+        "Electrical & Electronics Engg": 30609,
+        "Mechanical Engg": 102233,
+        "Civil Engg": 109639
+    }
+};
+
+            function applyThreshold(predictedRank) {
+            if (predictedRank > 15000) return predictedRank - 2000;
+            if (predictedRank > 10000) return predictedRank - 1000;
+            if (predictedRank > 7500) return predictedRank - 750;
+            if (predictedRank > 5000) return predictedRank - 500;
+            if (predictedRank > 2500) return predictedRank - 250;
+            return predictedRank;
+
+            }
+
+            function getAttainableBranches(predictedRank) {
+            const effectiveRank = applyThreshold(predictedRank);
+            let result = "";
+
+            Object.keys(cutoffs).forEach(campus => {
+                result += `<button class="collapsible">${campus}</button>`;
+                result += `<div class="content"><ul>`;
+                Object.keys(cutoffs[campus]).forEach(branch => {
+                    if (effectiveRank <= cutoffs[campus][branch]) {
+                        result += `<li>${branch} - ${cutoffs[campus][branch]}</li>`;
+                    }
+                });
+                result += `</ul></div>`;
+            });
+
+            return result;
+        }
+
     const myChart = new Chart(ctx, {
         type: 'line',
         data: {
@@ -238,8 +375,12 @@
         const kper = (kcet / 141) * 100;
         const x_c = (pcm + kper) / 2;
 
-        const y_c = Math.round(interpolate(x_c, xData, yData));
-        document.getElementById('result').innerText = `Your rank is predicted to be ${y_c}`;
+        const predictedRank = Math.round(interpolate(x_c, xData, yData));
+        document.getElementById('result').innerText = `Your rank is predicted to be ${predictedRank}`;
+
+        const attainableBranches = getAttainableBranches(predictedRank);
+        document.getElementById('attainableBranches').innerHTML = attainableBranches;
+
     }
 
     function interpolate(x, xData, yData) {
@@ -253,4 +394,5 @@
 
 </body>
 </html>
+
 

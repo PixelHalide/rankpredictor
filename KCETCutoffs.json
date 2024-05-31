@@ -1,0 +1,79 @@
+{
+
+    "RVCE": {
+    
+    "Aerospace Engg": 4868,
+    "Artificial Intelligence & Machine Learning": 1143,
+    "Bio Technology": 13000,
+    "Chemical Engg": 14949,
+    "Civil Engg": 18609,
+    "Computer Science & Engg": 360,
+    "Computer Science & Cyber Security": 1339,
+    "Computer Science & Data Science": 899,
+    "Electrical & Electronics Engg": 6013,
+    "Electronics & Communication Engg": 1366,
+    "Electronics & Instrumentation Engg": 6212,
+    "Electronics & Telecommunication Engg": 4663,
+    "Industrial Engg & Management": 21189,
+    "Information Science & Engg": 663,
+    "Mechanical Engg": 11815
+    
+    },
+    
+    "BMSCE": {
+    
+    "Aerospace Engg": 4868,
+    "AIML": 1143,
+    "Bio Technology": 13000,
+    "Chemical Engg": 14949,
+    "Civil Engg": 18609,
+    "Computer Science & Engg": 360,
+    "Computer Science & Cyber Security": 1339,
+    "Computer Science & Data Science": 899,
+    "Electrical & Electronics Engg": 6013,
+    "Electronics & Communication Engg": 1366,
+    "Electronics & Instrumentation Engg": 6212,
+    "Electronics & Telecommunication Engg": 4663,
+    "Industrial Engg & Management": 21189,
+    "Information Science & Engg": 663,
+    "Mechanical Engg": 11815
+    
+    },
+    
+    "MSRIT":{
+    
+    "Artificial Intelligence & Data Science": 4594,
+    "AIML": 4178,
+    "Bio Technology": 21557,
+    "Chemical Engg": 55300,
+    "Civil Engg": 44361,
+    "Computer Science & Engg": 1859,
+    "Computer Science & AIML": 3342,
+    "Computer Science & Cyber Security": 4810,
+    "Electrical & Electronics Engg": 13073,
+    "Electronics & Communication Engg": 5803,
+    "Electronics & Instrumentation Engg": 15240,
+    "Electronics & Telecommunication Engg": 9677,
+    "Industrial Engg & Management": 64430,
+    "Information Science & Engg": 2634,
+    "Mechanical Engg": 37472,
+    "Medical Electronics": 47014
+    
+    },
+    
+    "PESU":{
+    
+    "Biotechnology": 24273,
+    "Computer Science & Engg": 1643,
+    "Computer Science & AIML": 2733,
+    "Electrical & Electronics Engg": 15006,
+    "Electronics & Communication Engg": 5898,
+    "Mechanical Engg": 29905
+    
+    }
+    
+    }
+    
+    
+    
+    
