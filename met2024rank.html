@@ -203,63 +203,7 @@
         const xValues = [34, 42.6, 50.7, 52.025, 53.475, 56.125, 63.75, 64.125, 64.65, 68.75, 70.45, 76, 77.875, 78.4, 83.425, 85.975];
         const yValues = [31500, 21000, 18132, 17044, 15762, 11012, 6700, 4700, 4493, 3016, 2234, 950, 672, 604, 228, 108];  
 
-        const cutoffs = {
-            Manipal: {
-              
-                "Computer Science & Engg": 1602,
-                "Computer Science & Engg (AIML)": 2382,
-                "Computer Science and Financial Technology": 3737,
-                "Information Technology": 4765,
-                "Data Science": 5794,
-                "Computer & Communication Engg": 6360, 
-                "Mathematics and Computing": 6771,
-                "Electronics & Communication Engg": 8820,
-                "Electronics Engg & VLSI": 13725,
-                "Electrical & Electronics Engg": 20997,
-                "Cyber Physical Systems": 23818,
-                "Aeronautical Engg": 28850,
-                "Biotechnology": 30017,
-                "Electronics & Instrumentation Engg": 34087,
-                "Mechatronics": 38247,
-                "Industrial Engg": 45140,
-                "Automobile Engg": 46461,
-                "Biomedical Engg": 47120,
-                "Mechanical Engg": 47184,
-                "Civil Engg": 47893,
-                "Chemical Engg": 48465,
-                
-            },
-            Jaipur: {
-
-                "Computer Science & Engg": 17794,
-                "Computer Science & Engg (Artificial Intelligence & Machine Learning)": 24500,
-                "Electronics Engg & VLSI": 27258,
-                "Computer Science & Bioscience": 31591,
-                "Electrical & Computer Engg": 34935,
-                "Mechatronics": 41998,
-                "Chemical Engg": 42594,
-                "Computer Science and Bioscience": 43634,
-                "Electrical & Electronics Engg": 45001,
-                "Biotechnology": 46006,
-                "Mechanical Engg": 46177,
-                "Computer Science and Engg (IOT and Intelligent Systems)": 46707,
-                "Computer & Communication Engg": 46694,
-                "Information Technology": 47833,
-                "Civil Engg": 48178,
-                "Computer Science & Engg (Data Science)": 48250,
-                "Electronics & Communication Engg": 48266,
-                "Automobile Engg": 48334,
-            },
-            Bengaluru: {
-                "Computer Science & Engg": 8888,
-                "Computer Science & Engg (Artificial Intelligence)": 11738,
-                "Computer Science & Engg (Cyber Security)": 17427,
-                "Computer Science & Engg (Data Science)": 17587,
-                "Information Technology": 20167,
-                "Electronics & Communication Engg": 26764,
-                "Electronics & Computer Engg": 29025,
-            }
-        };
+        
 
         function linearInterpolation(x, xValues, yValues) {
             if (x <= xValues[0]) return yValues[0];
@@ -289,6 +233,18 @@
             if (percentage >= 50) return 10;
             return 0;
         }
+
+
+        document.addEventListener('DOMContentLoaded', () => {
+        fetch('cutoffs.json')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok ' + response.statusText);
+            }
+            return response.json(); 
+        })
+            .then(cutoffs => {
+            let result = '';
 
         function applyThreshold(predictedRank) {
             if (predictedRank > 15000) return predictedRank - 2000;
