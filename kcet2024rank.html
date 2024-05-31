@@ -369,19 +369,22 @@
         115885, 93040, 61134, 49806, 40702, 29961, 28396, 26062, 25682, 24884, 24846, 24172, 23258, 20224, 19679, 18400, 17514, 15103, 13146, 12948, 11186, 10084, 8013, 7007, 6037, 5446, 4872, 2942, 2830, 2792, 2411, 2264, 1873, 1653, 1496, 1490, 1487, 1484, 1249, 1089, 980, 745, 409, 322
     ];
 
-    function predictRank() {
-        const pcm = parseFloat(document.getElementById('boardPercentage').value);
-        const kcet = parseInt(document.getElementById('kcetMarks').value);
-        const kper = (kcet / 141) * 100;
-        const x_c = (pcm + kper) / 2;
+function predictRank() {
+    const pcm = parseFloat(document.getElementById('boardPercentage').value);
+    const kcet = parseInt(document.getElementById('kcetMarks').value);
+    const kper = (kcet / 141) * 100;
+    const x_c = (pcm + kper) / 2;
 
-        const predictedRank = Math.round(interpolate(x_c, xData, yData));
-        document.getElementById('result').innerText = `Your rank is predicted to be ${predictedRank}`;
-
-        const attainableBranches = getAttainableBranches(predictedRank);
-        document.getElementById('attainableBranches').innerHTML = attainableBranches;
-
+    let predictedRank = Math.round(interpolate(x_c, xData, yData));
+    if (predictedRank > 120000) {
+        predictedRank = 120000;
     }
+    document.getElementById('result').innerText = `Your rank is predicted to be ${predictedRank}`;
+
+    const attainableBranches = getAttainableBranches(predictedRank);
+    document.getElementById('attainableBranches').innerHTML = attainableBranches;
+}
+
 
     function interpolate(x, xData, yData) {
         let i = 1;
