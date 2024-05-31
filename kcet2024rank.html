@@ -376,9 +376,7 @@
     const x_c = (pcm + kper) / 2;
 
     let predictedRank = Math.round(interpolate(x_c, xData, yData));
-    if (predictedRank > 120000) {
-        predictedRank = 120000;
-    }
+
     document.getElementById('result').innerText = `Your rank is predicted to be ${predictedRank}`;
 
     const attainableBranches = getAttainableBranches(predictedRank);
