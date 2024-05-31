@@ -379,12 +379,11 @@
     if (predictedRank > 120000) {
         predictedRank = 120000;
     }
-    document.getElementById('result').innerText = 'Your rank is predicted to be ${predictedRank}';
+    document.getElementById('result').innerText = `Your rank is predicted to be ${predictedRank}`;
 
     const attainableBranches = getAttainableBranches(predictedRank);
     document.getElementById('attainableBranches').innerHTML = attainableBranches;
 }
-
 
     }
 
