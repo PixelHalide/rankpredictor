@@ -67,64 +67,29 @@
     <div class="content">
         <p class="underline" onclick="toggleContent()">How does this work? ></p>
         <div id="hiddenContent" style="display: none;">
-            <p class="formula" style="text-align: left;">The code works on the principle of linear interpolation:</p>
-            <p>In MET 2020, board marks were implemented with a 60-40 weightage, With 60% being MET and 40% being board marks. I have compiled the results from various sources, Such as Youtube, Reddit, Quora and asking various students too. I have calculated their band percentages with the following formula:</p>
-            <p class="formula" style="font-size: 2em; text-align: center;">\( \left( \frac{M}{800} \right) \times 0.6 + (B \times 0.4) \)</p>
-            <p>Where M stands for your MET mark out of 800, and B your board percentage. <br>After calculating their band marks, I have plotted and compared it against their ranks on a graph </p>
-            <div id="chartContainer">
+            <p class="formula" style="text-align: left;">The code works based on the principle of linear interpolation:</p>
+            <p>In MET 2024, both entrance exam scores and board exam results are considered. To account for varying difficulty levels across different boards, board percentages are normalized into band scores from 0 to 10. This creates a "fair" system where your final score combines your MET performance with your standardized board exam band. Here's how board percentages are converted to bands:</p>
+            <ul style="text-align: left;">
+                <li>95-100%: Band 10</li>
+                <li>90-94.99%: Band 9</li>
+                <li>And so on...</li>
+                <li>Below 50%: Band 0</li>
+            </ul>
+            <p>Your final band score is calculated using the following formula:</p>
+            <p class="formula" style="font-size: 3em; text-align: center;">\( \frac{\left( \frac{M}{240} \times 100 \right) + \left( \frac{B}{10} \times 100 \right)}{2} \)</p>
+            <p>Where M is your MET score (out of 240), and B is your board band (0-10). <br>The data used in this predictor has been compiled by polling students across various MET campuses, with careful verification to ensure accuracy.</p>
+            <p style="color: white;">Using a mathematical concept called <a href="https://en.wikipedia.org/wiki/Linear_interpolation" class="underline">Linear Interpolation</a>, We can find the ranks for values of various band scores.
+            </head>
+            <body>
+            </p>
+            <div id="chartContainer"> 
                 <canvas id="myChart"></canvas>
             </div>
-            <p style="color: white;">Using a mathematical concept called <a href="https://en.wikipedia.org/wiki/Linear_interpolation" class="underline">Linear Interpolation</a>, We can find the ranks for values of various band scores. <br><br> There are obviously some faults with this:
-                <ul style="text-align: left;">
-                    <li>In areas with large gaps of data, It won't be very accurate</li>
-                    <li>MET 2020 was held online, with many people likely cheating and resulting in rank inflation</li>
-                    <li>Various other factors that may or may not be obvious</li>
-                </ul>
-                <br> However, This is the best we can do to predict this year's rank 
-                <br><br> <font size="+1"><b>Why did we use the 1 band system instead of 0.5?</font></b>
-                <br><br>ChronocRafter (credits to him) discovered that in the data spreadsheet, The band scores and the ranks would only match up when using the 1 band score and not with 0.5 or 60-40 average. You would see people with better band scores get worse ranks with 0.5 or 60-40 scores. The data is here for you to see if you wish to observe. 
-                </head>
-                <body>
-                
-                <table>
-                    <thead>
-                        <tr>
-                            <th>MET marks (/800)</th>
-                            <th>MET %</th>
-                            <th>Boards %</th>
-                            <th>0.5 Band score</th>
-                            <th>1 Band score</th>
-                            <th>60-40 avg score</th>
-                            <th>Rank</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr><td>613</td><td>76.625</td><td>95.8</td><td>85.975</td><td>85.975</td><td>84.295</td><td>108</td></tr>
-                        <tr><td>579</td><td>72.375</td><td>96.6</td><td>83.425</td><td>83.425</td><td>82.065</td><td>228</td></tr>
-                        <tr><td>512</td><td>64</td><td>95.5</td><td>78.4</td><td>78.4</td><td>76.6</td><td>604</td></tr>
-                        <tr><td>505</td><td>63.125</td><td>96.5</td><td>77.875</td><td>77.875</td><td>76.475</td><td>672</td></tr>
-                        <tr><td>480</td><td>60</td><td>96.66</td><td>76</td><td>76</td><td>74.664</td><td>950</td></tr>
-                        <tr><td>406</td><td>50.75</td><td>96</td><td>70.45</td><td>70.45</td><td>68.85</td><td>2234</td></tr>
-                        <tr><td>490</td><td>61.25</td><td>85</td><td>72.75</td><td>68.75</td><td>70.75</td><td>3016</td></tr>
-                        <tr><td>382</td><td>47.75</td><td>93</td><td>66.65</td><td>64.65</td><td>65.85</td><td>4493</td></tr>
-                        <tr><td>375</td><td>46.875</td><td>91.5</td><td>66.125</td><td>64.125</td><td>64.725</td><td>4700</td></tr>
-                        <tr><td>370</td><td>46.25</td><td>93</td><td>65.75</td><td>63.75</td><td>64.95</td><td>6700</td></tr>
-                        <tr><td>375</td><td>46.875</td><td>81.5</td><td>62.125</td><td>56.125</td><td>60.725</td><td>11012</td></tr>
-                        <tr><td>233</td><td>29.125</td><td>87.76</td><td>49.475</td><td>53.475</td><td>52.579</td><td>15762</td></tr>
-                        <tr><td>427</td><td>53.375</td><td>70</td><td>62.025</td><td>52.025</td><td>60.025</td><td>17044</td></tr>
-                        <tr><td>356</td><td>44.5</td><td>75.5</td><td>58.7</td><td>50.7</td><td>56.9</td><td>18132</td></tr>
-                        <tr><td>568</td><td>71</td><td>0</td><td>42.6</td><td>42.6</td><td>42.6</td><td>21000</td></tr>
-                        <tr><td>240</td><td>30</td><td>69</td><td>46</td><td>34</td><td>45.6</td><td>31500</td></tr>
 
-                    </tbody>
-                </table>
-            
-
-                </p>
             <script>
                 const ctx = document.getElementById('myChart').getContext('2d');
-                const xData = [34, 42.6, 50.7, 52.025, 53.475, 56.125, 63.75, 64.125, 64.65, 68.75, 70.45, 76, 77.875, 78.4, 83.425, 85.975];
-                const yData = [31500, 21000, 18132, 17044, 15762, 11012, 6700, 4700, 4493, 3016, 2234, 950, 672, 604, 228, 108];
+                const xData = [31.25, 31.66666667, 33.95833333, 35.83333333, 37.5, 39.375, 39.375, 40.0, 42.08333333, 45.41666667, 46.04166667, 47.70833333, 47.91666667, 48.54166667, 48.95833333, 49.79166667, 51.04166667, 51.66666667, 52.08333333, 52.70833333, 53.125, 53.75, 55.41666667, 56.66666667, 57.08333333, 57.5, 57.5, 57.70833333, 58.95833333, 59.375, 59.58333333, 60.8333, 61.04166667, 61.25, 61.875, 62.08333333, 62.91666667, 63.95833333, 64.3, 64.79166667, 65.20833333, 66.04166667, 66.667, 66.875, 67.08333333, 67.29166667, 67.5, 67.91666667, 68.125, 68.33333333, 68.54166667, 69.16666667, 69.375, 69.58333333, 70.0, 70.20833333, 71.04166667, 71.25, 71.45833333, 71.875, 72.08333333, 72.29166667, 72.70833333, 72.91666667, 73.125, 73.54166667, 73.75, 73.95833333, 74.16666667, 74.375, 74.58333333, 75.0, 75.20833333, 75.625, 75.83333333, 76.04166667, 76.25, 76.45833333, 76.66666667, 76.875, 77.08333333, 77.29166667, 78.125, 78.33333333, 78.95833333, 79.16666667, 79.58333333, 80.20833333, 81.25, 81.45833333, 81.66666667, 82.08333333, 82.70833333, 84.375, 84.375, 85.0, 85.41666667, 85.83333333, 88.54166667, 91.25];
+                const yData = [32043, 31803, 30599, 29500, 28300, 27555, 27503, 27100, 25719, 23458, 22810, 21765, 21285, 20894, 20490, 19859, 18716, 18216, 17960, 17364, 16900, 16000, 14983, 14000, 13652, 13286, 13171, 13101, 11994, 11612, 11570, 10500, 10380, 10127, 9642, 9472, 8817, 8000, 7750, 7454, 7169, 6610, 6217, 6051, 5941, 5859, 5675, 5434, 5349, 5193, 5071, 4675, 4653, 4483, 4267, 4170, 3776, 3553, 3551, 3383, 3285, 3144, 2970, 2896, 2801, 2665, 2583, 2493, 2436, 2370, 2271, 2100, 2066, 1936, 1827, 1800, 1680, 1648, 1590, 1549, 1469, 1399, 1223, 1200, 1053, 1000, 941, 831, 625, 605, 585, 533, 450, 305, 298, 238, 216, 187, 83, 74];  
 
                 const myChart = new Chart(ctx, {
                     type: 'line',
@@ -201,29 +166,29 @@
         </div>
     </div> 
     <script>
-        const xValues = [34, 42.6, 50.7, 52.025, 53.475, 56.125, 63.75, 64.125, 64.65, 68.75, 70.45, 76, 77.875, 78.4, 83.425, 85.975];
-        const yValues = [31500, 21000, 18132, 17044, 15762, 11012, 6700, 4700, 4493, 3016, 2234, 950, 672, 604, 228, 108];  
+        const xValues = [31.25, 31.66666667, 33.95833333, 35.83333333, 37.5, 39.375, 39.375, 40.0, 42.08333333, 45.41666667, 46.04166667, 47.70833333, 47.91666667, 48.54166667, 48.95833333, 49.79166667, 51.04166667, 51.66666667, 52.08333333, 52.70833333, 53.125, 53.75, 55.41666667, 56.66666667, 57.08333333, 57.5, 57.5, 57.70833333, 58.95833333, 59.375, 59.58333333, 60.8333, 61.04166667, 61.25, 61.875, 62.08333333, 62.91666667, 63.95833333, 64.3, 64.79166667, 65.20833333, 66.04166667, 66.667, 66.875, 67.08333333, 67.29166667, 67.5, 67.91666667, 68.125, 68.33333333, 68.54166667, 69.16666667, 69.375, 69.58333333, 70.0, 70.20833333, 71.04166667, 71.25, 71.45833333, 71.875, 72.08333333, 72.29166667, 72.70833333, 72.91666667, 73.125, 73.54166667, 73.75, 73.95833333, 74.16666667, 74.375, 74.58333333, 75.0, 75.20833333, 75.625, 75.83333333, 76.04166667, 76.25, 76.45833333, 76.66666667, 76.875, 77.08333333, 77.29166667, 78.125, 78.33333333, 78.95833333, 79.16666667, 79.58333333, 80.20833333, 81.25, 81.45833333, 81.66666667, 82.08333333, 82.70833333, 84.375, 84.375, 85.0, 85.41666667, 85.83333333, 88.54166667, 91.25];
+        const yValues = [32043, 31803, 30599, 29500, 28300, 27555, 27503, 27100, 25719, 23458, 22810, 21765, 21285, 20894, 20490, 19859, 18716, 18216, 17960, 17364, 16900, 16000, 14983, 14000, 13652, 13286, 13171, 13101, 11994, 11612, 11570, 10500, 10380, 10127, 9642, 9472, 8817, 8000, 7750, 7454, 7169, 6610, 6217, 6051, 5941, 5859, 5675, 5434, 5349, 5193, 5071, 4675, 4653, 4483, 4267, 4170, 3776, 3553, 3551, 3383, 3285, 3144, 2970, 2896, 2801, 2665, 2583, 2493, 2436, 2370, 2271, 2100, 2066, 1936, 1827, 1800, 1680, 1648, 1590, 1549, 1469, 1399, 1223, 1200, 1053, 1000, 941, 831, 625, 605, 585, 533, 450, 305, 298, 238, 216, 187, 83, 74];  
 
         const cutoffs = {
             Manipal: {
               
-                "Computer Science & Engg": 1602,
-                "Computer Science & Engg (AIML)": 2382,
-                "Computer Science and Financial Technology": 3737,
-                "Information Technology": 4765,
-                "Data Science": 5794,
-                "Computer & Communication Engg": 6360, 
-                "Mathematics and Computing": 6771,
-                "Electronics & Communication Engg": 8820,
-                "Electronics Engg & VLSI": 13725,
-                "Electrical & Electronics Engg": 20997,
-                "Cyber Physical Systems": 23818,
-                "Aeronautical Engg": 28850,
-                "Biotechnology": 30017,
-                "Electronics & Instrumentation Engg": 34087,
-                "Mechatronics": 38247,
-                "Industrial Engg": 45140,
-                "Automobile Engg": 46461,
+                "Computer Science & Engg": 1633,
+                "Computer Science & Engg (AIML)": 2255,
+                "Computer Science and Financial Technology": 3189,
+                "Information Technology": 5148,
+                "Data Science": 5679,
+                "Computer & Communication Engg": 5681, 
+                "Mathematics and Computing": 5910,
+                "Electronics & Communication Engg": 7255,
+                "Electronics Engg & VLSI": 8610,
+                "Electrical & Electronics Engg": 14814,
+                "Cyber Physical Systems": 19584,
+                "Aeronautical Engg": 17546,
+                "Biotechnology": 23458,
+                "Electronics & Instrumentation Engg": 17416,
+                "Mechatronics": 19948,
+                "Industrial Engg": 38663,
+                "Automobile Engg": 28284,
                 "Biomedical Engg": 47120,
                 "Mechanical Engg": 47184,
                 "Civil Engg": 47893,
@@ -231,34 +196,34 @@
                 
             },
             Jaipur: {
-
-                "Computer Science & Engg": 17794,
-                "Computer Science & Engg (Artificial Intelligence & Machine Learning)": 24500,
-                "Electronics Engg & VLSI": 27258,
-                "Computer Science & Bioscience": 31591,
-                "Electrical & Computer Engg": 34935,
-                "Mechatronics": 41998,
-                "Chemical Engg": 42594,
-                "Computer Science and Bioscience": 43634,
-                "Electrical & Electronics Engg": 45001,
-                "Biotechnology": 46006,
-                "Mechanical Engg": 46177,
-                "Computer Science and Engg (IOT and Intelligent Systems)": 46707,
-                "Computer & Communication Engg": 46694,
-                "Information Technology": 47833,
-                "Civil Engg": 48178,
-                "Computer Science & Engg (Data Science)": 48250,
-                "Electronics & Communication Engg": 48266,
-                "Automobile Engg": 48334,
-            },
+            "Computer Science & Engg": 19857,  
+            "Computer Science & Engg (Artificial Intelligence & Machine Learning)": 24524,  
+            "Electronics Engg & VLSI": 45815,  
+            "Computer Science & Bioscience": 47242,  
+            "Electrical & Computer Engg": 45507,  
+            "Mechatronics": 45815,  
+            "Chemical Engg": 41782,  
+            "Computer Science and Bioscience": 47242,  
+            "Electrical & Electronics Engg": 46937,  
+            "Biotechnology": 43734,  
+            "Mechanical Engg": 46720,  
+            "Computer Science and Engg (IOT and Intelligent Systems)": 47830,  
+            "Computer & Communication Engg": 46406,  
+            "Information Technology": 44343,  
+            "Civil Engg": 44343,  
+            "Computer Science & Engg (Data Science)": 30737,  
+            "Electronics & Communication Engg": 45835,  
+            "Automobile Engg": 43734,  
+        },
             Bengaluru: {
-                "Computer Science & Engg": 8888,
-                "Computer Science & Engg (Artificial Intelligence)": 11738,
-                "Computer Science & Engg (Cyber Security)": 17427,
-                "Computer Science & Engg (Data Science)": 17587,
-                "Information Technology": 20167,
-                "Electronics & Communication Engg": 26764,
-                "Electronics & Computer Engg": 29025,
+                "Computer Science & Engg": 6256,
+                "Computer Science & Engg (Artificial Intelligence)": 7760,
+                "Computer Science & Engg (Cyber Security)": 12207,
+                "Computer Science & Engg (Data Science)": 9861,
+                "Information Technology": 13942,
+                "Electronics & Communication Engg": 14354,
+                "Electronics & Computer Engg": 16594,
+                "Electronics Engineering & VLSI": 19358
             }
         };
 
