@@ -1,2 +1,3 @@
-MET 2024 Rank Predictor
+Rank Predictors for various exams
 
+https://rankpredictor.in/
