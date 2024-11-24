@@ -289,6 +289,12 @@
                 return;
             }
 
+            if (boardPercentage < 50) {
+                document.getElementById('result').innerText = 'Not Qualified';
+                document.getElementById('attainableBranches').innerHTML = ''; 
+                return;
+            }
+
             const boardScore = getBoardScore(boardPercentage);
             const metPercentage = (metMarks / 240) * 100;
             const bandScore = (boardScore + metPercentage) / 2;
