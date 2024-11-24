@@ -322,6 +322,10 @@
             const boardPercentage = parseFloat(document.getElementById('boardPercentage').value);
             const metMarks = parseFloat(document.getElementById('metMarks').value);
 
+            if (metMarks > 240){
+                metMarks = 240;
+            }
+
             if (isNaN(boardPercentage) || isNaN(metMarks)) {
                 document.getElementById('result').innerText = 'Please enter valid numbers for both fields.';
                 return;

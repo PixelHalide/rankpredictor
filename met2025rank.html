@@ -12,6 +12,7 @@
   gtag('config', 'G-6B76EV7K8V');
 
 </script>
+<script src="js/met-predictor.js"></script>
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -283,6 +284,10 @@
         function predictRank() {
             const boardPercentage = parseFloat(document.getElementById('boardPercentage').value);
             const metMarks = parseFloat(document.getElementById('metMarks').value);
+
+            if (metMarks > 240){
+                metMarks = 240;
+            }
 
             if (isNaN(boardPercentage) || isNaN(metMarks)) {
                 document.getElementById('result').innerText = 'Please enter valid numbers for both fields.';
