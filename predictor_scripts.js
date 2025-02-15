@@ -89,17 +89,16 @@ function createKCETChart(ctx) {
     createChart(ctx, xData, yData, 'Rank vs Avg Score', 'KCET Ranks vs Average Scores');
 }
 
-// Toggle content script for all HTML files
 function toggleContent() {
-    var hiddenContent = document.getElementById("hiddenContent");
-    var toggleButton = document.querySelector(".underline");
+    const hiddenContent = document.getElementById("hiddenContent");
+    const toggleButton = document.querySelector(".underline");
 
-    if (hiddenContent.style.display === "none") {
-        hiddenContent.style.display = "block";
-        toggleButton.textContent = "How does the code work? V";
+    if (hiddenContent.classList.contains("hidden")) {
+        hiddenContent.classList.remove("hidden");
+        toggleButton.textContent = "How does this work? V";
     } else {
-        hiddenContent.style.display = "none";
-        toggleButton.textContent = "How does the code work? >";
+        hiddenContent.classList.add("hidden");
+        toggleButton.textContent = "How does this work? >";
     }
 }
 

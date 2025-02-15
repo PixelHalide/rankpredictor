@@ -58,7 +58,7 @@
   <hr class="border-t-2 border-white my-5">
 
   <!-- Navigation -->
-  <nav class="flex flex-wrap justify-center gap-8 mb-5">
+  <nav class="flex flex-wrap sm:flex-col justify-center gap-8 mb-5">
     <a href="index.html" class="text-lg border border-white py-1 px-4 rounded hover:text-yellow-500 hover:border-yellow-500 transition-all">
       Home
     </a>
@@ -157,23 +157,6 @@
       <div id="attainableBranches"></div>
     </div>
   </div>
-
-  <!-- Toggle content script -->
-  <script>
-    function toggleContent() {
-      const hiddenContent = document.getElementById("hiddenContent");
-      const toggleButton = document.querySelector(".underline");
-
-      if (hiddenContent.classList.contains("hidden")) {
-        hiddenContent.classList.remove("hidden");
-        toggleButton.textContent = "How does the code work? V";
-      } else {
-        hiddenContent.classList.add("hidden");
-        toggleButton.textContent = "How does the code work? >";
-      }
-    }
-  </script>
-
   <script src="predictor_scripts.js"></script>
 </body>
 </html>
