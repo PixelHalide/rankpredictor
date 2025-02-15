@@ -41,7 +41,7 @@
 <body class="bg-black text-white font-mono m-5">
   <!-- Header -->
   <header class="relative flex items-center justify-center mb-5">
-    <img src="https://i.imgur.com/dbVAfrg.png" alt="Company Logo"
+    <img src="media/logo.png" alt="Company Logo"
          class="absolute top-2 left-5 w-16 md:w-20 cursor-pointer"
          onclick="window.location='index.html';">
     <h1 class="text-3xl md:text-5xl font-bold">Rank Predictor</h1>
@@ -49,8 +49,8 @@
 
   <!-- Subscript with links -->
   <div class="text-sm text-center mb-4">
-    By <a href="https://github.com/druwn" target="_blank" class="text-white hover:text-yellow-500">druwn</a> and
-    <a href="https://github.com/PixelHalide" target="_blank" class="text-white hover:text-yellow-500">Pixel</a>
+    By <a href="https://github.com/druwn" target="_blank" class="text-white hover:text-yellow-500 transition-all">druwn</a> and
+    <a href="https://github.com/PixelHalide" target="_blank" class="text-white hover:text-yellow-500 transition-all">Pixel</a>
   </div>
 
   <!-- Separator -->
@@ -77,7 +77,7 @@
 
   <!-- Main Content -->
   <div class="content mb-8">
-    <p class="underline cursor-pointer text-center mb-4" onclick="toggleContent()">How does this work? ></p>
+    <p class="underline cursor-pointer text-center mb-4 hover:text-yellow-500 hover:border-yellow-500 transition-all" onclick="toggleContent()">How does this work? ></p>
     <div id="hiddenContent" class="hidden">
       <p class="formula text-xl font-bold text-left mb-2">The code works on the principle of linear interpolation:</p>
       <p class="mb-2">In MET 2020, board marks were implemented with a 60-40 weightage—60% being MET and 40% board marks. Data compiled from various sources (YouTube, Reddit, Quora, and direct student input) is used to compute band percentages with the following formula:</p>

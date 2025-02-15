@@ -40,7 +40,7 @@
 <body class="bg-black text-white font-mono m-5">
     <!-- Header -->
     <header class="relative flex items-center justify-center mb-5">
-        <img src="https://i.imgur.com/dbVAfrg.png" alt="Company Logo"
+        <img src="media/logo.png" alt="Company Logo"
              class="absolute top-2 left-5 w-16 md:w-20 cursor-pointer"
              onclick="window.location='index.html';">
         <h1 class="text-3xl md:text-5xl font-bold">Rank Predictor</h1>
@@ -48,8 +48,8 @@
 
     <!-- Subscript with links -->
     <div class="text-sm text-center mb-4">
-        By <a href="https://github.com/druwn" target="_blank" class="text-white hover:text-yellow-500">druwn</a> and
-        <a href="https://github.com/PixelHalide" target="_blank" class="text-white hover:text-yellow-500">Pixel</a>
+        By <a href="https://github.com/druwn" target="_blank" class="text-white hover:text-yellow-500 transition-all">druwn</a> and
+        <a href="https://github.com/PixelHalide" target="_blank" class="text-white hover:text-yellow-500 transition-all">Pixel</a>
     </div>
 
     <!-- Separator -->
@@ -76,7 +76,7 @@
 
     <!-- Main Content -->
     <div class="content mb-8">
-        <p class="underline cursor-pointer text-center mb-4" onclick="toggleContent()">How does this work? ></p>
+        <p class="underline cursor-pointer text-center mb-4 hover:text-yellow-500 hover:border-yellow-500 transition-all" onclick="toggleContent()">How does this work? ></p>
         <div id="hiddenContent" class="hidden">
             <p class="text-xl font-bold text-left mb-2">The code works based on the principle of linear interpolation:</p>
             <p class="mb-4">In MET 2025, both entrance exam scores and board exam results are considered. To account for varying difficulty levels across different boards, board percentages are normalized into band scores from 0 to 10. This creates a "fair" system where your final score combines your MET performance with your standardized board exam band. Here's how board percentages are converted to bands:</p>
