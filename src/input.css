@@ -1,5 +1,5 @@
 @import "tailwindcss";
 
-td {
+td, th {
     @apply border border-white p-2;
 }

@@ -339,7 +339,6 @@ window.predictRankMET2025 = function() { // It's better to have a more specific 
     predictMETRankAndBranches(boardPercentage, metMarks, met2025Cutoffs, met2025XValues, met2025YValues);
 }
 
-
 // KCET Specific Prediction Function
 window.predictRankKCET = function() {
     const boardEl = document.getElementById("boardPercentage");
@@ -360,23 +359,19 @@ window.predictRankKCET = function() {
         return;
     }
 
-    if (kcetMarks > 180) { // Corrected max marks to 180 based on formula in html
+    if (kcetMarks > 180) {
         alert("KCET Marks cannot exceed 180.");
         return;
     }
 
-    // Calculate the average score
+    // Calculate average score and predict rank
     const avgScore = (((kcetMarks / 180) * 100) + boardPercentage) / 2;
-
-    // KCET Data points for interpolation
     const kcetXData = [57.222, 58.278, 61.278, 62.889, 64.333, 66.444, 66.778, 67.389, 67.444, 67.667, 67.667, 67.833, 68.056, 68.944, 69.111, 69.556, 69.833, 70.833, 71.722, 71.778, 73.278, 73.389, 74.722, 75.444, 76.278, 76.833, 77.444, 79.944, 80.167, 80.222, 80.944, 81.278, 82.056, 82.611, 83.0, 83.0, 83.0, 83.0, 83.722, 84.333, 84.722, 85.944, 87.944, 88.833];
     const kcetYData = [115885, 93040, 61134, 49806, 40702, 29961, 28396, 26062, 25682, 24884, 24846, 24172, 23258, 20224, 19679, 18400, 17514, 15103, 13146, 12948, 11186, 10084, 8013, 7007, 6037, 5446, 4872, 2942, 2830, 2792, 2411, 2264, 1873, 1653, 1496, 1490, 1487, 1484, 1249, 1089, 980, 745, 409, 322];
 
-    // Calculate predicted rank
     let predictedRank = Math.round(interpolateRank(avgScore, kcetXData, kcetYData));
     const effectiveRank = applyRankThreshold(predictedRank);
 
-    // Display rank
     resultEl.innerHTML = `Your rank is predicted to be: ${effectiveRank}`;
 
     // KCET Cutoffs - Example Data (replace with actual KCET cutoffs)
@@ -489,28 +484,32 @@ window.predictRankKCET = function() {
         }
     };
 
-    // Generate attainable branches HTML
+    // Generate attainable branches HTML with updated styling
     let branchesHTML = "";
     Object.keys(kcetCutoffs).forEach(college => {
-        branchesHTML += `<button class="collapsible">${college}</button><div class="content"><ul>`;
+        const campusName = college;
+        branchesHTML += `
+            <button class="campus-btn cursor-pointer w-full py-2 px-4 bg-green-600 text-white rounded hover:bg-green-500 transition-colors mb-4">
+                ${campusName}
+            </button>
+            <div class="campus-content">
+                <ul class="list-disc list-inside text-left mb-4">`;
         Object.entries(kcetCutoffs[college])
             .filter(([_, cutoff]) => effectiveRank <= cutoff)
             .forEach(([branch, cutoff]) => {
-                branchesHTML += `<li>${branch} (${cutoff})</li>`;
+                branchesHTML += `<li>${branch} - ${cutoff}</li>`;
             });
-        branchesHTML += '</ul></div>';
+        branchesHTML += `</ul>
+            </div>`;
     });
-
-    // Display branches
     branchesEl.innerHTML = branchesHTML;
 
-    // Set up collapsible functionality for collapsibles
-    const collapsibles = document.getElementsByClassName("collapsible");
-    Array.from(collapsibles).forEach(btn => {
+    // Set up collapsible functionality for campus buttons
+    const campusButtons = document.getElementsByClassName("campus-btn");
+    Array.from(campusButtons).forEach(btn => {
         btn.addEventListener("click", function() {
-            this.classList.toggle("active");
             const content = this.nextElementSibling;
-            content.style.display = content.style.display === "block" ? "none" : "block";
+            content.classList.toggle("hidden");
         });
     });
 };
