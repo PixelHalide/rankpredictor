@@ -1,371 +1,178 @@
-
 <!DOCTYPE html>
 <html lang="en">
-
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-6B76EV7K8V"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-6B76EV7K8V');
-
-  
-
-
-</script>
-<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MET Rank Predictor 2024</title>
-    <link rel="stylesheet" href="styles.css">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-6B76EV7K8V"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-6B76EV7K8V');
+  </script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
-    <!-- Primary Meta Tags -->
-    <title>MET 2024 Rank Predictor</title>
-    <meta name="title" content="MET 2024 Rank Predictor" />
-    <meta name="description" content="Eager to know where you stand in the MET 2024 rankings? Our advanced MET 2024 Rank Predictor allows you to effortlessly estimate your rank using your MET score. Discover which branches you qualify for, including sought-after fields like CSE,  ECE, and many more. Get a head start on your future by understanding your potential academic opportunities today!" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MET 2024 Rank Predictor</title>
 
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://rankpredictor.in/met2024rank.html" />
-    <meta property="og:title" content="MET 2024 Rank Predictor" />
-    <meta property="og:description" content="Eager to know where you stand in the MET 2024 rankings? Our advanced MET 2024 Rank Predictor allows you to effortlessly estimate your rank using your MET score. Discover which branches you qualify for, including sought-after fields like CSE,  ECE, and many more. Get a head start on your future by understanding your potential academic opportunities today!" />
-    <meta property="og:image" content="https://media.discordapp.net/attachments/1142501310873223350/1245686427212058735/image.png?ex=6659a763&is=665855e3&hm=b0574ebc70c11e268789427089bd27c1d4d7df0d5a536a3a29ea325054f5be7f&=&format=webp&quality=lossless&width=1089&height=541" />
+  <!-- Replace default stylesheet with Tailwind CSS from output.css -->
+  <link rel="stylesheet" href="src/output.css">
 
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content="https://rankpredictor.in/met2024rank.html" />
-    <meta property="twitter:title" content="MET 2024 Rank Predictor" />
-    <meta property="twitter:description" content="Eager to know where you stand in the MET 2024 rankings? Our advanced MET 2024 Rank Predictor allows you to effortlessly estimate your rank using your MET score. Discover which branches you qualify for, including sought-after fields like CSE,  ECE, and many more. Get a head start on your future by understanding your potential academic opportunities today!" />
-    <meta property="twitter:image" content="https://media.discordapp.net/attachments/1142501310873223350/1245686427212058735/image.png?ex=6659a763&is=665855e3&hm=b0574ebc70c11e268789427089bd27c1d4d7df0d5a536a3a29ea325054f5be7f&=&format=webp&quality=lossless&width=1089&height=541" />
+  <!-- Primary Meta Tags -->
+  <meta name="title" content="MET 2024 Rank Predictor" />
+  <meta name="description" content="Eager to know where you stand in the MET 2024 rankings? Our advanced MET 2024 Rank Predictor allows you to effortlessly estimate your rank using your MET score. Discover which branches you qualify for, including sought-after fields like CSE, ECE, and many more. Get a head start on your future by understanding your potential academic opportunities today!" />
 
-    
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://rankpredictor.in/met2024rank.html" />
+  <meta property="og:title" content="MET 2024 Rank Predictor" />
+  <meta property="og:description" content="Eager to know where you stand in the MET 2024 rankings? Our advanced MET 2024 Rank Predictor allows you to effortlessly estimate your rank using your MET score. Discover which branches you qualify for, including sought-after fields like CSE, ECE, and many more. Get a head start on your future by understanding your potential academic opportunities today!" />
+  <meta property="og:image" content="https://media.discordapp.net/attachments/1142501310873223350/1245686427212058735/image.png?ex=6659a763&is=665855e3&hm=b0574ebc70c11e268789427089bd27c1d4d7df0d5a536a3a29ea325054f5be7f&=&format=webp&quality=lossless&width=1089&height=541" />
 
-
-
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://rankpredictor.in/met2024rank.html" />
+  <meta property="twitter:title" content="MET 2024 Rank Predictor" />
+  <meta property="twitter:description" content="Eager to know where you stand in the MET 2024 rankings? Our advanced MET 2024 Rank Predictor allows you to effortlessly estimate your rank using your MET score. Discover which branches you qualify for, including sought-after fields like CSE, ECE, and many more. Get a head start on your future by understanding your potential academic opportunities today!" />
+  <meta property="twitter:image" content="https://media.discordapp.net/attachments/1142501310873223350/1245686427212058735/image.png?ex=6659a763&is=665855e3&hm=b0574ebc70c11e268789427089bd27c1d4d7df0d5a536a3a29ea325054f5be7f&=&format=webp&quality=lossless&width=1089&height=541" />
 </head>
-<body>
-    <header>
-        <img src="https://i.imgur.com/dbVAfrg.png" alt="Company Logo" class="logo"  onclick="javascript:window.location='index.html';"   >
-        <h1>Rank Predictor</h1>
-    </header>
-    <div class="subscript">
-        By <a href="https://github.com/druwn" target="_blank">druwn</a> and <a href="https://github.com/PixelHalide" target="_blank">Pixel</a>
+<body class="bg-black text-white font-mono m-5">
+  <!-- Header -->
+  <header class="relative flex items-center justify-center mb-5">
+    <img src="https://i.imgur.com/dbVAfrg.png" alt="Company Logo"
+         class="absolute top-2 left-5 w-16 md:w-20 cursor-pointer"
+         onclick="window.location='index.html';">
+    <h1 class="text-3xl md:text-5xl font-bold">Rank Predictor</h1>
+  </header>
+
+  <!-- Subscript with links -->
+  <div class="text-sm text-center mb-4">
+    By <a href="https://github.com/druwn" target="_blank" class="text-white hover:text-yellow-500">druwn</a> and
+    <a href="https://github.com/PixelHalide" target="_blank" class="text-white hover:text-yellow-500">Pixel</a>
+  </div>
+
+  <!-- Separator -->
+  <hr class="border-t-2 border-white my-5">
+
+  <!-- Navigation -->
+  <nav class="flex flex-wrap justify-center gap-8 mb-5">
+    <a href="index.html" class="text-lg border border-white py-1 px-4 rounded hover:text-yellow-500 hover:border-yellow-500 transition-all">
+      Home
+    </a>
+    <a href="met2025rank.html" class="text-lg border border-white py-1 px-4 rounded hover:text-yellow-500 hover:border-yellow-500 transition-all">
+      MET 2025 Rank
+    </a>
+    <a href="met2024rank.html" class="text-lg border border-white py-1 px-4 rounded hover:text-yellow-500 hover:border-yellow-500 transition-all">
+      MET 2024 Rank
+    </a>
+    <a href="kcet2024rank.html" class="text-lg border border-white py-1 px-4 rounded hover:text-yellow-500 hover:border-yellow-500 transition-all">
+      KCET 2024 Rank
+    </a>
+  </nav>
+
+  <!-- Separator -->
+  <hr class="border-t-2 border-white my-5">
+
+  <!-- Main Content -->
+  <div class="content mb-8">
+    <p class="underline cursor-pointer text-center mb-4" onclick="toggleContent()">How does the code work? ></p>
+    <div id="hiddenContent" class="hidden">
+      <p class="formula text-xl font-bold text-left mb-2">The code works on the principle of linear interpolation:</p>
+      <p class="mb-2">In MET 2020, board marks were implemented with a 60-40 weightage—60% being MET and 40% board marks. Data compiled from various sources (YouTube, Reddit, Quora, and direct student input) is used to compute band percentages with the following formula:</p>
+      <p class="formula text-2xl text-center mb-4">
+        \( \left( \frac{M}{800} \right) \times 0.6 + (B \times 0.4) \)
+      </p>
+      <p class="mb-4">Where M stands for your MET mark out of 800, and B is your board percentage. After calculating band marks, these scores are plotted and compared against their ranks.</p>
+      <div id="chartContainer" class="w-4/5 mx-auto mb-4">
+        <canvas id="myChart"></canvas>
+      </div>
+      <p class="mb-4">
+        Using a mathematical concept called
+        <a href="https://en.wikipedia.org/wiki/Linear_interpolation" class="underline hover:text-yellow-500">Linear Interpolation</a>,
+        we can estimate the ranks for different band scores. Note that:
+      </p>
+      <ul class="list-disc list-inside text-left mb-4">
+        <li>In areas with large gaps in data, the predictions may be less accurate.</li>
+        <li>MET 2020 was conducted online, leading to possible rank inflation due to cheating.</li>
+        <li>Other factors might also affect the accuracy of predictions.</li>
+      </ul>
+      <p class="mb-4">
+        However, this remains the best method to predict this year's rank.
+        <br><br>
+        <span class="text-lg font-bold">Why use the 1 band system instead of 0.5?</span>
+        <br><br>
+        ChronocRafter (credit to him) discovered that the data best matched when using the 1 band score rather than 0.5 or a 60-40 average. With other methods, you might see better band scores correlating with worse ranks. For a detailed look at the data, please review the table below:
+      </p>
+      <table class="w-full border-collapse border border-white text-center mb-4">
+        <thead>
+          <tr>
+            <th class="border border-white p-2">MET marks (/800)</th>
+            <th class="border border-white p-2">MET %</th>
+            <th class="border border-white p-2">Boards %</th>
+            <th class="border border-white p-2">0.5 Band score</th>
+            <th class="border border-white p-2">1 Band score</th>
+            <th class="border border-white p-2">60-40 avg score</th>
+            <th class="border border-white p-2">Rank</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>613</td><td>76.625</td><td>95.8</td><td>85.975</td><td>85.975</td><td>84.295</td><td>108</td></tr>
+          <tr><td>579</td><td>72.375</td><td>96.6</td><td>83.425</td><td>83.425</td><td>82.065</td><td>228</td></tr>
+          <tr><td>512</td><td>64</td><td>95.5</td><td>78.4</td><td>78.4</td><td>76.6</td><td>604</td></tr>
+          <tr><td>505</td><td>63.125</td><td>96.5</td><td>77.875</td><td>77.875</td><td>76.475</td><td>672</td></tr>
+          <tr><td>480</td><td>60</td><td>96.66</td><td>76</td><td>76</td><td>74.664</td><td>950</td></tr>
+          <tr><td>406</td><td>50.75</td><td>96</td><td>70.45</td><td>70.45</td><td>68.85</td><td>2234</td></tr>
+          <tr><td>490</td><td>61.25</td><td>85</td><td>72.75</td><td>68.75</td><td>70.75</td><td>3016</td></tr>
+          <tr><td>382</td><td>47.75</td><td>93</td><td>66.65</td><td>64.65</td><td>65.85</td><td>4493</td></tr>
+          <tr><td>375</td><td>46.875</td><td>91.5</td><td>66.125</td><td>64.125</td><td>64.725</td><td>4700</td></tr>
+          <tr><td>370</td><td>46.25</td><td>93</td><td>65.75</td><td>63.75</td><td>64.95</td><td>6700</td></tr>
+          <tr><td>375</td><td>46.875</td><td>81.5</td><td>62.125</td><td>56.125</td><td>60.725</td><td>11012</td></tr>
+          <tr><td>233</td><td>29.125</td><td>87.76</td><td>49.475</td><td>53.475</td><td>52.579</td><td>15762</td></tr>
+          <tr><td>427</td><td>53.375</td><td>70</td><td>62.025</td><td>52.025</td><td>60.025</td><td>17044</td></tr>
+          <tr><td>356</td><td>44.5</td><td>75.5</td><td>58.7</td><td>50.7</td><td>56.9</td><td>18132</td></tr>
+          <tr><td>568</td><td>71</td><td>0</td><td>42.6</td><td>42.6</td><td>42.6</td><td>21000</td></tr>
+          <tr><td>240</td><td>30</td><td>69</td><td>46</td><td>34</td><td>45.6</td><td>31500</td></tr>
+
+      </tbody>
+  </table>
     </div>
-    <div class="separator"></div>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="met2025rank.html">MET 2025 Rank</a>
-        <a href="met2024rank.html">MET 2024 Rank</a>
-        <a href="kcet2024rank.html">KCET 2024 Rank</a>
-    </nav>
-    <div class="separator"></div>
-    <div class="content">
-        <p class="underline" onclick="toggleContent()">How does this work? ></p>
-        <div id="hiddenContent" style="display: none;">
-            <p class="formula" style="text-align: left;">The code works on the principle of linear interpolation:</p>
-            <p>In MET 2020, board marks were implemented with a 60-40 weightage, With 60% being MET and 40% being board marks. I have compiled the results from various sources, Such as Youtube, Reddit, Quora and asking various students too. I have calculated their band percentages with the following formula:</p>
-            <p class="formula" style="font-size: 2em; text-align: center;">\( \left( \frac{M}{800} \right) \times 0.6 + (B \times 0.4) \)</p>
-            <p>Where M stands for your MET mark out of 800, and B your board percentage. <br>After calculating their band marks, I have plotted and compared it against their ranks on a graph </p>
-            <div id="chartContainer">
-                <canvas id="myChart"></canvas>
-            </div>
-            <p style="color: white;">Using a mathematical concept called <a href="https://en.wikipedia.org/wiki/Linear_interpolation" class="underline">Linear Interpolation</a>, We can find the ranks for values of various band scores. <br><br> There are obviously some faults with this:
-                <ul style="text-align: left;">
-                    <li>In areas with large gaps of data, It won't be very accurate</li>
-                    <li>MET 2020 was held online, with many people likely cheating and resulting in rank inflation</li>
-                    <li>Various other factors that may or may not be obvious</li>
-                </ul>
-                <br> However, This is the best we can do to predict this year's rank 
-                <br><br> <font size="+1"><b>Why did we use the 1 band system instead of 0.5?</font></b>
-                <br><br>ChronocRafter (credits to him) discovered that in the data spreadsheet, The band scores and the ranks would only match up when using the 1 band score and not with 0.5 or 60-40 average. You would see people with better band scores get worse ranks with 0.5 or 60-40 scores. The data is here for you to see if you wish to observe. 
-                </head>
-                <body>
-                
-                <table>
-                    <thead>
-                        <tr>
-                            <th>MET marks (/800)</th>
-                            <th>MET %</th>
-                            <th>Boards %</th>
-                            <th>0.5 Band score</th>
-                            <th>1 Band score</th>
-                            <th>60-40 avg score</th>
-                            <th>Rank</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr><td>613</td><td>76.625</td><td>95.8</td><td>85.975</td><td>85.975</td><td>84.295</td><td>108</td></tr>
-                        <tr><td>579</td><td>72.375</td><td>96.6</td><td>83.425</td><td>83.425</td><td>82.065</td><td>228</td></tr>
-                        <tr><td>512</td><td>64</td><td>95.5</td><td>78.4</td><td>78.4</td><td>76.6</td><td>604</td></tr>
-                        <tr><td>505</td><td>63.125</td><td>96.5</td><td>77.875</td><td>77.875</td><td>76.475</td><td>672</td></tr>
-                        <tr><td>480</td><td>60</td><td>96.66</td><td>76</td><td>76</td><td>74.664</td><td>950</td></tr>
-                        <tr><td>406</td><td>50.75</td><td>96</td><td>70.45</td><td>70.45</td><td>68.85</td><td>2234</td></tr>
-                        <tr><td>490</td><td>61.25</td><td>85</td><td>72.75</td><td>68.75</td><td>70.75</td><td>3016</td></tr>
-                        <tr><td>382</td><td>47.75</td><td>93</td><td>66.65</td><td>64.65</td><td>65.85</td><td>4493</td></tr>
-                        <tr><td>375</td><td>46.875</td><td>91.5</td><td>66.125</td><td>64.125</td><td>64.725</td><td>4700</td></tr>
-                        <tr><td>370</td><td>46.25</td><td>93</td><td>65.75</td><td>63.75</td><td>64.95</td><td>6700</td></tr>
-                        <tr><td>375</td><td>46.875</td><td>81.5</td><td>62.125</td><td>56.125</td><td>60.725</td><td>11012</td></tr>
-                        <tr><td>233</td><td>29.125</td><td>87.76</td><td>49.475</td><td>53.475</td><td>52.579</td><td>15762</td></tr>
-                        <tr><td>427</td><td>53.375</td><td>70</td><td>62.025</td><td>52.025</td><td>60.025</td><td>17044</td></tr>
-                        <tr><td>356</td><td>44.5</td><td>75.5</td><td>58.7</td><td>50.7</td><td>56.9</td><td>18132</td></tr>
-                        <tr><td>568</td><td>71</td><td>0</td><td>42.6</td><td>42.6</td><td>42.6</td><td>21000</td></tr>
-                        <tr><td>240</td><td>30</td><td>69</td><td>46</td><td>34</td><td>45.6</td><td>31500</td></tr>
+  </div>
 
-                    </tbody>
-                </table>
-            
+  <!-- Form for rank prediction -->
+  <div class="flex justify-center">
+    <div class="bg-gray-800 rounded-lg p-6 shadow-lg max-w-sm w-full text-center">
+      <label for="boardPercentage" class="block mb-2">Enter your Board Percentage:</label>
+      <input type="number" id="boardPercentage" step="0.01" class="w-full mb-4 p-2 bg-gray-700 text-white rounded">
 
-                </p>
-            <script>
-                const ctx = document.getElementById('myChart').getContext('2d');
-                const xData = [34, 42.6, 50.7, 52.025, 53.475, 56.125, 63.75, 64.125, 64.65, 68.75, 70.45, 76, 77.875, 78.4, 83.425, 85.975];
-                const yData = [31500, 21000, 18132, 17044, 15762, 11012, 6700, 4700, 4493, 3016, 2234, 950, 672, 604, 228, 108];
+      <label for="metMarks" class="block mb-2">Enter your MET Marks (out of 240):</label>
+      <input type="number" id="metMarks" step="0.01" class="w-full mb-4 p-2 bg-gray-700 text-white rounded">
 
-                const myChart = new Chart(ctx, {
-                    type: 'line',
-                    data: {
-                        labels: xData,
-                        datasets: [{
-                            label: 'Values',
-                            data: yData,
-                            borderColor: 'white',
-                            backgroundColor: 'rgba(255, 255, 255, 0.2)',
-                            borderWidth: 2,
-                            pointBackgroundColor: 'white',
-                            pointBorderColor: 'white'
-                        }]
-                    },
-                    options: {
-                        animation: {
-                            duration: 3000
-                        },
-                        scales: {
-                            x: {
-                                ticks: {
-                                    color: 'white'
-                                },
-                                grid: {
-                                    color: '#555555'
-                                }
-                            },
-                            y: {
-                                ticks: {
-                                    color: 'white'
-                                },
-                                grid: {
-                                    color: '#555555'
-                                }
-                            }
-                        },
-                        plugins: {
-                            legend: {
-                                labels: {
-                                    color: 'white'
-                                }
-                            }
-                        }
-                    }
-                });
-            </script>
-        </div>
+      <button onclick="predictRank()" class="w-full py-2 px-4 bg-green-600 text-white rounded hover:bg-green-500 active:bg-green-700 cursor-pointer transition-colors mb-4">
+        Predict Rank
+      </button>
+      <p id="result"></p>
+      <div id="attainableBranches"></div>
     </div>
-    <script>
-        function toggleContent() {
-            var hiddenContent = document.getElementById("hiddenContent");
-            var toggleButton = document.querySelector(".underline");
+  </div>
 
-            if (hiddenContent.style.display === "none") {
-                hiddenContent.style.display = "block";
-                toggleButton.textContent = "How does the code work? V";
-            } else {
-                hiddenContent.style.display = "none";
-                toggleButton.textContent = "How does the code work? >";
-            }
-        }
-    </script>
-<body class="dark-mode">
-    <div class="center-container"> 
-        <div class="box">
-            <label for="boardPercentage">Enter your Board Percentage:</label><br>
-            <input type="number" id="boardPercentage" step="0.01"><br>
-            <label for="metMarks">Enter your MET Marks (out of 240):</label><br>
-            <input type="number" id="metMarks" step="0.01"><br><br>
-            <button onclick="predictRank()">Predict Rank</button>
-            <p id="result"></p>
-            <div id="attainableBranches"></div>
-        </div>
-    </div> 
-    <script>
-        const xValues = [34, 42.6, 50.7, 52.025, 53.475, 56.125, 63.75, 64.125, 64.65, 68.75, 70.45, 76, 77.875, 78.4, 83.425, 85.975];
-        const yValues = [31500, 21000, 18132, 17044, 15762, 11012, 6700, 4700, 4493, 3016, 2234, 950, 672, 604, 228, 108];  
+  <!-- Toggle content script -->
+  <script>
+    function toggleContent() {
+      const hiddenContent = document.getElementById("hiddenContent");
+      const toggleButton = document.querySelector(".underline");
 
-        const cutoffs = {
-            Manipal: {
-              
-                "Computer Science & Engg": 1602,
-                "Computer Science & Engg (AIML)": 2382,
-                "Computer Science and Financial Technology": 3737,
-                "Information Technology": 4765,
-                "Data Science": 5794,
-                "Computer & Communication Engg": 6360, 
-                "Mathematics and Computing": 6771,
-                "Electronics & Communication Engg": 8820,
-                "Electronics Engg & VLSI": 13725,
-                "Electrical & Electronics Engg": 20997,
-                "Cyber Physical Systems": 23818,
-                "Aeronautical Engg": 28850,
-                "Biotechnology": 30017,
-                "Electronics & Instrumentation Engg": 34087,
-                "Mechatronics": 38247,
-                "Industrial Engg": 45140,
-                "Automobile Engg": 46461,
-                "Biomedical Engg": 47120,
-                "Mechanical Engg": 47184,
-                "Civil Engg": 47893,
-                "Chemical Engg": 48465,
-                
-            },
-            Jaipur: {
+      if (hiddenContent.classList.contains("hidden")) {
+        hiddenContent.classList.remove("hidden");
+        toggleButton.textContent = "How does the code work? V";
+      } else {
+        hiddenContent.classList.add("hidden");
+        toggleButton.textContent = "How does the code work? >";
+      }
+    }
+  </script>
 
-                "Computer Science & Engg": 17794,
-                "Computer Science & Engg (Artificial Intelligence & Machine Learning)": 24500,
-                "Electronics Engg & VLSI": 27258,
-                "Computer Science & Bioscience": 31591,
-                "Electrical & Computer Engg": 34935,
-                "Mechatronics": 41998,
-                "Chemical Engg": 42594,
-                "Computer Science and Bioscience": 43634,
-                "Electrical & Electronics Engg": 45001,
-                "Biotechnology": 46006,
-                "Mechanical Engg": 46177,
-                "Computer Science and Engg (IOT and Intelligent Systems)": 46707,
-                "Computer & Communication Engg": 46694,
-                "Information Technology": 47833,
-                "Civil Engg": 48178,
-                "Computer Science & Engg (Data Science)": 48250,
-                "Electronics & Communication Engg": 48266,
-                "Automobile Engg": 48334,
-            },
-            Bengaluru: {
-                "Computer Science & Engg": 8888,
-                "Computer Science & Engg (Artificial Intelligence)": 11738,
-                "Computer Science & Engg (Cyber Security)": 17427,
-                "Computer Science & Engg (Data Science)": 17587,
-                "Information Technology": 20167,
-                "Electronics & Communication Engg": 26764,
-                "Electronics & Computer Engg": 29025,
-            }
-        };
-
-        function linearInterpolation(x, xValues, yValues) {
-            if (x <= xValues[0]) return yValues[0];
-            if (x >= xValues[xValues.length - 1]) return yValues[yValues.length - 1];
-
-            for (let i = 0; i < xValues.length - 1; i++) {
-                if (x >= xValues[i] && x <= xValues[i + 1]) {
-                    const x1 = xValues[i];
-                    const x2 = xValues[i + 1];
-                    const y1 = yValues[i];
-                    const y2 = yValues[i + 1];
-                    return y1 + ((x - x1) * (y2 - y1)) / (x2 - x1);
-                }
-            }
-        }
-
-        function getBoardScore(percentage) {
-            if (percentage >= 95) return 100;
-            if (percentage >= 90) return 90;
-            if (percentage >= 85) return 80;
-            if (percentage >= 80) return 70;
-            if (percentage >= 75) return 60;
-            if (percentage >= 70) return 50;
-            if (percentage >= 65) return 40;
-            if (percentage >= 60) return 30;
-            if (percentage >= 55) return 20;
-            if (percentage >= 50) return 10;
-            return 0;
-        }
-
-        function applyThreshold(predictedRank) {
-            if (predictedRank > 15000) return predictedRank - 2000;
-            if (predictedRank > 10000) return predictedRank - 1000;
-            if (predictedRank > 7500) return predictedRank - 750;
-            if (predictedRank > 5000) return predictedRank - 500;
-            if (predictedRank > 2500) return predictedRank - 250;
-            return predictedRank;
-        }
-
-        function getAttainableBranches(predictedRank) {
-            const effectiveRank = applyThreshold(predictedRank);
-            let result = "";
-
-            Object.keys(cutoffs).forEach(campus => {
-                result += `<button class="collapsible">${campus}</button>`;
-                result += `<div class="content"><ul>`;
-                Object.keys(cutoffs[campus]).forEach(branch => {
-                    if (effectiveRank <= cutoffs[campus][branch]) {
-                        result += `<li>${branch} - ${cutoffs[campus][branch]}</li>`;
-                    }
-                });
-                result += `</ul></div>`;
-            });
-
-            return result;
-        }
-
-        function predictRank() {
-            const boardPercentage = parseFloat(document.getElementById('boardPercentage').value);
-            const metMarks = parseFloat(document.getElementById('metMarks').value);
-
-            if (metMarks > 240){
-                metMarks = 240;
-            }
-
-            if (isNaN(boardPercentage) || isNaN(metMarks)) {
-                document.getElementById('result').innerText = 'Please enter valid numbers for both fields.';
-                return;
-            }
-
-            if (boardPercentage < 50) {
-                document.getElementById('result').innerText = 'Not Qualified';
-                document.getElementById('attainableBranches').innerHTML = ''; 
-                return;
-            }
-
-            const boardScore = getBoardScore(boardPercentage);
-            const metPercentage = (metMarks / 240) * 100;
-            const bandScore = (boardScore + metPercentage) / 2;
-            const predictedRank = linearInterpolation(bandScore, xValues, yValues);
-            document.getElementById('result').innerText = `Your rank is predicted to be ${Math.round(predictedRank)}`;
-
-            const attainableBranches = getAttainableBranches(predictedRank);
-            document.getElementById('attainableBranches').innerHTML = attainableBranches;
-
-            
-            const coll = document.getElementsByClassName("collapsible");
-            for (let i = 0; i < coll.length; i++) {
-                coll[i].addEventListener("click", function() {
-                    for (let j = 0; j < coll.length; j++) {
-                        if (j !== i) {
-                            coll[j].classList.remove("active");
-                            coll[j].nextElementSibling.style.display = "none";
-                        }
-                    }
-                    this.classList.toggle("active");
-                    const content = this.nextElementSibling;
-                    if (content.style.display === "block") {
-                        content.style.display = "none";
-                    } else {
-                        content.style.display = "block";
-                    }
-                });
-            }
-        }
-    </script>
+  <script src="predictor_scripts.js"></script>
 </body>
 </html>

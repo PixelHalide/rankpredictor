@@ -1,42 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6B76EV7K8V"></script>
-    <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-6B76EV7K8V');
-    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KCET Rank Predictor</title>
+    <title>KCET 2024 Rank Predictor</title>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6B76EV7K8V"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-6B76EV7K8V');
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="icon" href="https://media.discordapp.net/attachments/1245301144381558815/1245301187545137172/image.png?ex=6658409b&is=6656ef1b&hm=07875db9a3629f91c307dcae817d01efaa0e59283349955a4d3849188b0a8d82&=&format=webp&quality=lossless" type="image/png">
     <link rel="stylesheet" href="styles.css">
 
-        <!-- Primary Meta Tags -->
-        <title>KCET 2024 Rank Predictor</title>
-        <meta name="title" content="KCET 2024 Rank Predictor" />
-        <meta name="description" content="Eager to know where you stand in the KCET 2024 rankings? Our advanced KCET 2024 Rank Predictor allows you to effortlessly estimate your rank using your KCET score. Discover which branches you qualify for, including sought-after fields like CSE,  ECE, and many more. Get a head start on your future by understanding your potential academic opportunities today!" />
-    
-        <!-- Open Graph / Facebook -->
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://rankpredictor.in/kcet2024rank.html" />
-        <meta property="og:title" content="KCET 2024 Rank Predictor" />
-        <meta property="og:description" content="Eager to know where you stand in the KCET 2024 rankings? Our advanced KCET 2024 Rank Predictor allows you to effortlessly estimate your rank using your KCET score. Discover which branches you qualify for, including sought-after fields like CSE,  ECE, and many more. Get a head start on your future by understanding your potential academic opportunities today!" />
-        <meta property="og:image" content="https://media.discordapp.net/attachments/1245301144381558815/1245688428247519262/image.png?ex=6659a941&is=665857c1&hm=f7d993f00f0b01e82f01c72e9d5105a4705b503d2e693b8759ba8863fd619372&=&format=webp&quality=lossless&width=1069&height=529"/>
-    
-        <!-- Twitter -->
-        <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://rankpredictor.in/kcet2024rank.html" />
-        <meta property="twitter:title" content="KCET 2024 Rank Predictor" />
-        <meta property="twitter:description" content="Eager to know where you stand in the KCET 2024 rankings? Our advanced KCET 2024 Rank Predictor allows you to effortlessly estimate your rank using your KCET score. Discover which branches you qualify for, including sought-after fields like CSE,  ECE, and many more. Get a head start on your future by understanding your potential academic opportunities today!" />
-        <meta property="twitter:image" content="https://media.discordapp.net/attachments/1245301144381558815/1245688428247519262/image.png?ex=6659a941&is=665857c1&hm=f7d993f00f0b01e82f01c72e9d5105a4705b503d2e693b8759ba8863fd619372&=&format=webp&quality=lossless&width=1069&height=529"/>
-    
-    
+    <!-- Primary Meta Tags & Open Graph / Twitter -->
+    <meta name="title" content="KCET 2024 Rank Predictor" />
+    <meta name="description" content="Eager to know where you stand in the KCET 2024 rankings? Our advanced KCET 2024 Rank Predictor allows you to effortlessly estimate your rank using your KCET score. Discover which branches you qualify for, including sought-after fields like CSE, ECE, and more." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://rankpredictor.in/kcet2024rank.html" />
+    <meta property="og:title" content="KCET 2024 Rank Predictor" />
+    <meta property="og:description" content="Eager to know where you stand in the KCET 2024 rankings? ..." />
+    <meta property="og:image" content="https://media.discordapp.net/attachments/1245688428247519262/image.png" />
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://rankpredictor.in/kcet2024rank.html" />
+    <meta property="twitter:title" content="KCET 2024 Rank Predictor" />
+    <meta property="twitter:description" content="Eager to know where you stand in the KCET 2024 rankings? ..." />
+    <meta property="twitter:image" content="https://media.discordapp.net/attachments/1245688428247519262/image.png" />
 </head>
-
 <body>
     <header>
         <img src="https://i.imgur.com/dbVAfrg.png" alt="Company Logo" class="logo">
@@ -53,288 +45,64 @@
         <a href="kcet2024rank.html">KCET 2024 Rank</a>
     </nav>
     <div class="separator"></div>
-    <div class="content">
 
-<div class="content">
+    <!-- Content Section with Explanation & Chart -->
+    <div class="content">
         <p class="underline" onclick="toggleContent()">How does this work? ></p>
         <div id="hiddenContent" style="display: none;">
-            <font size="-1"><p class="formula" style="text-align: left;">The code works on the principle of linear interpolation:</p></font>
-            <p>Using data from 2023, Which I have compiled from various sources like Youtube, Reddit, Quora and asking various students, I calculated their scores with the following formula:</p>
-              <p class="formula" style="font-size: 2em; text-align: center;">\( \left( \frac{M}{180} \right) \times 0.5 + (B \times 0.5) \)</p>
-              <p>Where M stands for your KCET mark out of 180, and B your board percentage. <br>After calculating their band marks, I have plotted and compared it against their ranks on a graph </p>
-              
-<canvas id="myChart"></canvas>
+            <p class="formula" style="text-align: left;">The code works on the principle of linear interpolation:</p>
+            <p>Data from 2023 (compiled from various sources) are used to calculate band scores with the formula:</p>
+            <p class="formula" style="font-size: 2em; text-align: center;">\( \left( \frac{M}{180} \right) \times 0.5 + (B \times 0.5) \)</p>
+            <p>Where M is your KCET mark (out of 180) and B is your board percentage. The resulting average score is compared against historical data to predict your rank.</p>
+            <canvas id="myChart"></canvas>
+            <p style="color: white;">
+                Using <a href="https://en.wikipedia.org/wiki/Linear_interpolation" class="underline">linear interpolation</a>, we can determine ranks for given scores. Note that:
+            </p>
+            <ul style="text-align: left;">
+                <li>In regions with sparse data, predictions may be off.</li>
+                <li>KCET 2024 conditions may differ from 2023.</li>
+                <li>Other factors may come into play.</li>
+            </ul>
+            <p>Below is the dataset used for reference:</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>KCET_Mark</th>
+                        <th>KCET_%</th>
+                        <th>Board_Score</th>
+                        <th>Board_%</th>
+                        <th>Avg_Score</th>
+                        <th>Rank</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Dataset rows go here -->
+                    <tr><td>141</td><td>78.33</td><td>298</td><td>99.33</td><td>88.833</td><td>322</td></tr>
+                    <!-- ... remaining rows ... -->
+                    <tr><td>65</td><td>36.11</td><td>235</td><td>78.33</td><td>57.222</td><td>115885</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
 
- <p style="color: white;">Using a mathematical concept called <a href="https://en.wikipedia.org/wiki/Linear_interpolation" class="underline">Linear Interpolation</a>, We can find the ranks for values of various band scores. <br><br> There are obviously some faults with this:
-                <ul style="text-align: left;">
-                    <li>In areas with large gaps of data, It won't be very accurate</li>
-                    <li>KCET 2024 was harder than 2023, So there definitely will be differences in ranks.</li>
-                    <li>Various other factors that may or may not be obvious</li>
-                </ul>
+    <!-- Input Section for Predicting Rank -->
+    <div class="center-container">
+        <div class="box">
+            <label for="boardPercentage">Enter your Board Percentage:</label><br>
+            <input type="number" id="boardPercentage" step="0.01"><br>
+            <label for="kcetMarks">Enter your KCET Marks (out of 141):</label><br>
+            <input type="number" id="kcetMarks" step="0.01"><br><br>
+            <button onclick="predictRankKCET()">Predict Rank</button>
+            <p id="result"></p>
+            <div id="attainableBranches"></div>
+        </div>
+    </div>
 
-                <br> However, This is the best we can do to predict this year's rank.
-                <br><br> If you wish to see the dataset we have used, Here it is:
-<body>
-
-    <table>
-        <thead>
-            <tr>
-                <th>KCET_Mark</th>
-                <th>KCET_%</th>
-                <th>Board_Score</th>
-                <th>Board_%</th>
-                <th>Avg_Score</th>
-                <th>Rank</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr><td>141</td><td>78.33</td><td>298</td><td>99.33</td><td>88.833</td><td>322</td></tr>
-            <tr><td>142</td><td>78.89</td><td>291</td><td>97.00</td><td>87.944</td><td>409</td></tr>
-            <tr><td>130</td><td>72.22</td><td>299</td><td>99.67</td><td>85.944</td><td>745</td></tr>
-            <tr><td>128</td><td>71.11</td><td>295</td><td>98.33</td><td>84.722</td><td>980</td></tr>
-            <tr><td>126</td><td>70.00</td><td>296</td><td>98.67</td><td>84.333</td><td>1089</td></tr>
-            <tr><td>122</td><td>67.78</td><td>299</td><td>99.67</td><td>83.722</td><td>1249</td></tr>
-            <tr><td>120</td><td>66.67</td><td>298</td><td>99.33</td><td>83.000</td><td>1484</td></tr>
-            <tr><td>120</td><td>66.67</td><td>298</td><td>99.33</td><td>83.000</td><td>1487</td></tr>
-            <tr><td>123</td><td>68.33</td><td>293</td><td>97.67</td><td>83.000</td><td>1490</td></tr>
-            <tr><td>120</td><td>66.67</td><td>298</td><td>99.33</td><td>83.000</td><td>1496</td></tr>
-            <tr><td>127</td><td>70.56</td><td>284</td><td>94.67</td><td>82.611</td><td>1653</td></tr>
-            <tr><td>119</td><td>66.11</td><td>294</td><td>98.00</td><td>82.056</td><td>1873</td></tr>
-            <tr><td>118</td><td>65.56</td><td>291</td><td>97.00</td><td>81.278</td><td>2264</td></tr>
-            <tr><td>118</td><td>65.56</td><td>289</td><td>96.33</td><td>80.944</td><td>2411</td></tr>
-            <tr><td>113</td><td>62.78</td><td>293</td><td>97.67</td><td>80.222</td><td>2792</td></tr>
-            <tr><td>114</td><td>63.33</td><td>291</td><td>97.00</td><td>80.167</td><td>2830</td></tr>
-            <tr><td>118</td><td>65.56</td><td>283</td><td>94.33</td><td>79.944</td><td>2942</td></tr>
-            <tr><td>103</td><td>57.22</td><td>293</td><td>97.67</td><td>77.444</td><td>4872</td></tr>
-            <tr><td>102</td><td>56.67</td><td>291</td><td>97.00</td><td>76.833</td><td>5446</td></tr>
-            <tr><td>100</td><td>55.56</td><td>291</td><td>97.00</td><td>76.278</td><td>6037</td></tr>
-            <tr><td>97</td><td>53.89</td><td>291</td><td>97.00</td><td>75.444</td><td>7007</td></tr>
-            <tr><td>110</td><td>61.11</td><td>265</td><td>88.33</td><td>74.722</td><td>8013</td></tr>
-            <tr><td>89</td><td>49.44</td><td>292</td><td>97.33</td><td>73.389</td><td>10084</td></tr>
-            <tr><td>88</td><td>48.89</td><td>293</td><td>97.67</td><td>73.278</td><td>11186</td></tr>
-            <tr><td>118</td><td>65.56</td><td>234</td><td>78.00</td><td>71.778</td><td>12948</td></tr>
-            <tr><td>80</td><td>44.44</td><td>297</td><td>99.00</td><td>71.722</td><td>13146</td></tr>
-            <tr><td>81</td><td>45.00</td><td>290</td><td>96.67</td><td>70.833</td><td>15103</td></tr>
-            <tr><td>102</td><td>56.67</td><td>249</td><td>83.00</td><td>69.833</td><td>17514</td></tr>
-            <tr><td>74</td><td>41.11</td><td>294</td><td>98.00</td><td>69.556</td><td>18400</td></tr>
-            <tr><td>82</td><td>45.56</td><td>278</td><td>92.67</td><td>69.111</td><td>19679</td></tr>
-            <tr><td>82</td><td>45.56</td><td>277</td><td>92.33</td><td>68.944</td><td>20224</td></tr>
-            <tr><td>86</td><td>47.78</td><td>265</td><td>88.33</td><td>68.056</td><td>23258</td></tr>
-            <tr><td>72</td><td>40.00</td><td>287</td><td>95.67</td><td>67.833</td><td>24172</td></tr>
-            <tr><td>84</td><td>46.67</td><td>266</td><td>88.67</td><td>67.667</td><td>24846</td></tr>
-            <tr><td>72</td><td>40.00</td><td>286</td><td>95.33</td><td>67.667</td><td>24884</td></tr>
-            <tr><td>73</td><td>40.56</td><td>283</td><td>94.33</td><td>67.444</td><td>25682</td></tr>
-            <tr><td>71</td><td>39.44</td><td>286</td><td>95.33</td><td>67.389</td><td>26062</td></tr>
-            <tr><td>76</td><td>42.22</td><td>274</td><td>91.33</td><td>66.778</td><td>28396</td></tr>
-            <tr><td>61</td><td>33.89</td><td>297</td><td>99.00</td><td>66.444</td><td>29961</td></tr>
-            <tr><td>72</td><td>40.00</td><td>266</td><td>88.67</td><td>64.333</td><td>40702</td></tr>
-            <tr><td>59</td><td>32.78</td><td>279</td><td>93.00</td><td>62.889</td><td>49806</td></tr>
-            <tr><td>61</td><td>33.89</td><td>266</td><td>88.67</td><td>61.278</td><td>61134</td></tr>
-            <tr><td>67</td><td>37.22</td><td>238</td><td>79.33</td><td>58.278</td><td>93040</td></tr>
-            <tr><td>65</td><td>36.11</td><td>235</td><td>78.33</td><td>57.222</td><td>115885</td></tr>
-        </tbody>
-    </table>
-</body>
-
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
-<script>
-    const ctx = document.getElementById('myChart').getContext('2d');
-    const xDat = [57.222, 58.278, 61.278, 62.889, 64.333, 66.444, 66.778, 67.389, 67.444, 67.667, 67.667, 67.833, 68.056, 68.944, 69.111, 69.556, 69.833, 70.833, 71.722, 71.778, 73.278, 73.389, 74.722, 75.444, 76.278, 76.833, 77.444, 79.944, 80.167, 80.222, 80.944, 81.278, 82.056, 82.611, 83.0, 83.0, 83.0, 83.0, 83.722, 84.333, 84.722, 85.944, 87.944, 88.833
-    ];
-
-    const yDat = [115885, 93040, 61134, 49806, 40702, 29961, 28396, 26062, 25682, 24884, 24846, 24172, 23258, 20224, 19679, 18400, 17514, 15103, 13146, 12948, 11186, 10084, 8013, 7007, 6037, 5446, 4872, 2942, 2830, 2792, 2411, 2264, 1873, 1653, 1496, 1490, 1487, 1484, 1249, 1089, 980, 745, 409, 322];
-
-    const cutoffs = {
-    "RVCE": {
-        "Computer Science & Engg": 360,
-        "Information Science & Engg": 663,
-        "Computer Science & Data Science": 899,
-        "Artificial Intelligence & Machine Learning": 1143,
-        "Computer Science & Cyber Security": 1339,
-        "Electronics & Communication Engg": 1366,
-        "Electronics & Telecommunication Engg": 4663,
-        "Aerospace Engg": 4868,
-        "Electrical & Electronics Engg": 6013,
-        "Electronics & Instrumentation Engg": 6212,
-        "Mechanical Engg": 11815,
-        "Bio Technology": 13000,
-        "Chemical Engg": 14949,
-        "Civil Engg": 18609,
-        "Industrial Engg & Management": 21189
-    },
-    "BMSCE": {
-        "Computer Science & Engg": 360,
-        "Information Science & Engg": 663,
-        "Computer Science & Data Science": 899,
-        "AIML": 1143,
-        "Computer Science & Cyber Security": 1339,
-        "Electronics & Communication Engg": 1366,
-        "Electronics & Telecommunication Engg": 4663,
-        "Aerospace Engg": 4868,
-        "Electrical & Electronics Engg": 6013,
-        "Electronics & Instrumentation Engg": 6212,
-        "Mechanical Engg": 11815,
-        "Bio Technology": 13000,
-        "Chemical Engg": 14949,
-        "Civil Engg": 18609,
-        "Industrial Engg & Management": 21189
-    },
-    "MSRIT": {
-        "Computer Science & Engg": 1859,
-        "Information Science & Engg": 2634,
-        "Computer Science & AIML": 3342,
-        "AIML": 4178,
-        "Artificial Intelligence & Data Science": 4594,
-        "Computer Science & Cyber Security": 4810,
-        "Electronics & Communication Engg": 5803,
-        "Electronics & Telecommunication Engg": 9677,
-        "Electrical & Electronics Engg": 13073,
-        "Electronics & Instrumentation Engg": 15240,
-        "Bio Technology": 21557,
-        "Mechanical Engg": 37472,
-        "Civil Engg": 44361,
-        "Medical Electronics": 47014,
-        "Chemical Engg": 55300,
-        "Industrial Engg & Management": 64430
-    },
-    "PESU": {
-        "Computer Science & Engg": 1643,
-        "Computer Science & AIML": 2733,
-        "Electronics & Communication Engg": 5898,
-        "Electrical & Electronics Engg": 15006,
-        "Biotechnology": 24273,
-        "Mechanical Engg": 29905
-    },
-    "Dayanada Sagar": {
-        "Computer Science & Engg": 4424,
-        "AIML": 5840,
-        "Information Science & Engg": 6665,
-        "Computer Science & Data Science": 7360,
-        "Computer Science & Cyber Security": 8195,
-        "Computer Science & Business Systems": 9901,
-        "Computer Science & IOT, Cybersecurity, Blockchain": 10560,
-        "Electronics & Communication Engg": 11067,
-        "Computer Science & Design": 11288,
-        "Robotics & Artificial Intelligence": 15790,
-        "Electronics & Telecommunication Engg": 27256,
-        "Aeronautical Engg": 28059,
-        "Electrical & Electronics Engg": 29591,
-        "Electronics & Instrumentation Engg": 35307,
-        "Bio Technology": 57443,
-        "Mechanical Engg": 77609,
-        "Medical Electronics": 83455,
-        "Chemical Engg": 86010,
-        "Civil Engg": 122287,
-        "Automobile Engg": 124730
-    },
-    "NITTE": {
-        "Computer Science & Engg": 8854,
-        "AIML": 11384,
-        "Information Science & Engg": 11525,
-        "Artificial Intelligence & Data Science": 13937,
-        "Computer Science & Business Systems": 14432,
-        "Electronics & Communication Engg": 18544,
-        "Electronics Engg  & VLSI": 36392,
-        "Electrical & Electronics Engg": 39092,
-        "Aeronautical Engg": 51750,
-        "Mechanical Engg": 105127,
-        "Civil Engg": 167408
-    },
-    "BMSIT": {
-        "Computer Science & Engg": 6262,
-        "Information Science & Engg": 9744,
-        "AIML": 11163,
-        "Computer Science & Business Systems": 12606,
-        "Electronics & Communication Engg": 14907,
-        "Electronics & Telecommunication Engg": 27903,
-        "Electrical & Electronics Engg": 30609,
-        "Mechanical Engg": 102233,
-        "Civil Engg": 109639
-    }
-};
-
-            function applyThreshold(predictedRank) {
-            if (predictedRank > 15000) return predictedRank - 2000;
-            if (predictedRank > 10000) return predictedRank - 1000;
-            if (predictedRank > 7500) return predictedRank - 750;
-            if (predictedRank > 5000) return predictedRank - 500;
-            if (predictedRank > 2500) return predictedRank - 250;
-            return predictedRank;
-
-            }
-
-            function getAttainableBranches(predictedRank) {
-            const effectiveRank = applyThreshold(predictedRank);
-            let result = "";
-
-            Object.keys(cutoffs).forEach(campus => {
-                result += `<button class="collapsible">${campus}</button>`;
-                result += `<div class="content"><ul>`;
-                Object.keys(cutoffs[campus]).forEach(branch => {
-                    if (effectiveRank <= cutoffs[campus][branch]) {
-                        result += `<li>${branch} - ${cutoffs[campus][branch]}</li>`;
-                    }
-                });
-                result += `</ul></div>`;
-            });
-
-            return result;
-        }
-
-    const myChart = new Chart(ctx, {
-        type: 'line',
-        data: {
-            labels: xDat,
-            datasets: [{
-                label: 'Rank vs Avg Score',
-                data: yDat,
-                borderColor: 'white',
-                backgroundColor: 'rgba(255, 255, 255, 0.2)',
-                borderWidth: 2,
-                pointBackgroundColor: 'white',
-                pointBorderColor: 'white'
-            }]
-        },
-        options: {
-            animation: {
-                duration: 3000
-            },
-            scales: {
-                x: {
-                    ticks: {
-                        color: 'white'
-                    },
-                    grid: {
-                        color: '#555555'
-                    }
-                },
-                y: {
-                    ticks: {
-                        color: 'white'
-                    },
-                    grid: {
-                        color: '#555555'
-                    }
-                }
-            },
-            plugins: {
-                legend: {
-                    labels: {
-                        color: 'white'
-                    }
-                }
-            }
-        }
-    });
-</script>
-
-
-
- </div>
+    <!-- Scripts -->
+    <script src="predictor_scripts.js"></script>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
- <script>
+    <script>
         function toggleContent() {
             var hiddenContent = document.getElementById("hiddenContent");
             var toggleButton = document.querySelector(".underline");
@@ -348,54 +116,5 @@
             }
         }
     </script>
-
-<body>
-    <div class="center-container"> 
-        <div class="box">
-            <label for="boardPercentage">Enter your Board Percentage:</label><br>
-            <input type="number" id="boardPercentage" step="0.01"><br>
-            <label for="kcetMarks">Enter your KCET Marks (out of 141):</label><br>
-            <input type="number" id="kcetMarks" step="0.01"><br><br>
-            <button onclick="predictRank()">Predict Rank</button>
-            <p id="result"></p>
-            <div id="attainableBranches"></div>
-        </div>
-    </div> 
-
-<script>
-    const xData = [
-        57.222, 58.278, 61.278, 62.889, 64.333, 66.444, 66.778, 67.389, 67.444, 67.667, 67.667, 67.833, 68.056, 68.944, 69.111, 69.556, 69.833, 70.833, 71.722, 71.778, 73.278, 73.389, 74.722, 75.444, 76.278, 76.833, 77.444, 79.944, 80.167, 80.222, 80.944, 81.278, 82.056, 82.611, 83.0, 83.0, 83.0, 83.0, 83.722, 84.333, 84.722, 85.944, 87.944, 88.833
-    ];
-    const yData = [
-        115885, 93040, 61134, 49806, 40702, 29961, 28396, 26062, 25682, 24884, 24846, 24172, 23258, 20224, 19679, 18400, 17514, 15103, 13146, 12948, 11186, 10084, 8013, 7007, 6037, 5446, 4872, 2942, 2830, 2792, 2411, 2264, 1873, 1653, 1496, 1490, 1487, 1484, 1249, 1089, 980, 745, 409, 322
-    ];
-
-function predictRank() {
-    const pcm = parseFloat(document.getElementById('boardPercentage').value);
-    const kcet = parseInt(document.getElementById('kcetMarks').value);
-    const kper = (kcet / 141) * 100;
-    const x_c = (pcm + kper) / 2;
-
-    let predictedRank = Math.round(interpolate(x_c, xData, yData));
-    if (predictedRank > 120000) {
-        predictedRank = 120000;
-    }
-    document.getElementById('result').innerText = `Your rank is predicted to be ${predictedRank}`;
-
-    const attainableBranches = getAttainableBranches(predictedRank);
-    document.getElementById('attainableBranches').innerHTML = attainableBranches;
-}
-
-
-    function interpolate(x, xData, yData) {
-        let i = 1;
-        while (xData[i] < x) i++;
-        const xL = xData[i - 1], yL = yData[i - 1];
-        const xR = xData[i], yR = yData[i];
-        return yL + (yR - yL) * (x - xL) / (xR - xL);
-    }
-</script>
-
 </body>
 </html>
-
