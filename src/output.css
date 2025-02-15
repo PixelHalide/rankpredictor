@@ -527,6 +527,19 @@
   .pointer-events-auto {
     pointer-events: auto;
   }
+  /* Remove side arrows from number input */
+  /* Chrome, Safari, Edge, Opera */
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  /* Firefox */
+  input[type=number] {
+    -moz-appearance: textfield;
+  }
+
   .pointer-events-none {
     pointer-events: none;
   }

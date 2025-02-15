@@ -42,7 +42,7 @@
     <!-- Header -->
     <header class="relative flex items-center justify-center mb-5">
         <img src="media/logo.png" alt="Company Logo"
-            class="hidden sm:block absolute top-2 left-5 w-16 md:w-20 cursor-pointer"
+            class="sm:hidden absolute top-2 left-5 w-16 md:w-20 cursor-pointer"
             onclick="window.location='index.html';">
         <h1 class="text-3xl md:text-5xl font-bold">Rank Predictor</h1>
     </header>
@@ -106,10 +106,10 @@
     <div class="flex justify-center">
         <div class="bg-gray-800 rounded-lg p-6 shadow-lg max-w-sm w-full text-center">
             <label for="boardPercentage" class="block mb-2">Enter your Board Percentage:</label>
-            <input type="number" id="boardPercentage" step="0.01" class="w-full mb-4 p-2 bg-gray-700 text-white rounded">
+            <input type="number" id="boardPercentage" class="w-full mb-4 p-2 bg-gray-700 text-white rounded text-center">
 
             <label for="metMarks" class="block mb-2">Enter your MET Marks (out of 240):</label>
-            <input type="number" id="metMarks" step="0.01" class="w-full mb-4 p-2 bg-gray-700 text-white rounded">
+            <input type="number" id="metMarks" class="w-full mb-4 p-2 bg-gray-700 text-white rounded text-center">
 
             <button onclick="predictRank()" class="w-full py-2 px-4 bg-green-600 text-white rounded hover:bg-green-500 active:bg-green-700 cursor-pointer transition-colors mb-4">
                 Predict Rank
