@@ -147,7 +147,7 @@ function predictMETRankAndBranches(boardPercentage, metMarks, cutoffs, xValues, 
     let predictedRank = Math.round(interpolateRank(avgScore, xValues, yValues));
     const effectiveRank = applyRankThreshold(predictedRank);
 
-    resultEl.innerHTML = `Your rank is predicted to be: ${effectiveRank}`;
+    resultEl.innerHTML = `Your rank is predicted to be: ${predictedRank}`;
 
     // Generate attainable branches HTML with campus buttons
     let branchesHTML = "";
@@ -180,7 +180,7 @@ function predictMETRankAndBranches(boardPercentage, metMarks, cutoffs, xValues, 
 }
 
 // MET 2024 Specific Prediction Function
-window.predictRank = function() {
+window.predictRankMET2024 = function() {
     const boardEl = document.getElementById("boardPercentage");
     const metEl = document.getElementById("metMarks");
 
