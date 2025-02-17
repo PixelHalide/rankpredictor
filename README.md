@@ -21,7 +21,7 @@ Our website offers free, no-nonsense rank predictions for various entrance exams
 
 Each exam predictor uses:
 - Verified historical data from past exam results
-- Mathematical techniques like linear interpolation
+- Mathematical techniques like polynomial regression
 - Transparent calculations and data sources
 
 Every predictor includes a detailed "How does this work?" section that explains:

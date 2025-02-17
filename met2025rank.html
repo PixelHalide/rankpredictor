@@ -79,7 +79,7 @@
     <div class="content mb-8">
         <p class="underline cursor-pointer text-center mb-4 hover:text-yellow-500 hover:border-yellow-500 transition-all" onclick="toggleContent()">How does this work? ></p>
         <div id="hiddenContent" class="hidden">
-            <p class="text-xl font-bold text-left mb-2">The code works based on the principle of linear interpolation:</p>
+            <p class="text-xl font-bold text-left mb-2">The code works based on the principle of polynomial regression:</p>
             <p class="mb-4">In MET 2025, both entrance exam scores and board exam results are considered. To account for varying difficulty levels across different boards, board percentages are normalized into band scores from 0 to 10. This creates a "fair" system where your final score combines your MET performance with your standardized board exam band. Here's how board percentages are converted to bands:</p>
             <ul class="list-disc list-inside text-left mb-4">
                 <li>95-100%: Band 10</li>
@@ -94,7 +94,7 @@
             <p class="mb-4">Where M is your MET score (out of 240), and B is your board band (0-10).<br>
             The data used in this predictor has been compiled by polling students across various MET campuses, with careful verification to ensure accuracy.</p>
             <p class="mb-4">
-                Using a mathematical concept called <a href="https://en.wikipedia.org/wiki/Linear_interpolation" class="underline hover:text-yellow-500">Linear Interpolation</a>, We can find the ranks for values of various band scores.
+                Using a mathematical concept called <a href="https://en.wikipedia.org/wiki/Polynomial_regression" class="underline hover:text-yellow-500">polynomial regression</a>, We can find the ranks for values of various band scores.
             </p>
             <div id="chartContainer" class="w-4/5 mx-auto mb-4">
                 <canvas id="myChart"></canvas>

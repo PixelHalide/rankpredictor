@@ -39,13 +39,13 @@
   <meta property="twitter:image" content="https://media.discordapp.net/attachments/1142501310873223350/1245686427212058735/image.png?ex=6659a763&is=665855e3&hm=b0574ebc70c11e268789427089bd27c1d4d7df0d5a536a3a29ea325054f5be7f&=&format=webp&quality=lossless&width=1089&height=541" />
 </head>
 <body class="bg-black text-white font-mono m-5">
-  <!-- Header -->
-  <header class="relative flex items-center justify-center mb-5">
-    <img src="media/logo.png" alt="Company Logo"
-        class="sm:hidden absolute top-2 left-5 w-16 md:w-20 cursor-pointer"
-        onclick="window.location='index.html';">
-    <h1 class="text-3xl md:text-5xl font-bold">Rank Predictor</h1>
-  </header>
+    <!-- Header -->
+    <header class="relative flex items-center justify-center mb-5">
+      <img src="media/logo.png" alt="Company Logo"
+          class="sm:hidden absolute top-2 left-5 w-16 md:w-20 cursor-pointer"
+          onclick="window.location='index.html';">
+      <h1 class="text-3xl md:text-5xl font-bold">Rank Predictor</h1>
+    </header>
 
   <!-- Subscript with links -->
   <div class="text-sm text-center mb-4">
@@ -79,7 +79,7 @@
   <div class="content mb-8">
     <p class="underline cursor-pointer text-center mb-4 hover:text-yellow-500 hover:border-yellow-500 transition-all" onclick="toggleContent()">How does this work? ></p>
     <div id="hiddenContent" class="hidden">
-      <p class="formula text-xl font-bold text-left mb-2">The code works on the principle of linear interpolation:</p>
+      <p class="formula text-xl font-bold text-left mb-2">The code works on the principle of polynomial regression:</p>
       <p class="mb-2">In MET 2020, board marks were implemented with a 60-40 weightage—60% being MET and 40% board marks. Data compiled from various sources (YouTube, Reddit, Quora, and direct student input) is used to compute band percentages with the following formula:</p>
       <p class="formula text-2xl text-center mb-4">
         \( \left( \frac{M}{800} \right) \times 0.6 + (B \times 0.4) \)
@@ -90,7 +90,7 @@
       </div>
       <p class="mb-4">
         Using a mathematical concept called
-        <a href="https://en.wikipedia.org/wiki/Linear_interpolation" class="underline hover:text-yellow-500">Linear Interpolation</a>,
+        <a href="https://en.wikipedia.org/wiki/Polynomial_regression" class="underline hover:text-yellow-500">polynomial regression</a>,
         we can estimate the ranks for different band scores. Note that:
       </p>
       <ul class="list-disc list-inside text-left mb-4">

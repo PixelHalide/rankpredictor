@@ -81,7 +81,79 @@ function createMETChart2024(ctx) {
     const yData = [31500, 21000, 18132, 17044, 15762, 11012, 6700, 4700, 4493, 3016, 2234, 950, 672, 604, 228, 108];
     createChart(ctx, xData, yData, 'Rank vs Band Score', 'MET 2024 Ranks vs Band Scores');
 }
+function polynomialInterpolation(score, xData, yData, degree = 3) {
+    // Convert data to log scale to better handle the exponential nature of ranks
+    const logY = yData.map(y => Math.log(y));
 
+    // Generate polynomial features
+    const X = xData.map(x => {
+        let features = [];
+        for(let i = 0; i <= degree; i++) {
+            features.push(Math.pow(x, i));
+        }
+        return features;
+    });
+
+    // Solve normal equation: (X^T * X)^(-1) * X^T * y
+    const y = logY;
+    const Xt = transpose(X);
+    const XtX = multiply(Xt, X);
+    const XtXInv = inverse(XtX);
+    const XtY = multiply(Xt, y.map(yi => [yi]));
+    const coefficients = multiply(XtXInv, XtY).map(c => c[0]);
+
+    // Predict using polynomial
+    let prediction = 0;
+    for(let i = 0; i <= degree; i++) {
+        prediction += coefficients[i] * Math.pow(score, i);
+    }
+
+    // Convert back from log scale
+    return Math.round(Math.exp(prediction));
+}
+
+// Helper matrix functions
+function transpose(matrix) {
+    return matrix[0].map((_, i) => matrix.map(row => row[i]));
+}
+
+function multiply(a, b) {
+    return a.map(row =>
+        b[0].map((_, i) =>
+            row.reduce((sum, val, j) => sum + val * b[j][i], 0)
+        )
+    );
+}
+
+function inverse(matrix) {
+    // Implementation of matrix inverse (use a linear algebra library in production)
+    // This is a simplified version for small matrices
+    const n = matrix.length;
+    const result = Array(n).fill().map(() => Array(n).fill(0));
+    const temp = matrix.map(row => [...row]);
+
+    // Initialize identity matrix
+    for(let i = 0; i < n; i++) result[i][i] = 1;
+
+    // Gaussian elimination
+    for(let i = 0; i < n; i++) {
+        const pivot = temp[i][i];
+        for(let j = 0; j < n; j++) {
+            temp[i][j] /= pivot;
+            result[i][j] /= pivot;
+        }
+        for(let j = 0; j < n; j++) {
+            if(i !== j) {
+                const factor = temp[j][i];
+                for(let k = 0; k < n; k++) {
+                    temp[j][k] -= factor * temp[i][k];
+                    result[j][k] -= factor * result[i][k];
+                }
+            }
+        }
+    }
+    return result;
+}
 
 function createKCETChart(ctx) {
     const xData = [57.222, 58.278, 61.278, 62.889, 64.333, 66.444, 66.778, 67.389, 67.444, 67.667, 67.667, 67.833, 68.056, 68.944, 69.111, 69.556, 69.833, 70.833, 71.722, 71.778, 73.278, 73.389, 74.722, 75.444, 76.278, 76.833, 77.444, 79.944, 80.167, 80.222, 80.944, 81.278, 82.056, 82.611, 83.0, 83.0, 83.0, 83.0, 83.722, 84.333, 84.722, 85.944, 87.944, 88.833];
@@ -100,24 +172,6 @@ function toggleContent() {
         hiddenContent.classList.add("hidden");
         toggleButton.textContent = "How does this work? >";
     }
-}
-
-// Linear Interpolation Function
-function interpolateRank(score, xData, yData) {
-    if(score <= xData[0]) return yData[0];
-    if(score >= xData[xData.length - 1]) return yData[yData.length - 1];
-
-    let i = 0;
-    while(i < xData.length - 1 && score > xData[i+1]) {
-        i++;
-    }
-
-    const x0 = xData[i];
-    const x1 = xData[i+1];
-    const y0 = yData[i];
-    const y1 = yData[i+1];
-
-    return y0 + ((y1 - y0) / (x1 - x0)) * (score - x0);
 }
 
 // Rank Threshold Application
@@ -144,7 +198,7 @@ function predictMETRankAndBranches(boardPercentage, metMarks, cutoffs, xValues, 
     const avgScore = (((metMarks / 240) * 100) + boardPercentage) / 2;
 
     // Interpolate and apply threshold to predict rank
-    let predictedRank = Math.round(interpolateRank(avgScore, xValues, yValues));
+    let predictedRank = polynomialInterpolation(avgScore, xValues, yValues);
     const effectiveRank = applyRankThreshold(predictedRank);
 
     resultEl.innerHTML = `Your rank is predicted to be: ${predictedRank}`;
@@ -368,7 +422,7 @@ window.predictRankKCET = function() {
     const kcetXData = [57.222, 58.278, 61.278, 62.889, 64.333, 66.444, 66.778, 67.389, 67.444, 67.667, 67.667, 67.833, 68.056, 68.944, 69.111, 69.556, 69.833, 70.833, 71.722, 71.778, 73.278, 73.389, 74.722, 75.444, 76.278, 76.833, 77.444, 79.944, 80.167, 80.222, 80.944, 81.278, 82.056, 82.611, 83.0, 83.0, 83.0, 83.0, 83.722, 84.333, 84.722, 85.944, 87.944, 88.833];
     const kcetYData = [115885, 93040, 61134, 49806, 40702, 29961, 28396, 26062, 25682, 24884, 24846, 24172, 23258, 20224, 19679, 18400, 17514, 15103, 13146, 12948, 11186, 10084, 8013, 7007, 6037, 5446, 4872, 2942, 2830, 2792, 2411, 2264, 1873, 1653, 1496, 1490, 1487, 1484, 1249, 1089, 980, 745, 409, 322];
 
-    let predictedRank = Math.round(interpolateRank(avgScore, kcetXData, kcetYData));
+    let predictedRank = polynomialInterpolation(avgScore, kcetXData, kcetYData);
     const effectiveRank = applyRankThreshold(predictedRank);
 
     resultEl.innerHTML = `Your rank is predicted to be: ${effectiveRank}`;

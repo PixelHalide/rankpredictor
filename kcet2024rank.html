@@ -83,7 +83,7 @@
     <div class="content mb-8">
         <p class="underline cursor-pointer text-center mb-4 hover:text-yellow-500 hover:border-yellow-500 transition-all" onclick="toggleContent()">How does this work? ></p>
         <div id="hiddenContent" class="hidden">
-            <p class="text-xl font-bold text-left mb-2">The code works on the principle of linear interpolation:</p>
+            <p class="text-xl font-bold text-left mb-2">The code works on the principle of polynomial regression:</p>
             <p class="mb-4">Data from 2023 (compiled from various sources) are used to calculate band scores with the formula:</p>
             <p class="text-2xl text-center mb-4">
                 \( \left( \frac{M}{180} \right) \times 0.5 + (B \times 0.5) \)
@@ -93,7 +93,7 @@
                 <canvas id="myChart"></canvas>
             </div>
             <p class="mb-4">
-                Using <a href="https://en.wikipedia.org/wiki/Linear_interpolation" class="underline hover:text-yellow-500">linear interpolation</a>,
+                Using <a href="https://en.wikipedia.org/wiki/Polynomial_regression" class="underline hover:text-yellow-500">polynomial regression</a>,
                 we can determine ranks for given scores. Note that:
             </p>
             <ul class="list-disc list-inside mb-4">
