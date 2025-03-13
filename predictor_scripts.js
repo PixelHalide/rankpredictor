@@ -212,7 +212,7 @@ function predictMETRankAndBranches(boardPercentage, metMarks, cutoffs, xValues, 
     let predictedRank = polynomialInterpolation(avgScore, xValues, yValues);
     const effectiveRank = applyRankThreshold(predictedRank);
 
-    resultEl.innerHTML = `Your rank is predicted to be: ${predictedRank}`;
+    resultEl.innerHTML = `Your rank is predicted to be: <b>${predictedRank}</b><br><br>(Note: All CS related branches are to be merged for 2025 for Manipal Campus)`;
 
 
     let branchesHTML = "";
