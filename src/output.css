@@ -968,6 +968,9 @@
   .scale-none {
     scale: none;
   }
+  .rotate-180 {
+    rotate: 180deg;
+  }
   .rotate-none {
     rotate: none;
   }
@@ -1483,8 +1486,8 @@
     --tw-border-style: solid;
     border-style: solid;
   }
-  .border-blue-700 {
-    border-color: var(--color-blue-700);
+  .border-gray-700 {
+    border-color: var(--color-gray-700);
   }
   .border-white {
     border-color: var(--color-white);
@@ -1510,8 +1513,8 @@
   .bg-black {
     background-color: var(--color-black);
   }
-  .bg-gray-500 {
-    background-color: var(--color-gray-500);
+  .bg-gray-600 {
+    background-color: var(--color-gray-600);
   }
   .bg-gray-700 {
     background-color: var(--color-gray-700);
