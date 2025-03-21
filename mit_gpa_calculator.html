@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MIT GPA Calculator</title>
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6B76EV7K8V"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-6B76EV7K8V');
+    </script>
+
+    <!-- Scripts -->
+    <script src="gpa_calculator.js"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="/gpa_calculator.js"></script>
+
+    <!-- Tailwind CSS -->
+    <link rel="stylesheet" href="src/output.css">
+    <link rel="icon" href="media/logo.png" type="image/png">
+
+    <!-- Meta Tags -->
+    <meta name="title" content="MIT GPA Calculator" />
+    <meta name="description" content="Eager to know your MIT GPA? Our GPA calculator allows you to effortlessly predict your GPA, Whichever semester it may be." />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://rankpredictor.in/kcet2024rank.html" />
+    <meta property="og:title" content="KCET 2024 Rank Predictor" />
+    <meta property="og:description" content="Eager to know your MIT GPA? Our GPA calculator allows you to effortlessly predict your GPA, Whichever semester it may be." />
+    <meta property="og:image" content="https://media.discordapp.net/attachments/1245688428247519262/image.png" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://rankpredictor.in/kcet2024rank.html" />
+    <meta property="twitter:title" content="KCET 2024 Rank Predictor" />
+    <meta property="twitter:description" content="Eager to know your MIT GPA? Our GPA calculator allows you to effortlessly predict your GPA, Whichever semester it may be." />
+    <meta property="twitter:image" content="https://media.discordapp.net/attachments/1245688428247519262/image.png" />
+</head>
+<body class="bg-black text-white font-mono m-5">
+    <!-- Header -->
+    <header class="relative flex items-center justify-center mb-5">
+        <img src="media/logo.png" alt="Company Logo"
+            class="sm:hidden absolute top-2 left-5 w-16 md:w-20 cursor-pointer"
+            onclick="window.location='index.html';">
+        <h1 class="text-3xl md:text-5xl font-bold">Rank Predictor</h1>
+    </header>
+
+    <!-- Subscript with links -->
+    <div class="text-sm text-center mb-4">
+        By <a href="https://github.com/druwn" target="_blank" class="text-white hover:text-yellow-500 transition-all">druwn</a> and
+        <a href="https://github.com/PixelHalide" target="_blank" class="text-white hover:text-yellow-500 transition-all">Pixel</a>
+    </div>
+
+    <!-- Separator -->
+    <hr class="border-t-2 border-white my-5">
+
+    <!-- Navigation -->
+    <nav class="flex flex-col sm:flex-row justify-center gap-8 mb-5">
+        <a href="index.html" class="text-lg border border-white py-1 px-4 rounded hover:text-yellow-500 hover:border-yellow-500 transition-all">
+            Home
+        </a>
+        <a href="met2025rank.html" class="text-lg border border-white py-1 px-4 rounded hover:text-yellow-500 hover:border-yellow-500 transition-all">
+            MET 2025 Rank
+        </a>
+        <a href="met2024rank.html" class="text-lg border border-white py-1 px-4 rounded hover:text-yellow-500 hover:border-yellow-500 transition-all">
+            MET 2024 Rank
+        </a>
+        <a href="kcet2024rank.html" class="text-lg border border-white py-1 px-4 rounded hover:text-yellow-500 hover:border-yellow-500 transition-all">
+            KCET 2024 Rank
+        </a>
+    </nav>
+
+    <!-- Separator -->
+    <hr class="border-t-2 border-white my-5">
+    <div class="flex justify-center">
+        <div class="bg-gray-800 rounded-lg p-6 shadow-lg max-w-md w-full text-center">
+            <label for="semester" class="block mb-2">Select your Semester:</label>
+            <div class="py-2">
+                <button id="dropdown-button" class="bg-gray-600 hover:bg-gray-700 text-white font-bold py-2 px-4 border border-gray-700 rounded transition-all">
+                    <span>Semester</span>
+                    <span id="dropdown-arrow" class="rotate-180">^</span>
+                    <span class="rotate-180">hi</span>
+                </button>
+            </div>
+            <select name="semester" id="semester" class="hidden py-4 bg-amber-600">
+                <option value="I">I</option>
+                <option value="II">II</option>
+                <option value="III">III</option>
+                <option value="IV">IV</option>
+                <option value="V">V</option>
+                <option value="VI">VI</option>
+                <option value="VII">VII</option>
+                <option value="VIII">VIII</option>
+            </select>
+            <input type="number" id="boardPercentage" class="w-full mb-4 p-2 bg-gray-700 text-white rounded text-center">
+
+            <label for="metMarks" class="block mb-2">Enter your MET Marks (out of 240):</label>
+            <input type="number" id="metMarks" class="w-full mb-4 p-2 bg-gray-700 text-white rounded text-center">
+
+            <button onclick="predictRankMET2025()" class="w-full py-2 px-4 bg-green-600 text-white rounded hover:bg-green-500 active:bg-green-700 cursor-pointer transition-colors mb-4">
+                Predict Rank
+            </button>
+            <p id="result"></p>
+            <div id="attainableBranches"></div>
+        </div>
+    </div>
+</body>
+</html>
