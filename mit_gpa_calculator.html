@@ -76,8 +76,9 @@
 
     <!-- Separator -->
     <hr class="border-t-2 border-white my-5">
+
     <div class="flex justify-center">
-        <div class="bg-gray-800 rounded-lg p-6 shadow-lg max-w-md w-full text-center">
+        <div class="bg-gray-800 rounded-lg p-6 shadow-lg max-w-xl w-full text-center">
             <label for="semester" class="block mb-2">Select your Semester:</label>
             <div class="py-2">
                 <button id="dropdown-button" class="bg-gray-600 hover:bg-gray-700 text-white font-bold py-2 px-4 border border-gray-700 rounded transition-all cursor-pointer">
@@ -97,6 +98,33 @@
                     <div onclick="get_semester(8)" id="VIII" class="p-2 hover:-translate-y-1 hover:bg-gray-600 cursor-pointer transition-all">VIII</div>
                 </div>
             </div>
+            <div id="course" class="max-h-0 opacity-0 overflow-hidden flex justify-center items-center w-full bg-gray-700 mx-auto border border-white/40 rounded-xl mt-0 p-3 transition-all duration-500">
+                <div class="grid grid-cols-3 grid-rows-7 gap-2 text-center w-full">
+                    <span onclick="loadCourses('CS')" class="p-1 hover:-translate-y-1 hover:bg-gray-600 cursor-pointer transition-all">CSE</span>
+                    <span onclick="loadCourses('AIML')" class="p-1 hover:-translate-y-1 hover:bg-gray-600 cursor-pointer transition-all">AIML</span>
+                    <span onclick="loadCourses('CCE')" class="p-1 hover:-translate-y-1 hover:bg-gray-600 cursor-pointer transition-all">CCE</span>
+                    <span onclick="loadCourses('IT')" class="p-1 hover:-translate-y-1 hover:bg-gray-600 cursor-pointer transition-all">IT</span>
+                    <span onclick="loadCourses('DSE')" class="p-1 hover:-translate-y-1 hover:bg-gray-600 cursor-pointer transition-all">DSE</span>
+                    <span onclick="loadCourses('MNC')" class="p-1 hover:-translate-y-1 hover:bg-gray-600 cursor-pointer transition-all">MNC</span>
+                    <span onclick="loadCourses('CSFT')" class="p-1 hover:-translate-y-1 hover:bg-gray-600 cursor-pointer transition-all">CSFT</span>
+
+                    <span onclick="loadCourses('ECE')" class="p-1 hover:-translate-y-1 hover:bg-gray-600 cursor-pointer transition-all">ECE</span>
+                    <span onclick="loadCourses('VLSI')" class="p-1 hover:-translate-y-1 hover:bg-gray-600 cursor-pointer transition-all">VLSI</span>
+                    <span onclick="loadCourses('ENI')" class="p-1 hover:-translate-y-1 hover:bg-gray-600 cursor-pointer transition-all">ENI</span>
+                    <span onclick="loadCourses('EEE')" class="p-1 hover:-translate-y-1 hover:bg-gray-600 cursor-pointer transition-all">EEE</span>
+                    <span onclick="loadCourses('CPS')" class="p-1 hover:-translate-y-1 hover:bg-gray-600 cursor-pointer transition-all">CPS</span>
+                    <span onclick="loadCourses('BioMed')" class="p-1 hover:-translate-y-1 hover:bg-gray-600 cursor-pointer transition-all">BioMed</span>
+                    <span onclick="loadCourses('MechX')" class="p-1 hover:-translate-y-1 hover:bg-gray-600 cursor-pointer transition-all">MechX</span>
+
+                    <span onclick="loadCourses('Mech')" class="p-1 hover:-translate-y-1 hover:bg-gray-600 cursor-pointer transition-all">Mech</span>
+                    <span onclick="loadCourses('Aero')" class="p-1 hover:-translate-y-1 hover:bg-gray-600 cursor-pointer transition-all">Aero</span>
+                    <span onclick="loadCourses('Auto')" class="p-1 hover:-translate-y-1 hover:bg-gray-600 cursor-pointer transition-all">Auto</span>
+                    <span onclick="loadCourses('Industrial')" class="p-1 hover:-translate-y-1 hover:bg-gray-600 cursor-pointer transition-all">Industrial</span>
+                    <span onclick="loadCourses('Civil')" class="p-1 hover:-translate-y-1 hover:bg-gray-600 cursor-pointer transition-all">Civil</span>
+                    <span onclick="loadCourses('BioTech')" class="p-1 hover:-translate-y-1 hover:bg-gray-600 cursor-pointer transition-all">BioTech</span>
+                    <span onclick="loadCourses('Chem')" class="p-1 hover:-translate-y-1 hover:bg-gray-600 cursor-pointer transition-all">Chem</span>
+                </div>
+            </div>
             <div id="first_year" class="flex justify-center gap-4 opacity-0 bg-gray-700 mx-auto w-full overflow-hidden max-h-0 rounded-2xl p-2.5 transition-all duration-500 mt-0 mb-0">
                 <div class="flex flex-row justify-evenly w-full my-auto">
                     <div onclick="cycle(0)" class="hover:bg-gray-600 cursor-pointer transition-all hover:rounded-md hover:-translate-y-1">Physics Cycle</div>
@@ -110,14 +138,13 @@
                     <div id="noncs" class="hover:bg-gray-600 cursor-pointer transition-all hover:rounded-md hover:-translate-y-1">Non-CS Stream</div>
                 </div>
             </div>
-            <!--<div class="flex shrink justify-center text-center py-5 drop-shadow-xl">-->
             <div id="table" class="flex shrink justify-center text-center py-0 drop-shadow-xl opacity-0 transition-all duration-500">
                 <table id="nested_table" class="table-auto border-collapse drop-shadow-xl opacity-0 transition-all duration-500">
                     <thead>
                       <tr class="bg-zinc-900 py-10">
                         <th>Subject</th>
                         <th>Credits</th>
-                        <th>Grade(/A)</th>
+                        <th>Grade(/A+)</th>
                       </tr>
                     </thead>
                     <tbody id="subject_table" class="opacity-100">
@@ -125,7 +152,11 @@
                   </table>
                 </div>
                 <div id="submit_button" class="opacity-0 transition-all duration-500">
-                    <button class="w-full py-2 px-4 bg-green-600 text-white rounded hover:bg-green-500 active:bg-green-700 cursor-pointer transition-colors mb-4">Submit Grades</button>
+                    <button onclick="calculateGPA()" class="w-full py-2 px-4 bg-green-600 text-white rounded hover:bg-green-500 active:bg-green-700 cursor-pointer transition-colors mb-4">Submit Grades</button>
+                </div>
+                <div id="result_display" class="hidden">
+                    <p id="gpa_display">Your GPA is Calculated to be: </p>
+                    <p id="credit_display">Credits obtained: </p>
                 </div>
             </div>
     </div>

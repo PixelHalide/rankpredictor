@@ -7,8 +7,8 @@ const subjectData = { "1-CS-PHY": {
         "Programming for Problem Solving": 3,
         "Basic Mechanical Engineering Science": 3,
         "Communication Skills in English": 2,
-        "Universal Human Values and Professional Ethics (MLC)": 1,
-        "Human Rights and Constitution (MLC)": 1,
+        "Universal Human Values and Professional Ethics": 1,
+        "Human Rights and Constitution": 1,
         "Workshop Practice": 1,
         "Programming for Problem Solving Lab": 1
     },
@@ -72,7 +72,7 @@ const subjectData = { "1-CS-PHY": {
         "Software Engineering": 4,
         "Principles of Cryptography": 4,
         "Cloud Computing and DevOps": 4,
-        "Open Elective - 1 Creativity, Problem Solving and Innovation": 3
+        "Creativity, Problem Solving and Innovation": 3
     },
     "6-CS": {
         "Engineering Economics and Financial Management": 3,
@@ -106,7 +106,7 @@ const subjectData = { "1-CS-PHY": {
         "Basic Electronics": 3,
         "Basic Mechanical Engineering": 3,
         "Communication Skills in English": 2,
-        "Universal Human Values and Professional Ethics (MLC)": 1,
+        "Universal Human Values and Professional Ethics": 1,
         "Engineering Physics Lab": 1,
         "Workshop Practice": 1,
         "Engineering Graphics - 1": 1
@@ -118,7 +118,7 @@ const subjectData = { "1-CS-PHY": {
         "Basic Electrical Technology": 3,
         "Problem Solving Using Computers": 3,
         "Environmental Studies": 2,
-        "Human Rights and Constitution (MLC)": 1,
+        "Human Rights and Constitution": 1,
         "Engineering Chemistry Lab": 1,
         "Problem Solving Using Computers Lab": 1,
         "Engineering Graphics - 2": 1
@@ -130,7 +130,7 @@ const subjectData = { "1-CS-PHY": {
         "Basic Electrical Technology": 3,
         "Problem Solving Using Computers": 3,
         "Environmental Studies": 2,
-        "Human Rights and Constitution (MLC)": 1,
+        "Human Rights and Constitution": 1,
         "Engineering Chemistry Lab": 1,
         "Problem Solving Using Computers Lab": 1,
         "Engineering Graphics - 1": 1
@@ -142,7 +142,7 @@ const subjectData = { "1-CS-PHY": {
         "Basic Electronics": 3,
         "Basic Mechanical Engineering": 3,
         "Communication Skills in English": 2,
-        "Universal Human Values and Professional Ethics (MLC)": 1,
+        "Universal Human Values and Professional Ethics": 1,
         "Engineering Physics Lab": 1,
         "Workshop Practice": 1,
         "Engineering Graphics - 2": 1
@@ -153,6 +153,7 @@ document.addEventListener('DOMContentLoaded', function () {
     let cycle_isOpen = false;
     let stream_isOpen = false;
     let table_isOpen = false;
+    let course_isOpen = false;
     const dropdownButton = document.getElementById("dropdown-button");
     const dropdownArrow = document.getElementById("dropdown-arrow");
     const semesterDiv = document.getElementById("semester");
@@ -160,37 +161,47 @@ document.addEventListener('DOMContentLoaded', function () {
     const sub_table_nested = document.getElementById("nested_table");
     const submit_button = document.getElementById("submit_button");
     var selectedSemester;
+    var subjectCount;
     dropdownButton.onclick = function () {
         if (!semester_isOpen) {
             dropdownArrow.classList.add("rotate-180");
-            semesterDiv.classList.remove("max-h-0", "opacity-0", "mt-0", "mb-0");
+            semesterDiv.classList.remove("max-h-0", "opacity-0", "mt-0", "mb-0", "pointer-events-none");
             semesterDiv.classList.add("max-h-96", "opacity-100", "mt-2", "mb-5");
             semester_isOpen = true;
         }
         else {
             dropdownArrow.classList.remove("rotate-180");
             semesterDiv.classList.remove("max-h-96", "opacity-100", "mt-2", "mb-5");
-            semesterDiv.classList.add("max-h-0", "opacity-0", "mt-0", "mb-0");
+            semesterDiv.classList.add("max-h-0", "opacity-0", "mt-0", "mb-0", "pointer-events-none");
             semester_isOpen = false;
             if (cycle_isOpen) {
-                var cycleDiv = document.getElementById("first_year");
+                let cycleDiv = document.getElementById("first_year");
                 cycleDiv.classList.remove("max-h-15", "opacity-100", "mt-2", "mb-5");
-                cycleDiv.classList.add("max-h-0", "opacity-0", "mt-0", "mb-0");
+                cycleDiv.classList.add("max-h-0", "opacity-0", "mt-0", "mb-0", "pointer-events-none");
                 cycle_isOpen = false;
             }
             if (stream_isOpen) {
-                var streamDiv = document.getElementById("stream");
+                let streamDiv = document.getElementById("stream");
                 streamDiv.classList.remove("max-h-15", "opacity-100", "mt-2", "mb-5");
-                streamDiv.classList.add("max-h-0", "opacity-0", "mt-0", "mb-0");
+                streamDiv.classList.add("max-h-0", "opacity-0", "mt-0", "mb-0", "pointer-events-none");
+                stream_isOpen = false;
+            }
+            if (course_isOpen) {
+                let courseDiv = document.getElementById("course");
+                courseDiv.classList.remove("max-h-80", "opacity-100", "mt-2");
+                courseDiv.classList.add("max-h-0", "opacity-0", "mt-0", "pointer-events-none");
+                course_isOpen = false;
             }
             if (table_isOpen) {
-                sub_table.classList.remove("opacity-100", "py-5");
-                sub_table.classList.add("opacity-0", "py-0");
+                sub_table.classList.remove("opacity-100", "mb-5");
+                sub_table.classList.add("opacity-0", "pointer-events-none");
                 sub_table_nested.classList.remove("opacity-100");
-                sub_table_nested.classList.add("opacity-0");
+                sub_table_nested.classList.add("opacity-0", "pointer-events-none");
                 document.getElementById("subject_table").innerHTML = "";
                 submit_button.classList.remove("opacity-100");
-                submit_button.classList.add("opacity-0");
+                submit_button.classList.add("opacity-0", "pointer-events-none");
+                document.getElementById("result_display").classList.add("hidden");
+                table_isOpen = false;
             }
         }
     };
@@ -200,15 +211,21 @@ document.addEventListener('DOMContentLoaded', function () {
         switch (selectedSemester) {
             case 1:
                 var cycleDiv = document.getElementById("first_year");
-                cycleDiv.classList.remove("max-h-0", "opacity-0", "mt-0", "mb-0");
+                cycleDiv.classList.remove("max-h-0", "opacity-0", "mt-0", "mb-0", "pointer-events-none");
                 cycleDiv.classList.add("max-h-15", "opacity-100", "mt-2", "mb-5");
                 cycle_isOpen = true;
                 break;
             case 2:
                 var cycleDiv = document.getElementById("first_year");
-                cycleDiv.classList.remove("max-h-0", "opacity-0", "mt-0", "mb-0");
+                cycleDiv.classList.remove("max-h-0", "opacity-0", "mt-0", "mb-0", "pointer-events-none");
                 cycleDiv.classList.add("max-h-15", "opacity-100", "mt-2", "mb-5");
                 cycle_isOpen = true;
+                break;
+            default:
+                var courseDiv = document.getElementById("course");
+                courseDiv.classList.remove("max-h-0", "opacity-0", "mt-0", "pointer-events-none");
+                courseDiv.classList.add("max-h-80", "opacity-100", "mt-2");
+                course_isOpen = true;
                 break;
         }
     }
@@ -217,7 +234,7 @@ document.addEventListener('DOMContentLoaded', function () {
     function cycle(cycle) {
         var streamDiv = document.getElementById("stream");
         stream_isOpen = true;
-        streamDiv.classList.remove("max-h-0", "opacity-0", "mt-0", "mb-0");
+        streamDiv.classList.remove("max-h-0", "opacity-0", "mt-0", "mb-0", "pointer-events-none");
         streamDiv.classList.add("max-h-15", "opacity-100", "mt-2", "mb-5");
         var selectedCycle = cycle;
         console.log(`Selected cycle: ${selectedCycle === 0 ? 'Physics' : 'Chemistry'}`);
@@ -237,9 +254,12 @@ document.addEventListener('DOMContentLoaded', function () {
             const subjectGroup = `${selectedSemester}-${streamPrefix}-${cyclePrefix}`;
             loadSubjects(subjectGroup);
         }
-        else if (selectedSemester && selectedSemester >= 3 && selectedSemester <= 8) {
-        }
     }
+    function loadCourses(course) {
+        let subjectGroup = `${selectedSemester}-${course}`;
+        loadSubjects(subjectGroup);
+    }
+    window.loadCourses = loadCourses;
     function loadSubjects(subjectGroup) {
         console.log(`Loading subject group: ${subjectGroup}`);
         // @ts-ignore
@@ -253,29 +273,66 @@ document.addEventListener('DOMContentLoaded', function () {
             returnHTML += `
             <tr class="${alternate}">
                     <td>${subjectName}</td>
-                    <td>${creditValue}</td>
+                    <td id="credits-${i}">${creditValue}</td>
                     <td>
                         <input type="text"
                             placeholder="Grade"
                             class="w-16 p-1 text-center bg-gray-600 border border-gray-500 rounded focus:outline-none focus:ring-1 focus:ring-white"
                             maxlength="2"
+                            id="grade-${i}"
                     </td>
                 </tr>`;
             i++;
             if (alternate === "")
                 alternate = "bg-zinc-900";
         }
+        subjectCount = i;
         table_isOpen = true;
         document.getElementById("subject_table").innerHTML = returnHTML;
         let sub_table = document.getElementById("table");
         let sub_table_nested = document.getElementById("nested_table");
         let submit_button = document.getElementById("submit_button");
-        sub_table.classList.remove("opacity-0", "py-0");
-        sub_table.classList.add("opacity-100", "py-5");
-        sub_table_nested.classList.remove("opacity-0");
+        sub_table.classList.remove("opacity-0", "pointer-events-none");
+        sub_table.classList.add("opacity-100", "mb-5");
+        sub_table_nested.classList.remove("opacity-0", "pointer-events-none");
         sub_table_nested.classList.add("opacity-100");
-        submit_button.classList.remove("opacity-0");
+        submit_button.classList.remove("opacity-0", "pointer-events-none");
         submit_button.classList.add("opacity-100");
     }
     window.selectStream = selectStream;
+    const VALID_GRADES = ["A+", "A", "B", "C", "D", "E", "F", "S", "NS"];
+    const GRADE_WEIGHT = { "A+": 10, "A": 9, "B": 8, "C": 7, "D": 6, "E": 5, "F": 0, "S": 10, "NS": 0 };
+    function calculateGPA() {
+        let inputted_grades = [];
+        let credits = [];
+        let obtained_creds = 0;
+        let total_creds = 0;
+        for (let grade = 0; grade < subjectCount; grade++) {
+            let input = document.getElementById(`grade-${grade}`).value;
+            if (validChecker(input.toUpperCase())) {
+                inputted_grades.push(input);
+                let creditText = document.getElementById(`credits-${grade}`).textContent || "0";
+                credits.push(parseInt(creditText));
+                total_creds += parseInt(creditText);
+            }
+            else {
+                alert("Please enter a valid grade");
+                return;
+            }
+        }
+        for (let i = 0; i < inputted_grades.length; i++) {
+            obtained_creds += GRADE_WEIGHT[inputted_grades[i].toUpperCase()] * credits[i];
+        }
+        let gpa = obtained_creds / total_creds;
+        document.getElementById("gpa_display").textContent += `${gpa.toFixed(2)}`;
+        document.getElementById("credit_display").textContent += `${(obtained_creds / 10).toFixed(2)}`;
+        document.getElementById("result_display").classList.remove("hidden");
+    }
+    window.calculateGPA = calculateGPA;
+    function validChecker(grade) {
+        if (VALID_GRADES.includes(grade))
+            return true;
+        else
+            return false;
+    }
 });
