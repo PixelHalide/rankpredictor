@@ -110,8 +110,24 @@
                     <div id="noncs" class="hover:bg-gray-600 cursor-pointer transition-all hover:rounded-md hover:-translate-y-1">Non-CS Stream</div>
                 </div>
             </div>
-
-        </div>
+            <!--<div class="flex shrink justify-center text-center py-5 drop-shadow-xl">-->
+            <div id="table" class="flex shrink justify-center text-center py-0 drop-shadow-xl opacity-0 transition-all duration-500">
+                <table id="nested_table" class="table-auto border-collapse drop-shadow-xl opacity-0 transition-all duration-500">
+                    <thead>
+                      <tr class="bg-zinc-900 py-10">
+                        <th>Subject</th>
+                        <th>Credits</th>
+                        <th>Grade(/A)</th>
+                      </tr>
+                    </thead>
+                    <tbody id="subject_table" class="opacity-100">
+                    </tbody>
+                  </table>
+                </div>
+                <div id="submit_button" class="opacity-0 transition-all duration-500">
+                    <button class="w-full py-2 px-4 bg-green-600 text-white rounded hover:bg-green-500 active:bg-green-700 cursor-pointer transition-colors mb-4">Submit Grades</button>
+                </div>
+            </div>
     </div>
 </body>
 </html>
