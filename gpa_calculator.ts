@@ -1,4 +1,4 @@
-import subDat from "./src/subjects.json";
+//import subDat from "./src/subjects.json";
 
 const subjectData = {"1-CS-PHY":{
     "Computational Mathematics - 1": 4,

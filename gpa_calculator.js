@@ -1,3 +1,5 @@
+"use strict";
+//import subDat from "./src/subjects.json";
 const subjectData = { "1-CS-PHY": {
         "Computational Mathematics - 1": 4,
         "Applied Physics for Engineers": 3,
@@ -1473,4 +1475,3 @@ document.addEventListener('DOMContentLoaded', function () {
         return VALID_GRADES.includes(grade);
     }
 });
-export {};
