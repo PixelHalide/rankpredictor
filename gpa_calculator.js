@@ -1454,7 +1454,6 @@ document.addEventListener('DOMContentLoaded', function () {
         }
         let gpa = obtained_creds / total_creds;
         document.getElementById("gpa_display").textContent = `Your GPA is Calculated to be: ${gpa.toFixed(2)}`;
-        document.getElementById("credit_display").textContent = `Credits obtained: ${total_creds}`;
         document.getElementById("result_display").classList.remove("hidden");
     }
     window.calculateGPA = calculateGPA;
