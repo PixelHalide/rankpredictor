@@ -21,9 +21,7 @@
     --color-white: #fff;
     --spacing: 0.25rem;
     --container-md: 28rem;
-    --container-lg: 32rem;
     --container-xl: 36rem;
-    --container-2xl: 42rem;
     --text-sm: 0.875rem;
     --text-sm--line-height: calc(1.25 / 0.875);
     --text-lg: 1.125rem;
@@ -497,33 +495,6 @@
   .max-h-15 {
     max-height: calc(var(--spacing) * 15);
   }
-  .max-h-30 {
-    max-height: calc(var(--spacing) * 30);
-  }
-  .max-h-35 {
-    max-height: calc(var(--spacing) * 35);
-  }
-  .max-h-40 {
-    max-height: calc(var(--spacing) * 40);
-  }
-  .max-h-45 {
-    max-height: calc(var(--spacing) * 45);
-  }
-  .max-h-50 {
-    max-height: calc(var(--spacing) * 50);
-  }
-  .max-h-60 {
-    max-height: calc(var(--spacing) * 60);
-  }
-  .max-h-65 {
-    max-height: calc(var(--spacing) * 65);
-  }
-  .max-h-70 {
-    max-height: calc(var(--spacing) * 70);
-  }
-  .max-h-75 {
-    max-height: calc(var(--spacing) * 75);
-  }
   .max-h-80 {
     max-height: calc(var(--spacing) * 80);
   }
@@ -556,12 +527,6 @@
   }
   .w-screen {
     width: 100vw;
-  }
-  .max-w-2xl {
-    max-width: var(--container-2xl);
-  }
-  .max-w-lg {
-    max-width: var(--container-lg);
   }
   .max-w-md {
     max-width: var(--container-md);
@@ -1463,9 +1428,6 @@
   }
   .py-2 {
     padding-block: calc(var(--spacing) * 2);
-  }
-  .py-5 {
-    padding-block: calc(var(--spacing) * 5);
   }
   .py-10 {
     padding-block: calc(var(--spacing) * 10);
