@@ -89,7 +89,7 @@
                     <span id="dropdown-arrow" class="inline-block transform transition-all duration-300"><img src="/media/down-arrow-svgrepo-com.svg" width="10" height="10"></span>
                 </button>
             </div>
-            <div id="semester" class="max-h-0 opacity-0 overflow-hidden flex justify-center items-center w-64 bg-gray-700 mx-auto border border-white/40 rounded-xl mt-0 mb-0 p-3 transition-all duration-500">
+            <div id="semester" class="max-h-0 opacity-0 overflow-hidden flex justify-center items-center w-64 bg-gray-700 mx-auto border border-white/40 rounded-xl mt-0 mb-0 p-3 transition-all duration-500 pointer-events-none">
                 <div class="grid grid-cols-4 grid-rows-2 gap-2 text-center w-full">
                     <span onclick="get_semester(1)" id="I" class="p-2 hover:-translate-y-1 hover:bg-gray-600 cursor-pointer transition-all">I</span>
                     <div onclick="get_semester(2)" id="II" class="p-2 hover:-translate-y-1 hover:bg-gray-600 cursor-pointer transition-all">II</div>
@@ -101,7 +101,7 @@
                     <div onclick="get_semester(8)" id="VIII" class="p-2 hover:-translate-y-1 hover:bg-gray-600 cursor-pointer transition-all">VIII</div>
                 </div>
             </div>
-            <div id="course" class="max-h-0 opacity-0 overflow-hidden flex justify-center items-center w-full bg-gray-700 mx-auto border border-white/40 rounded-xl mt-0 p-3 transition-all duration-500">
+            <div id="course" class="max-h-0 opacity-0 overflow-hidden flex justify-center items-center w-full bg-gray-700 mx-auto border border-white/40 rounded-xl mt-0 p-3 transition-all duration-500 pointer-events-none">
                 <div class="grid grid-cols-3 grid-rows-7 gap-2 text-center w-full">
                     <span onclick="loadCourses('CS')" class="p-1 hover:-translate-y-1 hover:bg-gray-600 cursor-pointer transition-all">CSE</span>
                     <span onclick="loadCourses('AIML')" class="p-1 hover:-translate-y-1 hover:bg-gray-600 cursor-pointer transition-all">AIML</span>
@@ -128,14 +128,14 @@
                     <span onclick="loadCourses('Chem')" class="p-1 hover:-translate-y-1 hover:bg-gray-600 cursor-pointer transition-all">Chem</span>
                 </div>
             </div>
-            <div id="first_year" class="flex justify-center gap-4 opacity-0 bg-gray-700 mx-auto w-full overflow-hidden max-h-0 rounded-2xl p-2.5 transition-all duration-500 mt-0 mb-0">
+            <div id="first_year" class="flex justify-center gap-4 opacity-0 bg-gray-700 mx-auto w-full overflow-hidden max-h-0 rounded-2xl p-2.5 transition-all duration-500 mt-0 mb-0 pointer-events-none">
                 <div class="flex flex-row justify-evenly w-full my-auto">
                     <div onclick="cycle(0)" class="hover:bg-gray-600 cursor-pointer transition-all hover:rounded-md hover:-translate-y-1">Physics Cycle</div>
                     <div onclick="cycle(1)" class="hover:bg-gray-600 cursor-pointer transition-all hover:rounded-md hover:-translate-y-1">Chem Cycle</div>
                 </div>
             </div>
 
-            <div id="stream" class="flex justify-center gap-4 opacity-0 bg-gray-700 mx-auto w-full overflow-hidden max-h-0 rounded-2xl p-2.5 transition-all duration-500 mt-0 mb-0">
+            <div id="stream" class="flex justify-center gap-4 opacity-0 bg-gray-700 mx-auto w-full overflow-hidden max-h-0 rounded-2xl p-2.5 transition-all duration-500 mt-0 mb-0 pointer-events-none">
                 <div class="flex flex-row justify-evenly w-full my-auto">
                     <div id="cs" class="hover:bg-gray-600 cursor-pointer transition-all hover:rounded-md hover:-translate-y-1">CS Stream</div>
                     <div id="noncs" class="hover:bg-gray-600 cursor-pointer transition-all hover:rounded-md hover:-translate-y-1">Non-CS Stream</div>
