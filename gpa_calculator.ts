@@ -88,7 +88,7 @@ const subjectData = {"1-CS-PHY":{
     "Mini Project (Minor Specialization)": 8
 },
 "8-CS": {
-    "Industrial Training": 1,
+
     "Project Work / Practice School": 12,
     "Project Work (B. Tech Honors)": 20,
     "B Tech Honors (Theory 1) (5 Semester)": 4,
@@ -195,7 +195,7 @@ const subjectData = {"1-CS-PHY":{
     "Mini Project (Minor Specialization)": 8
 },
 "8-AIML": {
-    "Industrial Training": 1,
+
     "Project Work / Practice School": 12,
     "Project Work (B. Tech Honours)": 20,
     "B Tech Honours (Theory 1)** (V Semester)": 4,
@@ -252,7 +252,7 @@ const subjectData = {"1-CS-PHY":{
     "Mini Project (Minor Specialization)": 8
 },
 "8-IT": {
-    "Industrial Training": 1,
+
     "Project Work / Practice School": 12,
     "Project Work (B. Tech Honours)": 20,
     "B Tech Honours (Theory 1) (V Semester)": 4,
@@ -309,7 +309,7 @@ const subjectData = {"1-CS-PHY":{
     "Mini Project (Minor Specialization)": 8
 },
 "8-CCE": {
-    "Industrial Training": 1,
+
     "Project Work / Practice School": 12,
     "Project Work (B. Tech Honours)": 20,
     "B Tech Honours (Theory 1) (V Semester)": 4,
@@ -366,7 +366,7 @@ const subjectData = {"1-CS-PHY":{
     "Mini Project (Minor Specialization)": 8
 },
 "8-DSE": {
-    "Industrial Training": 1,
+
     "Project Work / Practice School": 12,
     "Project Work (B. Tech Honours)": 20,
     "B Tech Honours (Theory 1) (V Semester)": 4,
@@ -422,7 +422,7 @@ const subjectData = {"1-CS-PHY":{
     "Mini Project (Minor Specialization)": 8
 },
 "8-MNC": {
-    "Industrial Training": 1,
+
     "Project Work": 12,
     "Project Work (B Tech – Honours)": 20,
     "B Tech – Honours Theory – 1 (V Semester)": 4,
@@ -815,7 +815,7 @@ const subjectData = {"1-CS-PHY":{
     "Mini Project (Minor Specialization)": 8
 },
 "8-BioMed": {
-    "Industrial Training": 1,
+
     "Project Work": 12,
     "Project Work (B Tech – Honours)": 20,
     "B Tech – Honours Theory – 1 (V semester)": 4,
@@ -872,7 +872,7 @@ const subjectData = {"1-CS-PHY":{
         "Mini Project (Minor Specialization)": 8
     },
     "8-BioTech": {
-        "Industrial Training": 1,
+
         "Project Work": 12,
         "Project Work (B Tech – Honours)": 20,
         "B Tech – Honours Theory – 1 (V semester)": 4,
@@ -988,7 +988,7 @@ const subjectData = {"1-CS-PHY":{
         "Mini Project (Minor Specialization)": 8
     },
     "8-Aero": {
-        "Industrial Training": 1,
+
         "Project Work / Practice School": 12,
         "Project Work (B. Tech Honours)": 20,
         "BTech Honors (Theory 1)": 4,
@@ -1103,7 +1103,7 @@ const subjectData = {"1-CS-PHY":{
         "Mini Project (Minor Specialization)": 8
     },
     "8-Mech": {
-        "Industrial Training": 1,
+
         "Project Work / Practice School": 12,
         "Project Work (B. Tech Honours)": 20,
         "BTech Honors (Theory 1)": 4,
@@ -1160,7 +1160,7 @@ const subjectData = {"1-CS-PHY":{
         "Mini Project (Minor Specialization)": 8
     },
     "8-Industrial": {
-        "Industrial Training": 1,
+
         "Project Work / Practice School": 12,
         "Project Work (B. Tech Honours)": 20,
         "BTech Honors (Theory 1)": 4,
@@ -1217,7 +1217,7 @@ const subjectData = {"1-CS-PHY":{
         "Mini Project (Minor specialization)*": 8
     },
     "8-Civil": {
-        "Industrial Training": 1,
+
         "Project Work": 12,
         "Project Work (B. Tech Honours) **": 20,
         "B Tech Honours (Theory 1)** (V Semester)": 4,
@@ -1274,7 +1274,7 @@ const subjectData = {"1-CS-PHY":{
         "Mini Project (Minor Specialization)": 8
     },
     "8-Chem": {
-        "Industrial Training": 1,
+
         "Project Work": 12,
         "Project Work (B. Tech Honours)": 20,
         "BTech Honors (Theory 1)": 4,
