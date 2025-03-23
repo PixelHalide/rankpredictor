@@ -220,9 +220,8 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     (window as any).calculateGPA = calculateGPA;
 
-    function validChecker(grade:any){
-        if (VALID_GRADES.includes(grade)) return true;
-        else return false;
+    function validChecker(grade: string): boolean {
+        return VALID_GRADES.includes(grade);
     }
 });
 
