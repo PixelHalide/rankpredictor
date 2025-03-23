@@ -76,7 +76,6 @@ const subjectData = {"1-CS-PHY":{
     "Parallel Computer Architecture and Programming": 4,
     "Program Elective - 1 (Minor Specialization)": 3,
     "Program Elective - 2 (Minor Specialization)": 3,
-    "Open Elective 2": 3
 },
 "7-CS": {
     "Program Elective - 3 (Minor Specialization)": 3,
@@ -84,7 +83,6 @@ const subjectData = {"1-CS-PHY":{
     "Program Elective - 5": 3,
     "Program Elective - 6": 3,
     "Program Elective - 7": 3,
-    "Open Elective-3": 3,
     "Mini Project (Minor Specialization)": 8
 },
 "8-CS": {
@@ -180,7 +178,6 @@ const subjectData = {"1-CS-PHY":{
     "Parallel Computer Architecture and Programming": 3,
     "Program Elective – I/Minor Specialization": 3,
     "Program Elective – II/ Minor Specialization": 3,
-    "Open Elective-2": 3,
     "Deep Learning Lab": 1,
     "Web Programming Lab": 1,
     "Parallel Programming Lab": 1
@@ -191,7 +188,7 @@ const subjectData = {"1-CS-PHY":{
     "Program Elective – V": 3,
     "Program Elective – VI": 3,
     "Program Elective – VII": 3,
-    "Open Elective-3": 3,
+
     "Mini Project (Minor Specialization)": 8
 },
 "8-AIML": {
@@ -238,7 +235,6 @@ const subjectData = {"1-CS-PHY":{
     "Data Mining": 4,
     "Program Elective - I / Minor Specialization": 3,
     "Program Elective - II / Minor Specialization": 3,
-    "Open Elective-2": 3,
     "Advanced Technology Lab": 1,
     "Data Mining Lab": 1
 },
@@ -248,7 +244,6 @@ const subjectData = {"1-CS-PHY":{
     "Program Elective - V": 3,
     "Program Elective - VI": 3,
     "Program Elective - VII": 3,
-    "Open Elective-3": 3,
     "Mini Project (Minor Specialization)": 8
 },
 "8-IT": {
@@ -295,7 +290,7 @@ const subjectData = {"1-CS-PHY":{
     "Flexible Core - 2 (A2/B2/C2)": 3,
     "Program Elective - I / Minor Specialization": 3,
     "Program Elective - II / Minor Specialization": 3,
-    "Open Elective-2": 3,
+
     "Mobile Application Development Lab": 2,
     "Network Design and Programming Lab": 1
 },
@@ -305,7 +300,7 @@ const subjectData = {"1-CS-PHY":{
     "Program Elective - V": 3,
     "Program Elective - VI": 3,
     "Program Elective - VII": 3,
-    "Open Elective-3": 3,
+
     "Mini Project (Minor Specialization)": 8
 },
 "8-CCE": {
@@ -352,7 +347,7 @@ const subjectData = {"1-CS-PHY":{
     "Big Data Analytics and Tools": 3,
     "Program Elective - I / Minor Specialization": 3,
     "Program Elective - II / Minor Specialization": 3,
-    "Open Elective-2": 3,
+
     "Principles of Artificial Intelligence Lab": 1,
     "Big Data Analytics and Tools Lab": 1
 },
@@ -362,7 +357,7 @@ const subjectData = {"1-CS-PHY":{
     "Program Elective - V": 3,
     "Program Elective - VI": 3,
     "Program Elective - VII": 3,
-    "Open Elective-3": 3,
+
     "Mini Project (Minor Specialization)": 8
 },
 "8-DSE": {
@@ -1203,7 +1198,7 @@ const subjectData = {"1-CS-PHY":{
         "Flexible Core-III (A3/B3/C3)": 3,
         "Program Elective –1/ Minor Specialization": 3,
         "Program Elective –2/ Minor Specialization": 3,
-        "Open Elective-2": 3,
+
         "Building Design and Modelling": 1,
         "Structural Detailing and Drawing": 1
     },
@@ -1213,7 +1208,7 @@ const subjectData = {"1-CS-PHY":{
         "Program Elective –V": 3,
         "Program Elective – VI": 3,
         "Program Elective – VII": 3,
-        "Open Elective-3": 3,
+
         "Mini Project (Minor specialization)*": 8
     },
     "8-Civil": {
