@@ -214,8 +214,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 obtained_creds +=  GRADE_WEIGHT[grade] * credits[i];
             }
             let gpa:number = obtained_creds/total_creds;
-            document.getElementById("gpa_display")!.textContent += `${gpa.toFixed(2)}`;
-            document.getElementById("credit_display")!.textContent += `${(obtained_creds/10).toFixed(2)}`;
+            document.getElementById("gpa_display")!.textContent = `Your GPA is Calculated to be: ${gpa.toFixed(2)}`;
+            document.getElementById("credit_display")!.textContent += `Credits obtained: ${(obtained_creds/10).toFixed(2)}`;
             document.getElementById("result_display")!.classList.remove("hidden");
     }
     (window as any).calculateGPA = calculateGPA;
