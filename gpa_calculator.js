@@ -188,9 +188,9 @@ const subjectData = { "1-CS-PHY": {
     "8-AIML": {
         "Project Work / Practice School": 12,
         "Project Work (B. Tech Honors)": 20,
-        "B Tech Honors (Theory 1)** (V Semester)": 4,
-        "B Tech Honors (Theory 2)** (VI Semester)": 4,
-        "B Tech Honors (Theory 3)** (VII Semester)": 4
+        "B Tech Honors (Theory 1) (V Semester)": 4,
+        "B Tech Honors (Theory 2) (VI Semester)": 4,
+        "B Tech Honors (Theory 3) (VII Semester)": 4
     },
     "3-IT": {
         "Engineering Mathematics - III": 3,
@@ -388,7 +388,6 @@ const subjectData = { "1-CS-PHY": {
         "Program Elective – 1/Minor Specialization": 3,
         "Program Elective – 2/Minor Specialization": 3,
         "Time Series Analysis": 4,
-        "Open Elective – 2": 3,
         "Essentials of Management": 3,
         "Advanced Numerical Methods": 3,
         "Scientific Computing Lab": 1
@@ -399,7 +398,6 @@ const subjectData = { "1-CS-PHY": {
         "Program Elective – 5": 3,
         "Program Elective – 6": 3,
         "Program Elective – 7": 3,
-        "Open Elective – 3": 3,
         "Mini Project (Minor Specialization)": 8
     },
     "8-MNC": {
@@ -443,7 +441,6 @@ const subjectData = { "1-CS-PHY": {
         "Capital Markets Technology": 3,
         "Program Elective-1": 3,
         "Program Elective-2": 3,
-        "Open Elective": 3,
         "Capital Markets Lab": 1,
         "Machine Learning Lab": 1
     },
@@ -456,7 +453,6 @@ const subjectData = { "1-CS-PHY": {
         "Management Research Methods": 3
     },
     "8-CSFT": {
-        "Industrial Training Report": 1,
         "Project Work/Practice School": 12
     },
     "3-ECE": {
@@ -509,7 +505,6 @@ const subjectData = { "1-CS-PHY": {
         "Mini Project (Minor Specialization)": 8
     },
     "8-ECE": {
-        "Industrial Training (MLC)": 1,
         "Project Work": 12,
         "Project Work (B Tech – Honors) (V - VIII sem)": 20,
         "B Tech – Honors Theory – 1 (V semester)": 4,
@@ -552,7 +547,6 @@ const subjectData = { "1-CS-PHY": {
         "MEMS and NEMS": 3,
         "Program Elective- I (Minor Specialization)": 3,
         "Program Elective- II (Minor Specialization)": 3,
-        "Open Elective- II": 3,
         "Analog IC Design Lab": 1,
         "Semiconductor Fabrication and Characterization Lab": 1
     },
@@ -562,11 +556,9 @@ const subjectData = { "1-CS-PHY": {
         "Program Elective – V": 3,
         "Program Elective – VI": 3,
         "Program Elective – VII": 3,
-        "Open Elective – III": 3,
         "Mini Project (Minor Specialization)": 8
     },
     "8-VLSI": {
-        "Industrial Training (MLC)": 1,
         "Project Work / Practice School": 12,
         "Project Work (B. Tech Honors)": 20,
         "BTech Honors (Theory 1) (V Sem)": 4,
@@ -624,7 +616,6 @@ const subjectData = { "1-CS-PHY": {
         "Mini Project (Minor Specialization)": 8
     },
     "8-ENI": {
-        "Industrial Training (MLC)": 1,
         "Project Work": 12,
         "Project Work (B Tech – Honors)": 20,
         "B Tech – Honors Theory – 1 (V semester)": 4,
@@ -681,7 +672,6 @@ const subjectData = { "1-CS-PHY": {
         "Mini Project (Minor Specialization)": 8
     },
     "8-EEE": {
-        "Industrial Training (MLC)": 1,
         "Project Work": 12,
         "Project Work (B Tech – Honors)": 20,
         "B Tech – Honors Theory – 1 (V semester)": 4,
@@ -738,7 +728,6 @@ const subjectData = { "1-CS-PHY": {
         "Mini Project (Minor Specialization)": 8
     },
     "8-CPS": {
-        "Industrial Training (MLC)": 1,
         "Project Work": 12,
         "Project Work (B Tech – Honors)": 20,
         "B Tech – Honors Theory – 1 (V semester)": 4,
@@ -894,7 +883,6 @@ const subjectData = { "1-CS-PHY": {
         "Automobile Engineering / Automotive Mechanics for Electric Vehicles": 3,
         "Program Elective – I / Minor Specialization": 3,
         "Program Elective – II / Minor Specialization": 3,
-        "Open Elective – II": 3,
         "Hydraulics Lab": 1,
         "IIoT Lab": 1,
         "Pneumatics Lab": 1
@@ -903,12 +891,10 @@ const subjectData = { "1-CS-PHY": {
         "Program Elective – III / Minor Specialization": 3,
         "Program Elective – IV / Minor Specialization": 3,
         "Program Elective – V": 3,
-        "Industrial Training": 1
     },
     "8-MechX": {
         "Program Elective – VI": 3,
         "Program Elective – VII": 3,
-        "Open Elective – III": 3,
         "Mini Project (Minor Specialization)": 8,
         "Project Work/Practice School": 12,
         "Project Work (Only for B. Tech. Hons.)": 20,
@@ -952,7 +938,6 @@ const subjectData = { "1-CS-PHY": {
         "Aircraft Design": 4,
         "Program Elective – I / Minor Specialization": 3,
         "Program Elective – II / Minor Specialization": 3,
-        "Open Elective – II": 3,
         "Avionics Lab": 1,
         "Structural Design and Analysis Lab": 1
     },
@@ -962,7 +947,6 @@ const subjectData = { "1-CS-PHY": {
         "Program Elective – V": 3,
         "Program Elective – VI": 3,
         "Program Elective – VII": 3,
-        "Open Elective – III": 3,
         "Mini Project (Minor Specialization)": 8
     },
     "8-Aero": {
@@ -1018,16 +1002,14 @@ const subjectData = { "1-CS-PHY": {
         "Program Elective – V": 3,
         "Program Elective – VI": 3,
         "Program Elective – VII": 3,
-        "Open Elective –3": 3,
         "Mini Project (Minor specialization)*": 8
     },
     "8-Auto": {
-        "Industrial Training": 1,
         "Project Work/Practice School": 12,
-        "Project Work (B. Tech Honors) **": 20,
-        "B Tech Honors (Theory 1)** (V Semester)": 4,
-        "B Tech Honors (Theory 2)** (VI Semester)": 4,
-        "B Tech Honors (Theory 3)** (VII Semester)": 4
+        "Project Work (B.Tech Honors) ": 20,
+        "B Tech Honors (Theory 1) (V Semester)": 4,
+        "B Tech Honors (Theory 2) (VI Semester)": 4,
+        "B Tech Honors (Theory 3) (VII Semester)": 4
     },
     "3-Mech": {
         "Engineering Mathematics – III": 3,
@@ -1065,7 +1047,6 @@ const subjectData = { "1-CS-PHY": {
         "Flexible Core 3": 4,
         "Program Elective – I / Minor Specialization": 3,
         "Program Elective – II / Minor Specialization": 3,
-        "Open Elective – II": 3,
         "Finite Element Methods Lab": 1,
         "Heat Transfer and Solar Energy Lab": 1
     },
@@ -1075,7 +1056,6 @@ const subjectData = { "1-CS-PHY": {
         "Program Elective – V": 3,
         "Program Elective – VI": 3,
         "Program Elective – VII": 3,
-        "Open Elective – III": 3,
         "Mini Project (Minor Specialization)": 8
     },
     "8-Mech": {
@@ -1121,7 +1101,6 @@ const subjectData = { "1-CS-PHY": {
         "Operations Management": 4,
         "Program Elective – I / Minor Specialization": 3,
         "Program Elective – II / Minor Specialization": 3,
-        "Open Elective – II": 3,
         "Computer Aided Experimental Design Lab": 1,
         "Computer Aided Operations Management Lab": 1
     },
@@ -1131,7 +1110,6 @@ const subjectData = { "1-CS-PHY": {
         "Program Elective – V": 3,
         "Program Elective – VI": 3,
         "Program Elective – VII": 3,
-        "Open Elective – III": 3,
         "Mini Project (Minor Specialization)": 8
     },
     "8-Industrial": {
@@ -1190,10 +1168,10 @@ const subjectData = { "1-CS-PHY": {
     },
     "8-Civil": {
         "Project Work": 12,
-        "Project Work (B. Tech Honors) **": 20,
-        "B Tech Honors (Theory 1)** (V Semester)": 4,
-        "B Tech Honors (Theory 2)** (VI Semester)": 4,
-        "B Tech Honors (Theory 3)** (VII Semester)": 4
+        "Project Work (B. Tech Honors) ": 20,
+        "B Tech Honors (Theory 1) (V Semester)": 4,
+        "B Tech Honors (Theory 2) (VI Semester)": 4,
+        "B Tech Honors (Theory 3) (VII Semester)": 4
     },
     "3-Chem": {
         "Engineering Mathematics – III": 3,
@@ -1231,7 +1209,6 @@ const subjectData = { "1-CS-PHY": {
         "Flexible Core 2 (A2/B2)": 4,
         "Program Elective – I / Minor Specialization": 3,
         "Program Elective – II / Minor Specialization": 3,
-        "Open Elective – 2": 3,
         "Process Modelling and Simulation Lab": 1,
         "Reaction Engineering and Process Control Lab": 1
     },
@@ -1241,7 +1218,6 @@ const subjectData = { "1-CS-PHY": {
         "Program Elective – V": 3,
         "Program Elective – VI": 3,
         "Program Elective – VII": 3,
-        "Open Elective – 3": 3,
         "Mini Project (Minor Specialization)": 8
     },
     "8-Chem": {
