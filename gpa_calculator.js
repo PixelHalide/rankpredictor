@@ -897,7 +897,7 @@ const subjectData = { "1-CS-PHY": {
         "Program Elective – VII": 3,
         "Mini Project (Minor Specialization)": 8,
         "Project Work/Practice School": 12,
-        "Project Work (Only for B. Tech. Hons.)": 20,
+        "Project Work (Only for B. Tech. Honors)": 20,
         "BTech Honors (Theory 1)": 4,
         "BTech Honors (Theory 2)": 4,
         "BTech Honors (Theory 3)": 4
