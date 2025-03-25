@@ -194,10 +194,10 @@ const subjectData = {"1-CS-PHY":{
 "8-AIML": {
 
     "Project Work / Practice School": 12,
-    "Project Work (B. Tech Honours)": 20,
-    "B Tech Honours (Theory 1)** (V Semester)": 4,
-    "B Tech Honours (Theory 2)** (VI Semester)": 4,
-    "B Tech Honours (Theory 3)** (VII Semester)": 4
+    "Project Work (B. Tech Honors)": 20,
+    "B Tech Honors (Theory 1) (V Semester)": 4,
+    "B Tech Honors (Theory 2) (VI Semester)": 4,
+    "B Tech Honors (Theory 3) (VII Semester)": 4
 },
 "3-IT": {
     "Engineering Mathematics - III": 3,
@@ -249,10 +249,10 @@ const subjectData = {"1-CS-PHY":{
 "8-IT": {
 
     "Project Work / Practice School": 12,
-    "Project Work (B. Tech Honours)": 20,
-    "B Tech Honours (Theory 1) (V Semester)": 4,
-    "B Tech Honours (Theory 2) (VI Semester)": 4,
-    "B Tech Honours (Theory 3) (VII Semester)": 4
+    "Project Work (B. Tech Honors)": 20,
+    "B Tech Honors (Theory 1) (V Semester)": 4,
+    "B Tech Honors (Theory 2) (VI Semester)": 4,
+    "B Tech Honors (Theory 3) (VII Semester)": 4
 },
 "3-CCE": {
     "Engineering Mathematics - III": 3,
@@ -290,7 +290,6 @@ const subjectData = {"1-CS-PHY":{
     "Flexible Core - 2 (A2/B2/C2)": 3,
     "Program Elective - I / Minor Specialization": 3,
     "Program Elective - II / Minor Specialization": 3,
-
     "Mobile Application Development Lab": 2,
     "Network Design and Programming Lab": 1
 },
@@ -304,12 +303,11 @@ const subjectData = {"1-CS-PHY":{
     "Mini Project (Minor Specialization)": 8
 },
 "8-CCE": {
-
     "Project Work / Practice School": 12,
-    "Project Work (B. Tech Honours)": 20,
-    "B Tech Honours (Theory 1) (V Semester)": 4,
-    "B Tech Honours (Theory 2) (VI Semester)": 4,
-    "B Tech Honours (Theory 3) (VII Semester)": 4
+    "Project Work (B. Tech Honors)": 20,
+    "B Tech Honors (Theory 1) (V Semester)": 4,
+    "B Tech Honors (Theory 2) (VI Semester)": 4,
+    "B Tech Honors (Theory 3) (VII Semester)": 4
 },
 "3-DSE": {
     "Mathematical Foundations for Data Science-I": 3,
@@ -363,10 +361,10 @@ const subjectData = {"1-CS-PHY":{
 "8-DSE": {
 
     "Project Work / Practice School": 12,
-    "Project Work (B. Tech Honours)": 20,
-    "B Tech Honours (Theory 1) (V Semester)": 4,
-    "B Tech Honours (Theory 2) (VI Semester)": 4,
-    "B Tech Honours (Theory 3) (VII Semester)": 4
+    "Project Work (B. Tech Honors)": 20,
+    "B Tech Honors (Theory 1) (V Semester)": 4,
+    "B Tech Honors (Theory 2) (VI Semester)": 4,
+    "B Tech Honors (Theory 3) (VII Semester)": 4
 },
 "3-MNC": {
     "Computational Linear Algebra": 4,
@@ -402,7 +400,7 @@ const subjectData = {"1-CS-PHY":{
     "Program Elective – 1/Minor Specialization": 3,
     "Program Elective – 2/Minor Specialization": 3,
     "Time Series Analysis": 4,
-    "Open Elective – 2": 3,
+
     "Essentials of Management": 3,
     "Advanced Numerical Methods": 3,
     "Scientific Computing Lab": 1
@@ -413,16 +411,16 @@ const subjectData = {"1-CS-PHY":{
     "Program Elective – 5": 3,
     "Program Elective – 6": 3,
     "Program Elective – 7": 3,
-    "Open Elective – 3": 3,
+
     "Mini Project (Minor Specialization)": 8
 },
 "8-MNC": {
 
     "Project Work": 12,
-    "Project Work (B Tech – Honours)": 20,
-    "B Tech – Honours Theory – 1 (V Semester)": 4,
-    "B Tech – Honours Theory – 2 (VI Semester)": 4,
-    "B Tech – Honours Theory – 3 (VII Semester)": 4
+    "Project Work (B Tech – Honors)": 20,
+    "B Tech – Honors Theory – 1 (V Semester)": 4,
+    "B Tech – Honors Theory – 2 (VI Semester)": 4,
+    "B Tech – Honors Theory – 3 (VII Semester)": 4
 },
 "3-CSFT": {
     "Mathematics for Finance": 4,
@@ -458,7 +456,6 @@ const subjectData = {"1-CS-PHY":{
     "Capital Markets Technology": 3,
     "Program Elective-1": 3,
     "Program Elective-2": 3,
-    "Open Elective": 3,
     "Capital Markets Lab": 1,
     "Machine Learning Lab": 1
 },
@@ -471,7 +468,6 @@ const subjectData = {"1-CS-PHY":{
     "Management Research Methods": 3
 },
 "8-CSFT": {
-    "Industrial Training Report": 1,
     "Project Work/Practice School": 12
 },
 "3-ECE": {
@@ -524,12 +520,12 @@ const subjectData = {"1-CS-PHY":{
     "Mini Project (Minor Specialization)": 8
 },
 "8-ECE": {
-    "Industrial Training (MLC)": 1,
+
     "Project Work": 12,
-    "Project Work (B Tech – Honours) (V - VIII sem)": 20,
-    "B Tech – Honours Theory – 1 (V semester)": 4,
-    "B Tech – Honours Theory – 2 (VI semester)": 4,
-    "B Tech – Honours Theory – 3 (VII semester)": 4
+    "Project Work (B Tech – Honors) (V - VIII sem)": 20,
+    "B Tech – Honors Theory – 1 (V semester)": 4,
+    "B Tech – Honors Theory – 2 (VI semester)": 4,
+    "B Tech – Honors Theory – 3 (VII semester)": 4
 },
 "3-VLSI": {
     "Engineering Mathematics – III": 3,
@@ -567,7 +563,6 @@ const subjectData = {"1-CS-PHY":{
     "MEMS and NEMS": 3,
     "Program Elective- I (Minor Specialization)": 3,
     "Program Elective- II (Minor Specialization)": 3,
-    "Open Elective- II": 3,
     "Analog IC Design Lab": 1,
     "Semiconductor Fabrication and Characterization Lab": 1
 },
@@ -577,16 +572,15 @@ const subjectData = {"1-CS-PHY":{
     "Program Elective – V": 3,
     "Program Elective – VI": 3,
     "Program Elective – VII": 3,
-    "Open Elective – III": 3,
     "Mini Project (Minor Specialization)": 8
 },
 "8-VLSI": {
-    "Industrial Training (MLC)": 1,
+
     "Project Work / Practice School": 12,
-    "Project Work (B. Tech Honours)": 20,
-    "BTech Honours (Theory 1) (V Sem)": 4,
-    "BTech Honours (Theory 2) (VI Sem)": 4,
-    "BTech Honours (Theory 3) (VII Sem)": 4
+    "Project Work (B. Tech Honors)": 20,
+    "BTech Honors (Theory 1) (V Sem)": 4,
+    "BTech Honors (Theory 2) (VI Sem)": 4,
+    "BTech Honors (Theory 3) (VII Sem)": 4
 },
 "3-ENI": {
     "Engineering Mathematics – III": 3,
@@ -639,12 +633,12 @@ const subjectData = {"1-CS-PHY":{
     "Mini Project (Minor Specialization)": 8
 },
 "8-ENI": {
-    "Industrial Training (MLC)": 1,
+
     "Project Work": 12,
-    "Project Work (B Tech – honours)": 20,
-    "B Tech – honours Theory – 1 (V semester)": 4,
-    "B Tech – honours Theory – 2 (VI semester)": 4,
-    "B Tech – honours Theory – 3 (VII semester)": 4
+    "Project Work (B Tech – Honors)": 20,
+    "B Tech – Honors Theory – 1 (V semester)": 4,
+    "B Tech – Honors Theory – 2 (VI semester)": 4,
+    "B Tech – Honors Theory – 3 (VII semester)": 4
 },
 "3-EEE": {
     "Engineering Mathematics – III": 3,
@@ -696,12 +690,12 @@ const subjectData = {"1-CS-PHY":{
     "Mini Project (Minor Specialization)": 8
 },
 "8-EEE": {
-    "Industrial Training (MLC)": 1,
+
     "Project Work": 12,
-    "Project Work (B Tech – Honours)": 20,
-    "B Tech – Honours Theory – 1 (V semester)": 4,
-    "B Tech – Honours Theory – 2 (VI semester)": 4,
-    "B Tech – Honours Theory – 3 (VII semester)": 4
+    "Project Work (B Tech – Honors)": 20,
+    "B Tech – Honors Theory – 1 (V semester)": 4,
+    "B Tech – Honors Theory – 2 (VI semester)": 4,
+    "B Tech – Honors Theory – 3 (VII semester)": 4
 },
 "3-CPS": {
     "Engineering Mathematics – III": 3,
@@ -753,12 +747,12 @@ const subjectData = {"1-CS-PHY":{
     "Mini Project (Minor Specialization)": 8
 },
 "8-CPS": {
-    "Industrial Training (MLC)": 1,
+
     "Project Work": 12,
-    "Project Work (B Tech – Honours)": 20,
-    "B Tech – Honours Theory – 1 (V semester)": 4,
-    "B Tech – Honours Theory – 2 (VI semester)": 4,
-    "B Tech – Honours Theory – 3 (VII semester)": 4
+    "Project Work (B Tech – Honors)": 20,
+    "B Tech – Honors Theory – 1 (V semester)": 4,
+    "B Tech – Honors Theory – 2 (VI semester)": 4,
+    "B Tech – Honors Theory – 3 (VII semester)": 4
 },
 "3-BioMed": {
     "Engineering Mathematics – III": 3,
@@ -812,10 +806,10 @@ const subjectData = {"1-CS-PHY":{
 "8-BioMed": {
 
     "Project Work": 12,
-    "Project Work (B Tech – Honours)": 20,
-    "B Tech – Honours Theory – 1 (V semester)": 4,
-    "B Tech – Honours Theory – 2 (VI semester)": 4,
-    "B Tech – Honours Theory – 3 (VII semester)": 4
+    "Project Work (B Tech – Honors)": 20,
+    "B Tech – Honors Theory – 1 (V semester)": 4,
+    "B Tech – Honors Theory – 2 (VI semester)": 4,
+    "B Tech – Honors Theory – 3 (VII semester)": 4
 },
 "3-BioTech": {
         "Engineering Mathematics – III": 3,
@@ -869,10 +863,10 @@ const subjectData = {"1-CS-PHY":{
     "8-BioTech": {
 
         "Project Work": 12,
-        "Project Work (B Tech – Honours)": 20,
-        "B Tech – Honours Theory – 1 (V semester)": 4,
-        "B Tech – Honours Theory – 2 (VI semester)": 4,
-        "B Tech – Honours Theory – 3 (VII semester)": 4
+        "Project Work (B Tech – Honors)": 20,
+        "B Tech – Honors Theory – 1 (V semester)": 4,
+        "B Tech – Honors Theory – 2 (VI semester)": 4,
+        "B Tech – Honors Theory – 3 (VII semester)": 4
     },   "3-MechX": {
         "Engineering Mathematics – III": 3,
         "Data Structures and Algorithms": 3,
@@ -911,7 +905,7 @@ const subjectData = {"1-CS-PHY":{
         "Automobile Engineering / Automotive Mechanics for Electric Vehicles": 3,
         "Program Elective – I / Minor Specialization": 3,
         "Program Elective – II / Minor Specialization": 3,
-        "Open Elective – II": 3,
+
         "Hydraulics Lab": 1,
         "IIoT Lab": 1,
         "Pneumatics Lab": 1
@@ -920,12 +914,12 @@ const subjectData = {"1-CS-PHY":{
         "Program Elective – III / Minor Specialization": 3,
         "Program Elective – IV / Minor Specialization": 3,
         "Program Elective – V": 3,
-        "Industrial Training": 1
+
     },
     "8-MechX": {
         "Program Elective – VI": 3,
         "Program Elective – VII": 3,
-        "Open Elective – III": 3,
+
         "Mini Project (Minor Specialization)": 8,
         "Project Work/Practice School": 12,
         "Project Work (Only for B. Tech. Hons.)": 20,
@@ -969,7 +963,7 @@ const subjectData = {"1-CS-PHY":{
         "Aircraft Design": 4,
         "Program Elective – I / Minor Specialization": 3,
         "Program Elective – II / Minor Specialization": 3,
-        "Open Elective – II": 3,
+
         "Avionics Lab": 1,
         "Structural Design and Analysis Lab": 1
     },
@@ -979,13 +973,13 @@ const subjectData = {"1-CS-PHY":{
         "Program Elective – V": 3,
         "Program Elective – VI": 3,
         "Program Elective – VII": 3,
-        "Open Elective – III": 3,
+
         "Mini Project (Minor Specialization)": 8
     },
     "8-Aero": {
 
         "Project Work / Practice School": 12,
-        "Project Work (B. Tech Honours)": 20,
+        "Project Work (B. Tech Honors)": 20,
         "BTech Honors (Theory 1)": 4,
         "BTech Honors (Theory 2)": 4,
         "BTech Honors (Theory 3)": 4
@@ -1034,18 +1028,16 @@ const subjectData = {"1-CS-PHY":{
         "Program Elective – III/ Minor Specialization": 3,
         "Program Elective – IV/ Minor Specialization": 3,
         "Program Elective – V": 3,
-       "Program Elective – VI": 3,
+        "Program Elective – VI": 3,
         "Program Elective – VII": 3,
-       "Open Elective –3":3,
         "Mini Project (Minor specialization)*": 8
     },
     "8-Auto": {
-          "Industrial Training":1,
-       "Project Work/Practice School":12,
-      "Project Work (B. Tech Honours) **":20,
-        "B Tech Honours (Theory 1)** (V Semester)":4,
-       "B Tech Honours (Theory 2)** (VI Semester)":4,
-      "B Tech Honours (Theory 3)** (VII Semester)":4
+      "Project Work/Practice School":12,
+      "Project Work (B.Tech Honors) ":20,
+      "B Tech Honors (Theory 1) (V Semester)":4,
+      "B Tech Honors (Theory 2) (VI Semester)":4,
+      "B Tech Honors (Theory 3) (VII Semester)":4
 
     },
     "3-Mech": {
@@ -1084,7 +1076,7 @@ const subjectData = {"1-CS-PHY":{
         "Flexible Core 3": 4,
         "Program Elective – I / Minor Specialization": 3,
         "Program Elective – II / Minor Specialization": 3,
-        "Open Elective – II": 3,
+
         "Finite Element Methods Lab": 1,
         "Heat Transfer and Solar Energy Lab": 1
     },
@@ -1094,13 +1086,13 @@ const subjectData = {"1-CS-PHY":{
         "Program Elective – V": 3,
         "Program Elective – VI": 3,
         "Program Elective – VII": 3,
-        "Open Elective – III": 3,
+
         "Mini Project (Minor Specialization)": 8
     },
     "8-Mech": {
 
         "Project Work / Practice School": 12,
-        "Project Work (B. Tech Honours)": 20,
+        "Project Work (B. Tech Honors)": 20,
         "BTech Honors (Theory 1)": 4,
         "BTech Honors (Theory 2)": 4,
         "BTech Honors (Theory 3)": 4
@@ -1141,7 +1133,6 @@ const subjectData = {"1-CS-PHY":{
         "Operations Management": 4,
         "Program Elective – I / Minor Specialization": 3,
         "Program Elective – II / Minor Specialization": 3,
-        "Open Elective – II": 3,
         "Computer Aided Experimental Design Lab": 1,
         "Computer Aided Operations Management Lab": 1
     },
@@ -1151,13 +1142,12 @@ const subjectData = {"1-CS-PHY":{
         "Program Elective – V": 3,
         "Program Elective – VI": 3,
         "Program Elective – VII": 3,
-        "Open Elective – III": 3,
         "Mini Project (Minor Specialization)": 8
     },
     "8-Industrial": {
 
         "Project Work / Practice School": 12,
-        "Project Work (B. Tech Honours)": 20,
+        "Project Work (B. Tech Honors)": 20,
         "BTech Honors (Theory 1)": 4,
         "BTech Honors (Theory 2)": 4,
         "BTech Honors (Theory 3)": 4
@@ -1214,10 +1204,10 @@ const subjectData = {"1-CS-PHY":{
     "8-Civil": {
 
         "Project Work": 12,
-        "Project Work (B. Tech Honours) **": 20,
-        "B Tech Honours (Theory 1)** (V Semester)": 4,
-        "B Tech Honours (Theory 2)** (VI Semester)": 4,
-        "B Tech Honours (Theory 3)** (VII Semester)": 4
+        "Project Work (B. Tech Honors) ": 20,
+        "B Tech Honors (Theory 1) (V Semester)": 4,
+        "B Tech Honors (Theory 2) (VI Semester)": 4,
+        "B Tech Honors (Theory 3) (VII Semester)": 4
     },
     "3-Chem": {
         "Engineering Mathematics – III": 3,
@@ -1255,7 +1245,7 @@ const subjectData = {"1-CS-PHY":{
         "Flexible Core 2 (A2/B2)": 4,
         "Program Elective – I / Minor Specialization": 3,
         "Program Elective – II / Minor Specialization": 3,
-        "Open Elective – 2": 3,
+
         "Process Modelling and Simulation Lab": 1,
         "Reaction Engineering and Process Control Lab": 1
     },
@@ -1265,13 +1255,13 @@ const subjectData = {"1-CS-PHY":{
         "Program Elective – V": 3,
         "Program Elective – VI": 3,
         "Program Elective – VII": 3,
-        "Open Elective – 3": 3,
+
         "Mini Project (Minor Specialization)": 8
     },
     "8-Chem": {
 
         "Project Work": 12,
-        "Project Work (B. Tech Honours)": 20,
+        "Project Work (B. Tech Honors)": 20,
         "BTech Honors (Theory 1)": 4,
         "BTech Honors (Theory 2)": 4,
         "BTech Honors (Theory 3)": 4
@@ -1285,6 +1275,7 @@ document.addEventListener('DOMContentLoaded', function() {
     let stream_isOpen: boolean = false;
     let table_isOpen: boolean = false;
     let course_isOpen: boolean = false;
+    var honors: boolean = false;
 
     const dropdownButton = document.getElementById("dropdown-button")!;
     const dropdownArrow = document.getElementById("dropdown-arrow")!;
@@ -1295,6 +1286,17 @@ document.addEventListener('DOMContentLoaded', function() {
 
     var selectedSemester: number | null;
     var subjectCount: number | null;
+
+    document.getElementById("default-checkbox")!.onclick = function() {
+        if (honors) {
+            honors = false;
+            closeTable();
+        }
+        else {
+            honors = true;
+            closeTable();
+        }
+    }
 
     function closeCycle() {
         if (cycle_isOpen) {
@@ -1320,6 +1322,9 @@ document.addEventListener('DOMContentLoaded', function() {
             courseDiv.classList.remove("max-h-80", "opacity-100", "mt-2");
             courseDiv.classList.add("max-h-0", "opacity-0", "mt-0", "pointer-events-none");
             course_isOpen = false;
+            let honorsDiv = document.getElementById("honors")!;
+            honorsDiv.classList.remove("opacity-100", "mb-2");
+            honorsDiv.classList.add("opacity-0","pointer-events-none");
         }
     }
 
@@ -1365,16 +1370,29 @@ document.addEventListener('DOMContentLoaded', function() {
         if (selectedSemester === 1 || selectedSemester === 2){
             closeCourse();
             closeTable();
-            var cycleDiv = document.getElementById("first_year")!;
+            let cycleDiv = document.getElementById("first_year")!;
             cycleDiv.classList.remove("max-h-0", "opacity-0", "mt-0", "mb-0", "pointer-events-none");
             cycleDiv.classList.add("max-h-15", "opacity-100", "mt-2", "mb-5");
             cycle_isOpen = true;
+        }
+        else if (selectedSemester === 8){
+            closeCycle();
+            closeStream();
+            closeTable();
+            let honorsDiv = document.getElementById("honors")!;
+            honorsDiv.classList.remove("opacity-0","pointer-events-none");
+            honorsDiv.classList.add("opacity-100", "mb-2");
+
+            let courseDiv = document.getElementById("course")!;
+            courseDiv.classList.remove("max-h-0", "opacity-0", "mt-0", "pointer-events-none");
+            courseDiv.classList.add("max-h-80", "opacity-100", "mt-2");
+            course_isOpen = true;
         }
         else{
             closeCycle();
             closeStream();
             closeTable();
-            var courseDiv = document.getElementById("course")!;
+            let courseDiv = document.getElementById("course")!;
             courseDiv.classList.remove("max-h-0", "opacity-0", "mt-0", "pointer-events-none");
             courseDiv.classList.add("max-h-80", "opacity-100", "mt-2");
             course_isOpen = true;
@@ -1432,6 +1450,7 @@ document.addEventListener('DOMContentLoaded', function() {
         let alternate : string = "bg-zinc-900";
         for (const [subjectName, creditValue] of Object.entries(subjects)) {
             if (i%2 === 0) alternate = "";
+            if (!honors && subjectName.includes("Honors")) continue;
             returnHTML += `
             <tr class="${alternate}">
                     <td>${subjectName}</td>
@@ -1471,6 +1490,7 @@ document.addEventListener('DOMContentLoaded', function() {
         let credits : number[] = [];
         let obtained_creds: number = 0;
         let total_creds: number = 0;
+
         for (let grade:number = 0; grade < subjectCount!; grade++){
             let input: any = (document.getElementById(`grade-${grade}`) as HTMLInputElement).value;
             if (validChecker(input.toUpperCase())) {

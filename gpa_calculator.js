@@ -187,10 +187,10 @@ const subjectData = { "1-CS-PHY": {
     },
     "8-AIML": {
         "Project Work / Practice School": 12,
-        "Project Work (B. Tech Honours)": 20,
-        "B Tech Honours (Theory 1)** (V Semester)": 4,
-        "B Tech Honours (Theory 2)** (VI Semester)": 4,
-        "B Tech Honours (Theory 3)** (VII Semester)": 4
+        "Project Work (B. Tech Honors)": 20,
+        "B Tech Honors (Theory 1)** (V Semester)": 4,
+        "B Tech Honors (Theory 2)** (VI Semester)": 4,
+        "B Tech Honors (Theory 3)** (VII Semester)": 4
     },
     "3-IT": {
         "Engineering Mathematics - III": 3,
@@ -241,10 +241,10 @@ const subjectData = { "1-CS-PHY": {
     },
     "8-IT": {
         "Project Work / Practice School": 12,
-        "Project Work (B. Tech Honours)": 20,
-        "B Tech Honours (Theory 1) (V Semester)": 4,
-        "B Tech Honours (Theory 2) (VI Semester)": 4,
-        "B Tech Honours (Theory 3) (VII Semester)": 4
+        "Project Work (B. Tech Honors)": 20,
+        "B Tech Honors (Theory 1) (V Semester)": 4,
+        "B Tech Honors (Theory 2) (VI Semester)": 4,
+        "B Tech Honors (Theory 3) (VII Semester)": 4
     },
     "3-CCE": {
         "Engineering Mathematics - III": 3,
@@ -295,10 +295,10 @@ const subjectData = { "1-CS-PHY": {
     },
     "8-CCE": {
         "Project Work / Practice School": 12,
-        "Project Work (B. Tech Honours)": 20,
-        "B Tech Honours (Theory 1) (V Semester)": 4,
-        "B Tech Honours (Theory 2) (VI Semester)": 4,
-        "B Tech Honours (Theory 3) (VII Semester)": 4
+        "Project Work (B. Tech Honors)": 20,
+        "B Tech Honors (Theory 1) (V Semester)": 4,
+        "B Tech Honors (Theory 2) (VI Semester)": 4,
+        "B Tech Honors (Theory 3) (VII Semester)": 4
     },
     "3-DSE": {
         "Mathematical Foundations for Data Science-I": 3,
@@ -349,10 +349,10 @@ const subjectData = { "1-CS-PHY": {
     },
     "8-DSE": {
         "Project Work / Practice School": 12,
-        "Project Work (B. Tech Honours)": 20,
-        "B Tech Honours (Theory 1) (V Semester)": 4,
-        "B Tech Honours (Theory 2) (VI Semester)": 4,
-        "B Tech Honours (Theory 3) (VII Semester)": 4
+        "Project Work (B. Tech Honors)": 20,
+        "B Tech Honors (Theory 1) (V Semester)": 4,
+        "B Tech Honors (Theory 2) (VI Semester)": 4,
+        "B Tech Honors (Theory 3) (VII Semester)": 4
     },
     "3-MNC": {
         "Computational Linear Algebra": 4,
@@ -404,10 +404,10 @@ const subjectData = { "1-CS-PHY": {
     },
     "8-MNC": {
         "Project Work": 12,
-        "Project Work (B Tech – Honours)": 20,
-        "B Tech – Honours Theory – 1 (V Semester)": 4,
-        "B Tech – Honours Theory – 2 (VI Semester)": 4,
-        "B Tech – Honours Theory – 3 (VII Semester)": 4
+        "Project Work (B Tech – Honors)": 20,
+        "B Tech – Honors Theory – 1 (V Semester)": 4,
+        "B Tech – Honors Theory – 2 (VI Semester)": 4,
+        "B Tech – Honors Theory – 3 (VII Semester)": 4
     },
     "3-CSFT": {
         "Mathematics for Finance": 4,
@@ -511,10 +511,10 @@ const subjectData = { "1-CS-PHY": {
     "8-ECE": {
         "Industrial Training (MLC)": 1,
         "Project Work": 12,
-        "Project Work (B Tech – Honours) (V - VIII sem)": 20,
-        "B Tech – Honours Theory – 1 (V semester)": 4,
-        "B Tech – Honours Theory – 2 (VI semester)": 4,
-        "B Tech – Honours Theory – 3 (VII semester)": 4
+        "Project Work (B Tech – Honors) (V - VIII sem)": 20,
+        "B Tech – Honors Theory – 1 (V semester)": 4,
+        "B Tech – Honors Theory – 2 (VI semester)": 4,
+        "B Tech – Honors Theory – 3 (VII semester)": 4
     },
     "3-VLSI": {
         "Engineering Mathematics – III": 3,
@@ -568,10 +568,10 @@ const subjectData = { "1-CS-PHY": {
     "8-VLSI": {
         "Industrial Training (MLC)": 1,
         "Project Work / Practice School": 12,
-        "Project Work (B. Tech Honours)": 20,
-        "BTech Honours (Theory 1) (V Sem)": 4,
-        "BTech Honours (Theory 2) (VI Sem)": 4,
-        "BTech Honours (Theory 3) (VII Sem)": 4
+        "Project Work (B. Tech Honors)": 20,
+        "BTech Honors (Theory 1) (V Sem)": 4,
+        "BTech Honors (Theory 2) (VI Sem)": 4,
+        "BTech Honors (Theory 3) (VII Sem)": 4
     },
     "3-ENI": {
         "Engineering Mathematics – III": 3,
@@ -626,10 +626,10 @@ const subjectData = { "1-CS-PHY": {
     "8-ENI": {
         "Industrial Training (MLC)": 1,
         "Project Work": 12,
-        "Project Work (B Tech – honours)": 20,
-        "B Tech – honours Theory – 1 (V semester)": 4,
-        "B Tech – honours Theory – 2 (VI semester)": 4,
-        "B Tech – honours Theory – 3 (VII semester)": 4
+        "Project Work (B Tech – Honors)": 20,
+        "B Tech – Honors Theory – 1 (V semester)": 4,
+        "B Tech – Honors Theory – 2 (VI semester)": 4,
+        "B Tech – Honors Theory – 3 (VII semester)": 4
     },
     "3-EEE": {
         "Engineering Mathematics – III": 3,
@@ -683,10 +683,10 @@ const subjectData = { "1-CS-PHY": {
     "8-EEE": {
         "Industrial Training (MLC)": 1,
         "Project Work": 12,
-        "Project Work (B Tech – Honours)": 20,
-        "B Tech – Honours Theory – 1 (V semester)": 4,
-        "B Tech – Honours Theory – 2 (VI semester)": 4,
-        "B Tech – Honours Theory – 3 (VII semester)": 4
+        "Project Work (B Tech – Honors)": 20,
+        "B Tech – Honors Theory – 1 (V semester)": 4,
+        "B Tech – Honors Theory – 2 (VI semester)": 4,
+        "B Tech – Honors Theory – 3 (VII semester)": 4
     },
     "3-CPS": {
         "Engineering Mathematics – III": 3,
@@ -740,10 +740,10 @@ const subjectData = { "1-CS-PHY": {
     "8-CPS": {
         "Industrial Training (MLC)": 1,
         "Project Work": 12,
-        "Project Work (B Tech – Honours)": 20,
-        "B Tech – Honours Theory – 1 (V semester)": 4,
-        "B Tech – Honours Theory – 2 (VI semester)": 4,
-        "B Tech – Honours Theory – 3 (VII semester)": 4
+        "Project Work (B Tech – Honors)": 20,
+        "B Tech – Honors Theory – 1 (V semester)": 4,
+        "B Tech – Honors Theory – 2 (VI semester)": 4,
+        "B Tech – Honors Theory – 3 (VII semester)": 4
     },
     "3-BioMed": {
         "Engineering Mathematics – III": 3,
@@ -796,10 +796,10 @@ const subjectData = { "1-CS-PHY": {
     },
     "8-BioMed": {
         "Project Work": 12,
-        "Project Work (B Tech – Honours)": 20,
-        "B Tech – Honours Theory – 1 (V semester)": 4,
-        "B Tech – Honours Theory – 2 (VI semester)": 4,
-        "B Tech – Honours Theory – 3 (VII semester)": 4
+        "Project Work (B Tech – Honors)": 20,
+        "B Tech – Honors Theory – 1 (V semester)": 4,
+        "B Tech – Honors Theory – 2 (VI semester)": 4,
+        "B Tech – Honors Theory – 3 (VII semester)": 4
     },
     "3-BioTech": {
         "Engineering Mathematics – III": 3,
@@ -852,10 +852,10 @@ const subjectData = { "1-CS-PHY": {
     },
     "8-BioTech": {
         "Project Work": 12,
-        "Project Work (B Tech – Honours)": 20,
-        "B Tech – Honours Theory – 1 (V semester)": 4,
-        "B Tech – Honours Theory – 2 (VI semester)": 4,
-        "B Tech – Honours Theory – 3 (VII semester)": 4
+        "Project Work (B Tech – Honors)": 20,
+        "B Tech – Honors Theory – 1 (V semester)": 4,
+        "B Tech – Honors Theory – 2 (VI semester)": 4,
+        "B Tech – Honors Theory – 3 (VII semester)": 4
     }, "3-MechX": {
         "Engineering Mathematics – III": 3,
         "Data Structures and Algorithms": 3,
@@ -967,7 +967,7 @@ const subjectData = { "1-CS-PHY": {
     },
     "8-Aero": {
         "Project Work / Practice School": 12,
-        "Project Work (B. Tech Honours)": 20,
+        "Project Work (B. Tech Honors)": 20,
         "BTech Honors (Theory 1)": 4,
         "BTech Honors (Theory 2)": 4,
         "BTech Honors (Theory 3)": 4
@@ -1024,10 +1024,10 @@ const subjectData = { "1-CS-PHY": {
     "8-Auto": {
         "Industrial Training": 1,
         "Project Work/Practice School": 12,
-        "Project Work (B. Tech Honours) **": 20,
-        "B Tech Honours (Theory 1)** (V Semester)": 4,
-        "B Tech Honours (Theory 2)** (VI Semester)": 4,
-        "B Tech Honours (Theory 3)** (VII Semester)": 4
+        "Project Work (B. Tech Honors) **": 20,
+        "B Tech Honors (Theory 1)** (V Semester)": 4,
+        "B Tech Honors (Theory 2)** (VI Semester)": 4,
+        "B Tech Honors (Theory 3)** (VII Semester)": 4
     },
     "3-Mech": {
         "Engineering Mathematics – III": 3,
@@ -1080,7 +1080,7 @@ const subjectData = { "1-CS-PHY": {
     },
     "8-Mech": {
         "Project Work / Practice School": 12,
-        "Project Work (B. Tech Honours)": 20,
+        "Project Work (B. Tech Honors)": 20,
         "BTech Honors (Theory 1)": 4,
         "BTech Honors (Theory 2)": 4,
         "BTech Honors (Theory 3)": 4
@@ -1136,7 +1136,7 @@ const subjectData = { "1-CS-PHY": {
     },
     "8-Industrial": {
         "Project Work / Practice School": 12,
-        "Project Work (B. Tech Honours)": 20,
+        "Project Work (B. Tech Honors)": 20,
         "BTech Honors (Theory 1)": 4,
         "BTech Honors (Theory 2)": 4,
         "BTech Honors (Theory 3)": 4
@@ -1190,10 +1190,10 @@ const subjectData = { "1-CS-PHY": {
     },
     "8-Civil": {
         "Project Work": 12,
-        "Project Work (B. Tech Honours) **": 20,
-        "B Tech Honours (Theory 1)** (V Semester)": 4,
-        "B Tech Honours (Theory 2)** (VI Semester)": 4,
-        "B Tech Honours (Theory 3)** (VII Semester)": 4
+        "Project Work (B. Tech Honors) **": 20,
+        "B Tech Honors (Theory 1)** (V Semester)": 4,
+        "B Tech Honors (Theory 2)** (VI Semester)": 4,
+        "B Tech Honors (Theory 3)** (VII Semester)": 4
     },
     "3-Chem": {
         "Engineering Mathematics – III": 3,
@@ -1246,7 +1246,7 @@ const subjectData = { "1-CS-PHY": {
     },
     "8-Chem": {
         "Project Work": 12,
-        "Project Work (B. Tech Honours)": 20,
+        "Project Work (B. Tech Honors)": 20,
         "BTech Honors (Theory 1)": 4,
         "BTech Honors (Theory 2)": 4,
         "BTech Honors (Theory 3)": 4
@@ -1258,6 +1258,7 @@ document.addEventListener('DOMContentLoaded', function () {
     let stream_isOpen = false;
     let table_isOpen = false;
     let course_isOpen = false;
+    var honors = false;
     const dropdownButton = document.getElementById("dropdown-button");
     const dropdownArrow = document.getElementById("dropdown-arrow");
     const semesterDiv = document.getElementById("semester");
@@ -1266,6 +1267,16 @@ document.addEventListener('DOMContentLoaded', function () {
     const submit_button = document.getElementById("submit_button");
     var selectedSemester;
     var subjectCount;
+    document.getElementById("default-checkbox").onclick = function () {
+        if (honors) {
+            honors = false;
+            closeTable();
+        }
+        else {
+            honors = true;
+            closeTable();
+        }
+    };
     function closeCycle() {
         if (cycle_isOpen) {
             let cycleDiv = document.getElementById("first_year");
@@ -1288,6 +1299,9 @@ document.addEventListener('DOMContentLoaded', function () {
             courseDiv.classList.remove("max-h-80", "opacity-100", "mt-2");
             courseDiv.classList.add("max-h-0", "opacity-0", "mt-0", "pointer-events-none");
             course_isOpen = false;
+            let honorsDiv = document.getElementById("honors");
+            honorsDiv.classList.remove("opacity-100", "mb-2");
+            honorsDiv.classList.add("opacity-0", "pointer-events-none");
         }
     }
     function closeTable() {
@@ -1330,16 +1344,28 @@ document.addEventListener('DOMContentLoaded', function () {
         if (selectedSemester === 1 || selectedSemester === 2) {
             closeCourse();
             closeTable();
-            var cycleDiv = document.getElementById("first_year");
+            let cycleDiv = document.getElementById("first_year");
             cycleDiv.classList.remove("max-h-0", "opacity-0", "mt-0", "mb-0", "pointer-events-none");
             cycleDiv.classList.add("max-h-15", "opacity-100", "mt-2", "mb-5");
             cycle_isOpen = true;
+        }
+        else if (selectedSemester === 8) {
+            closeCycle();
+            closeStream();
+            closeTable();
+            let honorsDiv = document.getElementById("honors");
+            honorsDiv.classList.remove("opacity-0", "pointer-events-none");
+            honorsDiv.classList.add("opacity-100", "mb-2");
+            let courseDiv = document.getElementById("course");
+            courseDiv.classList.remove("max-h-0", "opacity-0", "mt-0", "pointer-events-none");
+            courseDiv.classList.add("max-h-80", "opacity-100", "mt-2");
+            course_isOpen = true;
         }
         else {
             closeCycle();
             closeStream();
             closeTable();
-            var courseDiv = document.getElementById("course");
+            let courseDiv = document.getElementById("course");
             courseDiv.classList.remove("max-h-0", "opacity-0", "mt-0", "pointer-events-none");
             courseDiv.classList.add("max-h-80", "opacity-100", "mt-2");
             course_isOpen = true;
@@ -1386,6 +1412,8 @@ document.addEventListener('DOMContentLoaded', function () {
         for (const [subjectName, creditValue] of Object.entries(subjects)) {
             if (i % 2 === 0)
                 alternate = "";
+            if (!honors && subjectName.includes("Honors"))
+                continue;
             returnHTML += `
             <tr class="${alternate}">
                     <td>${subjectName}</td>
