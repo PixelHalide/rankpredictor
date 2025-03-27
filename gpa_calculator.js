@@ -68,7 +68,6 @@ const subjectData = { "1-CS-PHY": {
         "Software Engineering": 4,
         "Principles of Cryptography": 4,
         "Cloud Computing and DevOps": 4,
-        "Creativity, Problem Solving and Innovation": 3
     },
     "6-CS": {
         "Engineering Economics and Financial Management": 3,
@@ -162,7 +161,6 @@ const subjectData = { "1-CS-PHY": {
         "Foundation of Computer Vision": 3,
         "Big Data Analytics": 3,
         "Artificial Neural Network": 3,
-        "Open Elective-1 Creativity, Problem Solving and Innovation": 3,
         "Computer Vision Lab": 1,
         "Big Data Analytics Lab": 1,
         "Machine Learning Lab": 1
@@ -218,7 +216,6 @@ const subjectData = { "1-CS-PHY": {
         "Principles of Operating Systems": 4,
         "Software Engineering": 3,
         "Flexible Core - 1 (A1/B1/C1/D1)": 3,
-        "Open Elective-1 Creativity, Problem Solving and Innovation": 3,
         "Information Security Lab": 1,
         "Principles of Operating Systems Lab": 1
     },
@@ -272,7 +269,6 @@ const subjectData = { "1-CS-PHY": {
         "Embedded System Design": 3,
         "Wireless Communication and Computing": 4,
         "Flexible Core - 1 (A1/B1/C1)": 3,
-        "Open Elective-1 Creativity, Problem Solving and Innovation": 3,
         "Information Security Lab": 1,
         "Embedded System Design Lab": 1
     },
@@ -326,7 +322,6 @@ const subjectData = { "1-CS-PHY": {
         "Operations Research": 3,
         "Deep Learning Techniques": 4,
         "High Performance Computing": 3,
-        "Open Elective-1 - Creativity, Problem Solving and Innovation": 3,
         "Deep Learning Techniques Lab": 1,
         "High Performance Computing Lab": 1
     },
@@ -380,7 +375,6 @@ const subjectData = { "1-CS-PHY": {
         "Engineering Economics & Financial Management": 3,
         "Artificial Intelligence": 3,
         "Software Engineering": 4,
-        "Open Elective – 1 Creativity, Problem Solving and Innovation (MLC)": 3,
         "Software Engineering Lab": 1,
         "Database Management Systems Lab": 1
     },
@@ -431,7 +425,6 @@ const subjectData = { "1-CS-PHY": {
         "Banking Technology": 3,
         "Statistics for Finance": 3,
         "Operating System": 3,
-        "Creativity, Problem Solving and Innovation": 3,
         "Software Application Design Lab": 1,
         "Banking Technology Lab": 1
     },
@@ -481,7 +474,6 @@ const subjectData = { "1-CS-PHY": {
         "MICROPROCESSORS": 3,
         "COMMUNICATION NETWORKS": 3,
         "Flexible Core – (Digital Computer Architecture / VLSI Testing and Testability / Satellite Communication)": 3,
-        "Creativity, Problem Solving and Innovation (MLC) - mandatory": 3,
         "DIGITAL SIGNAL PROCESSING LAB": 1,
         "MICROPROCESSOR LAB": 2
     },
@@ -537,7 +529,6 @@ const subjectData = { "1-CS-PHY": {
         "VLSI Testing": 3,
         "VLSI Fabrication Technology": 3,
         "Verification using System Verilog": 3,
-        "Creativity, Problem Solving and Innovation (OE-I*)": 3,
         "Microcontrollers and Embedded Systems Lab": 2,
         "Semiconductor Device and Process Simulation Lab": 1
     },
@@ -591,7 +582,6 @@ const subjectData = { "1-CS-PHY": {
         "VLSI Design": 3,
         "Process Instrumentation and Control": 3,
         "Flexible Core – (A1/B1/C1)": 3,
-        "OE-1 Creativity, Problem Solving and Innovation": 3,
         "Industrial Instrumentation Lab": 1,
         "Process Control Lab": 1
     },
@@ -648,7 +638,6 @@ const subjectData = { "1-CS-PHY": {
         "Digital Signal Processing": 3,
         "Switchgear & Protection": 3,
         "Flexible Core – (A1/B1/C1)": 3,
-        "OE-1 Creativity, Problem Solving and Innovation": 3,
         "Power Electronics Lab": 1,
         "Systems Simulation Lab": 1
     },
@@ -704,7 +693,6 @@ const subjectData = { "1-CS-PHY": {
         "Data Communication and Networks": 4,
         "Embedded Systems Design and Programming": 3,
         "Flexible Core – (A1/B1/C1)": 3,
-        "OE-1 Creativity, Problem Solving and Innovation": 3,
         "Cyber Physical Systems Design Lab": 1,
         "Embedded System Programming Lab": 1
     },
@@ -760,7 +748,6 @@ const subjectData = { "1-CS-PHY": {
         "Medical Devices": 3,
         "Biomaterials": 3,
         "Flexible Core – 1 (A1/B1)": 3,
-        "OE-1 Creativity, Problem Solving and Innovation": 3,
         "Biomaterials Lab": 1,
         "Biomedical Instrumentation Lab": 1
     },
@@ -816,7 +803,6 @@ const subjectData = { "1-CS-PHY": {
         "Bioprocess Engineering": 3,
         "Bioreaction Engineering": 3,
         "Downstream Processes – II": 3,
-        "OE – Creativity, Problem Solving and Innovation": 3,
         "Bioinformatics Lab": 1,
         "Downstream Processing and Bioprocess Engineering Lab": 2
     },
@@ -873,7 +859,6 @@ const subjectData = { "1-CS-PHY": {
         "Electric Drives": 3,
         "Manufacturing Technology / Foundations of EV and Hybrid Vehicles": 3,
         "Hydraulics and Pneumatics Systems": 3,
-        "Open Elective – 1: Creativity, Problem Solving and Innovation": 3,
         "Drives, Controls and Modelling Lab": 1,
         "Robot Operating System Lab": 1
     },
@@ -928,7 +913,6 @@ const subjectData = { "1-CS-PHY": {
         "Flight Dynamics and Control": 4,
         "Compressible Aerodynamics": 3,
         "Avionics and Navigation System": 3,
-        "Open Elective – 1: Creativity, Problem Solving and Innovation": 3,
         "Geometric Modelling Lab": 1,
         "Flight Dynamics and Control Lab": 1
     },
@@ -982,7 +966,6 @@ const subjectData = { "1-CS-PHY": {
         "Flexible Core I": 3,
         "Heat Transfer": 4,
         "Electric Vehicle Technology": 3,
-        "Open Elective -1 Creativity, Problem Solving and Innovation": 3,
         "Simulation Lab": 1,
         "Automobile Lab – III": 1
     },
@@ -1037,7 +1020,6 @@ const subjectData = { "1-CS-PHY": {
         "Geometric Modelling": 3,
         "Finite Element Methods": 3,
         "Heat and Mass Transfer": 4,
-        "Open Elective – 1: Creativity, Problem Solving and Innovation": 3,
         "Mechanical Lab": 1,
         "Metrology Lab": 1
     },
@@ -1091,7 +1073,6 @@ const subjectData = { "1-CS-PHY": {
         "Simulation Modeling and Analysis": 3,
         "Total Quality Management": 3,
         "Engineering System Design": 4,
-        "Open Elective – 1: Creativity, Problem Solving and Innovation": 3,
         "Computer Aided Quality Engineering Lab": 1,
         "Simulation Modeling and Analysis Lab": 1
     },
@@ -1145,7 +1126,6 @@ const subjectData = { "1-CS-PHY": {
         "Applied Soil Engineering": 3,
         "Estimation, Costing and Project Management": 4,
         "Flexible Core-I (A1/B1/C1)": 3,
-        "Open Elective-1 Creativity, Problem Solving and Innovation": 3,
         "Soil Mechanics Lab": 1,
         "Computer Aided Structural Analysis & Design Lab": 1
     },
@@ -1199,7 +1179,6 @@ const subjectData = { "1-CS-PHY": {
         "Process Modelling and Simulation": 3,
         "Process Design of Chemical Equipment": 3,
         "Transport Phenomena": 3,
-        "Open Elective – 1: Creativity, Problem Solving and Innovation": 3,
         "Heat Transfer Lab": 1,
         "Mass Transfer Lab": 1
     },
