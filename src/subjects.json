@@ -66,7 +66,7 @@
     "Software Engineering": 4,
     "Principles of Cryptography": 4,
     "Cloud Computing and DevOps": 4,
-    "Creativity, Problem Solving and Innovation": 3
+
 },
 "6-CS": {
     "Engineering Economics and Financial Management": 3,
@@ -74,7 +74,6 @@
     "Parallel Computer Architecture and Programming": 4,
     "Program Elective - 1 (Minor Specialization)": 3,
     "Program Elective - 2 (Minor Specialization)": 3,
-    "Open Elective 2": 3
 },
 "7-CS": {
     "Program Elective - 3 (Minor Specialization)": 3,
@@ -82,11 +81,10 @@
     "Program Elective - 5": 3,
     "Program Elective - 6": 3,
     "Program Elective - 7": 3,
-    "Open Elective-3": 3,
     "Mini Project (Minor Specialization)": 8
 },
 "8-CS": {
-    "Industrial Training": 1,
+
     "Project Work / Practice School": 12,
     "Project Work (B. Tech Honors)": 20,
     "B Tech Honors (Theory 1) (5 Semester)": 4,
@@ -167,7 +165,7 @@
     "Foundation of Computer Vision": 3,
     "Big Data Analytics": 3,
     "Artificial Neural Network": 3,
-    "Open Elective-1 Creativity, Problem Solving and Innovation": 3,
+
     "Computer Vision Lab": 1,
     "Big Data Analytics Lab": 1,
     "Machine Learning Lab": 1
@@ -178,7 +176,6 @@
     "Parallel Computer Architecture and Programming": 3,
     "Program Elective – I/Minor Specialization": 3,
     "Program Elective – II/ Minor Specialization": 3,
-    "Open Elective-2": 3,
     "Deep Learning Lab": 1,
     "Web Programming Lab": 1,
     "Parallel Programming Lab": 1
@@ -189,16 +186,16 @@
     "Program Elective – V": 3,
     "Program Elective – VI": 3,
     "Program Elective – VII": 3,
-    "Open Elective-3": 3,
+
     "Mini Project (Minor Specialization)": 8
 },
 "8-AIML": {
-    "Industrial Training": 1,
+
     "Project Work / Practice School": 12,
-    "Project Work (B. Tech Honours)": 20,
-    "B Tech Honours (Theory 1)** (V Semester)": 4,
-    "B Tech Honours (Theory 2)** (VI Semester)": 4,
-    "B Tech Honours (Theory 3)** (VII Semester)": 4
+    "Project Work (B. Tech Honors)": 20,
+    "B Tech Honors (Theory 1) (V Semester)": 4,
+    "B Tech Honors (Theory 2) (VI Semester)": 4,
+    "B Tech Honors (Theory 3) (VII Semester)": 4
 },
 "3-IT": {
     "Engineering Mathematics - III": 3,
@@ -226,7 +223,7 @@
     "Principles of Operating Systems": 4,
     "Software Engineering": 3,
     "Flexible Core - 1 (A1/B1/C1/D1)": 3,
-    "Open Elective-1 Creativity, Problem Solving and Innovation": 3,
+
     "Information Security Lab": 1,
     "Principles of Operating Systems Lab": 1
 },
@@ -236,7 +233,6 @@
     "Data Mining": 4,
     "Program Elective - I / Minor Specialization": 3,
     "Program Elective - II / Minor Specialization": 3,
-    "Open Elective-2": 3,
     "Advanced Technology Lab": 1,
     "Data Mining Lab": 1
 },
@@ -246,16 +242,15 @@
     "Program Elective - V": 3,
     "Program Elective - VI": 3,
     "Program Elective - VII": 3,
-    "Open Elective-3": 3,
     "Mini Project (Minor Specialization)": 8
 },
 "8-IT": {
-    "Industrial Training": 1,
+
     "Project Work / Practice School": 12,
-    "Project Work (B. Tech Honours)": 20,
-    "B Tech Honours (Theory 1) (V Semester)": 4,
-    "B Tech Honours (Theory 2) (VI Semester)": 4,
-    "B Tech Honours (Theory 3) (VII Semester)": 4
+    "Project Work (B. Tech Honors)": 20,
+    "B Tech Honors (Theory 1) (V Semester)": 4,
+    "B Tech Honors (Theory 2) (VI Semester)": 4,
+    "B Tech Honors (Theory 3) (VII Semester)": 4
 },
 "3-CCE": {
     "Engineering Mathematics - III": 3,
@@ -283,7 +278,7 @@
     "Embedded System Design": 3,
     "Wireless Communication and Computing": 4,
     "Flexible Core - 1 (A1/B1/C1)": 3,
-    "Open Elective-1 Creativity, Problem Solving and Innovation": 3,
+
     "Information Security Lab": 1,
     "Embedded System Design Lab": 1
 },
@@ -293,7 +288,6 @@
     "Flexible Core - 2 (A2/B2/C2)": 3,
     "Program Elective - I / Minor Specialization": 3,
     "Program Elective - II / Minor Specialization": 3,
-    "Open Elective-2": 3,
     "Mobile Application Development Lab": 2,
     "Network Design and Programming Lab": 1
 },
@@ -303,16 +297,15 @@
     "Program Elective - V": 3,
     "Program Elective - VI": 3,
     "Program Elective - VII": 3,
-    "Open Elective-3": 3,
+
     "Mini Project (Minor Specialization)": 8
 },
 "8-CCE": {
-    "Industrial Training": 1,
     "Project Work / Practice School": 12,
-    "Project Work (B. Tech Honours)": 20,
-    "B Tech Honours (Theory 1) (V Semester)": 4,
-    "B Tech Honours (Theory 2) (VI Semester)": 4,
-    "B Tech Honours (Theory 3) (VII Semester)": 4
+    "Project Work (B. Tech Honors)": 20,
+    "B Tech Honors (Theory 1) (V Semester)": 4,
+    "B Tech Honors (Theory 2) (VI Semester)": 4,
+    "B Tech Honors (Theory 3) (VII Semester)": 4
 },
 "3-DSE": {
     "Mathematical Foundations for Data Science-I": 3,
@@ -340,7 +333,7 @@
     "Operations Research": 3,
     "Deep Learning Techniques": 4,
     "High Performance Computing": 3,
-    "Open Elective-1 - Creativity, Problem Solving and Innovation": 3,
+
     "Deep Learning Techniques Lab": 1,
     "High Performance Computing Lab": 1
 },
@@ -350,7 +343,7 @@
     "Big Data Analytics and Tools": 3,
     "Program Elective - I / Minor Specialization": 3,
     "Program Elective - II / Minor Specialization": 3,
-    "Open Elective-2": 3,
+
     "Principles of Artificial Intelligence Lab": 1,
     "Big Data Analytics and Tools Lab": 1
 },
@@ -360,16 +353,16 @@
     "Program Elective - V": 3,
     "Program Elective - VI": 3,
     "Program Elective - VII": 3,
-    "Open Elective-3": 3,
+
     "Mini Project (Minor Specialization)": 8
 },
 "8-DSE": {
-    "Industrial Training": 1,
+
     "Project Work / Practice School": 12,
-    "Project Work (B. Tech Honours)": 20,
-    "B Tech Honours (Theory 1) (V Semester)": 4,
-    "B Tech Honours (Theory 2) (VI Semester)": 4,
-    "B Tech Honours (Theory 3) (VII Semester)": 4
+    "Project Work (B. Tech Honors)": 20,
+    "B Tech Honors (Theory 1) (V Semester)": 4,
+    "B Tech Honors (Theory 2) (VI Semester)": 4,
+    "B Tech Honors (Theory 3) (VII Semester)": 4
 },
 "3-MNC": {
     "Computational Linear Algebra": 4,
@@ -397,7 +390,6 @@
     "Engineering Economics & Financial Management": 3,
     "Artificial Intelligence": 3,
     "Software Engineering": 4,
-    "Open Elective – 1 Creativity, Problem Solving and Innovation (MLC)": 3,
     "Software Engineering Lab": 1,
     "Database Management Systems Lab": 1
 },
@@ -405,7 +397,7 @@
     "Program Elective – 1/Minor Specialization": 3,
     "Program Elective – 2/Minor Specialization": 3,
     "Time Series Analysis": 4,
-    "Open Elective – 2": 3,
+
     "Essentials of Management": 3,
     "Advanced Numerical Methods": 3,
     "Scientific Computing Lab": 1
@@ -416,16 +408,16 @@
     "Program Elective – 5": 3,
     "Program Elective – 6": 3,
     "Program Elective – 7": 3,
-    "Open Elective – 3": 3,
+
     "Mini Project (Minor Specialization)": 8
 },
 "8-MNC": {
-    "Industrial Training": 1,
+
     "Project Work": 12,
-    "Project Work (B Tech – Honours)": 20,
-    "B Tech – Honours Theory – 1 (V Semester)": 4,
-    "B Tech – Honours Theory – 2 (VI Semester)": 4,
-    "B Tech – Honours Theory – 3 (VII Semester)": 4
+    "Project Work (B Tech – Honors)": 20,
+    "B Tech – Honors Theory – 1 (V Semester)": 4,
+    "B Tech – Honors Theory – 2 (VI Semester)": 4,
+    "B Tech – Honors Theory – 3 (VII Semester)": 4
 },
 "3-CSFT": {
     "Mathematics for Finance": 4,
@@ -451,7 +443,6 @@
     "Banking Technology": 3,
     "Statistics for Finance": 3,
     "Operating System": 3,
-    "Creativity, Problem Solving and Innovation": 3,
     "Software Application Design Lab": 1,
     "Banking Technology Lab": 1
 },
@@ -461,7 +452,6 @@
     "Capital Markets Technology": 3,
     "Program Elective-1": 3,
     "Program Elective-2": 3,
-    "Open Elective": 3,
     "Capital Markets Lab": 1,
     "Machine Learning Lab": 1
 },
@@ -474,7 +464,6 @@
     "Management Research Methods": 3
 },
 "8-CSFT": {
-    "Industrial Training Report": 1,
     "Project Work/Practice School": 12
 },
 "3-ECE": {
@@ -503,7 +492,6 @@
     "MICROPROCESSORS": 3,
     "COMMUNICATION NETWORKS": 3,
     "Flexible Core – (Digital Computer Architecture / VLSI Testing and Testability / Satellite Communication)": 3,
-    "Creativity, Problem Solving and Innovation (MLC) - mandatory": 3,
     "DIGITAL SIGNAL PROCESSING LAB": 1,
     "MICROPROCESSOR LAB": 2
 },
@@ -527,12 +515,11 @@
     "Mini Project (Minor Specialization)": 8
 },
 "8-ECE": {
-    "Industrial Training (MLC)": 1,
     "Project Work": 12,
-    "Project Work (B Tech – Honours) (V - VIII sem)": 20,
-    "B Tech – Honours Theory – 1 (V semester)": 4,
-    "B Tech – Honours Theory – 2 (VI semester)": 4,
-    "B Tech – Honours Theory – 3 (VII semester)": 4
+    "Project Work (B Tech – Honors) (V - VIII sem)": 20,
+    "B Tech – Honors Theory – 1 (V semester)": 4,
+    "B Tech – Honors Theory – 2 (VI semester)": 4,
+    "B Tech – Honors Theory – 3 (VII semester)": 4
 },
 "3-VLSI": {
     "Engineering Mathematics – III": 3,
@@ -560,7 +547,6 @@
     "VLSI Testing": 3,
     "VLSI Fabrication Technology": 3,
     "Verification using System Verilog": 3,
-    "Creativity, Problem Solving and Innovation (OE-I*)": 3,
     "Microcontrollers and Embedded Systems Lab": 2,
     "Semiconductor Device and Process Simulation Lab": 1
 },
@@ -570,7 +556,6 @@
     "MEMS and NEMS": 3,
     "Program Elective- I (Minor Specialization)": 3,
     "Program Elective- II (Minor Specialization)": 3,
-    "Open Elective- II": 3,
     "Analog IC Design Lab": 1,
     "Semiconductor Fabrication and Characterization Lab": 1
 },
@@ -580,16 +565,15 @@
     "Program Elective – V": 3,
     "Program Elective – VI": 3,
     "Program Elective – VII": 3,
-    "Open Elective – III": 3,
     "Mini Project (Minor Specialization)": 8
 },
 "8-VLSI": {
-    "Industrial Training (MLC)": 1,
+
     "Project Work / Practice School": 12,
-    "Project Work (B. Tech Honours)": 20,
-    "BTech Honours (Theory 1) (V Sem)": 4,
-    "BTech Honours (Theory 2) (VI Sem)": 4,
-    "BTech Honours (Theory 3) (VII Sem)": 4
+    "Project Work (B. Tech Honors)": 20,
+    "BTech Honors (Theory 1) (V Sem)": 4,
+    "BTech Honors (Theory 2) (VI Sem)": 4,
+    "BTech Honors (Theory 3) (VII Sem)": 4
 },
 "3-ENI": {
     "Engineering Mathematics – III": 3,
@@ -617,7 +601,6 @@
     "VLSI Design": 3,
     "Process Instrumentation and Control": 3,
     "Flexible Core – (A1/B1/C1)": 3,
-    "OE-1 Creativity, Problem Solving and Innovation": 3,
     "Industrial Instrumentation Lab": 1,
     "Process Control Lab": 1
 },
@@ -642,12 +625,12 @@
     "Mini Project (Minor Specialization)": 8
 },
 "8-ENI": {
-    "Industrial Training (MLC)": 1,
+
     "Project Work": 12,
-    "Project Work (B Tech – honours)": 20,
-    "B Tech – honours Theory – 1 (V semester)": 4,
-    "B Tech – honours Theory – 2 (VI semester)": 4,
-    "B Tech – honours Theory – 3 (VII semester)": 4
+    "Project Work (B Tech – Honors)": 20,
+    "B Tech – Honors Theory – 1 (V semester)": 4,
+    "B Tech – Honors Theory – 2 (VI semester)": 4,
+    "B Tech – Honors Theory – 3 (VII semester)": 4
 },
 "3-EEE": {
     "Engineering Mathematics – III": 3,
@@ -675,7 +658,6 @@
     "Digital Signal Processing": 3,
     "Switchgear & Protection": 3,
     "Flexible Core – (A1/B1/C1)": 3,
-    "OE-1 Creativity, Problem Solving and Innovation": 3,
     "Power Electronics Lab": 1,
     "Systems Simulation Lab": 1
 },
@@ -699,12 +681,12 @@
     "Mini Project (Minor Specialization)": 8
 },
 "8-EEE": {
-    "Industrial Training (MLC)": 1,
+
     "Project Work": 12,
-    "Project Work (B Tech – Honours)": 20,
-    "B Tech – Honours Theory – 1 (V semester)": 4,
-    "B Tech – Honours Theory – 2 (VI semester)": 4,
-    "B Tech – Honours Theory – 3 (VII semester)": 4
+    "Project Work (B Tech – Honors)": 20,
+    "B Tech – Honors Theory – 1 (V semester)": 4,
+    "B Tech – Honors Theory – 2 (VI semester)": 4,
+    "B Tech – Honors Theory – 3 (VII semester)": 4
 },
 "3-CPS": {
     "Engineering Mathematics – III": 3,
@@ -732,7 +714,7 @@
     "Data Communication and Networks": 4,
     "Embedded Systems Design and Programming": 3,
     "Flexible Core – (A1/B1/C1)": 3,
-    "OE-1 Creativity, Problem Solving and Innovation": 3,
+
     "Cyber Physical Systems Design Lab": 1,
     "Embedded System Programming Lab": 1
 },
@@ -756,12 +738,12 @@
     "Mini Project (Minor Specialization)": 8
 },
 "8-CPS": {
-    "Industrial Training (MLC)": 1,
+
     "Project Work": 12,
-    "Project Work (B Tech – Honours)": 20,
-    "B Tech – Honours Theory – 1 (V semester)": 4,
-    "B Tech – Honours Theory – 2 (VI semester)": 4,
-    "B Tech – Honours Theory – 3 (VII semester)": 4
+    "Project Work (B Tech – Honors)": 20,
+    "B Tech – Honors Theory – 1 (V semester)": 4,
+    "B Tech – Honors Theory – 2 (VI semester)": 4,
+    "B Tech – Honors Theory – 3 (VII semester)": 4
 },
 "3-BioMed": {
     "Engineering Mathematics – III": 3,
@@ -789,7 +771,7 @@
     "Medical Devices": 3,
     "Biomaterials": 3,
     "Flexible Core – 1 (A1/B1)": 3,
-    "OE-1 Creativity, Problem Solving and Innovation": 3,
+
     "Biomaterials Lab": 1,
     "Biomedical Instrumentation Lab": 1
 },
@@ -813,12 +795,12 @@
     "Mini Project (Minor Specialization)": 8
 },
 "8-BioMed": {
-    "Industrial Training": 1,
+
     "Project Work": 12,
-    "Project Work (B Tech – Honours)": 20,
-    "B Tech – Honours Theory – 1 (V semester)": 4,
-    "B Tech – Honours Theory – 2 (VI semester)": 4,
-    "B Tech – Honours Theory – 3 (VII semester)": 4
+    "Project Work (B Tech – Honors)": 20,
+    "B Tech – Honors Theory – 1 (V semester)": 4,
+    "B Tech – Honors Theory – 2 (VI semester)": 4,
+    "B Tech – Honors Theory – 3 (VII semester)": 4
 },
 "3-BioTech": {
         "Engineering Mathematics – III": 3,
@@ -846,7 +828,6 @@
         "Bioprocess Engineering": 3,
         "Bioreaction Engineering": 3,
         "Downstream Processes – II": 3,
-        "OE – Creativity, Problem Solving and Innovation": 3,
         "Bioinformatics Lab": 1,
         "Downstream Processing and Bioprocess Engineering Lab": 2
     },
@@ -870,12 +851,12 @@
         "Mini Project (Minor Specialization)": 8
     },
     "8-BioTech": {
-        "Industrial Training": 1,
+
         "Project Work": 12,
-        "Project Work (B Tech – Honours)": 20,
-        "B Tech – Honours Theory – 1 (V semester)": 4,
-        "B Tech – Honours Theory – 2 (VI semester)": 4,
-        "B Tech – Honours Theory – 3 (VII semester)": 4
+        "Project Work (B Tech – Honors)": 20,
+        "B Tech – Honors Theory – 1 (V semester)": 4,
+        "B Tech – Honors Theory – 2 (VI semester)": 4,
+        "B Tech – Honors Theory – 3 (VII semester)": 4
     },   "3-MechX": {
         "Engineering Mathematics – III": 3,
         "Data Structures and Algorithms": 3,
@@ -904,7 +885,6 @@
         "Electric Drives": 3,
         "Manufacturing Technology / Foundations of EV and Hybrid Vehicles": 3,
         "Hydraulics and Pneumatics Systems": 3,
-        "Open Elective – 1: Creativity, Problem Solving and Innovation": 3,
         "Drives, Controls and Modelling Lab": 1,
         "Robot Operating System Lab": 1
     },
@@ -914,7 +894,7 @@
         "Automobile Engineering / Automotive Mechanics for Electric Vehicles": 3,
         "Program Elective – I / Minor Specialization": 3,
         "Program Elective – II / Minor Specialization": 3,
-        "Open Elective – II": 3,
+
         "Hydraulics Lab": 1,
         "IIoT Lab": 1,
         "Pneumatics Lab": 1
@@ -923,15 +903,15 @@
         "Program Elective – III / Minor Specialization": 3,
         "Program Elective – IV / Minor Specialization": 3,
         "Program Elective – V": 3,
-        "Industrial Training": 1
+
     },
     "8-MechX": {
         "Program Elective – VI": 3,
         "Program Elective – VII": 3,
-        "Open Elective – III": 3,
+
         "Mini Project (Minor Specialization)": 8,
         "Project Work/Practice School": 12,
-        "Project Work (Only for B. Tech. Hons.)": 20,
+        "Project Work (Only for B. Tech. Honors)": 20,
         "BTech Honors (Theory 1)": 4,
         "BTech Honors (Theory 2)": 4,
         "BTech Honors (Theory 3)": 4
@@ -962,7 +942,6 @@
         "Flight Dynamics and Control": 4,
         "Compressible Aerodynamics": 3,
         "Avionics and Navigation System": 3,
-        "Open Elective – 1: Creativity, Problem Solving and Innovation": 3,
         "Geometric Modelling Lab": 1,
         "Flight Dynamics and Control Lab": 1
     },
@@ -972,7 +951,7 @@
         "Aircraft Design": 4,
         "Program Elective – I / Minor Specialization": 3,
         "Program Elective – II / Minor Specialization": 3,
-        "Open Elective – II": 3,
+
         "Avionics Lab": 1,
         "Structural Design and Analysis Lab": 1
     },
@@ -982,13 +961,13 @@
         "Program Elective – V": 3,
         "Program Elective – VI": 3,
         "Program Elective – VII": 3,
-        "Open Elective – III": 3,
+
         "Mini Project (Minor Specialization)": 8
     },
     "8-Aero": {
-        "Industrial Training": 1,
+
         "Project Work / Practice School": 12,
-        "Project Work (B. Tech Honours)": 20,
+        "Project Work (B. Tech Honors)": 20,
         "BTech Honors (Theory 1)": 4,
         "BTech Honors (Theory 2)": 4,
         "BTech Honors (Theory 3)": 4
@@ -1019,7 +998,6 @@
         "Flexible Core I": 3,
         "Heat Transfer": 4,
         "Electric Vehicle Technology": 3,
-        "Open Elective -1 Creativity, Problem Solving and Innovation": 3,
         "Simulation Lab": 1,
         "Automobile Lab – III": 1
     },
@@ -1037,18 +1015,16 @@
         "Program Elective – III/ Minor Specialization": 3,
         "Program Elective – IV/ Minor Specialization": 3,
         "Program Elective – V": 3,
-       "Program Elective – VI": 3,
+        "Program Elective – VI": 3,
         "Program Elective – VII": 3,
-       "Open Elective –3":3,
         "Mini Project (Minor specialization)*": 8
     },
     "8-Auto": {
-          "Industrial Training":1,
-       "Project Work/Practice School":12,
-      "Project Work (B. Tech Honours) **":20,
-        "B Tech Honours (Theory 1)** (V Semester)":4,
-       "B Tech Honours (Theory 2)** (VI Semester)":4,
-      "B Tech Honours (Theory 3)** (VII Semester)":4
+      "Project Work/Practice School":12,
+      "Project Work (B.Tech Honors) ":20,
+      "B Tech Honors (Theory 1) (V Semester)":4,
+      "B Tech Honors (Theory 2) (VI Semester)":4,
+      "B Tech Honors (Theory 3) (VII Semester)":4
 
     },
     "3-Mech": {
@@ -1077,7 +1053,6 @@
         "Geometric Modelling": 3,
         "Finite Element Methods": 3,
         "Heat and Mass Transfer": 4,
-        "Open Elective – 1: Creativity, Problem Solving and Innovation": 3,
         "Mechanical Lab": 1,
         "Metrology Lab": 1
     },
@@ -1087,7 +1062,7 @@
         "Flexible Core 3": 4,
         "Program Elective – I / Minor Specialization": 3,
         "Program Elective – II / Minor Specialization": 3,
-        "Open Elective – II": 3,
+
         "Finite Element Methods Lab": 1,
         "Heat Transfer and Solar Energy Lab": 1
     },
@@ -1097,13 +1072,13 @@
         "Program Elective – V": 3,
         "Program Elective – VI": 3,
         "Program Elective – VII": 3,
-        "Open Elective – III": 3,
+
         "Mini Project (Minor Specialization)": 8
     },
     "8-Mech": {
-        "Industrial Training": 1,
+
         "Project Work / Practice School": 12,
-        "Project Work (B. Tech Honours)": 20,
+        "Project Work (B. Tech Honors)": 20,
         "BTech Honors (Theory 1)": 4,
         "BTech Honors (Theory 2)": 4,
         "BTech Honors (Theory 3)": 4
@@ -1134,7 +1109,6 @@
         "Simulation Modeling and Analysis": 3,
         "Total Quality Management": 3,
         "Engineering System Design": 4,
-        "Open Elective – 1: Creativity, Problem Solving and Innovation": 3,
         "Computer Aided Quality Engineering Lab": 1,
         "Simulation Modeling and Analysis Lab": 1
     },
@@ -1144,7 +1118,6 @@
         "Operations Management": 4,
         "Program Elective – I / Minor Specialization": 3,
         "Program Elective – II / Minor Specialization": 3,
-        "Open Elective – II": 3,
         "Computer Aided Experimental Design Lab": 1,
         "Computer Aided Operations Management Lab": 1
     },
@@ -1154,13 +1127,11 @@
         "Program Elective – V": 3,
         "Program Elective – VI": 3,
         "Program Elective – VII": 3,
-        "Open Elective – III": 3,
         "Mini Project (Minor Specialization)": 8
     },
     "8-Industrial": {
-        "Industrial Training": 1,
         "Project Work / Practice School": 12,
-        "Project Work (B. Tech Honours)": 20,
+        "Project Work (B. Tech Honors)": 20,
         "BTech Honors (Theory 1)": 4,
         "BTech Honors (Theory 2)": 4,
         "BTech Honors (Theory 3)": 4
@@ -1191,7 +1162,7 @@
         "Applied Soil Engineering": 3,
         "Estimation, Costing and Project Management": 4,
         "Flexible Core-I (A1/B1/C1)": 3,
-        "Open Elective-1 Creativity, Problem Solving and Innovation": 3,
+
         "Soil Mechanics Lab": 1,
         "Computer Aided Structural Analysis & Design Lab": 1
     },
@@ -1201,7 +1172,7 @@
         "Flexible Core-III (A3/B3/C3)": 3,
         "Program Elective –1/ Minor Specialization": 3,
         "Program Elective –2/ Minor Specialization": 3,
-        "Open Elective-2": 3,
+
         "Building Design and Modelling": 1,
         "Structural Detailing and Drawing": 1
     },
@@ -1211,16 +1182,16 @@
         "Program Elective –V": 3,
         "Program Elective – VI": 3,
         "Program Elective – VII": 3,
-        "Open Elective-3": 3,
+
         "Mini Project (Minor specialization)*": 8
     },
     "8-Civil": {
-        "Industrial Training": 1,
+
         "Project Work": 12,
-        "Project Work (B. Tech Honours) **": 20,
-        "B Tech Honours (Theory 1)** (V Semester)": 4,
-        "B Tech Honours (Theory 2)** (VI Semester)": 4,
-        "B Tech Honours (Theory 3)** (VII Semester)": 4
+        "Project Work (B. Tech Honors) ": 20,
+        "B Tech Honors (Theory 1) (V Semester)": 4,
+        "B Tech Honors (Theory 2) (VI Semester)": 4,
+        "B Tech Honors (Theory 3) (VII Semester)": 4
     },
     "3-Chem": {
         "Engineering Mathematics – III": 3,
@@ -1248,7 +1219,6 @@
         "Process Modelling and Simulation": 3,
         "Process Design of Chemical Equipment": 3,
         "Transport Phenomena": 3,
-        "Open Elective – 1: Creativity, Problem Solving and Innovation": 3,
         "Heat Transfer Lab": 1,
         "Mass Transfer Lab": 1
     },
@@ -1258,7 +1228,7 @@
         "Flexible Core 2 (A2/B2)": 4,
         "Program Elective – I / Minor Specialization": 3,
         "Program Elective – II / Minor Specialization": 3,
-        "Open Elective – 2": 3,
+
         "Process Modelling and Simulation Lab": 1,
         "Reaction Engineering and Process Control Lab": 1
     },
@@ -1268,13 +1238,13 @@
         "Program Elective – V": 3,
         "Program Elective – VI": 3,
         "Program Elective – VII": 3,
-        "Open Elective – 3": 3,
+
         "Mini Project (Minor Specialization)": 8
     },
     "8-Chem": {
-        "Industrial Training": 1,
+
         "Project Work": 12,
-        "Project Work (B. Tech Honours)": 20,
+        "Project Work (B. Tech Honors)": 20,
         "BTech Honors (Theory 1)": 4,
         "BTech Honors (Theory 2)": 4,
         "BTech Honors (Theory 3)": 4
