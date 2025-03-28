@@ -1232,6 +1232,11 @@ document.addEventListener('DOMContentLoaded', function () {
             closeTable();
         }
     };
+    function closeHonors() {
+        let honorsDiv = document.getElementById("honors");
+        honorsDiv.classList.remove("opacity-100", "mb-2");
+        honorsDiv.classList.add("opacity-0", "pointer-events-none");
+    }
     function closeCycle() {
         if (cycle_isOpen) {
             let cycleDiv = document.getElementById("first_year");
@@ -1254,9 +1259,7 @@ document.addEventListener('DOMContentLoaded', function () {
             courseDiv.classList.remove("max-h-80", "opacity-100", "mt-2");
             courseDiv.classList.add("max-h-0", "opacity-0", "mt-0", "pointer-events-none");
             course_isOpen = false;
-            let honorsDiv = document.getElementById("honors");
-            honorsDiv.classList.remove("opacity-100", "mb-2");
-            honorsDiv.classList.add("opacity-0", "pointer-events-none");
+            closeHonors();
         }
     }
     function closeTable() {
@@ -1320,6 +1323,7 @@ document.addEventListener('DOMContentLoaded', function () {
             closeCycle();
             closeStream();
             closeTable();
+            closeHonors();
             let courseDiv = document.getElementById("course");
             courseDiv.classList.remove("max-h-0", "opacity-0", "mt-0", "pointer-events-none");
             courseDiv.classList.add("max-h-80", "opacity-100", "mt-2");
