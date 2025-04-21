@@ -210,7 +210,11 @@ function predictMETRankAndBranches(boardPercentage, metMarks, cutoffs, xValues, 
 
     // Interpolate and apply threshold to predict rank
     let predictedRank = polynomialInterpolation(avgScore, xValues, yValues);
-    const effectiveRank = applyRankThreshold(predictedRank);
+    let effectiveRank = applyRankThreshold(predictedRank);
+    if (avgScore === 100){
+        predictedRank = 1;
+        effectiveRank = 1;
+    }
 
     resultEl.innerHTML = `Your rank is predicted to be: <b>${predictedRank}</b><br><br>(Note: All CS related branches (Except Fintech & MnC) are to be merged for 2025 for BLR and Manipal)`;
 
