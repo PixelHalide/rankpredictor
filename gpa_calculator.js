@@ -1,6 +1,5 @@
-"use strict";
 //import subDat from "./src/subjects.json";
-const subjectData = { "1-CS-PHY": {
+var subjectData = { "1-CS-PHY": {
         "Computational Mathematics - 1": 4,
         "Applied Physics for Engineers": 3,
         "Fundamentals of Electronics": 3,
@@ -351,10 +350,10 @@ const subjectData = { "1-CS-PHY": {
     },
     "3-MNC": {
         "Computational Linear Algebra": 4,
-        "Probability and Stochastic Process": 3,
+        "Probability and Stochastic Process": 4,
         "Data Structures": 3,
         "Elementary Number Theory": 3,
-        "Advanced Programming": 4,
+        "Advanced Programming": 3,
         "Discrete Mathematics": 3,
         "Advanced Programming Lab": 1,
         "Data Structures Lab": 1
@@ -1208,18 +1207,18 @@ const subjectData = { "1-CS-PHY": {
     }
 };
 document.addEventListener('DOMContentLoaded', function () {
-    let semester_isOpen = false;
-    let cycle_isOpen = false;
-    let stream_isOpen = false;
-    let table_isOpen = false;
-    let course_isOpen = false;
+    var semester_isOpen = false;
+    var cycle_isOpen = false;
+    var stream_isOpen = false;
+    var table_isOpen = false;
+    var course_isOpen = false;
     var honors = false;
-    const dropdownButton = document.getElementById("dropdown-button");
-    const dropdownArrow = document.getElementById("dropdown-arrow");
-    const semesterDiv = document.getElementById("semester");
-    const sub_table = document.getElementById("table");
-    const sub_table_nested = document.getElementById("nested_table");
-    const submit_button = document.getElementById("submit_button");
+    var dropdownButton = document.getElementById("dropdown-button");
+    var dropdownArrow = document.getElementById("dropdown-arrow");
+    var semesterDiv = document.getElementById("semester");
+    var sub_table = document.getElementById("table");
+    var sub_table_nested = document.getElementById("nested_table");
+    var submit_button = document.getElementById("submit_button");
     var selectedSemester;
     var subjectCount;
     document.getElementById("default-checkbox").onclick = function () {
@@ -1233,13 +1232,13 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     };
     function closeHonors() {
-        let honorsDiv = document.getElementById("honors");
+        var honorsDiv = document.getElementById("honors");
         honorsDiv.classList.remove("opacity-100", "mb-2");
         honorsDiv.classList.add("opacity-0", "pointer-events-none");
     }
     function closeCycle() {
         if (cycle_isOpen) {
-            let cycleDiv = document.getElementById("first_year");
+            var cycleDiv = document.getElementById("first_year");
             cycleDiv.classList.remove("max-h-15", "opacity-100", "mt-2", "mb-5");
             cycleDiv.classList.add("max-h-0", "opacity-0", "mt-0", "mb-0", "pointer-events-none");
             cycle_isOpen = false;
@@ -1247,7 +1246,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
     function closeStream() {
         if (stream_isOpen) {
-            let streamDiv = document.getElementById("stream");
+            var streamDiv = document.getElementById("stream");
             streamDiv.classList.remove("max-h-15", "opacity-100", "mt-2", "mb-5");
             streamDiv.classList.add("max-h-0", "opacity-0", "mt-0", "mb-0", "pointer-events-none");
             stream_isOpen = false;
@@ -1255,7 +1254,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
     function closeCourse() {
         if (course_isOpen) {
-            let courseDiv = document.getElementById("course");
+            var courseDiv = document.getElementById("course");
             courseDiv.classList.remove("max-h-80", "opacity-100", "mt-2");
             courseDiv.classList.add("max-h-0", "opacity-0", "mt-0", "pointer-events-none");
             course_isOpen = false;
@@ -1302,7 +1301,7 @@ document.addEventListener('DOMContentLoaded', function () {
         if (selectedSemester === 1 || selectedSemester === 2) {
             closeCourse();
             closeTable();
-            let cycleDiv = document.getElementById("first_year");
+            var cycleDiv = document.getElementById("first_year");
             cycleDiv.classList.remove("max-h-0", "opacity-0", "mt-0", "mb-0", "pointer-events-none");
             cycleDiv.classList.add("max-h-15", "opacity-100", "mt-2", "mb-5");
             cycle_isOpen = true;
@@ -1311,10 +1310,10 @@ document.addEventListener('DOMContentLoaded', function () {
             closeCycle();
             closeStream();
             closeTable();
-            let honorsDiv = document.getElementById("honors");
+            var honorsDiv = document.getElementById("honors");
             honorsDiv.classList.remove("opacity-0", "pointer-events-none");
             honorsDiv.classList.add("opacity-100", "mb-2");
-            let courseDiv = document.getElementById("course");
+            var courseDiv = document.getElementById("course");
             courseDiv.classList.remove("max-h-0", "opacity-0", "mt-0", "pointer-events-none");
             courseDiv.classList.add("max-h-80", "opacity-100", "mt-2");
             course_isOpen = true;
@@ -1324,7 +1323,7 @@ document.addEventListener('DOMContentLoaded', function () {
             closeStream();
             closeTable();
             closeHonors();
-            let courseDiv = document.getElementById("course");
+            var courseDiv = document.getElementById("course");
             courseDiv.classList.remove("max-h-0", "opacity-0", "mt-0", "pointer-events-none");
             courseDiv.classList.add("max-h-80", "opacity-100", "mt-2");
             course_isOpen = true;
@@ -1338,7 +1337,7 @@ document.addEventListener('DOMContentLoaded', function () {
         streamDiv.classList.remove("max-h-0", "opacity-0", "mt-0", "mb-0", "pointer-events-none");
         streamDiv.classList.add("max-h-15", "opacity-100", "mt-2", "mb-5");
         var selectedCycle = cycle;
-        console.log(`Selected cycle: ${selectedCycle === 0 ? 'Physics' : 'Chemistry'}`);
+        console.log("Selected cycle: ".concat(selectedCycle === 0 ? 'Physics' : 'Chemistry'));
         document.getElementById("cs").onclick = function () {
             selectStream("CS", selectedCycle);
         };
@@ -1348,43 +1347,33 @@ document.addEventListener('DOMContentLoaded', function () {
     }
     window.cycle = cycle;
     function selectStream(stream, cycleType) {
-        console.log(`Selected: ${cycleType === 0 ? 'Physics' : 'Chemistry'} Cycle, ${stream} Stream`);
+        console.log("Selected: ".concat(cycleType === 0 ? 'Physics' : 'Chemistry', " Cycle, ").concat(stream, " Stream"));
         if (selectedSemester === 1 || selectedSemester === 2) {
-            const streamPrefix = stream === "CS" ? "CS" : "NONCS";
-            const cyclePrefix = cycleType === 0 ? "PHY" : "CHM";
-            const subjectGroup = `${selectedSemester}-${streamPrefix}-${cyclePrefix}`;
+            var streamPrefix = stream === "CS" ? "CS" : "NONCS";
+            var cyclePrefix = cycleType === 0 ? "PHY" : "CHM";
+            var subjectGroup = "".concat(selectedSemester, "-").concat(streamPrefix, "-").concat(cyclePrefix);
             loadSubjects(subjectGroup);
         }
     }
     function loadCourses(course) {
-        let subjectGroup = `${selectedSemester}-${course}`;
+        var subjectGroup = "".concat(selectedSemester, "-").concat(course);
         loadSubjects(subjectGroup);
     }
     window.loadCourses = loadCourses;
     function loadSubjects(subjectGroup) {
-        console.log(`Loading subject group: ${subjectGroup}`);
+        console.log("Loading subject group: ".concat(subjectGroup));
         // @ts-ignore
-        let subjects = subjectData[subjectGroup];
-        let returnHTML = "";
-        let i = 0;
-        let alternate = "bg-zinc-900";
-        for (const [subjectName, creditValue] of Object.entries(subjects)) {
+        var subjects = subjectData[subjectGroup];
+        var returnHTML = "";
+        var i = 0;
+        var alternate = "bg-zinc-900";
+        for (var _i = 0, _a = Object.entries(subjects); _i < _a.length; _i++) {
+            var _b = _a[_i], subjectName = _b[0], creditValue = _b[1];
             if (i % 2 === 0)
                 alternate = "";
             if (!honors && subjectName.includes("Honors"))
                 continue;
-            returnHTML += `
-            <tr class="${alternate}">
-                    <td>${subjectName}</td>
-                    <td id="credits-${i}">${creditValue}</td>
-                    <td>
-                        <input type="text"
-                            placeholder="Grade"
-                            class="w-16 p-1 text-center bg-gray-600 border border-gray-500 rounded focus:outline-none focus:ring-1 focus:ring-white"
-                            maxlength="2"
-                            id="grade-${i}"
-                    </td>
-                </tr>`;
+            returnHTML += "\n            <tr class=\"".concat(alternate, "\">\n                    <td>").concat(subjectName, "</td>\n                    <td id=\"credits-").concat(i, "\">").concat(creditValue, "</td>\n                    <td>\n                        <input type=\"text\"\n                            placeholder=\"Grade\"\n                            class=\"w-16 p-1 text-center bg-gray-600 border border-gray-500 rounded focus:outline-none focus:ring-1 focus:ring-white\"\n                            maxlength=\"2\"\n                            id=\"grade-").concat(i, "\"\n                    </td>\n                </tr>");
             i++;
             if (alternate === "")
                 alternate = "bg-zinc-900";
@@ -1392,9 +1381,9 @@ document.addEventListener('DOMContentLoaded', function () {
         subjectCount = i;
         table_isOpen = true;
         document.getElementById("subject_table").innerHTML = returnHTML;
-        let sub_table = document.getElementById("table");
-        let sub_table_nested = document.getElementById("nested_table");
-        let submit_button = document.getElementById("submit_button");
+        var sub_table = document.getElementById("table");
+        var sub_table_nested = document.getElementById("nested_table");
+        var submit_button = document.getElementById("submit_button");
         sub_table.classList.remove("opacity-0", "pointer-events-none");
         sub_table.classList.add("opacity-100", "mb-5");
         sub_table_nested.classList.remove("opacity-0", "pointer-events-none");
@@ -1403,18 +1392,18 @@ document.addEventListener('DOMContentLoaded', function () {
         submit_button.classList.add("opacity-100");
     }
     window.selectStream = selectStream;
-    const VALID_GRADES = ["A+", "A", "B", "C", "D", "E", "F", "S", "NS"];
-    const GRADE_WEIGHT = { "A+": 10, "A": 9, "B": 8, "C": 7, "D": 6, "E": 5, "F": 0, "S": 10, "NS": 0 };
+    var VALID_GRADES = ["A+", "A", "B", "C", "D", "E", "F", "S", "NS"];
+    var GRADE_WEIGHT = { "A+": 10, "A": 9, "B": 8, "C": 7, "D": 6, "E": 5, "F": 0, "S": 10, "NS": 0 };
     function calculateGPA() {
-        let inputted_grades = [];
-        let credits = [];
-        let obtained_creds = 0;
-        let total_creds = 0;
-        for (let grade = 0; grade < subjectCount; grade++) {
-            let input = document.getElementById(`grade-${grade}`).value;
+        var inputted_grades = [];
+        var credits = [];
+        var obtained_creds = 0;
+        var total_creds = 0;
+        for (var grade = 0; grade < subjectCount; grade++) {
+            var input = document.getElementById("grade-".concat(grade)).value;
             if (validChecker(input.toUpperCase())) {
                 inputted_grades.push(input);
-                let creditText = document.getElementById(`credits-${grade}`).textContent || "0";
+                var creditText = document.getElementById("credits-".concat(grade)).textContent || "0";
                 credits.push(parseInt(creditText));
                 total_creds += parseInt(creditText);
             }
@@ -1423,12 +1412,12 @@ document.addEventListener('DOMContentLoaded', function () {
                 return;
             }
         }
-        for (let i = 0; i < inputted_grades.length; i++) {
-            let grade = inputted_grades[i].toUpperCase();
+        for (var i = 0; i < inputted_grades.length; i++) {
+            var grade = inputted_grades[i].toUpperCase();
             obtained_creds += GRADE_WEIGHT[grade] * credits[i];
         }
-        let gpa = obtained_creds / total_creds;
-        document.getElementById("gpa_display").textContent = `Your GPA is Calculated to be: ${gpa.toFixed(2)}`;
+        var gpa = obtained_creds / total_creds;
+        document.getElementById("gpa_display").textContent = "Your GPA is Calculated to be: ".concat(gpa.toFixed(2));
         document.getElementById("result_display").classList.remove("hidden");
     }
     window.calculateGPA = calculateGPA;

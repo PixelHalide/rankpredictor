@@ -368,10 +368,10 @@ const subjectData = {"1-CS-PHY":{
 },
 "3-MNC": {
     "Computational Linear Algebra": 4,
-    "Probability and Stochastic Process": 3,
+    "Probability and Stochastic Process": 4,
     "Data Structures": 3,
     "Elementary Number Theory": 3,
-    "Advanced Programming": 4,
+    "Advanced Programming": 3,
     "Discrete Mathematics": 3,
     "Advanced Programming Lab": 1,
     "Data Structures Lab": 1

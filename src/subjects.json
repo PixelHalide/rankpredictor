@@ -65,15 +65,14 @@
     "Finite Automata and Compiler Design": 4,
     "Software Engineering": 4,
     "Principles of Cryptography": 4,
-    "Cloud Computing and DevOps": 4,
-
+    "Cloud Computing and DevOps": 4
 },
 "6-CS": {
     "Engineering Economics and Financial Management": 3,
     "Machine Learning": 4,
     "Parallel Computer Architecture and Programming": 4,
     "Program Elective - 1 (Minor Specialization)": 3,
-    "Program Elective - 2 (Minor Specialization)": 3,
+    "Program Elective - 2 (Minor Specialization)": 3
 },
 "7-CS": {
     "Program Elective - 3 (Minor Specialization)": 3,
@@ -366,10 +365,10 @@
 },
 "3-MNC": {
     "Computational Linear Algebra": 4,
-    "Probability and Stochastic Process": 3,
+    "Probability and Stochastic Process": 4,
     "Data Structures": 3,
     "Elementary Number Theory": 3,
-    "Advanced Programming": 4,
+    "Advanced Programming": 3,
     "Discrete Mathematics": 3,
     "Advanced Programming Lab": 1,
     "Data Structures Lab": 1
@@ -902,8 +901,7 @@
     "7-MechX": {
         "Program Elective – III / Minor Specialization": 3,
         "Program Elective – IV / Minor Specialization": 3,
-        "Program Elective – V": 3,
-
+        "Program Elective – V": 3
     },
     "8-MechX": {
         "Program Elective – VI": 3,
