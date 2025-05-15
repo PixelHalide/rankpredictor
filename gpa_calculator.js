@@ -101,7 +101,7 @@ var subjectData = { "1-CS-PHY": {
         "Workshop Practice": 1,
         "Engineering Graphics - 1": 1
     },
-    "2-NONCS-PHY": {
+    "2-NONCS-CHM": {
         "Engineering Mathematics - 2": 4,
         "Engineering Chemistry": 3,
         "Biology for Engineers": 3,
@@ -123,7 +123,7 @@ var subjectData = { "1-CS-PHY": {
         "Problem Solving Using Computers Lab": 1,
         "Engineering Graphics - 1": 1
     },
-    "2-NONCS-CHM": {
+    "2-NONCS-PHY": {
         "Engineering Mathematics - 2": 4,
         "Engineering Physics": 3,
         "Mechanics of Solids": 3,
