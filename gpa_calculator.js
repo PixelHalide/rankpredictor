@@ -9,7 +9,7 @@ var subjectData = { "1-CS-PHY": {
         "Workshop Practice": 1,
         "Programming for Problem Solving Lab": 1
     },
-    "2-CS-PHY": {
+    "2-CS-CHM": {
         "Computational Mathematics - 2": 4,
         "Applied Chemistry for Engineers": 3,
         "Fundamentals of Electrical Engineering": 3,
@@ -30,7 +30,7 @@ var subjectData = { "1-CS-PHY": {
         "Programming for Problem Solving Lab": 1,
         "Computer Aided Engineering Graphics": 1
     },
-    "2-CS-CHM": {
+    "2-CS-PHY": {
         "Computational Mathematics - 2": 4,
         "Applied Physics for Engineers": 3,
         "Fundamentals of Electronics": 3,
