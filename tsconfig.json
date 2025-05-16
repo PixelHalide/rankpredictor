@@ -8,5 +8,9 @@
     "forceConsistentCasingInFileNames": true,
     "strict": true,
     "skipLibCheck": true
-  }
+  },
+  "include": [
+    "src/**/*",
+    "gpa_calculator.ts"
+  ]
 }
