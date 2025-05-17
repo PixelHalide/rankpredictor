@@ -8,7 +8,7 @@ const subjectData = { "1-CS-PHY": {
         "Workshop Practice": 1,
         "Programming for Problem Solving Lab": 1
     },
-    "2-CS-PHY": {
+    "2-CS-CHM": {
         "Computational Mathematics - 2": 4,
         "Applied Chemistry for Engineers": 3,
         "Fundamentals of Electrical Engineering": 3,
@@ -29,7 +29,7 @@ const subjectData = { "1-CS-PHY": {
         "Programming for Problem Solving Lab": 1,
         "Computer Aided Engineering Graphics": 1
     },
-    "2-CS-CHM": {
+    "2-CS-PHY": {
         "Computational Mathematics - 2": 4,
         "Applied Physics for Engineers": 3,
         "Fundamentals of Electronics": 3,
@@ -100,7 +100,7 @@ const subjectData = { "1-CS-PHY": {
         "Workshop Practice": 1,
         "Engineering Graphics - 1": 1
     },
-    "2-NONCS-PHY": {
+    "2-NONCS-CHM": {
         "Engineering Mathematics - 2": 4,
         "Engineering Chemistry": 3,
         "Biology for Engineers": 3,
@@ -122,7 +122,7 @@ const subjectData = { "1-CS-PHY": {
         "Problem Solving Using Computers Lab": 1,
         "Engineering Graphics - 1": 1
     },
-    "2-NONCS-CHM": {
+    "2-NONCS-PHY": {
         "Engineering Mathematics - 2": 4,
         "Engineering Physics": 3,
         "Mechanics of Solids": 3,
