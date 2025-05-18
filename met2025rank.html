@@ -102,6 +102,36 @@
             <p class="mb-4">
                 Using a mathematical concept called <a href="https://en.wikipedia.org/wiki/Polynomial_regression" class="underline hover:text-yellow-500">polynomial regression</a>, We can find the ranks for values of various band scores.
             </p>
+            <div class="mb-8">
+            <h3 class="text-2xl font-semibold mb-4 text-yellow-400">FAQs for the Rank Predictor</h3>
+            <div class="space-y-6 text-base leading-relaxed">
+                <div>
+                <p class="font-semibold text-lg mb-2">Q: How accurate is it?</p>
+                <p>
+                    <span class="font-semibold">A:</span> The predictions are based on last year’s data. So, if someone got the same MET marks and board percentage as you last year, they would’ve received the same predicted rank.
+                </p>
+                <ul class="list-disc list-inside ml-4 mt-2 mb-2 text-gray-300">
+                    <li>
+                    For the MET 2024 Rank Predictor, I used just 10 data points from the 2020 results. After the actual results were out, the average error was <span class="font-semibold text-yellow-300">+1.5k</span> (meaning the predictor showed a lower rank than people actually got).
+                    </li>
+                    <li>
+                    This year (2025), I'm using <span class="font-semibold text-yellow-300">100+ data points</span>, so it should be more accurate.
+                    </li>
+                </ul>
+                <p class="font-semibold mt-2">Possible sources of inaccuracy:</p>
+                <ul class="list-disc list-inside ml-4 text-gray-300 mb-4">
+                    <li>If the difficulty of the MET paper changes significantly compared to last year.</li>
+                    <li>If the number of students writing MET increases or decreases a lot this year.</li>
+                </ul>
+                </div>
+                <div>
+                <p class="font-semibold text-lg mb-2">Q: What will be the cutoff for CSE after the branch merges?</p>
+                <p>
+                    <span class="font-semibold">A:</span> No one can predict it with any accuracy, only speculate. DSE closed off last year at <span class="font-semibold text-yellow-300">5.6k</span>. It'll likely be around <span class="font-semibold text-yellow-300">4.5k</span>.
+                </p>
+                </div>
+            </div>
+            </div>
             <div id="chartContainer" class="w-4/5 mx-auto mb-4">
                 <canvas id="myChart"></canvas>
             </div>
