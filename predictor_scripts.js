@@ -216,7 +216,7 @@ function predictMETRankAndBranches(boardPercentage, metMarks, cutoffs, xValues, 
         effectiveRank = 1;
     }
 
-    resultEl.innerHTML = `Your rank is predicted to be: <b>${predictedRank}</b><br><br>(Note: All CS related branches (Except Fintech & MnC) are to be merged for 2025 for BLR and Manipal)`;
+    resultEl.innerHTML = `Your rank according to last year would be: <b>${predictedRank}</b><br><br>(Note: All CS related branches (Except Fintech & MnC) are to be merged for 2025 for BLR and Manipal)`;
 
     let branchesHTML = "";
     Object.keys(cutoffs).forEach(college => {
@@ -437,7 +437,7 @@ window.predictRankKCET = function() {
     let predictedRank = polynomialInterpolation(avgScore, kcetXData, kcetYData);
     const effectiveRank = applyRankThreshold(predictedRank);
 
-    resultEl.innerHTML = `Your rank is predicted to be: ${effectiveRank}`;
+    resultEl.innerHTML = `Your rank according to last year would be: ${effectiveRank}`;
 
     const kcetCutoffs = {
         "RVCE": {
