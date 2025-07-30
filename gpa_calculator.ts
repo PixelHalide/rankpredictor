@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
     let stream_isOpen: boolean = false;
     let table_isOpen: boolean = false;
     let course_isOpen: boolean = false;
-    var honors: boolean = false;
+    let honors: boolean = false;
 
     const dropdownButton = document.getElementById("dropdown-button")!;
     const dropdownArrow = document.getElementById("dropdown-arrow")!;
