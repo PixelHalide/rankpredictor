@@ -2,7 +2,7 @@
 export default function Home() {
   return (
     <div>
-        <div className="max-w text-justify space-y-8">
+        <div className="max-w px-10 md:px-30 text-justify space-y-8">
             <section className="space-y-2">
             <h2 className="text-2xl font-bold">About</h2>
             <p className="text-gray-300">After encountering numerous "rank predictors" on the internet that ask for your marks along with personal data like your phone number and name—only to farm and sell this information, as well as "coaches" and "bhaiyas" on Youtube spreading misinformation - we felt frustrated. Students lacked a legitimate way to predict and calculate their ranks. This frustration led to the creation of RankPredictor, a website that allows you to predict your rank for various exams with no nonsense.</p>

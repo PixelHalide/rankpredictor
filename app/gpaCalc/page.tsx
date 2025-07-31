@@ -8,6 +8,7 @@ import StreamSelect from '../../components/gpaCalculator/StreamSelect';
 import CourseList from '../../components/gpaCalculator/CourseList';
 import HonorsCheck from '../../components/gpaCalculator/HonorsCheck';
 import GpaTable from '../../components/gpaCalculator/GpaTable';
+import GradingInfoDropdown from '../../components/gpaCalculator/GradingInfoDropdown';
 
 const GpaCalc = () => {
 
@@ -44,7 +45,6 @@ const GpaCalc = () => {
 			set_stream_section_open(false);
 			set_table_section_open(false);
 			set_honors_section_open(false);
-			set_table_section_open(false);
 		} else {
 			set_semester_dropdown_open(true);
 		}
@@ -52,9 +52,8 @@ const GpaCalc = () => {
 
 	const sendSemester = (sem:number) => {
 		const isFirstYear = sem === 1 || sem === 2;
-		if (sem === 8) set_honors_section_open(true);
 		set_cycle_section_open(isFirstYear);
-		if (cycle_section_open) set_stream_section_open(isFirstYear);
+		if (isFirstYear && sem != semester) set_stream_section_open(false); // Reprompt user for stream if they change semester
 		set_course_section_open(!isFirstYear);
 		set_honors_section_open(sem === 8)
 		set_table_section_open(false);
@@ -64,8 +63,8 @@ const GpaCalc = () => {
 	const sendCycle = (cycle:number) => {
 		set_cycle(cycle);
 		set_stream_section_open(true);
-
 	}
+
 	const sendCourse = (course:string) => {
 		set_course(course);
 		set_table_section_open(true);
@@ -80,12 +79,11 @@ const GpaCalc = () => {
     }
 
   return (
-    <div className='flex justify-center'>
+    <div className='flex flex-col items-center'>
+      <GradingInfoDropdown />
       <div className="bg-gray-800 rounded-lg p-6 shadow-lg max-w-xl w-full text-center">
 		<label className="block mb-2">Select your Semester:</label>
-		<button onClick={semClick}>
-			<SemButton isOpen={semester_dropdown_open} />
-		</button>
+		<SemButton isOpen={semester_dropdown_open} onClick={semClick} />
 		<SemPicker isOpen={semester_dropdown_open}
 		sendSemester={sendSemester}
 		/>

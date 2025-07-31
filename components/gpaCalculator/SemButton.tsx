@@ -2,12 +2,15 @@
 interface SemButtonProps {
   isOpen: boolean;
   selectedSemester?: number | null;
+  onClick?: () => void;
 }
 
-const SemButton = ({ isOpen, selectedSemester }: SemButtonProps) => {
+const SemButton = ({ isOpen, selectedSemester, onClick }: SemButtonProps) => {
   return (
-    <div>
-      <button className="bg-gray-600 hover:bg-gray-700 text-white font-bold py-3 px-6 border border-gray-700 rounded-lg transition-all cursor-pointer mb-4 shadow-md hover:shadow-lg">
+      <button
+        className="bg-gray-600 hover:bg-gray-700 text-white font-bold py-3 px-6 border border-gray-700 rounded-lg transition-all cursor-pointer mb-4 shadow-md hover:shadow-lg"
+        onClick={onClick}
+      >
         <span>
           {selectedSemester ? `Semester ${selectedSemester}` : 'Select Semester'}
         </span>
@@ -20,7 +23,6 @@ const SemButton = ({ isOpen, selectedSemester }: SemButtonProps) => {
           <img src="/down-arrow-svgrepo-com.svg" width="12" height="12" alt="dropdown arrow" />
         </span>
       </button>
-    </div>
   )
 }
 

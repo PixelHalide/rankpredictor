@@ -2,6 +2,7 @@
 import { useState } from 'react';
 import 'katex/dist/katex.min.css';
 import { BlockMath } from 'react-katex';
+import METChart from './METChart';
 
 const HowItWorksDropdown = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -87,6 +88,8 @@ const HowItWorksDropdown = () => {
 
             </div>
           </div>
+
+          <METChart />
         </div>
       )}
     </div>

@@ -198,14 +198,14 @@ export const subjectData: {[SemCourse : string]: {[Subject: string] : number
         "Digital Systems Lab": 1
     },
     "4-IT": {
-        "Engineering Mathematics - IV": 3,
+        "Probability and Optimization": 3,
         "Database Systems": 4,
-        "Design and Analysis of Algorithms": 4,
-        "Embedded Systems": 4,
-        "Computer Networks": 4,
-        "Database Systems Lab": 1,
-        "Embedded Systems Lab": 1,
-        "Network Programming and Simulation Lab": 1
+        "Design & Analysis of Algorithms": 4,
+        "Introduction to Artificial Intelligence": 3,
+        "Operating Systems": 3,
+        "Operating Systems Lab": 1,
+        "Database Systems Lab": 2,
+        "Object-Oriented Software Development Lab": 2
     },
     "5-IT": {
         "Essentials of Management": 3,
@@ -250,14 +250,14 @@ export const subjectData: {[SemCourse : string]: {[Subject: string] : number
         "Digital Systems Lab": 1
     },
     "4-CCE": {
-        "Engineering Mathematics - IV": 3,
-        "Database Management Systems": 3,
-        "Design and Analysis of Algorithms": 4,
-        "Computer Networks and Protocols": 3,
-        "Operating Systems": 4,
-        "Software Design Technology": 3,
-        "Database Systems Lab": 1,
-        "Operating Systems Lab": 1
+        "Probability and Optimization": 3,
+        "Database Systems": 4,
+        "Design & Analysis of Algorithms": 4,
+        "Introduction to Artificial Intelligence": 3,
+        "Operating Systems": 3,
+        "Operating Systems Lab": 1,
+        "Database Systems Lab": 2,
+        "Object-Oriented Software Development Lab": 2
     },
     "5-CCE": {
         "Essentials of Management": 3,
@@ -293,24 +293,23 @@ export const subjectData: {[SemCourse : string]: {[Subject: string] : number
         "B Tech Honors (Theory 3) (VII Semester)": 4
     },
     "3-DSE": {
-        "Mathematical Foundations for Data Science-I": 3,
+        "Discrete Mathematical Structures": 3,
+        "Data Structures": 4,
         "Data Analytics": 4,
-        "Data Structures": 3,
-        "Object Oriented Programming": 4,
-        "Data Communication and Networks": 3,
-        "Data Analytics Lab": 2,
+        "Digital Systems and Computer Organization": 4,
+        "Data Communication and Computer Networks": 3,
         "Data Structures Lab": 1,
-        "Object Oriented Programming Lab": 1
+        "Digital Systems Lab": 1
     },
     "4-DSE": {
-        "Mathematical Foundations for Data Science-II": 3,
-        "Database Systems": 3,
-        "Fundamentals of Machine Learning": 3,
-        "Design & Analysis of Algorithms": 3,
-        "Principles of Data Privacy & Security": 3,
+        "Probability and Optimization": 3,
+        "Database Systems": 4,
+        "Design & Analysis of Algorithms": 4,
+        "Introduction to Artificial Intelligence": 3,
         "Operating Systems": 3,
+        "Operating Systems Lab": 1,
         "Database Systems Lab": 2,
-        "Fundamentals of Machine Learning Lab": 2
+        "Object-Oriented Software Development Lab": 2
     },
     "5-DSE": {
         "Engineering Economics & Financial Management": 3,
@@ -444,44 +443,44 @@ export const subjectData: {[SemCourse : string]: {[Subject: string] : number
     "8-CSFT": {
         "Project Work/Practice School": 12
     },
-    "3-ECE": {
-        "MATHEMATICS-III": 3,
-        "ANALOG ELECTRONIC CIRCUITS": 4,
-        "NETWORK ANALYSIS": 3,
-        "SIGNALS & SYSTEMS": 3,
-        "DIGITAL SYSTEM DESIGN": 3,
-        "ELECTROMAGNETIC WAVES": 3,
-        "DIGITAL SYSTEM DESIGN LAB": 1,
-        "ELECTRONIC CIRCUITS LAB": 1
+        "3-ECE": {
+        "Mathematics-III": 3,
+        "Analog Electronic Circuits": 4,
+        "Network Analysis": 3,
+        "Signals & Systems": 3,
+        "Digital System Design": 3,
+        "Electromagnetic Waves": 3,
+        "Digital System Design Lab": 1,
+        "Electronic Circuits Lab": 1
     },
     "4-ECE": {
-        "MATHEMATICS-IV": 3,
-        "VLSI DESIGN": 4,
-        "DIGITAL SIGNAL PROCESSING": 3,
-        "ANALOG INTEGRATED CIRCUITS": 3,
-        "MICROWAVE ENGINEERING": 3,
-        "MODERN CONTROL THEORY": 3,
-        "VLSI LAB": 1,
-        "ELECTRONIC SYSTEM DESIGN LAB": 2
+        "Mathematics-IV": 3,
+        "VLSI Design": 4,
+        "Digital Signal Processing": 3,
+        "Analog Integrated Circuits": 3,
+        "Microwave Engineering": 3,
+        "Modern Control Theory": 3,
+        "VLSI Lab": 1,
+        "Electronic System Design Lab": 2
     },
     "5-ECE": {
-        "ENGG ECONOMICS & FINANCIAL MANAGEMENT": 3,
-        "ANALOG AND DIGITAL COMMUNICATION": 4,
-        "MICROPROCESSORS": 3,
-        "COMMUNICATION NETWORKS": 3,
-        "Flexible Core – (Digital Computer Architecture / VLSI Testing and Testability / Satellite Communication)": 3,
-        "DIGITAL SIGNAL PROCESSING LAB": 1,
-        "MICROPROCESSOR LAB": 2
+        "Engg Economics & Financial Management": 3,
+        "Analog and Digital Communication": 4,
+        "Microprocessors": 3,
+        "Communication Networks": 3,
+        "Flexible Core": 3,
+        "Digital Signal Processing Lab": 1,
+        "Microprocessor Lab": 2
     },
     "6-ECE": {
-        "ESSENTIALS OF MANAGEMENT": 3,
-        "WIRELESS COMMUNICATION": 3,
-        "Flexible Core – (System on Chip Design/ RF Circuit Design / Information Theory and Coding)": 3,
+        "Essentials of Management": 3,
+        "Wireless Communication": 3,
+        "Flexible Core": 3,
         "PE – 1 / Minor Specialization": 3,
         "PE – 2 / Minor Specialization": 3,
         "OE – 1 (MLC)": 3,
-        "COMMUNICATION NETWORKS LAB": 1,
-        "COMMUNICATION SYSTEMS LAB": 1
+        "Communication Networks Lab": 1,
+        "Communication Systems Lab": 1
     },
     "7-ECE": {
         "PE – 3 / Minor Specialization": 3,
