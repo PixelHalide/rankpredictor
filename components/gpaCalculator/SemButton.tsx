@@ -1,3 +1,4 @@
+import Image from 'next/image';
 
 interface SemButtonProps {
   isOpen: boolean;
@@ -20,7 +21,7 @@ const SemButton = ({ isOpen, selectedSemester, onClick }: SemButtonProps) => {
             isOpen ? 'rotate-180' : 'rotate-0'
           }`}
         >
-          <img src="/down-arrow-svgrepo-com.svg" width="12" height="12" alt="dropdown arrow" />
+          <Image src="/down-arrow-svgrepo-com.svg" width="12" height="12" alt="dropdown arrow" />
         </span>
       </button>
   )
