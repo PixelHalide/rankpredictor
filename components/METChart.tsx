@@ -24,7 +24,15 @@ const METChart = () => {
   }));
 
   // Custom tooltip component
-  const CustomTooltip = ({ active, payload, label }: any) => {
+  const CustomTooltip = ({ 
+    active, 
+    payload, 
+    label 
+  }: { 
+    active?: boolean; 
+    payload?: Array<{ value: number; dataKey: string }>; 
+    label?: string | number; 
+  }) => {
     if (active && payload && payload.length) {
       return (
         <div className="bg-gray-800 border border-gray-600 rounded p-2 text-white">
