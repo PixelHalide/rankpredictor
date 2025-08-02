@@ -11,7 +11,7 @@ import {
   Legend
 } from 'chart.js';
 
-// @ts-expect-error react-chartjs-2 types may not be fully compatible
+// @ts-expect-error Module has no exported member 'Line' but it exists at runtime
 import { Line } from 'react-chartjs-2';
 
 ChartJS.register(
