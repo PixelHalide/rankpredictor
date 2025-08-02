@@ -46,7 +46,7 @@ const GradingInfoDropdown = () => {
               <span className="font-mono">GPA = Σ(Grade Points × Credits) / Σ(Credits)</span>
             </div>
             <p className="text-gray-300">
-              Each subject's grade points are multiplied by its credit value, then all are summed and divided by the total credits.
+              Each subject&rsquo;s grade points are multiplied by its credit value, then all are summed and divided by the total credits.
             </p>
           </section>
 

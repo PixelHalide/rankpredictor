@@ -11,7 +11,7 @@ import {
   Legend
 } from 'chart.js';
 
-// @ts-ignore
+// @ts-expect-error react-chartjs-2 types may not be fully compatible
 import { Line } from 'react-chartjs-2';
 
 ChartJS.register(

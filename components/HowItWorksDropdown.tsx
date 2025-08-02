@@ -25,7 +25,7 @@ const HowItWorksDropdown = () => {
           <p className="text-xl font-bold text-left mb-2">The code works based on the principle of polynomial regression:</p>
 
           <p className="mb-4">
-            In MET 2025, both entrance exam scores and board exam results are considered. To account for varying difficulty levels across different boards, board percentages are normalized into band scores from 0 to 10. This creates a "fair" system where your final score combines your MET performance with your standardized board exam band. Here's how board percentages are converted to bands:
+            In MET 2025, both entrance exam scores and board exam results are considered. To account for varying difficulty levels across different boards, board percentages are normalized into band scores from 0 to 10. This creates a &ldquo;fair&rdquo; system where your final score combines your MET performance with your standardized board exam band. Here&rsquo;s how board percentages are converted to bands:
           </p>
 
           <ul className="list-disc list-inside text-left mb-4 space-y-1">
@@ -71,7 +71,7 @@ const HowItWorksDropdown = () => {
               <div>
                 <p className="font-semibold text-lg mb-2">Q: How accurate is it?</p>
                 <p className="mb-2">
-                  <span className="font-semibold">A:</span> The predictions are based on last year's data. So, if someone got the same MET marks and board percentage as you last year, they would've received the same predicted rank.
+                  <span className="font-semibold">A:</span> The predictions are based on last year&rsquo;s data. So, if someone got the same MET marks and board percentage as you last year, they would&rsquo;ve received the same predicted rank.
                 </p>
                 <ul className="list-disc list-inside ml-4 mt-2 mb-2 text-gray-300 space-y-1">
                   <li>

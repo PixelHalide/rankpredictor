@@ -33,12 +33,12 @@ export default function Home() {
         <div className="max-w px-10 md:px-30 text-justify space-y-8">
             <section className="space-y-2">
             <h2 className="text-2xl font-bold">About</h2>
-            <p className="text-gray-300">After encountering numerous "rank predictors" on the internet that ask for your marks along with personal data like your phone number and name—only to farm and sell this information, as well as "coaches" and "bhaiyas" on Youtube spreading misinformation - we felt frustrated. Students lacked a legitimate way to predict and calculate their ranks. This frustration led to the creation of RankPredictor, a website that allows you to predict your rank for various exams with no nonsense.</p>
+            <p className="text-gray-300">After encountering numerous &ldquo;rank predictors&rdquo; on the internet that ask for your marks along with personal data like your phone number and name—only to farm and sell this information, as well as &ldquo;coaches&rdquo; and &ldquo;bhaiyas&rdquo; on Youtube spreading misinformation - we felt frustrated. Students lacked a legitimate way to predict and calculate their ranks. This frustration led to the creation of RankPredictor, a website that allows you to predict your rank for various exams with no nonsense.</p>
             </section>
 
             <section className="space-y-2">
             <h2 className="text-2xl font-bold">Our Methodology</h2>
-            <p className="text-gray-300">We gather verified and accurate data from past exam results to ensure our predictions are reliable. Using various mathematical methods, such as polynomial regression, we aim to provide the most accurate rank predictions possible. Detailed explanations of our rank prediction process for each exam are available in the "How does this work?" section within each exam's predictor, complete with graphs and datasets for transparency and scrutiny.</p>
+            <p className="text-gray-300">We gather verified and accurate data from past exam results to ensure our predictions are reliable. Using various mathematical methods, such as polynomial regression, we aim to provide the most accurate rank predictions possible. Detailed explanations of our rank prediction process for each exam are available in the &ldquo;How does this work?&rdquo; section within each exam&rsquo;s predictor, complete with graphs and datasets for transparency and scrutiny.</p>
             </section>
 
             <section className="space-y-2">
