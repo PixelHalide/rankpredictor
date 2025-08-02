@@ -14,8 +14,7 @@ Our website offers free, no-nonsense rank predictions for various entrance exams
 ## Currently Supported Exams
 
 - MET 2025 (Manipal Entrance Test)
-- MET 2024
-- KCET 2024 (Karnataka Common Entrance Test)
+- MIT GPA Calculator
 
 ## Methodology
 
