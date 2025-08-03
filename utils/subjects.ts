@@ -352,8 +352,8 @@ export const subjectData: {[SemCourse : string]: {[Subject: string] : number
     },
     "3-MNC": {
         "Computational Linear Algebra": 4,
-        "Probability and Stochastic Process": 4,
-        "Data Structures": 3,
+        "Probability and Stochastic Process": 3,
+        "Data Structures": 4,
         "Elementary Number Theory": 3,
         "Advanced Programming": 3,
         "Discrete Mathematics": 3,
