@@ -17,8 +17,8 @@ export const metadata: Metadata = {
     images: [
       {
         url: "/gpa.png",
-        width: 1200,
-        height: 630,
+        width: 1628,
+        height: 1472,
         alt: "MIT GPA Calculator",
       },
     ],
