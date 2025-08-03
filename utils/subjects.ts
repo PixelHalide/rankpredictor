@@ -57,20 +57,27 @@ export const subjectData: {[SemCourse : string]: {[Subject: string] : number
         "Introduction to Artificial Intelligence": 3,
         "Operating Systems": 3,
         "Operating Systems Lab": 1,
-        "Database Lab": 2,
+        "Database Systems Lab": 2,
         "Object-Oriented Software Development Lab": 2
     },
     "5-CS": {
         "Essentials of Management": 3,
-        "Finite Automata and Compiler Design": 4,
-        "Software Engineering": 4,
-        "Principles of Cryptography": 4,
-        "Cloud Computing and DevOps": 4
+        "Principles of Cryptography": 3,
+        "Operating Systems": 3,
+        "Software Engineering": 3,
+        "Computer Networks": 3,
+        "Software Engineering Lab": 1,
+        "Operating Systems Lab": 1,
+        "Computer Networks Lab": 1,
     },
     "6-CS": {
         "Engineering Economics and Financial Management": 3,
-        "Machine Learning": 4,
-        "Parallel Computer Architecture and Programming": 4,
+        "Compiler Design": 3,
+        "Parallel Computer Architecture and Programming": 3,
+        "Parallel Programming Lab": 1,
+        "Compiler Design Lab": 1,
+        "Web Programming Lab": 1,
+        "Open Elective - 1 (MLC)": 3,
         "Program Elective - 1 (Minor Specialization)": 3,
         "Program Elective - 2 (Minor Specialization)": 3
     },
@@ -134,24 +141,23 @@ export const subjectData: {[SemCourse : string]: {[Subject: string] : number
         "Engineering Graphics - 2": 1
     },
     "3-AIML": {
-        "Linear Algebra and Logic": 3,
-        "Digital Systems & Computer Organization": 3,
+        "Discrete Mathematical Structures": 3,
         "Data Structures": 4,
-        "Introduction to Data Analytics": 3,
-        "Object Oriented Programming": 4,
-        "Formal Languages and Automata Theory": 3,
+        "Data Analytics": 4,
+        "Digital Systems and Computer Organization": 4,
+        "Data Communication and Computer Networks": 3,
         "Data Structures Lab": 1,
-        "Object Oriented Programming Lab": 1
+        "Digital Systems Lab": 1
     },
     "4-AIML": {
-        "Probability And Optimization": 3,
+        "Probability and Optimization": 3,
         "Database Systems": 4,
-        "Design and Analysis of Algorithms": 4,
-        "Artificial Intelligence": 4,
+        "Design & Analysis of Algorithms": 4,
+        "Introduction to Artificial Intelligence": 3,
         "Operating Systems": 3,
-        "Algorithms Lab": 1,
-        "Database Systems Lab": 1,
-        "Artificial Intelligence Lab": 1
+        "Operating Systems Lab": 1,
+        "Database Systems Lab": 2,
+        "Object-Oriented Software Development Lab": 2
     },
     "5-AIML": {
         "Essentials of Management": 3,
