@@ -46,7 +46,7 @@ export const subjectData: {[SemCourse : string]: {[Subject: string] : number
         "Data Structures": 4,
         "Data Analytics": 4,
         "Digital Systems and Computer Organization": 4,
-        "Data Communication and Computer Networks": 3,
+        "Data Communication and Computer Networks": 4,
         "Data Structures Lab": 1,
         "Digital Systems Lab": 1
     },
