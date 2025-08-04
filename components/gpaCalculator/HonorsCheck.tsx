@@ -15,7 +15,7 @@ const HonorsCheck = ({ isOpen, honors, onHonorsChange }: HonorsCheckBoxProps) =>
           type="checkbox"
           checked={honors}
           onChange={(e) => onHonorsChange(e.target.checked)}
-          className="w-5 h-5 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-600 dark:focus:ring-blue-800 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600 cursor-pointer"
+          className="w-5 h-5 text-blue-600 bg-gray-700 border-gray-600 rounded focus:ring-blue-800 ring-offset-gray-800 focus:ring-2 cursor-pointer"
         />
         <label htmlFor="honors-checkbox" className="ml-3 text-sm font-medium text-gray-300 cursor-pointer select-none">
           B.Tech Honors Program
