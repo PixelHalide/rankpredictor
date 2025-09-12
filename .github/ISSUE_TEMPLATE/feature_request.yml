@@ -1,0 +1,44 @@
+name: Feature Request
+description: Suggest a new feature or improvement
+title: "feat: "
+labels: ["feature"]
+body:
+  - type: textarea
+    attributes:
+      label: Feature Description
+      description: What do you want to add or improve?
+      placeholder: |
+        Clearly describe the feature or enhancement you'd like to see implemented.
+        For example: Add a search bar to the homepage to quickly find user data.
+      render: shell
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: Use Case
+      description: Why would this feature be helpful?
+      placeholder: |
+        Describe the problem it solves or the value it brings to users or developers.
+        For example: Helps users navigate large datasets more efficiently.
+      render: shell
+
+  - type: textarea
+    attributes:
+      label: Affected Areas
+      description: Which files, routes, components, or features does this change impact?
+      placeholder: |
+        List relevant areas like: DashboardPage.tsx, SearchBar.jsx, or API endpoints.
+      render: shell
+
+  - type: textarea
+    attributes:
+      label: Additional Context
+      description: Add links, mockups, screenshots, or related issues.
+      placeholder: |
+        Include anything that helps explain your request better.
+        For example:
+        - Screenshot of current layout
+        - Related issues: #123
+        - External inspiration: [link]
+      render: shell

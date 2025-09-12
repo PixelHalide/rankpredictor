@@ -1,0 +1,61 @@
+name: Bug Report
+description: File a bug report to help us improve the project
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: textarea
+    attributes:
+      label: What happened?
+      description: A clear and concise description of the issue.
+      placeholder: |
+        Describe the issue you encountered and what you expected to happen.
+        Example: "When I tried to log in, the app refreshed but didn’t redirect."
+      render: shell
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: Steps to reproduce
+      description: Provide step-by-step instructions to reproduce the issue.
+      placeholder: |
+        1. Open the app
+        2. Click on a button or link
+        3. Describe what you saw
+        4. Mention what you expected instead
+      render: shell
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: Expected behavior
+      description: What should have happened instead?
+      placeholder: "Example: I expected a success message and a redirect to the dashboard."
+      render: shell
+
+  - type: input
+    attributes:
+      label: Affected route or component
+      description: Mention where the issue occurs (URL or component name).
+      placeholder: "/dashboard or LoginForm.tsx"
+
+  - type: input
+    attributes:
+      label: Environment
+      description: System & tech stack info (optional but helpful).
+      placeholder: "e.g. macOS 14, Chrome 126, Node 20, Vite, TailwindCSS"
+
+  - type: textarea
+    attributes:
+      label: Screenshots / logs
+      description: Paste any error logs or add screenshots if applicable.
+      placeholder: "No visible error logs. UI is stuck on loading..."
+      render: shell
+
+  - type: textarea
+    attributes:
+      label: Additional context
+      description: Any other details or edge cases that might be related.
+      placeholder: "This only happens in incognito mode or after clearing localStorage..."
+      render: shell
