@@ -1,7 +1,7 @@
 blank_issues_enabled: false
 contact_links:
   - name:  Ask a question or get support
-    url: https://github.com/YOUR_REPO/discussions
+    url: https://github.com/PixelHalide/rankpredictor/discussions
     about: Please ask questions or request help via GitHub Discussions.
 
 issue_templates:

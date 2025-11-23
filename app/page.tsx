@@ -43,7 +43,7 @@ export default function Home() {
 
             <section className="space-y-2">
             <h2 className="text-2xl font-bold">Contact and License</h2>
-            <p className="text-gray-300">You can reach out to us on Discord for any further queries. You can DM <a href="https://discord.com/users/180399116327714816" target="_blank" className="text-white hover:text-yellow-500 transition-all">@pixelhalide</a> for queries regarding MIT, MET, or the website.</p>
+            <p className="text-gray-300">You can reach out to us on Discord for any further queries. You can DM <a href="https://discord.com/users/180399116327714816" target="_blank" className="text-white hover:text-yellow-500 transition-all">@pixelhalide</a> for queries regarding MIT, MET, or the website. Do make sure to join the <a href="https://discord.gg/2mYN8aDPur" target="_blank" className="text-white hover:text-yellow-500 transition-all">MIT Manipal & MET Discord</a></p>
             <p className="text-gray-300">All our code and data are open-source under the GPL-3 license, allowing you to freely use, modify, and share them - provided that derivative works are also shared under the same license terms.</p>
             </section>
         </div>
