@@ -61,13 +61,6 @@ const GpaTable = ({ isOpen, honors, subjectGroup }: GpaTableProps) => {
         setSelectedGrades(newSelectedGrades);
     };
 
-    const resetGrades = () => {
-        setGpa(null);
-        setObtainedCreds(new Array(subjectArray.length).fill(0));
-        setCreds(new Array(subjectArray.length).fill(0));
-        setSelectedGrades({});
-    };
-
     const returnSubjects = (subjects: SemCourse): JSX.Element[] => {
         const returnElements: JSX.Element[] = [];
 
