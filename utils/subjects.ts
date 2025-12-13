@@ -77,7 +77,6 @@ export const subjectData: {[SemCourse : string]: {[Subject: string] : number
         "Parallel Programming Lab": 1,
         "Compiler Design Lab": 1,
         "Web Programming Lab": 1,
-        "Open Elective - 1 (MLC)": 3,
         "Program Elective - 1 (Minor Specialization)": 3,
         "Program Elective - 2 (Minor Specialization)": 3
     },
@@ -485,7 +484,6 @@ export const subjectData: {[SemCourse : string]: {[Subject: string] : number
         "Flexible Core": 3,
         "PE – 1 / Minor Specialization": 3,
         "PE – 2 / Minor Specialization": 3,
-        "OE – 1 (MLC)": 3,
         "Communication Networks Lab": 1,
         "Communication Systems Lab": 1
     },
@@ -495,7 +493,6 @@ export const subjectData: {[SemCourse : string]: {[Subject: string] : number
         "PE – 5": 3,
         "PE – 6": 3,
         "PE – 7": 3,
-        "OE – 2 (MLC)": 3,
         "Mini Project (Minor Specialization)": 8
     },
     "8-ECE": {
@@ -593,7 +590,6 @@ export const subjectData: {[SemCourse : string]: {[Subject: string] : number
         "Flexible Core – (A3/B3)": 3,
         "PE – 1 / Minor Specialization": 3,
         "PE – 2 / Minor Specialization": 3,
-        "OE – 2": 3,
         "Control and Signal Processing Lab": 1,
         "Industrial Automation Lab": 1,
         "Virtual Instrumentation Lab": 1
@@ -604,7 +600,6 @@ export const subjectData: {[SemCourse : string]: {[Subject: string] : number
         "PE – 5": 3,
         "PE – 6": 3,
         "PE – 7": 3,
-        "OE – 3": 3,
         "Mini Project (Minor Specialization)": 8
     },
     "8-ENI": {
@@ -649,7 +644,6 @@ export const subjectData: {[SemCourse : string]: {[Subject: string] : number
         "Flexible Core – (A2/B2/C2)": 3,
         "PE – 1 / Minor Specialization": 3,
         "PE – 2 / Minor Specialization": 3,
-        "OE – 2": 3,
         "Measurements & Instrumentation Lab": 1,
         "Power System Lab": 1
     },
@@ -659,7 +653,6 @@ export const subjectData: {[SemCourse : string]: {[Subject: string] : number
         "PE – 5": 3,
         "PE – 6": 3,
         "PE – 7": 3,
-        "OE – 3": 3,
         "Mini Project (Minor Specialization)": 8
     },
     "8-EEE": {
@@ -704,7 +697,6 @@ export const subjectData: {[SemCourse : string]: {[Subject: string] : number
         "Flexible Core – (A3/B3/C3)": 3,
         "PE – 1 / Minor Specialization": 3,
         "PE – 2 / Minor Specialization": 3,
-        "OE – 2": 3,
         "CPS Interface Lab": 1,
         "Networking Lab": 1
     },
@@ -714,7 +706,6 @@ export const subjectData: {[SemCourse : string]: {[Subject: string] : number
         "PE – 5": 3,
         "PE – 6": 3,
         "PE – 7": 3,
-        "OE – 3": 3,
         "Mini Project (Minor Specialization)": 8
     },
     "8-CPS": {
@@ -759,7 +750,6 @@ export const subjectData: {[SemCourse : string]: {[Subject: string] : number
         "Digital Image Processing": 4,
         "Program Elective – I (Minor Specialization)": 3,
         "Program Elective – II (Minor Specialization)": 3,
-        "OE – 2": 3,
         "Digital Signal Processing Lab": 1,
         "Digital Image Processing Lab": 1
     },
@@ -769,7 +759,6 @@ export const subjectData: {[SemCourse : string]: {[Subject: string] : number
         "Program Elective – V": 3,
         "Program Elective – VI": 3,
         "Program Elective – VII": 3,
-        "OE – 3": 3,
         "Mini Project (Minor Specialization)": 8
     },
     "8-BioMed": {
@@ -814,7 +803,6 @@ export const subjectData: {[SemCourse : string]: {[Subject: string] : number
         "Bioethics and Intellectual Property Rights": 3,
         "Program Elective – I (Minor Specialization)": 3,
         "Program Elective – II (Minor Specialization)": 3,
-        "OE – 1": 3,
         "Bioreaction Engineering and Cell Culture Lab": 2,
         "Modeling and Simulation Lab": 1
     },
@@ -824,7 +812,6 @@ export const subjectData: {[SemCourse : string]: {[Subject: string] : number
         "Program Elective – V": 3,
         "Program Elective – VI": 3,
         "Program Elective – VII": 3,
-        "OE – 2": 3,
         "Mini Project (Minor Specialization)": 8
     },
     "8-BioTech": {
@@ -977,7 +964,6 @@ export const subjectData: {[SemCourse : string]: {[Subject: string] : number
         "Flexible Core II": 3,
         "Program Elective I/Minor Specialization": 3,
         "Program Elective II/ Minor Specialization": 3,
-        "Open Elective–2": 3,
         "Automotive Design and Analysis Lab": 1,
         "Vehicle Aerodynamics Lab": 1
     },
