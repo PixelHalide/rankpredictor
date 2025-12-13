@@ -404,11 +404,12 @@ export const subjectData: {[SemCourse : string]: {[Subject: string] : number
     },
     "3-CSFT": {
         "Mathematics for Finance": 4,
-        "Programming Paradigms": 4,
+        "Programming Paradigm": 4,
         "Algorithms & Data Structures": 4,
         "Introduction to Banking, Payments and Capital Markets": 4,
         "Database Management Systems": 3,
-        "Programming Paradigms Lab": 1,
+        "Programming Paradigm Lab": 1,
+        "Algorithms and Data Structures" : 1,
         "Database Management Systems Lab": 1
     },
     "4-CSFT": {
