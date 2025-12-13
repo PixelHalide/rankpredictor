@@ -845,7 +845,7 @@ export const subjectData: {[SemCourse : string]: {[Subject: string] : number
     "5-MechX": {
         "Engg. Economics and Financial Management": 3,
         "Digital Signal Processing": 3,
-        "Electric Drives": 3,
+        "Electric Drives": 4,
         "Manufacturing Technology / Foundations of EV and Hybrid Vehicles": 3,
         "Hydraulics and Pneumatics Systems": 3,
         "Drives, Controls and Modelling Lab": 1,
