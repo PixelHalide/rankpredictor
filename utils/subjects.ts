@@ -829,7 +829,7 @@ export const subjectData: {[SemCourse : string]: {[Subject: string] : number
         "Sensors and Transducers": 3,
         "Industrial Robotics Lab": 1,
         "Integrated Electronics Lab": 1,
-        "Manufacturing Processes Lab": 2
+        "Manufacturing Processes Lab": 1
     },
     "4-MechX": {
         "Engineering Mathematics – IV": 3,
