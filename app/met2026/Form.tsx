@@ -144,7 +144,7 @@ const Form = ({ sendBoards, sendMET }: FormProp) => {
                 </span>
               </p>
               <p className="mt-2 text-center text-xs text-slate-400 sm:text-sm">
-                Note: Core branches are expected to be merged for 2026.
+                Note: Core branches are expected to be merged for 2026. (Industrial, Auto, Aero will be merged into Mechanical; And the Circuital branches will be merged into EEE & ECE)
               </p>
             </div>
 

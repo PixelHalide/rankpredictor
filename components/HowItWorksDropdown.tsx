@@ -13,7 +13,7 @@ const HowItWorksDropdown = () => {
   return (
     <div className="content mb-8 max-w-4xl mx-auto">
       <p
-        className="underline cursor-pointer text-center mb-4 hover:text-yellow-500 transition-all"
+        className="underline cursor-pointer text-center mb-4 text-white hover:text-yellow-500 transition-all"
         onClick={toggleContent}
       >
         How does this work? {isOpen ? "V" : ">"}
