@@ -4,15 +4,17 @@ import Image from "next/image";
 const NavBar = () => {
   return (
     <div>
-      <header className="relative flex items-center justify-center mb-5 mt-6">
+      <header className="mb-5 mt-6 flex flex-col items-center justify-center gap-2 px-4 sm:flex-row sm:gap-4">
         <Image
           src="/logo.png"
           alt="Company Logo"
           width={80}
           height={80}
-          className="sm:hidden absolute top-2 left-5 w-16 md:w-20 cursor-pointer"
+          className="h-14 w-14 cursor-pointer object-contain sm:h-16 sm:w-16 md:h-20 md:w-20"
         />
-        <h1 className="text-3xl md:text-5xl font-bold">Rank Predictor</h1>
+        <h1 className="text-center text-3xl font-bold leading-tight sm:text-4xl md:text-5xl">
+          Rank Predictor
+        </h1>
       </header>
       <div className="text-sm text-center mb-4">
         By{" "}

@@ -66,58 +66,85 @@ const Form = ({ sendBoards, sendMET }: FormProp) => {
   };
 
   return (
-    <div className="flex justify-center">
-      <div className="bg-gray-800 rounded-lg p-6 shadow-lg max-w-md w-full text-center">
-        <label htmlFor="boardPercentage" className="block mb-2 text-white">
-          Enter your Board Percentage:
-        </label>
-        <input
-          type="number"
-          id="boardPercentage"
-          min="0"
-          max="100"
-          step="0.01"
-          value={boardPercentage ?? ""}
-          onChange={(e) => handleBoardChange(Number(e.target.value))}
-          className="w-full mb-4 p-2 bg-gray-700 text-white rounded text-center border border-gray-600 focus:border-green-500 focus:outline-none"
-        />
+    <div className="mt-6">
+      <div className="mx-auto w-full max-w-5xl rounded-2xl border border-slate-700/70 bg-slate-900/70 p-5 shadow-xl backdrop-blur-sm sm:p-6">
+        <h1 className="mb-2 text-center text-2xl font-semibold tracking-tight text-slate-100 sm:text-3xl">
+          MET 2026 Rank Predictor
+        </h1>
+        <p className="mb-6 text-center text-sm text-slate-400 sm:text-base">
+          Enter your scores to estimate your rank and view likely branches.
+        </p>
 
-        <label htmlFor="metMarks" className="block mb-2 text-white">
-          Enter your MET Marks (out of 240):
-        </label>
-        <input
-          type="number"
-          id="metMarks"
-          min="0"
-          max="240"
-          value={metMarks ?? ""}
-          onChange={(e) => handleMetChange(Number(e.target.value))}
-          className="w-full mb-4 p-2 bg-gray-700 text-white rounded text-center border border-gray-600 focus:border-green-500 focus:outline-none"
-        />
+        <div className="grid gap-4 sm:grid-cols-2">
+          <div>
+            <label
+              htmlFor="boardPercentage"
+              className="mb-2 block text-sm font-medium text-slate-200"
+            >
+              Board Percentage
+            </label>
+            <input
+              type="number"
+              id="boardPercentage"
+              name="boardPercentage"
+              autoComplete="off"
+              inputMode="decimal"
+              min="0"
+              max="100"
+              step="0.01"
+              value={boardPercentage ?? ""}
+              onChange={(e) => handleBoardChange(Number(e.target.value))}
+              className="w-full rounded-lg border border-slate-600 bg-slate-800 px-4 py-3 text-lg text-slate-100 shadow-inner transition-colors focus-visible:border-emerald-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500/40"
+            />
+          </div>
+
+          <div>
+            <label
+              htmlFor="metMarks"
+              className="mb-2 block text-sm font-medium text-slate-200"
+            >
+              MET Marks (out of 240)
+            </label>
+            <input
+              type="number"
+              id="metMarks"
+              name="metMarks"
+              autoComplete="off"
+              inputMode="numeric"
+              min="0"
+              max="240"
+              value={metMarks ?? ""}
+              onChange={(e) => handleMetChange(Number(e.target.value))}
+              className="w-full rounded-lg border border-slate-600 bg-slate-800 px-4 py-3 text-lg text-slate-100 shadow-inner transition-colors focus-visible:border-emerald-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500/40"
+            />
+          </div>
+        </div>
 
         <button
           onClick={handlePredict}
           disabled={isLoading || boardPercentage === null || metMarks === null}
-          className="w-full py-2 px-4 bg-green-600 text-white rounded hover:bg-green-500 active:bg-green-700 disabled:bg-gray-600 disabled:cursor-not-allowed cursor-pointer transition-colors mb-4"
+          className="mt-5 w-full touch-manipulation rounded-lg bg-emerald-600 px-4 py-3 text-base font-semibold text-white transition-colors hover:bg-emerald-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400/70 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900 active:bg-emerald-700 disabled:cursor-not-allowed disabled:bg-slate-600 sm:text-lg"
         >
           {isLoading ? "Predicting..." : "Predict Rank"}
         </button>
 
         {error && (
-          <div className="mb-4 p-3 bg-red-800 text-white rounded">{error}</div>
+          <div className="mt-4 rounded-lg border border-red-500/40 bg-red-950/60 p-3 text-sm text-red-100">
+            {error}
+          </div>
         )}
 
         {prediction && (
-          <div className="text-left">
-            <div className="mb-4 p-4 bg-gray-600/50 rounded">
-              <p className="text-white text-center">
-                Your rank according to last year would be:{" "}
-                <strong className="text-yellow-400">
+          <div className="mt-6 space-y-4">
+            <div className="rounded-xl border border-slate-700 bg-slate-800/70 p-4 sm:p-5">
+              <p className="text-center text-lg text-slate-100 sm:text-xl">
+                Your rank according to last year:
+                <span className="ml-2 font-bold tabular-nums text-amber-300">
                   {prediction.predictedRank}
-                </strong>
+                </span>
               </p>
-              <p className="text-sm text-gray-300 text-center mt-2">
-                (Note: Core-Branches are supposed to be merged for 2026)
+              <p className="mt-2 text-center text-xs text-slate-400 sm:text-sm">
+                Note: Core branches are expected to be merged for 2026.
               </p>
             </div>
 

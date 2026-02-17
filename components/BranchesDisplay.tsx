@@ -29,8 +29,8 @@ const BranchesDisplay = ({ attainableBranches }: BranchesDisplayProps) => {
 
   if (attainableBranches.length === 0) {
     return (
-      <div className="mt-4 p-4 bg-red-800 rounded text-center">
-        <p>
+      <div className="mt-4 rounded-xl border border-red-500/40 bg-red-950/70 p-4 text-center text-red-100">
+        <p className="text-sm sm:text-base">
           No branches available at your predicted rank. Better luck next time!
         </p>
       </div>
@@ -38,33 +38,61 @@ const BranchesDisplay = ({ attainableBranches }: BranchesDisplayProps) => {
   }
 
   return (
-    <div className="mt-4">
+    <section className="mt-4">
+      <div className="mb-3 flex items-center justify-between gap-3">
+        <h2 className="text-lg font-semibold text-slate-100 sm:text-xl">
+          Attainable Branches
+        </h2>
+      </div>
+
       {attainableBranches.map((collegeData) => (
-        <div key={collegeData.college}>
+        <div
+          key={collegeData.college}
+          className="mb-4 overflow-hidden rounded-xl border border-slate-700 bg-slate-900/70"
+        >
           {collegeData.branches.length > 0 && (
             <>
               <button
                 onClick={() => toggleCollege(collegeData.college)}
-                className="campus-btn cursor-pointer w-full py-2 px-4 bg-green-600 text-white rounded hover:bg-green-500 transition-colors mb-4"
+                aria-expanded={!hiddenColleges.has(collegeData.college)}
+                aria-controls={`branches-${collegeData.college.replace(/\s+/g, "-").toLowerCase()}`}
+                className="campus-btn flex w-full touch-manipulation items-center justify-between gap-3 border-b border-slate-700 bg-emerald-600/90 px-4 py-3 text-left text-white transition-colors hover:bg-emerald-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400/70 focus-visible:ring-inset sm:px-5"
               >
-                {collegeData.college}
+                <span className="text-base font-semibold sm:text-lg">
+                  {collegeData.college}
+                </span>
+                <span className="rounded-full bg-black/20 px-2 py-1 text-xs font-medium sm:text-sm">
+                  {collegeData.branches.length} branches
+                </span>
               </button>
-              <div
-                className={`campus-content text-center bg-gray-600/50 mb-4 rounded-xl py-2 ${hiddenColleges.has(collegeData.college) ? "hidden" : ""}`}
-              >
-                <ul className="list-disc list-inside">
-                  {collegeData.branches.map((branch, index) => (
-                    <li key={index}>
-                      {branch.name} - {branch.cutoff}
-                    </li>
-                  ))}
-                </ul>
-              </div>
+
+              {!hiddenColleges.has(collegeData.college) && (
+                <div
+                  id={`branches-${collegeData.college.replace(/\s+/g, "-").toLowerCase()}`}
+                  className="campus-content p-3 sm:p-4"
+                >
+                  <ul className="grid gap-2 sm:grid-cols-2">
+                    {collegeData.branches.map((branch, index) => (
+                      <li
+                        key={index}
+                        className="flex items-start justify-between gap-3 rounded-lg border border-slate-700 bg-slate-800/70 px-3 py-2"
+                      >
+                        <span className="min-w-0 break-words text-sm text-slate-100 sm:text-base">
+                          {branch.name}
+                        </span>
+                        <span className="shrink-0 rounded-md bg-slate-700 px-2 py-1 text-xs font-semibold tabular-nums text-amber-300 sm:text-sm">
+                          {branch.cutoff}
+                        </span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
             </>
           )}
         </div>
       ))}
-    </div>
+    </section>
   );
 };
 

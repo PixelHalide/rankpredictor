@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import {
   LineChart,
   Line,
@@ -13,6 +14,17 @@ import {
 import { MET_2025_X_VALUES, MET_2025_Y_VALUES } from "@/utils/metPrediction";
 
 const METChart = () => {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia("(max-width: 640px)");
+    const updateViewport = () => setIsMobile(mediaQuery.matches);
+
+    updateViewport();
+    mediaQuery.addEventListener("change", updateViewport);
+    return () => mediaQuery.removeEventListener("change", updateViewport);
+  }, []);
+
   const rawXData = MET_2025_X_VALUES;
   const rawYData = MET_2025_Y_VALUES;
 
@@ -78,19 +90,20 @@ const METChart = () => {
   return (
     <div
       style={{
-        width: "80%",
+        width: "100%",
+        maxWidth: "1000px",
         margin: "0 auto 24px",
         background: "rgba(255,255,255,0.03)",
         border: "1px solid rgba(255,255,255,0.08)",
         borderRadius: "16px",
-        padding: "28px 24px 16px",
+        padding: isMobile ? "18px 12px 12px" : "28px 24px 16px",
       }}
     >
-      <div style={{ marginBottom: 24 }}>
+      <div style={{ marginBottom: isMobile ? 12 : 24 }}>
         <h2
           style={{
             color: "#fff",
-            fontSize: 18,
+            fontSize: isMobile ? 16 : 18,
             fontWeight: 600,
             textAlign: "center",
             letterSpacing: "0.02em",
@@ -108,10 +121,14 @@ const METChart = () => {
         ></p>
       </div>
 
-      <ResponsiveContainer width="100%" height={380}>
+      <ResponsiveContainer width="100%" height={isMobile ? 290 : 380}>
         <LineChart
           data={data}
-          margin={{ top: 10, right: 30, left: 30, bottom: 30 }}
+          margin={
+            isMobile
+              ? { top: 8, right: 8, left: 0, bottom: 22 }
+              : { top: 10, right: 30, left: 30, bottom: 30 }
+          }
         >
           <defs>
             <linearGradient id="lineGradient" x1="0" y1="0" x2="1" y2="0">
@@ -129,29 +146,42 @@ const METChart = () => {
           <XAxis
             dataKey="bandScore"
             stroke="rgba(255,255,255,0.15)"
-            tick={{ fill: "#718096", fontSize: 11 }}
+            tick={{ fill: "#718096", fontSize: isMobile ? 10 : 11 }}
             tickLine={false}
-            interval={4}
+            minTickGap={isMobile ? 28 : 18}
+            interval="preserveStartEnd"
+            tickMargin={8}
+            tickFormatter={(value: number) =>
+              isMobile ? Number(value).toFixed(0) : String(value)
+            }
             label={{
               value: "Band Score",
               position: "insideBottom",
-              offset: -18,
-              style: { textAnchor: "middle", fill: "#718096", fontSize: 12 },
+              offset: isMobile ? -14 : -18,
+              style: {
+                textAnchor: "middle",
+                fill: "#718096",
+                fontSize: isMobile ? 11 : 12,
+              },
             }}
           />
 
           <YAxis
             stroke="rgba(255,255,255,0.15)"
-            tick={{ fill: "#718096", fontSize: 11 }}
+            tick={{ fill: "#718096", fontSize: isMobile ? 10 : 11 }}
             tickLine={false}
             tickFormatter={formatYAxis}
-            width={70}
+            width={isMobile ? 42 : 70}
             label={{
               value: "Rank",
               angle: -90,
               position: "insideLeft",
-              offset: 15,
-              style: { textAnchor: "middle", fill: "#718096", fontSize: 12 },
+              offset: isMobile ? 6 : 15,
+              style: {
+                textAnchor: "middle",
+                fill: "#718096",
+                fontSize: isMobile ? 11 : 12,
+              },
             }}
           />
 

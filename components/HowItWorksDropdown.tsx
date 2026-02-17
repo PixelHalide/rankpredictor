@@ -92,10 +92,9 @@ const HowItWorksDropdown = () => {
                 </p>
                 <ul className="list-disc list-inside ml-4 mt-2 mb-2 text-gray-300 space-y-1">
                   <li>
-                    For the MET 2024 Rank Predictor, I used just 10 data points
-                    from the 2020 results. After the actual results were out,
+                    For the MET 2025 Rank Predictor, Due to merging of the CS branches and other factors
                     the average error was{" "}
-                    <span className="font-semibold text-yellow-300">+1.5k</span>{" "}
+                    <span className="font-semibold text-yellow-300">+25%</span>{" "}
                     (meaning the predictor showed a lower rank than people
                     actually got).
                   </li>
