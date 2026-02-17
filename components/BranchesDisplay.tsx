@@ -1,5 +1,4 @@
-'use client'
-import { useState } from 'react';
+import { useState } from "react";
 
 interface Branch {
   name: string;
@@ -31,7 +30,9 @@ const BranchesDisplay = ({ attainableBranches }: BranchesDisplayProps) => {
   if (attainableBranches.length === 0) {
     return (
       <div className="mt-4 p-4 bg-red-800 rounded text-center">
-        <p>No branches available at your predicted rank. Better luck next time!</p>
+        <p>
+          No branches available at your predicted rank. Better luck next time!
+        </p>
       </div>
     );
   }
@@ -48,7 +49,9 @@ const BranchesDisplay = ({ attainableBranches }: BranchesDisplayProps) => {
               >
                 {collegeData.college}
               </button>
-              <div className={`campus-content text-center bg-gray-600/50 mb-4 rounded-xl py-2 ${hiddenColleges.has(collegeData.college) ? 'hidden' : ''}`}>
+              <div
+                className={`campus-content text-center bg-gray-600/50 mb-4 rounded-xl py-2 ${hiddenColleges.has(collegeData.college) ? "hidden" : ""}`}
+              >
                 <ul className="list-disc list-inside">
                   {collegeData.branches.map((branch, index) => (
                     <li key={index}>

@@ -4,10 +4,14 @@ interface CycleSelectProps {
   selectedCycle?: number | null;
 }
 
-const CycleSelect = ({ isOpen, sendCycle, selectedCycle }: CycleSelectProps) => {
+const CycleSelect = ({
+  isOpen,
+  sendCycle,
+  selectedCycle,
+}: CycleSelectProps) => {
   const getClasses = (cycleNum: number) =>
     `hover:bg-gray-600 cursor-pointer transition-all hover:rounded-md hover:-translate-y-1 p-1 rounded-md ${
-      selectedCycle === cycleNum ? 'bg-blue-600 hover:bg-blue-500' : ''
+      selectedCycle === cycleNum ? "bg-blue-600 hover:bg-blue-500" : ""
     }`;
 
   return (
@@ -33,7 +37,7 @@ const CycleSelect = ({ isOpen, sendCycle, selectedCycle }: CycleSelectProps) => 
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default CycleSelect
+export default CycleSelect;

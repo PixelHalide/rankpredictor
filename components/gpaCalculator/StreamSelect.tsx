@@ -1,14 +1,17 @@
-
 interface StreamSelectProps {
   isOpen: boolean;
   sendStream: (stream: string) => void;
   selectedStream?: string | null;
 }
 
-const StreamSelect = ({ isOpen, sendStream, selectedStream }: StreamSelectProps) => {
+const StreamSelect = ({
+  isOpen,
+  sendStream,
+  selectedStream,
+}: StreamSelectProps) => {
   const getClasses = (streamType: string) =>
     `hover:bg-gray-600 cursor-pointer transition-all hover:rounded-md hover:-translate-y-1 p-1 rounded-md ${
-      selectedStream === streamType ? 'bg-blue-600 hover:bg-blue-500' : ''
+      selectedStream === streamType ? "bg-blue-600 hover:bg-blue-500" : ""
     }`;
 
   return (
@@ -20,10 +23,7 @@ const StreamSelect = ({ isOpen, sendStream, selectedStream }: StreamSelectProps)
       }`}
     >
       <div className="flex flex-row justify-evenly w-full my-auto">
-        <div
-          onClick={() => sendStream("CS")}
-          className={getClasses("CS")}
-        >
+        <div onClick={() => sendStream("CS")} className={getClasses("CS")}>
           CS Stream
         </div>
         <div
@@ -35,6 +35,6 @@ const StreamSelect = ({ isOpen, sendStream, selectedStream }: StreamSelectProps)
       </div>
     </div>
   );
-}
+};
 
-export default StreamSelect
+export default StreamSelect;
