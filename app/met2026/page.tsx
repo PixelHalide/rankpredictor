@@ -3,7 +3,7 @@ import { useState } from "react";
 import HowItWorksDropdown from "../../components/HowItWorksDropdown";
 import Form from "./Form";
 
-const MET2025 = () => {
+const MET2026 = () => {
   const [boardPercentage, set_boards] = useState<number | null>();
   const [METMarks, set_met] = useState<number | null>();
 
@@ -23,4 +23,4 @@ const MET2025 = () => {
   );
 };
 
-export default MET2025;
+export default MET2026;

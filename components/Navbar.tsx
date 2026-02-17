@@ -43,10 +43,10 @@ const NavBar = () => {
           Home
         </Link>
         <Link
-          href="/met2025"
+          href="/met2026"
           className="text-lg border border-white py-1 px-4 rounded hover:text-yellow-500 hover:border-yellow-500 transition-all"
         >
-          MET 2025 Rank
+          MET 2026 Rank
         </Link>
         <Link
           href="/gpaCalc"

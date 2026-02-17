@@ -96,7 +96,7 @@ const METChart = () => {
             letterSpacing: "0.02em",
           }}
         >
-          MET 2025 — Rank vs Band Score
+          MET 2026 — Rank vs Band Score
         </h2>
         <p
           style={{

@@ -11,10 +11,10 @@ export const metadata: Metadata = {
     template: "%s | RankPredictor",
   },
   description:
-    "Eager to know where you stand in your 2025 exam rankings? Our advanced Rank Predictor allows you to effortlessly estimate your rank using your score. Discover which branches you qualify for, including sought-after fields like CSE, ECE, and many more. Get a head start on your future by understanding your potential academic opportunities today!",
+    "Eager to know where you stand in your 2026 exam rankings? Our advanced Rank Predictor allows you to effortlessly estimate your rank using your score. Discover which branches you qualify for, including sought-after fields like CSE, ECE, and many more. Get a head start on your future by understanding your potential academic opportunities today!",
   keywords: [
     "rank predictor",
-    "MET 2025",
+    "MET 2026",
     "MIT GPA calculator",
     "exam rank",
     "engineering admission",
@@ -40,9 +40,9 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://rankpredictor.in",
-    title: "2025 Exam Rank Predictors",
+    title: "2026 Exam Rank Predictors",
     description:
-      "Eager to know where you stand in your 2025 exam rankings? Our advanced Rank Predictor allows you to effortlessly estimate your rank using your score. Discover which branches you qualify for, including sought-after fields like CSE, ECE, and many more. Get a head start on your future by understanding your potential academic opportunities today!",
+      "Eager to know where you stand in your 2026 exam rankings? Our advanced Rank Predictor allows you to effortlessly estimate your rank using your score. Discover which branches you qualify for, including sought-after fields like CSE, ECE, and many more. Get a head start on your future by understanding your potential academic opportunities today!",
     siteName: "RankPredictor",
     images: [
       {
@@ -55,9 +55,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "2025 Exam Rank Predictors",
+    title: "2026 Exam Rank Predictors",
     description:
-      "Eager to know where you stand in your 2025 exam rankings? Our advanced Rank Predictor allows you to effortlessly estimate your rank using your score. Discover which branches you qualify for, including sought-after fields like CSE, ECE, and many more. Get a head start on your future by understanding your potential academic opportunities today!",
+      "Eager to know where you stand in your 2026 exam rankings? Our advanced Rank Predictor allows you to effortlessly estimate your rank using your score. Discover which branches you qualify for, including sought-after fields like CSE, ECE, and many more. Get a head start on your future by understanding your potential academic opportunities today!",
     images: ["/home.png"],
   },
   robots: {

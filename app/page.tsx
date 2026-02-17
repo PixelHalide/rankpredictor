@@ -3,14 +3,14 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "RankPredictor - Exam Rank Predictors",
   description:
-    "Eager to know where you stand in your 2025 exam rankings? Our advanced Rank Predictor allows you to effortlessly estimate your rank using your score. Discover which branches you qualify for, including sought-after fields like CSE, ECE, and many more. Get a head start on your future by understanding your potential academic opportunities today!",
+    "Eager to know where you stand in your 2026 exam rankings? Our advanced Rank Predictor allows you to effortlessly estimate your rank using your score. Discover which branches you qualify for, including sought-after fields like CSE, ECE, and many more. Get a head start on your future by understanding your potential academic opportunities today!",
   alternates: {
     canonical: "/",
   },
   openGraph: {
-    title: "2025 Exam Rank Predictors",
+    title: "2026 Exam Rank Predictors",
     description:
-      "Eager to know where you stand in your 2025 exam rankings? Our advanced Rank Predictor allows you to effortlessly estimate your rank using your score. Discover which branches you qualify for, including sought-after fields like CSE, ECE, and many more. Get a head start on your future by understanding your potential academic opportunities today!",
+      "Eager to know where you stand in your 2026 exam rankings? Our advanced Rank Predictor allows you to effortlessly estimate your rank using your score. Discover which branches you qualify for, including sought-after fields like CSE, ECE, and many more. Get a head start on your future by understanding your potential academic opportunities today!",
     url: "https://rankpredictor.in",
     images: [
       {
@@ -22,9 +22,9 @@ export const metadata: Metadata = {
     ],
   },
   twitter: {
-    title: "2025 Exam Rank Predictors",
+    title: "2026 Exam Rank Predictors",
     description:
-      "Eager to know where you stand in your 2025 exam rankings? Our advanced Rank Predictor allows you to effortlessly estimate your rank using your score. Discover which branches you qualify for, including sought-after fields like CSE, ECE, and many more. Get a head start on your future by understanding your potential academic opportunities today!",
+      "Eager to know where you stand in your 2026 exam rankings? Our advanced Rank Predictor allows you to effortlessly estimate your rank using your score. Discover which branches you qualify for, including sought-after fields like CSE, ECE, and many more. Get a head start on your future by understanding your potential academic opportunities today!",
     images: ["/home.png"],
   },
 };
