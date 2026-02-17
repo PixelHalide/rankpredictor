@@ -20,7 +20,7 @@ const HowItWorksDropdown = () => {
       </p>
 
       {isOpen && (
-        <div className="bg-gray-900 rounded-lg p-6">
+        <div className="bg-gray-900 rounded-lg p-6  text-white">
           <p className="mb-4">
             In MET 2025, both entrance exam scores and board exam results are
             considered. To account for varying difficulty levels across
