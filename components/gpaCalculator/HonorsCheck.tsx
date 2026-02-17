@@ -1,10 +1,14 @@
 interface HonorsCheckBoxProps {
-    isOpen: boolean;
-    honors: boolean;
-    onHonorsChange: (checked: boolean) => void;
+  isOpen: boolean;
+  honors: boolean;
+  onHonorsChange: (checked: boolean) => void;
 }
 
-const HonorsCheck = ({ isOpen, honors, onHonorsChange }: HonorsCheckBoxProps) => {
+const HonorsCheck = ({
+  isOpen,
+  honors,
+  onHonorsChange,
+}: HonorsCheckBoxProps) => {
   if (!isOpen) return null;
 
   return (
@@ -17,11 +21,14 @@ const HonorsCheck = ({ isOpen, honors, onHonorsChange }: HonorsCheckBoxProps) =>
           onChange={(e) => onHonorsChange(e.target.checked)}
           className="w-5 h-5 text-blue-600 bg-gray-700 border-gray-600 rounded focus:ring-blue-800 ring-offset-gray-800 focus:ring-2 cursor-pointer"
         />
-        <label htmlFor="honors-checkbox" className="ml-3 text-sm font-medium text-gray-300 cursor-pointer select-none">
+        <label
+          htmlFor="honors-checkbox"
+          className="ml-3 text-sm font-medium text-gray-300 cursor-pointer select-none"
+        >
           B.Tech Honors Program
         </label>
       </div>
     </div>
-  )
-}
-export default HonorsCheck
+  );
+};
+export default HonorsCheck;

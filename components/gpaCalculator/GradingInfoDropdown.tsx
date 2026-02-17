@@ -1,5 +1,5 @@
-'use client'
-import { useState } from 'react';
+"use client";
+import { useState } from "react";
 
 const GradingInfoDropdown = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -14,17 +14,20 @@ const GradingInfoDropdown = () => {
         className="underline cursor-pointer text-center mb-4 hover:text-yellow-500 transition-all"
         onClick={toggleContent}
       >
-        How does grading work? {isOpen ? 'V' : '>'}
+        How does grading work? {isOpen ? "V" : ">"}
       </p>
 
       {isOpen && (
         <div className="bg-gray-900 rounded-lg p-6">
-          <h2 className="text-xl font-bold text-left mb-4">Grading System Overview</h2>
+          <h2 className="text-xl font-bold text-left mb-4">
+            Grading System Overview
+          </h2>
 
           <section className="mb-6">
             <h3 className="text-lg font-semibold mb-2">Grade Point Scale</h3>
             <p className="text-gray-300 mb-2">
-              The grading system uses a 10-point scale where each letter grade corresponds to specific grade points:
+              The grading system uses a 10-point scale where each letter grade
+              corresponds to specific grade points:
             </p>
             <ul className="list-disc list-inside ml-4 text-gray-300 space-y-1">
               <li>A+: 10 points</li>
@@ -40,20 +43,25 @@ const GradingInfoDropdown = () => {
           <section className="mb-6">
             <h3 className="text-lg font-semibold mb-2">GPA Calculation</h3>
             <p className="text-gray-300 mb-2">
-              Your Grade Point Average (GPA) is calculated using the following formula:
+              Your Grade Point Average (GPA) is calculated using the following
+              formula:
             </p>
             <div className="bg-gray-800 p-4 rounded text-center mb-2">
-              <span className="font-mono">GPA = Σ(Grade Points × Credits) / Σ(Credits)</span>
+              <span className="font-mono">
+                GPA = Σ(Grade Points × Credits) / Σ(Credits)
+              </span>
             </div>
             <p className="text-gray-300">
-              Each subject&rsquo;s grade points are multiplied by its credit value, then all are summed and divided by the total credits.
+              Each subject&rsquo;s grade points are multiplied by its credit
+              value, then all are summed and divided by the total credits.
             </p>
           </section>
 
           <section className="mb-6">
             <h3 className="text-lg font-semibold mb-2">Grade Determination</h3>
             <p className="text-gray-300 mb-2">
-              Professors assign grades based on class average and standard deviation. The cutoffs are as follows:
+              Professors assign grades based on class average and standard
+              deviation. The cutoffs are as follows:
             </p>
             <div className="text-gray-300 mb-2">
               <strong>Maximum Cutoffs (when average/std dev is high):</strong>
@@ -85,9 +93,12 @@ const GradingInfoDropdown = () => {
           </section>
 
           <section className="mb-6">
-            <h3 className="text-lg font-semibold mb-2">Grade Cutoff Calculator</h3>
+            <h3 className="text-lg font-semibold mb-2">
+              Grade Cutoff Calculator
+            </h3>
             <p className="text-gray-300">
-              Use this tool to see grade cutoffs based on average marks and standard deviation:
+              Use this tool to see grade cutoffs based on average marks and
+              standard deviation:
               <a
                 href="https://www.desmos.com/calculator/g6mijvx4ct"
                 target="_blank"
@@ -95,7 +106,8 @@ const GradingInfoDropdown = () => {
                 className="text-blue-400 hover:text-blue-300 underline ml-1"
               >
                 Grade Calculator
-              </a> (credit: u/Super382946)
+              </a>{" "}
+              (credit: u/Super382946)
             </p>
           </section>
         </div>
