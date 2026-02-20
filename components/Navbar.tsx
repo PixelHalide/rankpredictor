@@ -34,13 +34,13 @@ const NavLink = ({ href, label, isExternal }: NavLinkProps) => {
 const NavBar = () => {
   return (
     <div>
-      <header className="mb-5 mt-6 flex flex-col items-center justify-center gap-2 px-4 sm:flex-row sm:gap-4">
+      <header className="relative mb-5 mt-6 flex flex-col items-center justify-center gap-2 px-4 sm:gap-4">
         <Image
           src="/logo.png"
-          alt="Company Logo"
+          alt="RankPredictor Logo"
           width={80}
           height={80}
-          className="h-14 w-14 cursor-pointer object-contain sm:h-16 sm:w-16 md:h-20 md:w-20"
+          className="h-14 w-14 cursor-pointer object-contain sm:h-16 sm:w-16 md:absolute md:left-4 md:top-1/2 md:h-20 md:w-20 md:-translate-y-1/3 md:ml-4"
         />
         <h1 className="text-center text-3xl font-bold leading-tight sm:text-4xl md:text-5xl">
           Rank Predictor

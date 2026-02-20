@@ -32,7 +32,7 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <div>
-      <div className="max-w px-10 md:px-30 text-justify space-y-8">
+      <div className="max-w px-10 md:px-30 text-justify space-y-8 mb-18 mt-8">
         <section className="space-y-2">
           <h2 className="text-2xl font-bold">About</h2>
           <p className="text-gray-300">
@@ -91,7 +91,7 @@ export default function Home() {
             <a
               href="https://discord.gg/2mYN8aDPur"
               target="_blank"
-              className="text-white hover:text-yellow-500 transition-all"
+              className="text-yellow-500 hover:text-yellow-600 transition-all"
             >
               MIT Manipal & MET Discord
             </a>

@@ -184,7 +184,7 @@ const Form = ({ sendBoards, sendMET }: FormProp) => {
         )}
       </div>
                 <p className="font-semibold text-s mt-10 mb-2 text-center text-white">
-                  Special thanks to <a href="www.pranavu.dev" className="text-yellow-400 hover:text-yellow-300 transition-all">Pranav U</a> for processing and cleaning the data, and for their help in building the predictor!
+                  Special thanks to <a href="https://pranavu.dev/" target="_blank" rel="noopener noreferrer" className="text-yellow-400 hover:text-yellow-300 transition-all">Pranav U</a> for processing and cleaning the data, and for their help in building the predictor!
                 </p>
     </div>
   );
