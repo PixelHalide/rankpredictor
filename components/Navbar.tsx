@@ -1,6 +1,36 @@
 import Link from "next/link";
 import Image from "next/image";
 
+interface NavLinkProps {
+  href: string;
+  label: string;
+  isExternal?: boolean;
+}
+
+const NavLink = ({ href, label, isExternal }: NavLinkProps) => {
+  const className =
+    "text-lg border border-white py-1 px-4 rounded hover:text-yellow-500 hover:border-yellow-500 transition-all";
+
+  if (isExternal) {
+    return (
+      <a
+        href={href}
+        target="_blank"
+        rel="noopener noreferrer"
+        className={className}
+      >
+        {label}
+      </a>
+    );
+  }
+
+  return (
+    <Link href={href} className={className}>
+      {label}
+    </Link>
+  );
+};
+
 const NavBar = () => {
   return (
     <div>
@@ -38,32 +68,19 @@ const NavBar = () => {
 
       <hr className="border-t-2 border-white my-5" />
       <nav className="flex flex-col md:flex-row justify-center gap-8 mb-5 text-center">
-        <Link
-          href="/"
-          className="text-lg border border-white py-1 px-4 rounded hover:text-yellow-500 hover:border-yellow-500 transition-all"
-        >
-          Home
-        </Link>
-        <Link
-          href="/met2026"
-          className="text-lg border border-white py-1 px-4 rounded hover:text-yellow-500 hover:border-yellow-500 transition-all"
-        >
-          MET 2026 Rank
-        </Link>
-        <Link
-          href="/gpaCalc"
-          className="text-lg border border-white py-1 px-4 rounded hover:text-yellow-500 hover:border-yellow-500 transition-all"
-        >
-          MIT GPA Calculator
-        </Link>
-        <a
+        <NavLink href="/" label="Home" />
+        <NavLink href="/met2026" label="MET 2026 Rank" />
+        <NavLink href="/gpaCalc" label="MIT GPA Calculator" />
+        <NavLink
           href="https://manipal-guessr.vercel.app/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-lg border border-white py-1 px-4 rounded hover:text-yellow-500 hover:border-yellow-500 transition-all"
-        >
-          ManipalGuessr
-        </a>
+          label="ManipalGuessr"
+          isExternal
+        />
+        <NavLink
+        href="https://cd.coolstuff.work"
+        label="MIT Directory"
+        isExternal
+      />
       </nav>
       <hr className="border-t-2 border-white my-5" />
     </div>
