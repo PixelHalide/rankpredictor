@@ -4,8 +4,8 @@ import { predictMETRank, PredictionResult } from "../../utils/metPrediction";
 import BranchesDisplay from "../../components/BranchesDisplay";
 
 interface FormProp {
-  sendBoards: (marks: number) => void;
-  sendMET: (marks: number) => void;
+  sendBoards: (marks: number | null) => void;
+  sendMET: (marks: number | null) => void;
 }
 
 const Form = ({ sendBoards, sendMET }: FormProp) => {
@@ -15,7 +15,7 @@ const Form = ({ sendBoards, sendMET }: FormProp) => {
   const [error, setError] = useState<string>("");
   const [isLoading, setIsLoading] = useState(false);
 
-  const handleBoardChange = (value: number) => {
+  const handleBoardChange = (value: number | null) => {
     setBoardPercentage(value);
     sendBoards(value);
     // Clear previous prediction when inputs change
@@ -23,7 +23,7 @@ const Form = ({ sendBoards, sendMET }: FormProp) => {
     if (error) setError("");
   };
 
-  const handleMetChange = (value: number) => {
+  const handleMetChange = (value: number | null) => {
     setMetMarks(value);
     sendMET(value);
     // Clear previous prediction when inputs change
@@ -112,7 +112,10 @@ const Form = ({ sendBoards, sendMET }: FormProp) => {
               max="100"
               step="0.01"
               value={boardPercentage ?? ""}
-              onChange={(e) => handleBoardChange(Number(e.target.value))}
+              onChange={(e) => {
+                const val = e.target.value;
+                handleBoardChange(val === "" ? null : Number(val));
+              }}
               className="w-full rounded-lg border border-slate-600 bg-slate-800 px-4 py-3 text-lg text-slate-100 shadow-inner transition-colors focus-visible:border-emerald-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500/40"
             />
           </div>
@@ -133,7 +136,10 @@ const Form = ({ sendBoards, sendMET }: FormProp) => {
               min="0"
               max="240"
               value={metMarks ?? ""}
-              onChange={(e) => handleMetChange(Number(e.target.value))}
+              onChange={(e) => {
+                const val = e.target.value;
+                handleMetChange(val === "" ? null : Number(val));
+              }}
               className="w-full rounded-lg border border-slate-600 bg-slate-800 px-4 py-3 text-lg text-slate-100 shadow-inner transition-colors focus-visible:border-emerald-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500/40"
             />
           </div>
