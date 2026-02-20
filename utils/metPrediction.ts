@@ -261,7 +261,11 @@ export function predictMETRank(
       "Board percentage below 50. You are not qualified for MET.",
     );
   }
-
+  if (boardBand === 0 && metMarks === 0) {
+    throw new Error(
+      "😭😭😭😭son😭😭😭😭😭😭😭😭😭😭I'm crine😭😭😭😭😭😭",
+    );
+  }
   const avgScore = ((metMarks / 240) * 100 + boardBand * 10) / 2;
 
   // Interpolate and apply threshold to predict rank

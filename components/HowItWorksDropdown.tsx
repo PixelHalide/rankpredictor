@@ -36,11 +36,7 @@ const HowItWorksDropdown = () => {
             <li>90-94.99%: Band 9</li>
             <li>85-89.99%: Band 8</li>
             <li>80-84.99%: Band 7</li>
-            <li>75-79.99%: Band 6</li>
-            <li>70-74.99%: Band 5</li>
-            <li>65-69.99%: Band 4</li>
-            <li>60-64.99%: Band 3</li>
-            <li>55-59.99%: Band 2</li>
+            <li>...</li>
             <li>50-54.99%: Band 1</li>
             <li>Below 50%: Not qualified for MET</li>
           </ul>
