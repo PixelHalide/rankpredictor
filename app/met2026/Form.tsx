@@ -47,6 +47,10 @@ const Form = ({ sendBoards, sendMET }: FormProp) => {
       setError("MET marks must be between 0 and 240.");
       return;
     }
+        if (metMarks === 0 && boardPercentage === 50) {
+      setError("😭😭😭😭son😭😭😭😭😭😭😭😭😭😭I'm crine😭😭😭😭😭😭");
+      return;
+    }
 
     setIsLoading(true);
     setError("");
@@ -174,7 +178,7 @@ const Form = ({ sendBoards, sendMET }: FormProp) => {
         )}
       </div>
                 <p className="font-semibold text-s mt-10 mb-2 text-center text-white">
-                  Special thanks to <span className="text-yellow-400">Crazy_Steroids69</span> for processing and cleaning the data, and for their help in building the predictor!
+                  Special thanks to <a href="www.pranavu.dev" className="text-yellow-400 hover:text-yellow-300 transition-all">Pranav U</a> for processing and cleaning the data, and for their help in building the predictor!
                 </p>
     </div>
   );
