@@ -48,6 +48,19 @@ export default function Home() {
         </section>
 
         <section className="space-y-2">
+          <h2 className="text-2xl font-bold">Our Track Record</h2>
+          <p className="text-gray-300">
+            We have a proven history of providing reliable predictions. To date,
+            we have delivered rank predictors for:
+          </p>
+          <ul className="list-disc list-inside text-gray-300 ml-4">
+            <li>KCET 2024</li>
+            <li>MET 2024</li>
+            <li>MET 2025</li>
+          </ul>
+        </section>
+
+        <section className="space-y-2">
           <h2 className="text-2xl font-bold">Our Methodology</h2>
           <p className="text-gray-300">
             We gather verified and accurate data from past exam results to
@@ -85,7 +98,7 @@ export default function Home() {
           </p>
           <p className="text-gray-300">
             All our code and data are open-source under the GPL-3 license,
-            allowing you to freely use, modify, and share them - provided that
+            allowing you to freely use, modify, and share them, provided that
             derivative works are also shared under the same license terms.
           </p>
         </section>
