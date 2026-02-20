@@ -117,8 +117,11 @@ const HowItWorksDropdown = () => {
           </div>
 
           <METChart />
+
         </div>
+
       )}
+
     </div>
   );
 };

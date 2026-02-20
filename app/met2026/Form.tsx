@@ -143,6 +143,10 @@ const Form = ({ sendBoards, sendMET }: FormProp) => {
           {isLoading ? "Predicting..." : "Predict Rank"}
         </button>
 
+        <p className="mt-3 text-center text-[10px] text-slate-500 sm:text-xs">
+          Your inputs are stored anonymously to help improve future prediction accuracy.
+        </p>
+
         {error && (
           <div className="mt-4 rounded-lg border border-red-500/40 bg-red-950/60 p-3 text-sm text-red-100">
             {error}
@@ -169,6 +173,9 @@ const Form = ({ sendBoards, sendMET }: FormProp) => {
           </div>
         )}
       </div>
+                <p className="font-semibold text-s mt-10 mb-2 text-center text-white">
+                  Special thanks to <span className="text-yellow-400">Crazy_Steroids69</span> for processing and cleaning the data, and for their help in building the predictor!
+                </p>
     </div>
   );
 };
