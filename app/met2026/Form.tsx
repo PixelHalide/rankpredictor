@@ -54,6 +54,21 @@ const Form = ({ sendBoards, sendMET }: FormProp) => {
     try {
       const result = predictMETRank(boardPercentage, metMarks);
       setPrediction(result);
+
+      // Non-blocking concurrent call to log user input
+      fetch("/api/submissions", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          boardPercentage,
+          metMarks,
+        }),
+      }).catch((err) => {
+        // Log locally if it fails, but don't show the user.
+        console.error("Submission failed:", err);
+      });
     } catch (err) {
       setError(
         err instanceof Error
