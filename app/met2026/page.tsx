@@ -83,9 +83,9 @@ const MET2026 = () => {
         </DialogContent>
       </Dialog>
 
-      <div className="min-h-screen overflow-x-hidden bg-slate-950 px-4 py-8 sm:px-6 lg:px-10">
+      <div className="min-h-screen overflow-x-hidden bg-[#06070a] px-4 py-8 sm:px-6 lg:px-10">
         <div className="mx-auto w-full max-w-6xl">
-          <Card className="rounded-3xl border-slate-700/60 bg-gradient-to-b from-slate-900 via-slate-900 to-slate-950 shadow-[0_20px_80px_rgba(2,6,23,0.6)]">
+          <Card className="rounded-3xl border-slate-700/60 bg-linear-to-b from-slate-900 via-slate-900 to-slate-950 shadow-[0_20px_80px_rgba(2,6,23,0.6)]">
             <CardContent className="p-4 sm:p-6">
               <HowItWorksDropdown />
               <Form sendBoards={() => {}} sendMET={() => {}} />
