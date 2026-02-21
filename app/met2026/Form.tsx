@@ -153,10 +153,6 @@ const Form = ({ sendBoards, sendMET }: FormProp) => {
           {isLoading ? "Predicting..." : "Predict Rank"}
         </button>
 
-        <p className="mt-3 text-center text-[10px] text-slate-500 sm:text-xs">
-          Your inputs are stored anonymously to help improve future prediction accuracy.
-        </p>
-
         {error && (
           <div className="mt-4 rounded-lg border border-red-500/40 bg-red-950/60 p-3 text-sm text-red-100">
             {error}
