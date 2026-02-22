@@ -9,29 +9,31 @@ const StreamSelect = ({
   sendStream,
   selectedStream,
 }: StreamSelectProps) => {
-  const getClasses = (streamType: string) =>
-    `hover:bg-gray-600 cursor-pointer transition-all hover:rounded-md hover:-translate-y-1 p-1 rounded-md ${
-      selectedStream === streamType ? "bg-blue-600 hover:bg-blue-500" : ""
-    }`;
-
   return (
     <div
-      className={`flex justify-center gap-4 bg-gray-700 mx-auto w-full overflow-hidden rounded-2xl border border-white/40 transition-all duration-500 shadow-lg ${
+      className={`overflow-hidden w-full transition-all duration-300 ${
         !isOpen
-          ? "max-h-0 mt-0 mb-0 opacity-0 pointer-events-none p-0"
-          : "max-h-20 mt-2 mb-5 opacity-100 p-3"
+          ? "max-h-0 opacity-0 pointer-events-none"
+          : "max-h-24 opacity-100 mb-4"
       }`}
     >
-      <div className="flex flex-row justify-evenly w-full my-auto">
-        <div onClick={() => sendStream("CS")} className={getClasses("CS")}>
-          CS Stream
-        </div>
-        <div
-          onClick={() => sendStream("NONCS")}
-          className={getClasses("NONCS")}
-        >
-          Non-CS Stream
-        </div>
+      <div className="grid grid-cols-2 gap-px bg-white border-4 border-white">
+        {[
+          { label: "CS Stream", value: "CS" },
+          { label: "Non-CS Stream", value: "NONCS" },
+        ].map(({ label, value }) => (
+          <button
+            key={value}
+            onClick={() => sendStream(value)}
+            className={`p-3 font-bold uppercase tracking-wide cursor-pointer transition-all text-sm ${
+              selectedStream === value
+                ? "bg-white text-black"
+                : "bg-black text-white hover:bg-white hover:text-black"
+            }`}
+          >
+            {label}
+          </button>
+        ))}
       </div>
     </div>
   );

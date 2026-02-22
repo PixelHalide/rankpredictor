@@ -86,6 +86,7 @@ const GpaTable = ({ isOpen, honors, subjectGroup }: GpaTableProps) => {
               name="Grades"
               value={selectedGrades[subjectName] || ""}
               onChange={(e) => getCredits(e, creditValue, idx, subjectName)}
+              className="bg-black text-white border-2 border-white p-1 cursor-pointer font-bold uppercase w-full"
             >
               <option value="" disabled>
                 Grade
@@ -109,37 +110,36 @@ const GpaTable = ({ isOpen, honors, subjectGroup }: GpaTableProps) => {
 
   return (
     <div>
-      <div
-        className={`flex shrink justify-center text-center drop-shadow-xl transition-all duration-500 mb-6 ${!isOpen ? "opacity-0" : "opacity-100"} `}
-      >
-        <table
-          className={`table-auto border-collapse drop-shadow-xl transition-all duration-500 ${!isOpen ? "opacity-0" : "opacity-100"}`}
-        >
+      <div className="flex shrink justify-center text-center mb-6 overflow-x-auto">
+        <table className="table-auto border-collapse w-full">
           <thead>
-            <tr className="bg-zinc-900 py-10">
+            <tr className="bg-white text-black">
               <th>Subject</th>
               <th>Credits</th>
-              <th>Grade(/A+)</th>
+              <th>Grade (/A+)</th>
             </tr>
           </thead>
-          <tbody id="subject_table" className="opacity-100">
+          <tbody id="subject_table">
             {isOpen ? returnSubjects(subjects) : null}
           </tbody>
         </table>
       </div>
-      <div
-        className={`transition-all duration-500 ${!isOpen ? "opacity-0 pointer-events-none" : "opacity-100"}`}
+
+      <button
+        onClick={calculateGPA}
+        className="w-full border-4 border-white bg-white text-black py-3 px-4 font-bold uppercase tracking-widest transition-all hover:bg-black hover:text-white shadow-[4px_4px_0px_white] hover:shadow-none hover:translate-x-[2px] hover:translate-y-[2px] active:translate-x-[4px] active:translate-y-[4px] cursor-pointer mb-4"
       >
-        <button
-          onClick={calculateGPA}
-          className="w-full py-2 px-4 bg-green-600 text-white rounded-lg hover:bg-green-500 active:bg-green-700 cursor-pointer transition-colors mb-4"
-        >
-          Submit Grades
-        </button>
-      </div>
-      <div className={`${gpa === null || !isOpen ? "hidden" : ""}`}>
-        Your GPA is Calculated to be: {gpa}
-      </div>
+        Calculate GPA
+      </button>
+
+      {gpa !== null && isOpen && (
+        <div className="border-4 border-white bg-white text-black p-6 shadow-[8px_8px_0px_white] text-center">
+          <p className="text-sm font-bold uppercase tracking-widest text-gray-700 mb-2">
+            Your Calculated GPA
+          </p>
+          <p className="text-5xl font-bold">{gpa}</p>
+        </div>
+      )}
     </div>
   );
 };

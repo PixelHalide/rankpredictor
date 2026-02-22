@@ -1,3 +1,4 @@
+"use client";
 import { useState } from "react";
 import "katex/dist/katex.min.css";
 import { BlockMath } from "react-katex";
@@ -6,63 +7,57 @@ import METChart from "./METChart";
 const HowItWorksDropdown = () => {
   const [isOpen, setIsOpen] = useState(false);
 
-  const toggleContent = () => {
-    setIsOpen(!isOpen);
-  };
-
   return (
-    <div className="content mb-8 max-w-4xl mx-auto">
-      <p
-        className="underline cursor-pointer text-center mb-4 text-white hover:text-yellow-500 transition-all"
-        onClick={toggleContent}
+    <div className="mb-8">
+      <button
+        onClick={() => setIsOpen(!isOpen)}
+        className="w-full border-4 border-white bg-black px-6 py-4 text-left font-bold uppercase tracking-widest text-white transition-all hover:bg-white hover:text-black shadow-[4px_4px_0px_white] hover:shadow-none hover:translate-x-[2px] hover:translate-y-[2px] active:translate-x-[4px] active:translate-y-[4px] flex items-center justify-between"
       >
-        How does this work? {isOpen ? "V" : ">"}
-      </p>
+        <span>How does this work?</span>
+        <span className={`transition-transform duration-300 text-sm ${isOpen ? "rotate-180" : "rotate-0"}`}>▼</span>
+      </button>
 
       {isOpen && (
-        <div className="bg-gray-900 rounded-lg p-6  text-white">
-          <p className="mb-4">
+        <div className="border-4 border-t-0 border-white bg-black p-6 text-white space-y-6">
+          <p className="text-gray-300 font-bold leading-relaxed">
             In MET 2025, both entrance exam scores and board exam results are
-            considered. To account for varying difficulty levels across
-            different boards, board percentages are normalized into band scores
-            from 0 to 10. This creates a &ldquo;fair&rdquo; system where your
-            final score combines your MET performance with your standardized
-            board exam band. Here&rsquo;s how board percentages are converted to
-            bands:
+            considered. To account for varying difficulty levels across different
+            boards, board percentages are normalized into band scores from 0 to
+            10. This creates a &ldquo;fair&rdquo; system where your final score
+            combines your MET performance with your standardized board exam band.
+            Here&rsquo;s how board percentages are converted to bands:
           </p>
 
-          <ul className="list-disc list-inside text-left mb-4 space-y-1">
-            <li>95-100%: Band 10</li>
-            <li>90-94.99%: Band 9</li>
-            <li>85-89.99%: Band 8</li>
-            <li>80-84.99%: Band 7</li>
+          <ul className="space-y-1 font-bold text-sm text-gray-300 border-2 border-white p-4">
+            <li>95–100%: Band 10</li>
+            <li>90–94.99%: Band 9</li>
+            <li>85–89.99%: Band 8</li>
+            <li>80–84.99%: Band 7</li>
             <li>...</li>
-            <li>50-54.99%: Band 1</li>
-            <li>Below 50%: Not qualified for MET</li>
+            <li>50–54.99%: Band 1</li>
+            <li className="text-white">Below 50%: Not qualified for MET</li>
           </ul>
 
-          <p className="mb-4">
+          <p className="text-gray-300 font-bold leading-relaxed">
             Your final band score is calculated using the following formula:
           </p>
 
-          <div className="text-center mb-4 bg-gray-800 p-4 rounded">
+          <div className="border-2 border-white bg-black p-4 text-center">
             <BlockMath math="\frac{\left( \frac{M}{240} \times 100 \right) + \left( \frac{B}{10} \times 100 \right)}{2}" />
           </div>
 
-          <p className="mb-4">
+          <p className="text-gray-300 font-bold leading-relaxed">
             Where M is your MET score (out of 240), and B is your board band
-            (0-10).
-            <br />
-            The data used in this predictor has been compiled by polling
+            (0–10). The data used in this predictor has been compiled by polling
             students across various MET campuses, with careful verification to
             ensure accuracy.
           </p>
 
-          <p className="mb-4">
+          <p className="text-gray-300 font-bold leading-relaxed">
             Using a mathematical concept called{" "}
             <a
               href="https://www.youtube.com/watch?v=MnEa_xHm1j8"
-              className="underline hover:text-yellow-500 text-blue-400"
+              className="underline hover:bg-white hover:text-black px-1 transition-all"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -71,53 +66,41 @@ const HowItWorksDropdown = () => {
             , we can find the ranks for values of various band scores.
           </p>
 
-          <div className="mb-8">
-            <h3 className="text-2xl font-semibold mb-4">
-              FAQs for the Rank Predictor
+          <div className="border-t-4 border-white pt-6 space-y-4">
+            <h3 className="text-xl font-bold uppercase tracking-wider">
+              <span className="bg-white text-black px-2 py-1">FAQs</span> for the Rank Predictor
             </h3>
-            <div className="space-y-6 text-base leading-relaxed">
-              <div>
-                <p className="font-semibold text-lg mb-2">
-                  Q: How accurate is it?
+
+            <div className="space-y-2">
+              <p className="font-bold uppercase tracking-widest text-sm">
+                Q: How accurate is it?
+              </p>
+              <p className="text-gray-300 font-bold leading-relaxed">
+                The predictions are based on last year&rsquo;s data. So, if
+                someone got the same MET marks and board percentage as you last
+                year, they would&rsquo;ve received the same predicted rank.
+              </p>
+              <div className="border-2 border-dashed border-gray-600 p-4">
+                <p className="text-sm font-bold text-gray-300">
+                  For the MET 2025 Rank Predictor, due to merging of the CS
+                  branches and other factors, the average error was{" "}
+                  <span className="bg-white text-black px-1 font-bold">+25%</span>{" "}
+                  (meaning the predictor showed a lower rank than people actually got).
                 </p>
-                <p className="mb-2">
-                  <span className="font-semibold">A:</span> The predictions are
-                  based on last year&rsquo;s data. So, if someone got the same
-                  MET marks and board percentage as you last year, they
-                  would&rsquo;ve received the same predicted rank.
-                </p>
-                <ul className="list-disc list-inside ml-4 mt-2 mb-2 text-gray-300 space-y-1">
-                  <li>
-                    For the MET 2025 Rank Predictor, Due to merging of the CS branches and other factors
-                    the average error was{" "}
-                    <span className="font-semibold text-yellow-300">+25%</span>{" "}
-                    (meaning the predictor showed a lower rank than people
-                    actually got).
-                  </li>
-                </ul>
-                <p className="font-semibold mt-2 mb-2">
-                  Possible sources of inaccuracy:
-                </p>
-                <ul className="list-disc list-inside ml-4 text-gray-300 space-y-1">
-                  <li>
-                    If the difficulty of the MET paper changes significantly
-                    compared to last year.
-                  </li>
-                  <li>
-                    If the number of students writing MET increases or decreases
-                    a lot this year.
-                  </li>
-                </ul>
               </div>
+              <p className="font-bold uppercase tracking-widest text-sm mt-2">
+                Possible sources of inaccuracy:
+              </p>
+              <ul className="space-y-1 text-sm font-bold text-gray-300 border-2 border-white p-4">
+                <li>— If the difficulty of the MET paper changes significantly compared to last year.</li>
+                <li>— If the number of students writing MET increases or decreases a lot this year.</li>
+              </ul>
             </div>
           </div>
 
           <METChart />
-
         </div>
-
       )}
-
     </div>
   );
 };

@@ -31,11 +31,11 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <div>
-      <div className="max-w px-10 md:px-30 text-justify space-y-8 mb-18 mt-8">
-        <section className="space-y-2">
-          <h2 className="text-2xl font-bold">About</h2>
-          <p className="text-gray-300">
+    <div className="max-w-4xl mx-auto px-6 md:px-10 space-y-12 pb-12">
+      <div className="border-4 border-white p-6 md:p-10 shadow-[8px_8px_0px_white] bg-black text-white space-y-12">
+        <section className="space-y-4 border-b-4 border-white pb-8">
+          <h2 className="text-3xl font-bold uppercase tracking-wider bg-white text-black inline-block px-2 py-1 mb-2">About</h2>
+          <p className="text-gray-300 font-bold leading-relaxed">
             After encountering numerous &ldquo;rank predictors&rdquo; on the
             internet that ask for your marks along with personal data like your
             phone number and name—only to farm and sell this information, as
@@ -47,22 +47,22 @@ export default function Home() {
           </p>
         </section>
 
-        <section className="space-y-2">
-          <h2 className="text-2xl font-bold">Our Track Record</h2>
-          <p className="text-gray-300">
+        <section className="space-y-4 border-b-4 border-white pb-8">
+          <h2 className="text-3xl font-bold uppercase tracking-wider bg-white text-black inline-block px-2 py-1 mb-2">Our Track Record</h2>
+          <p className="text-gray-300 font-bold leading-relaxed">
             We have a proven history of providing reliable predictions. To date,
             we have delivered rank predictors for:
           </p>
-          <ul className="list-disc list-inside text-gray-300 ml-4">
-            <li>KCET 2024</li>
-            <li>MET 2024</li>
-            <li>MET 2025</li>
+          <ul className="font-bold text-gray-300 space-y-1 border-2 border-white p-4">
+            <li>— KCET 2024</li>
+            <li>— MET 2024</li>
+            <li>— MET 2025</li>
           </ul>
         </section>
 
-        <section className="space-y-2">
-          <h2 className="text-2xl font-bold">Our Methodology</h2>
-          <p className="text-gray-300">
+        <section className="space-y-4 border-b-4 border-white pb-8">
+          <h2 className="text-3xl font-bold uppercase tracking-wider bg-white text-black inline-block px-2 py-1 mb-2">Our Methodology</h2>
+          <p className="text-gray-300 font-bold leading-relaxed">
             We gather verified and accurate data from past exam results to
             ensure our predictions are reliable. Using various mathematical
             methods, such as polynomial regression, we aim to provide the most
@@ -74,33 +74,35 @@ export default function Home() {
           </p>
         </section>
 
-        <section className="space-y-2">
-          <h2 className="text-2xl font-bold">Contact and License</h2>
-          <p className="text-gray-300">
-            You can reach out to us on Discord for any further queries. You can
-            DM{" "}
-            <a
-              href="https://discord.com/users/180399116327714816"
-              target="_blank"
-              className="text-white hover:text-yellow-500 transition-all"
-            >
-              @pixelhalide
-            </a>{" "}
-            for queries regarding MIT, MET, or the website. Do make sure to join
-            the{" "}
-            <a
-              href="https://discord.gg/2mYN8aDPur"
-              target="_blank"
-              className="text-yellow-500 hover:text-yellow-600 transition-all"
-            >
-              MIT Manipal & MET Discord
-            </a>
-          </p>
-          <p className="text-gray-300">
-            All our code and data are open-source under the GPL-3 license,
-            allowing you to freely use, modify, and share them, provided that
-            derivative works are also shared under the same license terms.
-          </p>
+        <section className="space-y-4">
+          <h2 className="text-3xl font-bold uppercase tracking-wider bg-white text-black inline-block px-2 py-1 mb-2">Contact & License</h2>
+          <div className="text-gray-300 font-bold leading-relaxed space-y-4">
+            <p>
+              You can reach out to us on Discord for any further queries. You can
+              DM{" "}
+              <a
+                href="https://discord.com/users/180399116327714816"
+                target="_blank"
+                className="underline hover:bg-white hover:text-black px-1"
+              >
+                @pixelhalide
+              </a>{" "}
+              for queries regarding MIT, MET, or the website. Do make sure to join
+              the{" "}
+              <a
+                href="https://discord.gg/2mYN8aDPur"
+                target="_blank"
+                className="underline hover:bg-white hover:text-black px-1 text-yellow-400 hover:text-black"
+              >
+                MIT Manipal & MET Discord
+              </a>
+            </p>
+            <p className="border-2 border-dashed border-gray-500 p-4 mt-4">
+              All our code and data are open-source under the GPL-3 license,
+              allowing you to freely use, modify, and share them, provided that
+              derivative works are also shared under the same license terms.
+            </p>
+          </div>
         </section>
       </div>
     </div>

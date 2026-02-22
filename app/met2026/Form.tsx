@@ -18,7 +18,6 @@ const Form = ({ sendBoards, sendMET }: FormProp) => {
   const handleBoardChange = (value: number | null) => {
     setBoardPercentage(value);
     sendBoards(value);
-    // Clear previous prediction when inputs change
     if (prediction) setPrediction(null);
     if (error) setError("");
   };
@@ -26,7 +25,6 @@ const Form = ({ sendBoards, sendMET }: FormProp) => {
   const handleMetChange = (value: number | null) => {
     setMetMarks(value);
     sendMET(value);
-    // Clear previous prediction when inputs change
     if (prediction) setPrediction(null);
     if (error) setError("");
   };
@@ -47,7 +45,8 @@ const Form = ({ sendBoards, sendMET }: FormProp) => {
       setError("MET marks must be between 0 and 240.");
       return;
     }
-        if (metMarks === 0 && boardPercentage === 50) {
+
+    if (metMarks === 0 && boardPercentage === 50) {
       setError("😭😭😭😭son😭😭😭😭😭😭😭😭😭😭I'm crine😭😭😭😭😭😭");
       return;
     }
@@ -70,7 +69,6 @@ const Form = ({ sendBoards, sendMET }: FormProp) => {
           metMarks,
         }),
       }).catch((err) => {
-        // Log locally if it fails, but don't show the user.
         console.error("Submission failed:", err);
       });
     } catch (err) {
@@ -85,103 +83,116 @@ const Form = ({ sendBoards, sendMET }: FormProp) => {
   };
 
   return (
-    <div className="mt-6">
-      <div className="mx-auto w-full max-w-5xl rounded-2xl border border-slate-700/70 bg-slate-900/70 p-5 shadow-xl backdrop-blur-sm sm:p-6">
-        <h1 className="mb-2 text-center text-2xl font-semibold tracking-tight text-slate-100 sm:text-3xl">
-          MET 2026 Rank Predictor
+    <div className="w-full border-4 border-white bg-black p-6 sm:p-8 shadow-[8px_8px_0px_white]">
+      <div className="mb-8 border-b-4 border-white pb-6">
+        <h1 className="text-4xl font-bold uppercase tracking-tighter sm:text-5xl">
+          <span className="bg-white text-black px-2 py-1">MET 2026</span>{" "}
+          Rank Predictor
         </h1>
-        <p className="mb-6 text-center text-sm text-slate-400 sm:text-base">
+        <p className="mt-3 text-sm font-bold uppercase tracking-widest text-gray-400">
           Enter your scores to estimate your rank and view likely branches.
         </p>
+      </div>
 
-        <div className="grid gap-4 sm:grid-cols-2">
-          <div>
-            <label
-              htmlFor="boardPercentage"
-              className="mb-2 block text-sm font-medium text-slate-200"
-            >
-              Board Percentage
-            </label>
-            <input
-              type="number"
-              id="boardPercentage"
-              name="boardPercentage"
-              autoComplete="off"
-              inputMode="decimal"
-              min="0"
-              max="100"
-              step="0.01"
-              value={boardPercentage ?? ""}
-              onChange={(e) => {
-                const val = e.target.value;
-                handleBoardChange(val === "" ? null : Number(val));
-              }}
-              className="w-full rounded-lg border border-slate-600 bg-slate-800 px-4 py-3 text-lg text-slate-100 shadow-inner transition-colors focus-visible:border-emerald-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500/40"
-            />
-          </div>
-
-          <div>
-            <label
-              htmlFor="metMarks"
-              className="mb-2 block text-sm font-medium text-slate-200"
-            >
-              MET Marks (out of 240)
-            </label>
-            <input
-              type="number"
-              id="metMarks"
-              name="metMarks"
-              autoComplete="off"
-              inputMode="numeric"
-              min="0"
-              max="240"
-              value={metMarks ?? ""}
-              onChange={(e) => {
-                const val = e.target.value;
-                handleMetChange(val === "" ? null : Number(val));
-              }}
-              className="w-full rounded-lg border border-slate-600 bg-slate-800 px-4 py-3 text-lg text-slate-100 shadow-inner transition-colors focus-visible:border-emerald-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500/40"
-            />
-          </div>
+      <div className="grid gap-6 sm:grid-cols-2">
+        <div className="space-y-2">
+          <label
+            htmlFor="boardPercentage"
+            className="block text-sm font-bold uppercase tracking-widest text-white"
+          >
+            Board Percentage
+          </label>
+          <input
+            type="number"
+            id="boardPercentage"
+            name="boardPercentage"
+            autoComplete="off"
+            inputMode="decimal"
+            min="0"
+            max="100"
+            step="0.01"
+            value={boardPercentage ?? ""}
+            onChange={(e) => {
+              const val = e.target.value;
+              handleBoardChange(val === "" ? null : Number(val));
+            }}
+            className="w-full border-4 border-white bg-black px-4 py-3 text-xl font-bold text-white transition-all focus-visible:bg-white focus-visible:text-black focus-visible:outline-none placeholder:text-gray-600"
+            placeholder="e.g. 95.5"
+          />
         </div>
 
-        <button
-          onClick={handlePredict}
-          disabled={isLoading || boardPercentage === null || metMarks === null}
-          className="mt-5 w-full touch-manipulation rounded-lg bg-emerald-600 px-4 py-3 text-base font-semibold text-white transition-colors hover:bg-emerald-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400/70 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900 active:bg-emerald-700 disabled:cursor-not-allowed disabled:bg-slate-600 sm:text-lg"
-        >
-          {isLoading ? "Predicting..." : "Predict Rank"}
-        </button>
-
-        {error && (
-          <div className="mt-4 rounded-lg border border-red-500/40 bg-red-950/60 p-3 text-sm text-red-100">
-            {error}
-          </div>
-        )}
-
-        {prediction && (
-          <div className="mt-6 space-y-4">
-            <div className="rounded-xl border border-slate-700 bg-slate-800/70 p-4 sm:p-5">
-              <p className="text-center text-lg text-slate-100 sm:text-xl">
-                Your rank according to last year:
-                <span className="ml-2 font-bold tabular-nums text-amber-300">
-                  {prediction.predictedRank}
-                </span>
-              </p>
-              <p className="mt-2 text-center text-xs text-slate-400 sm:text-sm">
-                Note: CPS, Biomedical, VLSI will be merged into EEE for 2026.
-              </p>
-            </div>
-
-            <BranchesDisplay
-              attainableBranches={prediction.attainableBranches}
-            />
-          </div>
-        )}
+        <div className="space-y-2">
+          <label
+            htmlFor="metMarks"
+            className="block text-sm font-bold uppercase tracking-widest text-white"
+          >
+            MET Marks (out of 240)
+          </label>
+          <input
+            type="number"
+            id="metMarks"
+            name="metMarks"
+            autoComplete="off"
+            inputMode="numeric"
+            min="0"
+            max="240"
+            value={metMarks ?? ""}
+            onChange={(e) => {
+              const val = e.target.value;
+              handleMetChange(val === "" ? null : Number(val));
+            }}
+            className="w-full border-4 border-white bg-black px-4 py-3 text-xl font-bold text-white transition-all focus-visible:bg-white focus-visible:text-black focus-visible:outline-none placeholder:text-gray-600"
+            placeholder="e.g. 180"
+          />
+        </div>
       </div>
-                <p className="font-semibold text-s mt-10 mb-2 text-center text-white">
-                  Special thanks to <a href="https://pranavu.dev/" target="_blank" rel="noopener noreferrer" className="text-yellow-400 hover:text-yellow-300 transition-all">Pranav U</a> for processing and cleaning the data, and for their help in building the predictor!
-                </p>
+
+      <button
+        onClick={handlePredict}
+        disabled={isLoading || boardPercentage === null || metMarks === null}
+        className="mt-8 w-full touch-manipulation border-4 border-white bg-white px-4 py-4 text-xl font-bold uppercase tracking-widest text-black transition-all hover:bg-black hover:text-white hover:translate-x-[2px] hover:translate-y-[2px] shadow-[8px_8px_0px_white] hover:shadow-none active:translate-x-[4px] active:translate-y-[4px] disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:translate-x-0 disabled:hover:translate-y-0 disabled:hover:shadow-[8px_8px_0px_white]"
+      >
+        {isLoading ? "Predicting..." : "Predict Rank"}
+      </button>
+
+      {error && (
+        <div className="mt-6 border-4 border-white bg-black p-4 text-center font-bold uppercase tracking-widest text-white">
+          ERROR: {error}
+        </div>
+      )}
+
+      {prediction && (
+        <div className="mt-10 space-y-8">
+          <div className="border-4 border-white bg-white text-black p-6 shadow-[8px_8px_0px_white]">
+            <p className="text-center text-xl font-bold uppercase tracking-wider sm:text-2xl">
+              Your rank according to last year:
+              <span className="ml-4 text-4xl bg-black text-white px-4 py-2 border-2 border-black inline-block mt-4 md:mt-0">
+                {prediction.predictedRank}
+              </span>
+            </p>
+            <p className="mt-6 text-center text-sm font-bold uppercase text-gray-800">
+              Note: CPS, Biomedical, VLSI will be merged into EEE for 2026.
+            </p>
+          </div>
+
+          <BranchesDisplay
+            attainableBranches={prediction.attainableBranches}
+          />
+        </div>
+      )}
+
+      <p className="font-bold text-sm uppercase tracking-widest mt-12 mb-0 text-center text-white p-4 border-4 border-dashed border-gray-600">
+        Special thanks to{" "}
+        <a
+          href="https://pranavu.dev/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="bg-white text-black px-2 py-1 mx-1 hover:bg-gray-200 transition-colors"
+        >
+          Pranav U
+        </a>{" "}
+        for processing and cleaning the data, and for their help in building the predictor!
+      </p>
     </div>
   );
 };

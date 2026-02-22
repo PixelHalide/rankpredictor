@@ -77,30 +77,42 @@ const GpaCalc = () => {
   };
 
   return (
-    <div className="flex flex-col items-center">
-      <GradingInfoDropdown />
-      <div className="bg-gray-800 rounded-lg p-6 shadow-lg max-w-xl w-full text-center">
-        <label className="block mb-2">Select your Semester:</label>
-        <SemButton isOpen={semester_dropdown_open} onClick={semClick} />
-        <SemPicker
-          isOpen={semester_dropdown_open}
-          sendSemester={sendSemester}
-        />
-        <CycleSelect isOpen={cycle_section_open} sendCycle={sendCycle} />
+    <div className="min-h-screen bg-black px-4 py-8 sm:px-6 lg:px-10">
+      <div className="mx-auto w-full max-w-2xl">
+        <div className="border-4 border-white bg-black p-6 sm:p-8 shadow-[8px_8px_0px_white] mb-8">
+          <h1 className="text-4xl font-bold uppercase tracking-tighter sm:text-5xl">
+            <span className="bg-white text-black px-2 py-1">MIT</span> GPA Calculator
+          </h1>
+          <p className="mt-3 text-sm font-bold uppercase tracking-widest text-gray-400">
+            Select your semester, stream, and grades to calculate your GPA.
+          </p>
+        </div>
 
-        <StreamSelect isOpen={stream_section_open} sendStream={sendStream} />
+        <GradingInfoDropdown />
 
-        <CourseList isOpen={course_section_open} sendCourse={sendCourse} />
-        <HonorsCheck
-          isOpen={honors_section_open}
-          honors={honors}
-          onHonorsChange={handleHonorsChange}
-        />
-        <GpaTable
-          isOpen={table_section_open}
-          honors={honors}
-          subjectGroup={semName()}
-        />
+        <div className="border-4 border-white bg-black p-6 md:p-10 shadow-[12px_12px_0px_white] w-full mb-12">
+          <label className="block mb-4 font-bold uppercase tracking-widest text-lg md:text-xl text-white">
+            Select your Semester:
+          </label>
+          <SemButton isOpen={semester_dropdown_open} onClick={semClick} />
+          <SemPicker
+            isOpen={semester_dropdown_open}
+            sendSemester={sendSemester}
+          />
+          <CycleSelect isOpen={cycle_section_open} sendCycle={sendCycle} />
+          <StreamSelect isOpen={stream_section_open} sendStream={sendStream} />
+          <CourseList isOpen={course_section_open} sendCourse={sendCourse} />
+          <HonorsCheck
+            isOpen={honors_section_open}
+            honors={honors}
+            onHonorsChange={handleHonorsChange}
+          />
+          <GpaTable
+            isOpen={table_section_open}
+            honors={honors}
+            subjectGroup={semName()}
+          />
+        </div>
       </div>
     </div>
   );
