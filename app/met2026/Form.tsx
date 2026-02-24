@@ -116,7 +116,7 @@ const Form = ({ sendBoards, sendMET }: FormProp) => {
               const val = e.target.value;
               handleBoardChange(val === "" ? null : Number(val));
             }}
-            className="w-full border-4 border-slate-600 bg-slate-900 px-4 py-3 text-xl font-bold text-white transition-all focus-visible:bg-indigo-400 focus-visible:text-slate-950 focus-visible:outline-none placeholder:text-slate-500"
+            className="w-full border-4 border-slate-600 bg-slate-900 px-4 py-3 text-xl font-bold text-white transition-all focus-visible:bg-indigo-400 focus-visible:text-slate-950 focus-visible:outline-none placeholder:text-slate-500 focus-visible:placeholder:text-gray-100"
             placeholder="e.g. 95.5"
           />
         </div>
@@ -141,7 +141,7 @@ const Form = ({ sendBoards, sendMET }: FormProp) => {
               const val = e.target.value;
               handleMetChange(val === "" ? null : Number(val));
             }}
-            className="w-full border-4 border-slate-600 bg-slate-900 px-4 py-3 text-xl font-bold text-white transition-all focus-visible:bg-indigo-400 focus-visible:text-slate-950 focus-visible:outline-none placeholder:text-slate-500"
+            className="w-full border-4 border-slate-600 bg-slate-900 px-4 py-3 text-xl font-bold text-white transition-all focus-visible:bg-indigo-400 focus-visible:text-slate-950 focus-visible:outline-none placeholder:text-slate-500 focus-visible:placeholder:text-gray-100"
             placeholder="e.g. 180"
           />
         </div>
@@ -150,7 +150,7 @@ const Form = ({ sendBoards, sendMET }: FormProp) => {
       <button
         onClick={handlePredict}
         disabled={isLoading || boardPercentage === null || metMarks === null}
-        className="mt-8 w-full touch-manipulation border-4 border-slate-600 bg-indigo-400 px-4 py-4 text-xl font-bold uppercase tracking-widest text-slate-950 transition-all hover:bg-rose-400 hover:border-rose-400 hover:translate-x-[2px] hover:translate-y-[2px] shadow-[8px_8px_0px_#64748b] hover:shadow-none active:translate-x-[4px] active:translate-y-[4px] disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:translate-x-0 disabled:hover:translate-y-0 disabled:hover:shadow-[8px_8px_0px_#64748b]"
+        className="mt-8 w-full touch-manipulation border-4 border-slate-600 bg-indigo-400 px-4 py-4 text-xl font-bold uppercase tracking-widest text-slate-950 transition-all hover:bg-rose-400 hover:border-rose-400 hover:translate-x-0.5 hover:translate-y-0.5 shadow-[8px_8px_0px_#64748b] hover:shadow-none active:translate-x-[4px] active:translate-y-[4px] disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:translate-x-0 disabled:hover:translate-y-0 disabled:hover:shadow-[8px_8px_0px_#64748b]"
       >
         {isLoading ? "Predicting..." : "Predict Rank"}
       </button>
