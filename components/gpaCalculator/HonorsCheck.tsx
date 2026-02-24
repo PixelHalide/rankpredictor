@@ -12,22 +12,20 @@ const HonorsCheck = ({
   if (!isOpen) return null;
 
   return (
-    <div className="flex justify-center mx-auto mb-4 p-3 bg-gray-700 rounded-lg border border-white/40 shadow-lg transition-all duration-500">
-      <div className="flex items-center">
-        <input
-          id="honors-checkbox"
-          type="checkbox"
-          checked={honors}
-          onChange={(e) => onHonorsChange(e.target.checked)}
-          className="w-5 h-5 text-blue-600 bg-gray-700 border-gray-600 rounded focus:ring-blue-800 ring-offset-gray-800 focus:ring-2 cursor-pointer"
-        />
-        <label
-          htmlFor="honors-checkbox"
-          className="ml-3 text-sm font-medium text-gray-300 cursor-pointer select-none"
-        >
-          B.Tech Honors Program
-        </label>
-      </div>
+    <div className="flex items-center gap-3 mb-4 p-4 border-4 border-slate-600 bg-slate-900">
+      <input
+        id="honors-checkbox"
+        type="checkbox"
+        checked={honors}
+        onChange={(e) => onHonorsChange(e.target.checked)}
+        className="w-5 h-5 cursor-pointer accent-emerald-400 bg-slate-950 border-2 border-slate-600"
+      />
+      <label
+        htmlFor="honors-checkbox"
+        className="text-sm font-bold uppercase tracking-widest text-white cursor-pointer select-none"
+      >
+        B.Tech Honors Program
+      </label>
     </div>
   );
 };

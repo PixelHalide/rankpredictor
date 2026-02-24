@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { Analytics } from "@vercel/analytics/next";
 import { GoogleAnalytics } from "@next/third-parties/google";
+import { GeistPixelSquare } from "geist/font/pixel";
+import { GeistMono } from "geist/font/mono";
+import { ThemeProvider } from "next-themes";
 import NavBar from "@/components/Navbar";
 import "./globals.css";
 import "katex/dist/katex.min.css";
@@ -82,12 +85,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className="bg-[#06070a] text-white font-mono">
-        <GoogleAnalytics gaId="G-NQYHBHJ3MX" />
-        <NavBar />
-        {children}
-        <Analytics />
+    <html lang="en" suppressHydrationWarning>
+      <body className={`antialiased ${GeistPixelSquare.variable} ${GeistMono.variable} font-mono bg-slate-950/90 text-foreground`}>
+        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false}>
+          <GoogleAnalytics gaId="G-NQYHBHJ3MX" />
+          <NavBar />
+          {children}
+          <Analytics />
+        </ThemeProvider>
       </body>
     </html>
   );
