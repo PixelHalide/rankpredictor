@@ -52,7 +52,7 @@ const GpaCalc = () => {
   const sendSemester = (sem: number) => {
     const isFirstYear = sem === 1 || sem === 2;
     set_cycle_section_open(isFirstYear);
-    if (isFirstYear && sem !== semester) set_stream_section_open(false);
+    if (!isFirstYear) set_stream_section_open(false);
     set_course_section_open(!isFirstYear);
     set_honors_section_open(sem === 8);
     set_table_section_open(false);
@@ -91,7 +91,7 @@ const GpaCalc = () => {
 
         <GradingInfoDropdown />
 
-        <div className="border-4 border-emerald-500 bg-slate-950 p-6 md:p-10 shadow-[12px_12px_0px_#059669] w-full mb-12">
+        <div className="border-4 border-slate-600 bg-slate-950 p-6 md:p-10 shadow-[12px_12px_0px_#64748b] w-full mb-12">
           <label className="block mb-4 font-bold uppercase tracking-widest text-lg md:text-xl text-white">
             Select your Semester:
           </label>

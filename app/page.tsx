@@ -82,6 +82,18 @@ export default function Home() {
             </p>
           </section>
 
+          <section className="space-y-3 border-b-4 border-slate-600 pb-8">
+            <h2 className="text-2xl font-bold uppercase tracking-wider bg-slate-300 text-slate-950 inline-block px-2 py-1">
+              Credits
+            </h2>
+            <ul className="font-bold text-slate-200 space-y-2 border-2 border-slate-600 bg-slate-900/70 p-4">
+              <li>Thank you Pranav U for help with the MET rank predictor.</li>
+              <li>
+                Thank you Sherlock (Aadit Agrawal) for help with site design.
+              </li>
+            </ul>
+          </section>
+
           <section className="space-y-4">
             <h2 className="text-3xl font-bold uppercase tracking-wider bg-emerald-300 text-slate-950 inline-block px-2 py-1 mb-2">
               Contact & License

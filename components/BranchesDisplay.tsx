@@ -48,7 +48,7 @@ const BranchesDisplay = ({ attainableBranches }: BranchesDisplayProps) => {
       {attainableBranches.map((collegeData) => (
         <div
           key={collegeData.college}
-          className="mb-8 border-4 border-rose-400 bg-slate-950 shadow-[8px_8px_0px_#fb7185]"
+          className="mb-8 border-4 border-indigo-400 bg-slate-950 shadow-[8px_8px_0px_#6366f1]"
         >
           {collegeData.branches.length > 0 && (
             <>
@@ -56,7 +56,7 @@ const BranchesDisplay = ({ attainableBranches }: BranchesDisplayProps) => {
                 onClick={() => toggleCollege(collegeData.college)}
                 aria-expanded={!hiddenColleges.has(collegeData.college)}
                 aria-controls={`branches-${collegeData.college.replace(/\s+/g, "-").toLowerCase()}`}
-                className="campus-btn flex w-full touch-manipulation items-center justify-between gap-3 border-b-4 border-rose-400 bg-rose-400 px-4 py-4 text-left text-slate-950 uppercase font-bold hover:bg-indigo-400 hover:text-slate-950 focus-visible:outline-none focus-visible:bg-indigo-400 focus-visible:text-slate-950 sm:px-6"
+                className="campus-btn flex w-full touch-manipulation items-center justify-between gap-3 border-b-4 border-indigo-400 bg-indigo-400 px-4 py-4 text-left text-slate-950 uppercase font-bold hover:bg-indigo-300 hover:text-slate-950 focus-visible:outline-none focus-visible:bg-indigo-300 focus-visible:text-slate-950 sm:px-6"
               >
                 <span className="text-xl sm:text-2xl tracking-tight">
                   {collegeData.college}
@@ -80,7 +80,7 @@ const BranchesDisplay = ({ attainableBranches }: BranchesDisplayProps) => {
                         <span className="min-w-0 break-words text-sm font-bold uppercase text-white sm:text-base">
                           {branch.name}
                         </span>
-                        <span className="shrink-0 border-2 border-slate-600 bg-indigo-400 px-2 py-1 text-xs font-bold tabular-nums text-slate-950 sm:text-sm">
+                        <span className="shrink-0 border-2 border-indigo-300 bg-slate-100 px-2 py-1 text-xs font-bold tabular-nums text-slate-900 sm:text-sm">
                           {branch.cutoff}
                         </span>
                       </li>
