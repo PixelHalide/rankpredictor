@@ -5,20 +5,20 @@ import { Slot } from "radix-ui"
 import { cn } from "@/lib/utils"
 
 const buttonVariants = cva(
-  "inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:ring-2 focus-visible:ring-white border-2 border-white rounded-none shadow-[4px_4px_0px_white] active:translate-x-[4px] active:translate-y-[4px] active:shadow-none",
+  "inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:ring-2 focus-visible:ring-yellow-300 border-2 border-slate-600 rounded-none shadow-[4px_4px_0px_#64748b] active:translate-x-[4px] active:translate-y-[4px] active:shadow-none",
   {
     variants: {
       variant: {
-        default: "bg-white text-black hover:bg-black hover:text-white",
+        default: "bg-indigo-400 text-slate-950 hover:bg-rose-400 hover:border-rose-400",
         destructive:
-          "bg-red-500 text-white hover:bg-neutral-900 border-red-500 shadow-[4px_4px_0px_red]",
+          "bg-red-500 text-white hover:bg-neutral-900 border-red-500 shadow-[4px_4px_0px_#ef4444]",
         outline:
-          "bg-black text-white hover:bg-white hover:text-black",
+          "bg-slate-950 text-white hover:bg-indigo-400 hover:text-slate-950",
         secondary:
-          "bg-neutral-800 text-white hover:bg-neutral-700",
+          "bg-indigo-900 text-white border-indigo-400 shadow-[4px_4px_0px_#818cf8] hover:bg-indigo-800",
         ghost:
-          "border-transparent shadow-none active:translate-x-0 active:translate-y-0 hover:border-white hover:shadow-[4px_4px_0px_white] hover:-translate-x-[2px] hover:-translate-y-[2px]",
-        link: "border-transparent shadow-none text-white underline-offset-4 hover:underline active:translate-x-0 active:translate-y-0",
+          "border-transparent shadow-none active:translate-x-0 active:translate-y-0 hover:border-slate-600 hover:shadow-[4px_4px_0px_#64748b] hover:-translate-x-[2px] hover:-translate-y-[2px]",
+        link: "border-transparent shadow-none text-indigo-200 underline-offset-4 hover:underline active:translate-x-0 active:translate-y-0",
       },
       size: {
         default: "h-9 px-4 py-2 has-[>svg]:px-3",

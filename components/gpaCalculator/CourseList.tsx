@@ -41,15 +41,15 @@ const CourseList = ({
           : "max-h-[500px] opacity-100 mb-4"
       }`}
     >
-      <div className="grid grid-cols-3 gap-px bg-white border-4 border-white">
+      <div className="grid grid-cols-3 gap-px bg-emerald-400 border-4 border-slate-600">
         {COURSES.map(({ label, value }) => (
           <button
             key={value}
             onClick={() => sendCourse(value)}
             className={`p-3 font-bold uppercase tracking-wide cursor-pointer transition-all text-sm ${
               selectedCourse === value
-                ? "bg-white text-black"
-                : "bg-black text-white hover:bg-white hover:text-black"
+                ? "bg-emerald-400 text-slate-950"
+                : "bg-slate-900 text-white hover:bg-emerald-300 hover:text-slate-950"
             }`}
           >
             {label}

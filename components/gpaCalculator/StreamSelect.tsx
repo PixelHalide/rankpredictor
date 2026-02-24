@@ -17,7 +17,7 @@ const StreamSelect = ({
           : "max-h-24 opacity-100 mb-4"
       }`}
     >
-      <div className="grid grid-cols-2 gap-px bg-white border-4 border-white">
+      <div className="grid grid-cols-2 gap-px bg-emerald-400 border-4 border-slate-600">
         {[
           { label: "CS Stream", value: "CS" },
           { label: "Non-CS Stream", value: "NONCS" },
@@ -27,8 +27,8 @@ const StreamSelect = ({
             onClick={() => sendStream(value)}
             className={`p-3 font-bold uppercase tracking-wide cursor-pointer transition-all text-sm ${
               selectedStream === value
-                ? "bg-white text-black"
-                : "bg-black text-white hover:bg-white hover:text-black"
+                ? "bg-emerald-400 text-slate-950"
+                : "bg-slate-900 text-white hover:bg-emerald-300 hover:text-slate-950"
             }`}
           >
             {label}

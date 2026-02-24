@@ -16,15 +16,15 @@ const SemPicker = ({ isOpen, sendSemester, selectedSemester }: SemSelector) => {
           : "pointer-events-none max-h-0 opacity-0"
       }`}
     >
-      <div className="grid grid-cols-4 gap-px bg-white border-4 border-t-0 border-white">
+      <div className="grid grid-cols-4 gap-px bg-emerald-400 border-4 border-t-0 border-slate-600">
         {[1, 2, 3, 4, 5, 6, 7, 8].map((sem, i) => (
           <button
             key={sem}
             onClick={() => sendSemester(sem)}
             className={`p-4 font-bold text-center uppercase cursor-pointer transition-all tracking-widest ${
               selectedSemester === sem
-                ? "bg-white text-black"
-                : "bg-black text-white hover:bg-white hover:text-black"
+                ? "bg-emerald-400 text-slate-950"
+                : "bg-slate-900 text-white hover:bg-emerald-300 hover:text-slate-950"
             }`}
           >
             {LABELS[i]}

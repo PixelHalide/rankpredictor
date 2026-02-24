@@ -50,13 +50,13 @@ const MET2026 = () => {
       >
         <DialogContent
           showCloseButton={false}
-          className="border-4 border-white bg-black text-white p-6 shadow-[12px_12px_0px_white]"
+          className="border-4 border-slate-600 bg-slate-950 text-white p-6 shadow-[12px_12px_0px_#64748b]"
         >
-          <DialogHeader className="border-b-4 border-white pb-4 mb-4">
+          <DialogHeader className="border-b-4 border-slate-600 pb-4 mb-4">
             <DialogTitle className="text-2xl font-bold uppercase tracking-wider">
               Prediction Disclaimer
             </DialogTitle>
-            <DialogDescription className="space-y-4 font-bold text-sm text-gray-300">
+            <DialogDescription className="space-y-4 font-bold text-sm text-slate-200">
               <span className="block">
                 This tool provides an estimated rank based on previous data and
                 trends. It is only a prediction and cannot be 100% accurate.
@@ -66,15 +66,15 @@ const MET2026 = () => {
                 normalization, cutoffs, and counseling decisions.
               </span>
               <span className="block font-bold text-white uppercase text-xs mt-4">
-                By continuing, you acknowledge this is informational only, and
-                I am not liable for decisions made based on this prediction.
+                By continuing, you acknowledge this is informational only, and I
+                am not liable for decisions made based on this prediction.
               </span>
             </DialogDescription>
           </DialogHeader>
           <DialogFooter className="mt-4">
             <Button
               onClick={handleDisclaimerClose}
-              className="w-full sm:w-auto uppercase font-bold text-lg border-2 border-white hover:bg-white hover:text-black shadow-[4px_4px_0px_white] hover:shadow-none hover:translate-x-[2px] hover:translate-y-[2px]"
+              className="w-full sm:w-auto uppercase font-bold text-lg border-2 border-slate-600 bg-slate-900 hover:bg-indigo-400 hover:text-slate-950 shadow-[4px_4px_0px_#64748b] hover:shadow-none hover:translate-x-[2px] hover:translate-y-[2px]"
             >
               I Understand, Continue
             </Button>
@@ -82,11 +82,10 @@ const MET2026 = () => {
         </DialogContent>
       </Dialog>
 
-      <div className="min-h-screen bg-black px-4 py-8 sm:px-6 lg:px-10">
+      <div className="min-h-screen bg-slate-950/90 px-4 py-8 sm:px-6 lg:px-10">
         <div className="mx-auto w-full max-w-4xl">
           <HowItWorksDropdown />
           <Form sendBoards={() => {}} sendMET={() => {}} />
-
         </div>
       </div>
     </>

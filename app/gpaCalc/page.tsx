@@ -77,20 +77,21 @@ const GpaCalc = () => {
   };
 
   return (
-    <div className="min-h-screen bg-black px-4 py-8 sm:px-6 lg:px-10">
+    <div className="min-h-screen bg-slate-950/90 px-4 py-8 sm:px-6 lg:px-10">
       <div className="mx-auto w-full max-w-2xl">
-        <div className="border-4 border-white bg-black p-6 sm:p-8 shadow-[8px_8px_0px_white] mb-8">
+        <div className="border-4 border-slate-600 bg-slate-950 p-6 sm:p-8 shadow-[8px_8px_0px_#64748b] mb-8">
           <h1 className="text-4xl font-bold uppercase tracking-tighter sm:text-5xl">
-            <span className="bg-white text-black px-2 py-1">MIT</span> GPA Calculator
+            <span className="bg-emerald-400 text-slate-950 px-2 py-1">MIT</span>{" "}
+            GPA Calculator
           </h1>
-          <p className="mt-3 text-sm font-bold uppercase tracking-widest text-gray-400">
+          <p className="mt-3 text-sm font-bold uppercase tracking-widest text-slate-300">
             Select your semester, stream, and grades to calculate your GPA.
           </p>
         </div>
 
         <GradingInfoDropdown />
 
-        <div className="border-4 border-white bg-black p-6 md:p-10 shadow-[12px_12px_0px_white] w-full mb-12">
+        <div className="border-4 border-emerald-500 bg-slate-950 p-6 md:p-10 shadow-[12px_12px_0px_#059669] w-full mb-12">
           <label className="block mb-4 font-bold uppercase tracking-widest text-lg md:text-xl text-white">
             Select your Semester:
           </label>

@@ -86,7 +86,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`antialiased ${GeistPixelSquare.variable} ${GeistMono.variable} font-mono bg-background text-foreground`}>
+      <body className={`antialiased ${GeistPixelSquare.variable} ${GeistMono.variable} font-mono bg-slate-950/90 text-foreground`}>
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false}>
           <GoogleAnalytics gaId="G-NQYHBHJ3MX" />
           <NavBar />

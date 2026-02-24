@@ -4,12 +4,20 @@ import Image from "next/image";
 interface NavLinkProps {
   href: string;
   label: string;
+  tone: string;
   isExternal?: boolean;
 }
 
-const NavLink = ({ href, label, isExternal }: NavLinkProps) => {
+const NavLink = ({ href, label, tone, isExternal }: NavLinkProps) => {
+  const toneClasses: Record<string, string> = {
+    home: "hover:bg-amber-400 hover:border-amber-200",
+    met: "hover:bg-indigo-400 hover:border-indigo-200",
+    gpa: "hover:bg-emerald-400 hover:border-emerald-200",
+    guessr: "hover:bg-fuchsia-400 hover:border-fuchsia-200",
+    directory: "hover:bg-sky-400 hover:border-sky-200",
+  };
   const className =
-    "text-lg border-2 border-white py-2 px-4 font-bold uppercase hover:bg-white hover:text-black hover:translate-x-[2px] hover:translate-y-[2px] shadow-[4px_4px_0px_white] hover:shadow-none active:translate-x-[4px] active:translate-y-[4px] transition-all";
+    `text-lg border-2 border-slate-600 bg-slate-900/80 py-2 px-4 font-bold uppercase hover:text-slate-950 hover:translate-x-[2px] hover:translate-y-[2px] shadow-[4px_4px_0px_#64748b] hover:shadow-none active:translate-x-[4px] active:translate-y-[4px] transition-all ${toneClasses[tone]}`;
 
   if (isExternal) {
     return (
@@ -51,30 +59,30 @@ const NavBar = () => {
         <a
           href="https://github.com/druwn"
           target="_blank"
-          className="text-white hover:bg-white hover:text-black border-b-2 border-transparent hover:border-white px-1"
+          className="text-indigo-200 hover:bg-indigo-400 hover:text-slate-950 border-b-2 border-transparent hover:border-indigo-200 px-1"
         >
           druwn
         </a>{" "}
         and
+                  {" "}
         <a
           href="https://github.com/PixelHalide"
           target="_blank"
-          className="text-white hover:bg-white hover:text-black border-b-2 border-transparent hover:border-white px-1"
+          className="text-rose-300 hover:bg-rose-400 hover:text-slate-950 border-b-2 border-transparent hover:border-rose-200 px-1"
         >
-          {" "}
           Pixel
         </a>
       </div>
 
-      <hr className="border-t-4 border-white my-5" />
+      <hr className="border-t-4 border-slate-600 my-5" />
       <nav className="flex flex-col md:flex-row justify-center gap-4 mb-5 text-center px-4">
-        <NavLink href="/" label="Home" />
-        <NavLink href="/met2026" label="MET 2026 Rank" />
-        <NavLink href="/gpaCalc" label="MIT GPA Calculator" />
-        <NavLink href="https://manipal-guessr.vercel.app/" label="ManipalGuessr" isExternal />
-        <NavLink href="https://cd.coolstuff.work" label="MIT Directory" isExternal />
+        <NavLink href="/" label="Home" tone="home" />
+        <NavLink href="/met2026" label="MET 2026 Rank" tone="met" />
+        <NavLink href="/gpaCalc" label="MIT GPA Calculator" tone="gpa" />
+        <NavLink href="https://manipal-guessr.vercel.app/" label="ManipalGuessr" tone="guessr" isExternal />
+        <NavLink href="https://cd.coolstuff.work" label="MIT Directory" tone="directory" isExternal />
       </nav>
-      <hr className="border-t-4 border-white my-5" />
+      <hr className="border-t-4 border-slate-600 my-5" />
     </div>
   );
 };
