@@ -43,7 +43,7 @@ export default function Home() {
               internet that ask for your marks along with personal data like
               your phone number and name—only to farm and sell this information,
               as well as &ldquo;coaches&rdquo; and &ldquo;bhaiyas&rdquo; on
-              Youtube spreading misinformation - we felt frustrated. Students
+              Youtube spreading misinformation, we felt frustrated. Students
               lacked a legitimate way to predict and calculate their ranks. This
               frustration led to the creation of RankPredictor, a website that
               allows you to predict your rank for various exams with no
