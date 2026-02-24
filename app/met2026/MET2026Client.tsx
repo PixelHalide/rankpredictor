@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import HowItWorksDropdown from "../../components/HowItWorksDropdown";
 import { Button } from "@/components/ui/button";
 import {
   Dialog,
@@ -83,13 +82,7 @@ export default function MET2026Client() {
           </DialogFooter>
         </DialogContent>
       </Dialog>
-
-      <div className="min-h-screen bg-slate-950/90 px-4 py-8 sm:px-6 lg:px-10">
-        <div className="mx-auto w-full max-w-4xl">
-          <HowItWorksDropdown />
-          <Form sendBoards={() => {}} sendMET={() => {}} />
-        </div>
-      </div>
+      <Form sendBoards={() => {}} sendMET={() => {}} />
     </>
   );
 }
