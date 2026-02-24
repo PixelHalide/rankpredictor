@@ -58,7 +58,7 @@ const NavBar = () => {
         <a
           href="https://github.com/PixelHalide"
           target="_blank"
-          className="text-rose-300 hover:bg-rose-400 hover:text-slate-950 border-b-2 border-transparent hover:border-rose-200 px-1"
+          className="text-rose-300 hover:bg-rose-400 hover:text-slate-950 border-b-2 border-transparent hover:border-rose-200 px-1 transition-all"
         >
           Pixel
         </a>{" "}
@@ -66,7 +66,7 @@ const NavBar = () => {
         <a
           href="https://github.com/druwn"
           target="_blank"
-          className="text-indigo-200 hover:bg-indigo-400 hover:text-slate-950 border-b-2 border-transparent hover:border-indigo-200 px-1"
+          className="text-indigo-200 hover:bg-indigo-400 hover:text-slate-950 border-b-2 border-transparent hover:border-indigo-200 px-1 transition-all"
         >
           druwn
         </a>

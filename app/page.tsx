@@ -87,9 +87,27 @@ export default function Home() {
               Credits
             </h2>
             <ul className="font-bold text-slate-200 space-y-2 border-2 border-slate-600 bg-slate-900/70 p-4">
-              <li>Thank you Pranav U for help with the MET rank predictor.</li>
               <li>
-                Thank you Sherlock (Aadit Agrawal) for help with site design.
+                MET rank predictor support:{" "}
+                <a
+                  href="https://pranavu.dev/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-yellow-400 text-slate-950 px-1 py-1 mx-1 hover:bg-rose-400 transition-colors"
+                >
+                  Pranav U
+                </a>
+              </li>
+              <li>
+                Site design support:{" "}
+                <a
+                  href="https://aadit.cc"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-yellow-400 text-slate-950 px-1 py-1 mx-1 hover:bg-rose-400 transition-colors"
+                >
+                  Sherlock (Aadit Agrawal)
+                </a>
               </li>
             </ul>
           </section>
@@ -114,7 +132,7 @@ export default function Home() {
                 <a
                   href="https://discord.gg/2mYN8aDPur"
                   target="_blank"
-                  className="underline hover:bg-yellow-300 hover:text-slate-950 px-1 text-yellow-300"
+                  className="underline hover:bg-yellow-300 hover:text-slate-950 px-1 text-yellow-300 transition-all"
                 >
                   MIT Manipal & MET Discord
                 </a>
