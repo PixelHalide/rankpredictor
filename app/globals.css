@@ -5,7 +5,8 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
-  --color-black: #0f0f0f;
+  --color-black: #2a2a2a;
+  --color-white: #b8b8b8;
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-mono), ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
@@ -56,14 +57,14 @@ th {
 
 :root {
   --radius: 0;
-  --background: #0f0f0f;
-  --foreground: #ffffff;
-  --card: #0f0f0f;
+  --background: #2a2a2a;
+  --foreground: #c0c0c0;
+  --card: #2a2a2a;
   --card-foreground: #ffffff;
-  --popover: #0f0f0f;
+  --popover: #2a2a2a;
   --popover-foreground: #ffffff;
   --primary: #ffffff;
-  --primary-foreground: #0f0f0f;
+  --primary-foreground: #2a2a2a;
   --secondary: #222222;
   --secondary-foreground: #ffffff;
   --muted: #222222;
@@ -72,18 +73,18 @@ th {
   --accent-foreground: #ffffff;
   --destructive: #ff0000;
   --destructive-foreground: #ffffff;
-  --border: #ffffff;
-  --input: #ffffff;
-  --ring: #ffffff;
+  --border: #b8b8b8;
+  --input: #b8b8b8;
+  --ring: #b8b8b8;
   --chart-1: #ffffff;
   --chart-2: #cccccc;
   --chart-3: #999999;
   --chart-4: #666666;
   --chart-5: #333333;
-  --sidebar: #0f0f0f;
+  --sidebar: #2a2a2a;
   --sidebar-foreground: #ffffff;
   --sidebar-primary: #ffffff;
-  --sidebar-primary-foreground: #0f0f0f;
+  --sidebar-primary-foreground: #2a2a2a;
   --sidebar-accent: #222222;
   --sidebar-accent-foreground: #ffffff;
   --sidebar-border: #ffffff;
@@ -91,14 +92,14 @@ th {
 }
 
 .dark {
-  --background: #0f0f0f;
-  --foreground: #ffffff;
-  --card: #0f0f0f;
+  --background: #2a2a2a;
+  --foreground: #c0c0c0;
+  --card: #2a2a2a;
   --card-foreground: #ffffff;
-  --popover: #0f0f0f;
+  --popover: #2a2a2a;
   --popover-foreground: #ffffff;
   --primary: #ffffff;
-  --primary-foreground: #0f0f0f;
+  --primary-foreground: #2a2a2a;
   --secondary: #222222;
   --secondary-foreground: #ffffff;
   --muted: #222222;
@@ -107,18 +108,18 @@ th {
   --accent-foreground: #ffffff;
   --destructive: #ff0000;
   --destructive-foreground: #ffffff;
-  --border: #ffffff;
-  --input: #ffffff;
-  --ring: #ffffff;
+  --border: #b8b8b8;
+  --input: #b8b8b8;
+  --ring: #b8b8b8;
   --chart-1: #ffffff;
   --chart-2: #cccccc;
   --chart-3: #999999;
   --chart-4: #666666;
   --chart-5: #333333;
-  --sidebar: #0f0f0f;
+  --sidebar: #2a2a2a;
   --sidebar-foreground: #ffffff;
   --sidebar-primary: #ffffff;
-  --sidebar-primary-foreground: #0f0f0f;
+  --sidebar-primary-foreground: #2a2a2a;
   --sidebar-accent: #222222;
   --sidebar-accent-foreground: #ffffff;
   --sidebar-border: #ffffff;
