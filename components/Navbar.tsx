@@ -12,6 +12,7 @@ const NavLink = ({ href, label, tone, isExternal }: NavLinkProps) => {
   const toneClasses: Record<string, string> = {
     home: "hover:bg-amber-400 hover:border-amber-200",
     met: "hover:bg-indigo-400 hover:border-indigo-200",
+    jee: "hover:bg-rose-400 hover:border-rose-200",
     gpa: "hover:bg-emerald-400 hover:border-emerald-200",
     guessr: "hover:bg-fuchsia-400 hover:border-fuchsia-200",
     directory: "hover:bg-sky-400 hover:border-sky-200",
@@ -76,6 +77,12 @@ const NavBar = () => {
       <nav className="flex flex-col md:flex-row justify-center gap-4 mb-5 text-center px-4">
         <NavLink href="/" label="Home" tone="home" />
         <NavLink href="/met2026" label="MET 2026 Rank" tone="met" />
+        <NavLink
+          href="/api/out/jee"
+          label="JEE 2026 Rank"
+          tone="jee"
+          isExternal
+        />
         <NavLink href="/gpaCalc" label="MIT GPA Calculator" tone="gpa" />
         <NavLink
           href="https://manipal-guessr.vercel.app/"
