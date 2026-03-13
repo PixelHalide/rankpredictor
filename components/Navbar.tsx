@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
 
@@ -6,9 +8,10 @@ interface NavLinkProps {
   label: string;
   tone: string;
   isExternal?: boolean;
+  trackingUrl?: string;
 }
 
-const NavLink = ({ href, label, tone, isExternal }: NavLinkProps) => {
+const NavLink = ({ href, label, tone, isExternal, trackingUrl }: NavLinkProps) => {
   const toneClasses: Record<string, string> = {
     home: "hover:bg-amber-400 hover:border-amber-200",
     met: "hover:bg-indigo-400 hover:border-indigo-200",
@@ -19,6 +22,12 @@ const NavLink = ({ href, label, tone, isExternal }: NavLinkProps) => {
   };
   const className = `text-lg border-2 border-slate-600 bg-slate-900/80 py-2 px-4 font-bold uppercase hover:text-slate-950 hover:translate-x-[2px] hover:translate-y-[2px] shadow-[4px_4px_0px_#64748b] hover:shadow-none active:translate-x-[4px] active:translate-y-[4px] transition-all ${toneClasses[tone]}`;
 
+  const handleClick = () => {
+    if (trackingUrl) {
+      fetch(trackingUrl, { keepalive: true, mode: "no-cors" }).catch(() => {});
+    }
+  };
+
   if (isExternal) {
     return (
       <a
@@ -26,6 +35,7 @@ const NavLink = ({ href, label, tone, isExternal }: NavLinkProps) => {
         target="_blank"
         rel="noopener noreferrer"
         className={className}
+        onClick={handleClick}
       >
         {label}
       </a>
@@ -33,7 +43,7 @@ const NavLink = ({ href, label, tone, isExternal }: NavLinkProps) => {
   }
 
   return (
-    <Link href={href} className={className}>
+    <Link href={href} className={className} onClick={handleClick}>
       {label}
     </Link>
   );
@@ -78,7 +88,8 @@ const NavBar = () => {
         <NavLink href="/" label="Home" tone="home" />
         <NavLink href="/met2026" label="MET 2026 Rank" tone="met" />
         <NavLink
-          href="/api/out/jee"
+          href="https://www.jeepredictor.in/"
+          trackingUrl="/api/out/jee"
           label="JEE 2026 Rank"
           tone="jee"
           isExternal
