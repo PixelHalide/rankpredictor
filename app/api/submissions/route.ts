@@ -1,53 +1,67 @@
-import { NextRequest, NextResponse } from "next/server";
-import clientPromise from "@/lib/mongodb";
-import { headers } from "next/headers";
-
 export const dynamic = "force-dynamic";
 
-export async function POST(req: NextRequest) {
-  try {
-    const { boardPercentage, metMarks } = await req.json();
+const runtimeEnv = globalThis as typeof globalThis & {
+  process?: {
+    env?: Record<string, string | undefined>;
+  };
+};
 
-    if (boardPercentage === undefined || metMarks === undefined) {
-      return NextResponse.json(
-        { error: "Missing required fields" },
-        { status: 400 }
-      );
+const runtimeProcessEnv = runtimeEnv.process?.env ?? {};
+
+const backendBaseUrl =
+  runtimeProcessEnv.BACKEND_API_URL ??
+  runtimeProcessEnv.BACKEND_URL ??
+  "http://localhost:8000";
+
+export async function POST(req: Request) {
+  try {
+    const backendHeaders = new Headers();
+    const contentType = req.headers.get("content-type");
+
+    if (contentType) {
+      backendHeaders.set("content-type", contentType);
     }
 
-    const client = await clientPromise;
-    const db = client.db(process.env.MONGODB_DB || "rankpredictor");
-    const collection = db.collection("submissions");
+    const forwardedFor = req.headers.get("x-forwarded-for");
+    if (forwardedFor) {
+      backendHeaders.set("x-forwarded-for", forwardedFor);
+    }
 
-    // Client's IP and metadata
-    const heads = await headers();
-    const forwarded = heads.get("x-forwarded-for");
-    const ip = forwarded ? forwarded.split(",")[0] : heads.get("x-real-ip") || "unknown";
-    const userAgent = heads.get("user-agent") || "unknown";
+    const realIp = req.headers.get("x-real-ip");
+    if (realIp) {
+      backendHeaders.set("x-real-ip", realIp);
+    }
 
-    const submission = {
-      boardPercentage,
-      metMarks,
-      timestamp: new Date(),
-      ip,
-      userAgent,
-      metadata: {
-        method: heads.get("host"),
-        referer: heads.get("referer"),
-      }
-    };
+    const userAgent = req.headers.get("user-agent");
+    if (userAgent) {
+      backendHeaders.set("user-agent", userAgent);
+    }
 
-    const result = await collection.insertOne(submission);
+    const referer = req.headers.get("referer");
+    if (referer) {
+      backendHeaders.set("referer", referer);
+    }
 
-    return NextResponse.json(
-      { success: true, id: result.insertedId },
-      { status: 201 }
-    );
+    const host = req.headers.get("host");
+    if (host) {
+      backendHeaders.set("x-original-host", host);
+    }
+
+    const backendResponse = await fetch(new URL("/submissions", backendBaseUrl), {
+      method: "POST",
+      headers: backendHeaders,
+      body: await req.text(),
+    });
+
+    return new Response(backendResponse.body, {
+      status: backendResponse.status,
+      headers: backendResponse.headers,
+    });
   } catch (error) {
-    console.error("Database connection error:", error);
-    return NextResponse.json(
-      { error: "Failed to store submission" },
-      { status: 500 }
+    console.error("Submission proxy error:", error);
+    return Response.json(
+      { error: "Failed to forward submission" },
+      { status: 502 }
     );
   }
 }
