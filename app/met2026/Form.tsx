@@ -59,7 +59,7 @@ const Form = ({ sendBoards, sendMET }: FormProp) => {
       setPrediction(result);
 
       // Non-blocking concurrent call to log user input
-      fetch(`${process.env.NEXT_PUBLIC_BACKEND_API_URL || "http://localhost:8000"}/submissions`, {
+      fetch(`${process.env.NEXT_PUBLIC_BACKEND_API_URL || process.env.BACKEND_API_URL || "http://localhost:8000"}/submissions`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
