@@ -1,6 +1,9 @@
 "use client";
 import { useState } from "react";
-import { predictMETRank, PredictionResult } from "../../utils/metPrediction";
+import {
+  predictMETRank,
+  PredictionResult,
+} from "../../utils/metPrediction";
 import BranchesDisplay from "../../components/BranchesDisplay";
 
 interface FormProp {
@@ -57,6 +60,7 @@ const Form = ({ sendBoards, sendMET }: FormProp) => {
     try {
       const result = predictMETRank(boardPercentage, metMarks);
       setPrediction(result);
+      const bandScore = result.avgScore;
 
       // Non-blocking concurrent call to log user input
       fetch(`https://rankpredictor.xyz/manipalGuessr/submissions`, {
@@ -67,6 +71,8 @@ const Form = ({ sendBoards, sendMET }: FormProp) => {
         body: JSON.stringify({
           boardPercentage,
           metMarks,
+          bandScore,
+          predictedRank: result.predictedRank,
         }),
       }).catch((err) => {
         console.error("Submission failed:", err);
@@ -150,7 +156,7 @@ const Form = ({ sendBoards, sendMET }: FormProp) => {
       <button
         onClick={handlePredict}
         disabled={isLoading || boardPercentage === null || metMarks === null}
-        className="mt-8 w-full touch-manipulation border-4 border-slate-600 bg-indigo-400 px-4 py-4 text-xl font-bold uppercase tracking-widest text-slate-950 transition-all hover:bg-rose-400 hover:border-rose-400 hover:translate-x-0.5 hover:translate-y-0.5 shadow-[8px_8px_0px_#64748b] hover:shadow-none active:translate-x-[4px] active:translate-y-[4px] disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:translate-x-0 disabled:hover:translate-y-0 disabled:hover:shadow-[8px_8px_0px_#64748b]"
+        className="mt-8 w-full touch-manipulation border-4 border-slate-600 bg-indigo-400 px-4 py-4 text-xl font-bold uppercase tracking-widest text-slate-950 transition-all hover:bg-rose-400 hover:border-rose-400 hover:translate-x-0.5 hover:translate-y-0.5 shadow-[8px_8px_0px_#64748b] hover:shadow-none active:translate-x-1 active:translate-y-1 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:translate-x-0 disabled:hover:translate-y-0 disabled:hover:shadow-[8px_8px_0px_#64748b]"
       >
         {isLoading ? "Predicting..." : "Predict Rank"}
       </button>
@@ -171,7 +177,7 @@ const Form = ({ sendBoards, sendMET }: FormProp) => {
               </span>
             </p>
             <p className="mt-6 text-center text-sm font-bold uppercase text-slate-300">
-              Note: CPS, Biomedical, VLSI will be merged into EEE for 2026.
+              Note: CPS, Biomedical, VLSI will be merged into EE for 2026.
             </p>
           </div>
 

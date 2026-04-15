@@ -13,7 +13,7 @@ import {
 import Form from "./Form";
 
 const DISCLAIMER_COOKIE = "met2026-disclaimer-seen";
-const ONE_WEEK_SECONDS = 60 * 60 * 24 * 7;
+const ONE_DAY_SECONDS = 60 * 60 * 24;
 
 export default function MET2026Client() {
   const [isDisclaimerOpen, setIsDisclaimerOpen] = useState(false);
@@ -24,7 +24,7 @@ export default function MET2026Client() {
       .some((cookie) => cookie.startsWith(`${DISCLAIMER_COOKIE}=true`));
 
   const setDisclaimerCookie = () => {
-    document.cookie = `${DISCLAIMER_COOKIE}=true; Max-Age=${ONE_WEEK_SECONDS}; Path=/; SameSite=Lax`;
+    document.cookie = `${DISCLAIMER_COOKIE}=true; Max-Age=${ONE_DAY_SECONDS}; Path=/; SameSite=Lax`;
   };
 
   useEffect(() => {
