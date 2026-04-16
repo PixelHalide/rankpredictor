@@ -44,7 +44,7 @@ const BranchesDisplay = ({ attainableBranches }: BranchesDisplayProps) => {
     <section className="mt-8">
       <div className="mb-6 flex items-center justify-between gap-3 border-b-4 border-slate-600 pb-2">
         <h2 className="text-2xl font-bold text-white uppercase tracking-wider">
-          Attainable Branches
+          Attainable Branches (MET 2025 Round 4 Cutoffs)
         </h2>
       </div>
 
