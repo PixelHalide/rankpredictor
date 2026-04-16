@@ -85,11 +85,30 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const adsenseClientId =
+    process.env.NEXT_PUBLIC_GOOGLE_ADSENSE_CLIENT_ID
+
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1385061151654417"
-        crossOrigin="anonymous"></script>
+        <Script id="google-consent-default" strategy="beforeInteractive">
+          {`window.dataLayer = window.dataLayer || [];
+function gtag(){window.dataLayer.push(arguments);}
+gtag('consent', 'default', {
+  'ad_storage': 'denied',
+  'ad_user_data': 'denied',
+  'ad_personalization': 'denied',
+  'analytics_storage': 'denied',
+  'wait_for_update': 500
+});
+gtag('set', 'ads_data_redaction', true);`}
+        </Script>
+        <Script
+          id="google-adsense"
+          src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${adsenseClientId}`}
+          strategy="afterInteractive"
+          crossOrigin="anonymous"
+        />
       </head>
       <body className={`antialiased ${GeistPixelSquare.variable} ${GeistMono.variable} font-mono bg-slate-950/90 text-foreground`}>
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false}>
