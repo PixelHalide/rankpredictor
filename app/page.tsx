@@ -112,6 +112,26 @@ export default function Home() {
             </ul>
           </section>
 
+          <section className="space-y-4 border-b-4 border-cyan-300 pb-8">
+            <h2 className="text-3xl font-bold uppercase tracking-wider bg-cyan-300 text-slate-950 inline-block px-2 py-1 mb-2">
+              Collaborations
+            </h2>
+            <ul className="font-bold text-slate-200 space-y-1 border-2 border-cyan-300 bg-slate-900/70 p-4">
+              <li>
+                — JEE 2026 Rankpredictor by
+                <span className="bg-yellow-400 text-slate-950 px-1 py-1 mx-1">
+                  Trix
+                </span>
+              </li>
+              <li>
+                — MIT Directory by
+                <span className="bg-yellow-400 text-slate-950 px-1 py-1 mx-1">
+                  Sherlock
+                </span>
+              </li>
+            </ul>
+          </section>
+
           <section className="space-y-4">
             <h2 className="text-3xl font-bold uppercase tracking-wider bg-emerald-300 text-slate-950 inline-block px-2 py-1 mb-2">
               Contact & License

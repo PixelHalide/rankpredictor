@@ -7,7 +7,7 @@ const HowItWorksDropdown = () => {
     <div className="mb-8">
       <details className="group">
         <summary className="flex w-full cursor-pointer items-center justify-between border-4 border-slate-600 bg-slate-950 px-6 py-4 text-left font-bold uppercase tracking-widest text-white transition-all hover:translate-x-[2px] hover:translate-y-[2px] hover:bg-indigo-400 hover:text-slate-950 hover:shadow-none active:translate-x-[4px] active:translate-y-[4px] shadow-[4px_4px_0px_#64748b]">
-          <span>How does this work?</span>
+          <span>How accurate is this?</span>
           <span className="text-sm transition-transform duration-400 group-open:rotate-180">
             ▼
           </span>

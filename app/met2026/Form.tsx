@@ -106,7 +106,7 @@ const Form = ({ sendBoards, sendMET }: FormProp) => {
             htmlFor="boardPercentage"
             className="block text-sm font-bold uppercase tracking-widest text-white"
           >
-            Board Percentage
+            Board Percentage (PCME or PCsME)
           </label>
           <input
             type="number"
@@ -173,7 +173,11 @@ const Form = ({ sendBoards, sendMET }: FormProp) => {
             <p className="text-center text-xl font-bold uppercase tracking-wider sm:text-2xl">
               Your rank according to last year:
               <span className="ml-4 text-4xl bg-slate-950 text-yellow-400 px-4 py-2 border-2 border-slate-600 inline-block mt-4 md:mt-0">
-                {prediction.predictedRank}
+                {prediction.predictedRank < 100
+                  ? "<100"
+                  : prediction.predictedRank > 50000
+                    ? ">50000"
+                    : prediction.predictedRank}
               </span>
             </p>
             <p className="mt-6 text-center text-sm font-bold uppercase text-slate-300">
