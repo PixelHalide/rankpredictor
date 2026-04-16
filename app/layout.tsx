@@ -88,12 +88,8 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        <Script
-          id="google-adsense"
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9294944496926514"
-          strategy="afterInteractive"
-          crossOrigin="anonymous"
-        />
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1385061151654417"
+        crossOrigin="anonymous"></script>
       </head>
       <body className={`antialiased ${GeistPixelSquare.variable} ${GeistMono.variable} font-mono bg-slate-950/90 text-foreground`}>
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false}>
