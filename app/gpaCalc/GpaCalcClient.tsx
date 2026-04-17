@@ -7,6 +7,7 @@ import CycleSelect from "../../components/gpaCalculator/CycleSelect";
 import StreamSelect from "../../components/gpaCalculator/StreamSelect";
 import CourseList from "../../components/gpaCalculator/CourseList";
 import HonorsCheck from "../../components/gpaCalculator/HonorsCheck";
+import MinorCheck from "../../components/gpaCalculator/MinorCheck";
 import GpaTable from "../../components/gpaCalculator/GpaTable";
 import GradingInfoDropdown from "../../components/gpaCalculator/GradingInfoDropdown";
 
@@ -16,6 +17,7 @@ export default function GpaCalcClient() {
   const [cycle, set_cycle] = useState<number | null>();
   const [stream, set_stream] = useState<string | null>();
   const [honors, set_honors] = useState<boolean>(false);
+  const [minors, set_minors] = useState<boolean>(false);
 
   const [semester_dropdown_open, set_semester_dropdown_open] = useState(false);
   const [cycle_section_open, set_cycle_section_open] = useState(false);
@@ -23,6 +25,7 @@ export default function GpaCalcClient() {
   const [course_section_open, set_course_section_open] = useState(false);
   const [table_section_open, set_table_section_open] = useState(false);
   const [honors_section_open, set_honors_section_open] = useState(false);
+  const [minors_section_open, set_minors_section_open] = useState(false);
 
   const semName = () => {
     let subjectGroup: string;
@@ -44,6 +47,7 @@ export default function GpaCalcClient() {
       set_stream_section_open(false);
       set_table_section_open(false);
       set_honors_section_open(false);
+      set_minors_section_open(false);
     } else {
       set_semester_dropdown_open(true);
     }
@@ -55,6 +59,7 @@ export default function GpaCalcClient() {
     if (!isFirstYear) set_stream_section_open(false);
     set_course_section_open(!isFirstYear);
     set_honors_section_open(sem === 8);
+    set_minors_section_open(sem === 7);
     set_table_section_open(false);
     set_semester(sem);
   };
@@ -76,6 +81,10 @@ export default function GpaCalcClient() {
 
   const handleHonorsChange = (checked: boolean) => {
     set_honors(checked);
+  };
+
+  const handleMinorsChange = (checked: boolean) => {
+    set_minors(checked);
   };
 
   return (
@@ -110,9 +119,15 @@ export default function GpaCalcClient() {
             honors={honors}
             onHonorsChange={handleHonorsChange}
           />
+          <MinorCheck
+            isOpen={minors_section_open}
+            minors={minors}
+            onMinorsChange={handleMinorsChange}
+          />
           <GpaTable
             isOpen={table_section_open}
             honors={honors}
+            minors={minors}
             subjectGroup={semName()}
           />
         </div>

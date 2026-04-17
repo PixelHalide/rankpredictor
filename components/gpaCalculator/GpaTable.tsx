@@ -4,6 +4,7 @@ import subjectData from "../../utils/subjects";
 interface GpaTableProps {
   isOpen: boolean;
   honors: boolean;
+  minors: boolean;
   subjectGroup: string;
 }
 
@@ -11,7 +12,12 @@ interface SemCourse {
   [name: string]: number;
 }
 
-const GpaTable = ({ isOpen, honors, subjectGroup }: GpaTableProps) => {
+const GpaTable = ({
+  isOpen,
+  honors,
+  minors,
+  subjectGroup,
+}: GpaTableProps) => {
   const [gpa, setGpa] = useState<number | null>(null);
   const [obtainedCreds, setObtainedCreds] = useState<number[]>([]);
   const [creds, setCreds] = useState<number[]>([]);
@@ -74,6 +80,7 @@ const GpaTable = ({ isOpen, honors, subjectGroup }: GpaTableProps) => {
     subjectArray.forEach((subjectName, idx) => {
       const creditValue = subjects[subjectName];
       if (!honors && subjectName.includes("Honors")) return;
+      if (!minors && subjectName.includes("Minor") && !subjectName.includes("Program")) return;
 
       const isAlternate = idx % 2 === 0;
 
