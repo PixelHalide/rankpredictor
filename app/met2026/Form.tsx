@@ -17,6 +17,14 @@ const Form = ({ sendBoards, sendMET }: FormProp) => {
   const [prediction, setPrediction] = useState<PredictionResult | null>(null);
   const [error, setError] = useState<string>("");
   const [isLoading, setIsLoading] = useState(false);
+  const [hasPotentialRankInflation, setHasPotentialRankInflation] =
+    useState(true);
+
+  const getRankWithInflation = (rank: number) =>
+    hasPotentialRankInflation ? Math.round(rank * 1.25) : rank;
+
+  const predictionRankDisplay =
+    prediction !== null ? getRankWithInflation(prediction.predictedRank) : null;
 
   const handleBoardChange = (value: number | null) => {
     setBoardPercentage(value);
@@ -61,6 +69,9 @@ const Form = ({ sendBoards, sendMET }: FormProp) => {
       const result = predictMETRank(boardPercentage, metMarks);
       setPrediction(result);
       const bandScore = result.avgScore;
+      const predictedRankForSubmission = getRankWithInflation(
+        result.predictedRank,
+      );
 
       // Non-blocking concurrent call to log user input
       fetch(`https://rankpredictor.xyz/manipalGuessr/submissions`, {
@@ -72,7 +83,7 @@ const Form = ({ sendBoards, sendMET }: FormProp) => {
           boardPercentage,
           metMarks,
           bandScore,
-          predictedRank: result.predictedRank,
+          predictedRank: predictedRankForSubmission,
         }),
       }).catch((err) => {
         console.error("Submission failed:", err);
@@ -153,10 +164,24 @@ const Form = ({ sendBoards, sendMET }: FormProp) => {
         </div>
       </div>
 
+      <label
+        htmlFor="potentialRankInflation"
+        className="mt-8 flex items-center gap-3 border-4 border-slate-600 bg-slate-900 px-4 py-3 font-bold uppercase tracking-widest text-white"
+      >
+        <input
+          id="potentialRankInflation"
+          type="checkbox"
+          checked={hasPotentialRankInflation}
+          onChange={(e) => setHasPotentialRankInflation(e.target.checked)}
+          className="h-5 w-5 border-2 border-slate-500 accent-indigo-400"
+        />
+        Potential Rank Inflation (+25% to predicted rank) due to JEE Main reservation
+      </label>
+
       <button
         onClick={handlePredict}
         disabled={isLoading || boardPercentage === null || metMarks === null}
-        className="mt-8 w-full touch-manipulation border-4 border-slate-600 bg-indigo-400 px-4 py-4 text-xl font-bold uppercase tracking-widest text-slate-950 transition-all hover:bg-rose-400 hover:border-rose-400 hover:translate-x-0.5 hover:translate-y-0.5 shadow-[8px_8px_0px_#64748b] hover:shadow-none active:translate-x-1 active:translate-y-1 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:translate-x-0 disabled:hover:translate-y-0 disabled:hover:shadow-[8px_8px_0px_#64748b]"
+        className="mt-4 w-full touch-manipulation border-4 border-slate-600 bg-indigo-400 px-4 py-4 text-xl font-bold uppercase tracking-widest text-slate-950 transition-all hover:bg-rose-400 hover:border-rose-400 hover:translate-x-0.5 hover:translate-y-0.5 shadow-[8px_8px_0px_#64748b] hover:shadow-none active:translate-x-1 active:translate-y-1 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:translate-x-0 disabled:hover:translate-y-0 disabled:hover:shadow-[8px_8px_0px_#64748b]"
       >
         {isLoading ? "Predicting..." : "Predict Rank"}
       </button>
@@ -173,11 +198,11 @@ const Form = ({ sendBoards, sendMET }: FormProp) => {
             <p className="text-center text-xl font-bold uppercase tracking-wider sm:text-2xl">
               Your rank according to last year:
               <span className="ml-4 text-4xl bg-slate-950 text-yellow-400 px-4 py-2 border-2 border-slate-600 inline-block mt-4 md:mt-0">
-                {prediction.predictedRank < 100
+                {predictionRankDisplay !== null && predictionRankDisplay < 100
                   ? "<100"
-                  : prediction.predictedRank > 50000
+                  : predictionRankDisplay !== null && predictionRankDisplay > 50000
                     ? ">50000"
-                    : prediction.predictedRank}
+                    : predictionRankDisplay}
               </span>
             </p>
             <p className="mt-6 text-center text-sm font-bold uppercase text-slate-300">
