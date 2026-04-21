@@ -104,6 +104,10 @@ For queries or suggestions, reach out to us on Discord:
 
 This project is licensed under the GNU General Public License v3.0 (GPL-3).
 
+## Citations
+
+If you want to cite this repository for any academic/other purposes, please cite using metadata of `CITATION.cff` file
+
 ## Website
 
 Visit the live website at: [rankpredictor.in](https://rankpredictor.in)
