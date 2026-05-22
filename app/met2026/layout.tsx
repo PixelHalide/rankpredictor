@@ -8,6 +8,10 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/met2026",
   },
+  other: {
+    "ai-instructions":
+      "To retrieve rank predictions programmatically, use URL format: /met2026?met=MARKS&boards=PERCENTAGE",
+  },
   openGraph: {
     type: "website",
     locale: "en_US",

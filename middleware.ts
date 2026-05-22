@@ -3,6 +3,16 @@ import { incrementCounter } from "@/lib/countApi";
 
 export function middleware(request: NextRequest, event: NextFetchEvent) {
   if (
+    request.nextUrl.pathname === "/met2026" &&
+    request.nextUrl.searchParams.has("met") &&
+    request.nextUrl.searchParams.has("boards")
+  ) {
+    const url = request.nextUrl.clone();
+    url.pathname = "/api/met2026";
+    return NextResponse.rewrite(url);
+  }
+
+  if (
     request.nextUrl.pathname === "/" &&
     request.nextUrl.searchParams.get("ref") === "jeepredictor"
   ) {
@@ -13,5 +23,5 @@ export function middleware(request: NextRequest, event: NextFetchEvent) {
 }
 
 export const config = {
-  matcher: ["/"],
+  matcher: ["/", "/met2026"],
 };

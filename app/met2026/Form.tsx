@@ -206,7 +206,7 @@ const Form = ({ sendBoards, sendMET }: FormProp) => {
               </span>
             </p>
             <p className="mt-6 text-center text-sm font-bold uppercase text-slate-300">
-              Note: CPS, Biomedical, VLSI will be merged into EE for 2026.
+              Note: CPS, Biomedical, VLSI, ENI will be merged into EE for 2026.
             </p>
             <p className="mt-2 text-center text-sm font-bold uppercase text-slate-300">
               Note 2: 20% of seats will be allocated for JEE Main candidates from 2026 onwards.

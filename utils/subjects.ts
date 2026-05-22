@@ -415,11 +415,11 @@ export const subjectData: {
   },
   "4-CSFT": {
     "Probability, Stochastic Process and Operations Research": 4,
-    "Accounting for Engineers": 3,
+    "Accounting & Financial Management": 4,
+    "Design Thinking": 2,
     "Cyber Security": 3,
     "Introduction to Fintech": 3,
-    "Computer Networks": 3,
-    "Financial Management": 3,
+    "Software Systems": 3,
     "Fintech Lab": 2,
   },
   "5-CSFT": {
