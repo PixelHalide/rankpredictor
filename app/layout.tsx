@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { Analytics } from "@vercel/analytics/next";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import Script from "next/script";
 import { GeistPixelSquare } from "geist/font/pixel";
@@ -75,9 +74,6 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
-  verification: {
-    google: "G-NQYHBHJ3MX",
-  },
 };
 
 export default function RootLayout({
@@ -98,8 +94,7 @@ gtag('consent', 'default', {
   'ad_storage': 'denied',
   'ad_user_data': 'denied',
   'ad_personalization': 'denied',
-  'analytics_storage': 'denied',
-  'wait_for_update': 500
+  'analytics_storage': 'granted'
 });
 gtag('set', 'ads_data_redaction', true);`}
         </Script>
@@ -115,7 +110,6 @@ gtag('set', 'ads_data_redaction', true);`}
           <GoogleAnalytics gaId="G-NQYHBHJ3MX" />
           <NavBar />
           {children}
-          <Analytics />
         </ThemeProvider>
       </body>
     </html>

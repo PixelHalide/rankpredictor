@@ -43,7 +43,7 @@ const NavLink = ({ href, label, tone, isExternal, trackingUrl }: NavLinkProps) =
   }
 
   return (
-    <Link href={href} className={className} onClick={handleClick}>
+    <Link href={href} className={className} onClick={handleClick} prefetch={false}>
       {label}
     </Link>
   );
