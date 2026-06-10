@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 
 interface NavLinkProps {
   href: string;
@@ -50,6 +51,12 @@ const NavLink = ({ href, label, tone, isExternal, trackingUrl }: NavLinkProps) =
 };
 
 const NavBar = () => {
+  const pathname = usePathname();
+
+  if (pathname === "/dmca") {
+    return null;
+  }
+
   return (
     <div>
       <header className="relative mb-5 mt-6 flex flex-col items-center justify-center gap-2 px-4 sm:gap-4 uppercase">
