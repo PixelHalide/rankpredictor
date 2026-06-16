@@ -5,6 +5,7 @@ import { GeistPixelSquare } from "geist/font/pixel";
 import { GeistMono } from "geist/font/mono";
 import { ThemeProvider } from "next-themes";
 import NavBar from "@/components/Navbar";
+import CookieConsent from "@/components/CookieConsent";
 import "./globals.css";
 import "katex/dist/katex.min.css";
 
@@ -81,35 +82,32 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const adsenseClientId =
-    process.env.NEXT_PUBLIC_GOOGLE_ADSENSE_CLIENT_ID
+  const adsenseClientId = process.env.NEXT_PUBLIC_GOOGLE_ADSENSE_CLIENT_ID;
 
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning style={{ colorScheme: "dark" }}>
       <head>
         <Script id="google-consent-default" strategy="beforeInteractive">
           {`window.dataLayer = window.dataLayer || [];
 function gtag(){window.dataLayer.push(arguments);}
 gtag('consent', 'default', {
+  'analytics_storage': 'denied',
   'ad_storage': 'denied',
   'ad_user_data': 'denied',
   'ad_personalization': 'denied',
-  'analytics_storage': 'granted'
+  'functionality_storage': 'granted',
+  'personalization_storage': 'denied',
+  'security_storage': 'granted'
 });
 gtag('set', 'ads_data_redaction', true);`}
         </Script>
-        <Script
-          id="google-adsense"
-          src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${adsenseClientId}`}
-          strategy="afterInteractive"
-          crossOrigin="anonymous"
-        />
       </head>
       <body className={`antialiased ${GeistPixelSquare.variable} ${GeistMono.variable} font-mono bg-slate-950/90 text-foreground`}>
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false}>
           <GoogleAnalytics gaId="G-NQYHBHJ3MX" />
           <NavBar />
           {children}
+          <CookieConsent adsenseClientId={adsenseClientId} />
         </ThemeProvider>
       </body>
     </html>
