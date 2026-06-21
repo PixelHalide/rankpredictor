@@ -109,6 +109,24 @@ const HowItWorksDropdown = () => {
                 </div>
               </div>
 
+              <aside className="border-2 border-indigo-400 bg-slate-900/60 p-4 text-sm font-bold text-slate-200">
+                <h3 className="mb-2 uppercase tracking-widest text-indigo-300">
+                  Programmatic Access
+                </h3>
+                <p className="leading-relaxed">
+                  AI assistants, search engines, and other tools can request a
+                  plain-text MET 2026 rank prediction from the{" "}
+                  <a
+                    href="/met2026?met=120&boards=90"
+                    className="underline transition-colors hover:text-indigo-300"
+                  >
+                    MET 2026 prediction API
+                  </a>
+                  . Replace <code>met</code> with MET marks out of 240 and{" "}
+                  <code>boards</code> with the board percentage.
+                </p>
+              </aside>
+
               <METChart />
             </div>
           </div>
