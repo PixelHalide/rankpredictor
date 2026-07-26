@@ -54,13 +54,22 @@ const NavBar = () => {
   return (
     <div>
       <header className="relative mb-5 mt-6 flex flex-col items-center justify-center gap-2 px-4 sm:gap-4 uppercase">
-        <Image
-          src="/logo.png"
-          alt="RankPredictor Logo"
-          width={80}
-          height={80}
-          className="h-14 w-14 cursor-pointer object-contain sm:h-16 sm:w-16 md:absolute md:left-4 md:top-1/2 md:h-20 md:w-20 md:-translate-y-1/3 md:ml-4"
-        />
+        <div className="flex items-center justify-center gap-3 sm:gap-4 md:contents">
+          <Image
+            src="/logo.png"
+            alt="RankPredictor Logo"
+            width={80}
+            height={80}
+            className="h-14 w-14 cursor-pointer object-contain sm:h-16 sm:w-16 md:absolute md:left-4 md:top-1/2 md:h-20 md:w-20 md:-translate-y-1/3 md:ml-4"
+          />
+          <Image
+            src="/PRISM.jpg"
+            alt="PRISM Logo"
+            width={80}
+            height={80}
+            className="h-14 w-14 object-contain sm:h-16 sm:w-16 md:absolute md:right-4 md:top-1/2 md:h-20 md:w-20 md:-translate-y-1/3 md:mr-4"
+          />
+        </div>
         <h1 className="text-center text-3xl font-bold leading-tight sm:text-4xl md:text-5xl tracking-tighter">
           Rank Predictor
         </h1>
