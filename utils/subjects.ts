@@ -64,13 +64,10 @@ export const subjectData: {
   },
   "5-CS": {
     "Essentials of Management": 3,
-    "Principles of Cryptography": 3,
-    "Operating Systems": 3,
-    "Software Engineering": 3,
-    "Computer Networks": 3,
-    "Software Engineering Lab": 1,
-    "Operating Systems Lab": 1,
-    "Computer Networks Lab": 1,
+    "Machine Learning": 4,
+    "Cloud Computing and DevOps": 4,
+    "Finite Automata and Compiler Design": 4,
+    "Parallel Computer Architecture and Programming": 4
   },
   "6-CS": {
     "Engineering Economics and Financial Management": 3,
@@ -162,13 +159,10 @@ export const subjectData: {
   },
   "5-AIML": {
     "Essentials of Management": 3,
-    "Machine Learning": 3,
-    "Foundation of Computer Vision": 3,
-    "Big Data Analytics": 3,
-    "Artificial Neural Network": 3,
-    "Computer Vision Lab": 1,
-    "Big Data Analytics Lab": 1,
-    "Machine Learning Lab": 1,
+    "Machine Learning": 4,
+    "Fundamentals of Computer Vision": 4,
+    "Finite Automata and Compiler Design": 4,
+    "Parallel Computer Architecture and Programming": 4
   },
   "6-AIML": {
     "Engineering Economics and Financial Management": 3,
