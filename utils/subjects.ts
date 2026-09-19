@@ -211,11 +211,11 @@ export const subjectData: {
   "5-IT": {
     "Essentials of Management": 3,
     "Information Security": 3,
-    "Principles of Operating Systems": 4,
+    "Embedded Systems": 4,
     "Software Engineering": 3,
     "Flexible Core - 1 (A1/B1/C1/D1)": 3,
     "Information Security Lab": 1,
-    "Principles of Operating Systems Lab": 1,
+    "Embedded Systems Systems Lab": 1,
   },
   "6-IT": {
     "Engineering Economics and Financial Management": 3,
