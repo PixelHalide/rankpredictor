@@ -87,6 +87,8 @@ export default function GpaCalcClient() {
     set_minors(checked);
   };
 
+  const subjectGroup = semName();
+
   return (
     <div className="min-h-screen bg-slate-950/90 px-4 py-8 sm:px-6 lg:px-10">
       <div className="mx-auto w-full max-w-2xl">
@@ -125,10 +127,11 @@ export default function GpaCalcClient() {
             onMinorsChange={handleMinorsChange}
           />
           <GpaTable
+            key={subjectGroup}
             isOpen={table_section_open}
             honors={honors}
             minors={minors}
-            subjectGroup={semName()}
+            subjectGroup={subjectGroup}
           />
         </div>
       </div>
